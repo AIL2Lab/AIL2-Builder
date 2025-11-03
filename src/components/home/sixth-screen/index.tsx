@@ -1,0 +1,140 @@
+import Image from "next/image";
+import Carousel3D from "./Carousel3D";
+
+const supports = [
+  {
+    name: "gobi pariners",
+    src: "/images/gobi.png",
+    with: 128,
+    height: 38,
+  },
+  {
+    name: "waterdrip",
+    src: "/images/waterdrip.png",
+    with: 132,
+    height: 60,
+  },
+  {
+    name: "depin",
+    src: "/images/depin.png",
+    with: 169,
+    height: 35,
+  },
+  {
+    name: "jdi",
+    src: "/images/jdi.png",
+    with: 95,
+    height: 70,
+  },
+  {
+    name: "dbc",
+    src: "/images/dbc.png",
+    with: 78,
+    height: 70,
+  },
+  {
+    name: "meezan",
+    src: "/images/meezan.png",
+    with: 84,
+    height: 50,
+  },
+  {
+    name: "neoventures",
+    src: "/images/neov.png",
+    with: 215,
+    height: 30,
+  },
+  {
+    name: "primelink",
+    src: "/images/primelink.png",
+    with: 170,
+    height: 60,
+  },
+];
+const images = [
+    {
+      src: '/images/lorem.png',
+      alt: 'Slide 1',
+      title: '美丽的风景',
+      description: '探索大自然的奇妙世界'
+    },
+    {
+      src: '/images/lorem.png',
+      alt: 'Slide 2',
+      title: '城市夜景',
+      description: '现代都市的璀璨灯火'
+    },
+    {
+      src: '/images/lorem.png',
+      alt: 'Slide 3',
+      title: '艺术创作',
+      description: '创意与灵感的完美结合'
+    },
+    
+  ]
+export default function HomeSixthScreen() {
+  return (
+    <section className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 ">
+      <div className="text-center font-bold text-2xl mb-20">
+        Backed by Top AI Expert Worldwide
+      </div>
+      <div className="grid grid-cols-2 px-20 py-5 relative bg-[color:#121212] rounded-lg border-5 border-white/4">
+        <div className="col-span-1">
+          <Image src="/images/lorem.png" alt="" width={449} height={565} />
+        </div>
+        <div className="six-border "></div>
+        <div className="p-20 flex flex-col justify-center items-center">
+          <div className="font-semibold text-2xl text-theme mb-10">
+            Lorem ipsum dolor sit amet{" "}
+          </div>
+          <div className="text-lg">
+            consectetur. Eget purus eget lacus eu duis lacus in duis. Nisl vel
+            velit lacinia fringilla laoreet bibendum mattis sagittis. Nunc neque
+            imperdiet sed posuere egestas accumsan ut enim. Turpis nec at
+            placerat amet adipiscing turpis magna. Malesuada sed vffjfj fdd
+            eweiuw
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 mt-20 mx-auto lg:max-w-5xl">
+        <div className="col-span-2 md:col-span-1">
+          <div className="text-2xl">
+            Join the AIL2 builders. Our community is rapidly expanding-Let’s the
+            future of decentralized AI together
+          </div>
+          <div className="flex space-x-2.5">
+            <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold my-10">
+              Support AIL2 on X
+            </div>
+            <div className="px-7 py-3 bg-theme/20 border-theme/30 border-2 text-theme w-fit rounded-xl font-bold my-10">
+              Join our TG
+            </div>
+          </div>
+        </div>
+        <div className="col-span-2 md:col-span-1">
+         <Carousel3D images={images} autoPlay={true} interval={4000} />
+        </div>
+      </div>
+      <div>
+        <div className="text-center font-bold text-2xl mb-20">
+          We're Backed Supported By
+        </div>
+        <div className="grid grid-cols-12">
+          {supports.map((item, idx) => (
+            <div
+              key={idx}
+              className="mb-5 mr-5 col-span-6 sm:col-span-4 md:col-span-3 flex justify-center items-center border-white/10 border-5 h-24"
+            >
+              <Image
+                src={item.src}
+                alt={item.name}
+                width={item.with}
+                height={item.height}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
