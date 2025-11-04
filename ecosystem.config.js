@@ -1,7 +1,7 @@
 module.exports = {
   apps : [
     {
-      name: 'my-next-app',       // 应用名称
+      name: 'AIL2',       // 应用名称
       script: 'npm',             // 启动脚本
       args: 'start',             // 传递给脚本的参数，相当于执行 `npm start`
       cwd: './',                 // 项目的根目录
