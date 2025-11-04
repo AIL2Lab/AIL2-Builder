@@ -12,7 +12,7 @@ module.exports = {
       max_memory_restart: '1G',  // 当内存超过 1G 时自动重启
       env: {
         NODE_ENV: 'production',  // 设置环境变量
-        PORT: 3003               // 指定端口
+        PORT: 3004              // 指定端口
       }
     }
   ]
