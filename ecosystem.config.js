@@ -7,7 +7,7 @@ module.exports = {
       cwd: './',                 // 项目的根目录
       instances: 1,              // 启动的实例数量
       exec_mode: 'fork',         // 进程模式，'fork' 或 'cluster'
-      autorestart: true,         // 应用崩溃后自动重启
+      autorestart: false,         // 应用崩溃后自动重启
       watch: false,              // 生产环境不建议开启文件监听
       max_memory_restart: '1G',  // 当内存超过 1G 时自动重启
       env: {
