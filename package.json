@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "redeploy": "npm install && npm run build && pm2 start ecosystem.config.js",
+    "pm2ls": "pm2 ls",
     "lint": "eslint"
   },
   "dependencies": {
