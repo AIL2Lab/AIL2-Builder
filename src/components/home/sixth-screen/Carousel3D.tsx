@@ -17,7 +17,7 @@ type Props = {
 const Carousel3D = ({ images, autoPlay = true, interval = 3000 }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 自动播放
   useEffect(() => {
@@ -47,14 +47,14 @@ const Carousel3D = ({ images, autoPlay = true, interval = 3000 }: Props) => {
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index:number) => {
     if (isTransitioning || index === currentIndex) return;
     setIsTransitioning(true);
     setCurrentIndex(index);
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
-  const getSlidePosition = (index) => {
+  const getSlidePosition = (index:number) => {
     const diff = index - currentIndex;
     const totalSlides = images.length;
 

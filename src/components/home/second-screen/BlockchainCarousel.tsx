@@ -6,7 +6,7 @@ import { BnbIcon } from "@/components/icons/Bnb";
 const BlockchainCarousel = ({ autoPlay = true, interval = 2500 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
-  const timeoutRef = useRef(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 区块链数据
   const blockchains = [

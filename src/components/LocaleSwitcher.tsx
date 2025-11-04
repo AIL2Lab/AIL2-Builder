@@ -3,7 +3,7 @@ import {routing} from '@/i18n/routing';
 import LocaleSwitcherSelect from './LocaleSwitcherSelect';
 
 type Props = {
-  className: string
+  className?: string
 }
 
 export default function LocaleSwitcher({className}:Props) {
@@ -11,7 +11,7 @@ export default function LocaleSwitcher({className}:Props) {
   const locale = useLocale();
 
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t('label')} className={className}>
+    <LocaleSwitcherSelect defaultValue={locale} label={t('label')} className={className as string}>
       {routing.locales.map((cur) => (
         <option key={cur} value={cur}>
           {t('locale', {locale: cur})}
