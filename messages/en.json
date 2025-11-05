@@ -50,5 +50,10 @@
     "thirdScreen": {
       "text": "The largest community-driven ecosystem for decentralized Al apps."
     }
+  },
+  "Footer": {
+    "emailTip": "Sign up for our {br} newsletter",
+    "emailPlaceholder": "Your email",
+    "emailBtnText": "Subscribe"
   }
 }

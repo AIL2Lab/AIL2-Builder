@@ -12,7 +12,7 @@ export default function PageLayout({children, title, isShowFooter}: Props) {
   const t = useTranslations('PageLayout');
 
   return (
-    <main className="app h-full flex flex-col">
+    <main className="app h-full flex flex-col px-6">
         <Navbar />
         {children}
         { isShowFooter && <Footer />}

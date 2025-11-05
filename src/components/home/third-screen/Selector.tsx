@@ -23,7 +23,7 @@ export default function Selector () {
             <div>
                 {
                     arr.map((item,idx) => (
-                        <div>
+                        <div key={idx}>
                             <div>{item.title}</div>
                             <div>{item.text}</div>
                         </div>

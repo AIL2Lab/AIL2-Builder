@@ -74,17 +74,17 @@ const images = [
   ]
 export default function HomeSixthScreen() {
   return (
-    <section className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 ">
+    <section className="w-full mx-auto lg:max-w-7xl md:my-24 lg:my-32 ">
       <div className="text-center font-bold text-2xl mb-20">
         Backed by Top AI Expert Worldwide
       </div>
-      <div className="grid grid-cols-2 px-20 py-5 relative bg-[color:#121212] rounded-lg border-5 border-white/4">
-        <div className="col-span-1">
+      <div className="grid grid-cols-2 py-5 relative bg-[color:#121212] rounded-lg border-5 border-white/4">
+        <div className="sm:col-span-1 col-span-2 flex flex-col items-center p-5 lg:p-0">
           <Image src="/images/lorem.png" alt="" width={449} height={565} />
         </div>
-        <div className="six-border "></div>
-        <div className="p-20 flex flex-col justify-center items-center">
-          <div className="font-semibold text-2xl text-theme mb-10">
+        <div className="six-border hidden sm:flex"></div>
+        <div className="px-5 md:px-10 sm:col-span-1 col-span-2 flex flex-col justify-center items-center">
+          <div className="font-semibold text-2xl text-theme mb-5 md:mb-10">
             Lorem ipsum dolor sit amet{" "}
           </div>
           <div className="text-lg">

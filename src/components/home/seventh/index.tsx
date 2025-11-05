@@ -7,7 +7,7 @@ const floats = [
     with: 132,
     height: 60,
     styles: {
-      left: "-100px",
+      left: "-5%",
       top: "100px",
     },
   },
@@ -17,7 +17,7 @@ const floats = [
     with: 95,
     height: 70,
     styles: {
-      right: "-100px",
+      right: "-5%",
       bottom: "100px",
     },
   },
@@ -28,7 +28,7 @@ const floats = [
     height: 70,
     styles: {
       left: "50%",
-      top: "30%",
+      top: "40%",
     },
   },
   {
@@ -37,7 +37,7 @@ const floats = [
     with: 84,
     height: 50,
     styles: {
-      left: "0px",
+      left: "5%",
       bottom: "20px",
       zIndex: -1
     },
@@ -48,7 +48,7 @@ const floats = [
     with: 170,
     height: 60,
     styles: {
-      right: "-110px",
+      right: "-5%",
       top: "80px",
       zIndex: -1
     },
@@ -57,7 +57,7 @@ const floats = [
 export default function HomeSeventhScreen() {
   return (
     <section className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 ">
-      <div className="justify-center flex flex-col items-center mb-40">
+      <div className="justify-center flex flex-col items-center mb-20 md:mb-40">
         <div className="ai-l2-btn w-fit text-xl border border-theme/30 py-2.5 px-5 rounded-2x">
           Ecosystem Partners
         </div>
@@ -69,12 +69,12 @@ export default function HomeSeventhScreen() {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <div className="w-fit relative">
+        <div className="w-fit relative m-10 lg:m-0">
           <Image src="/images/bg-seven.png" alt="" width={772} height={772} />
           {floats.map((item, idx) => (
             <div
               key={idx}
-              className="border-white/10 border-5 bg-white/5 w-60 h-24 absolute flex justify-center items-center rounded-xl backdrop-blur-lg"
+              className="border-white/10 border-5 bg-white/5 w-40 h-20 p-2.5 absolute flex justify-center items-center rounded-xl backdrop-blur-lg"
               style={item.styles}
             >
               <Image
