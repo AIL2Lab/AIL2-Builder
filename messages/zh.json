@@ -12,7 +12,7 @@
   },
   "LocaleSwitcher": {
     "label": "Sprache ändern",
-    "locale": "{locale, select, zh {中文} en {English} other {Unbekannt}}"
+    "locale": "{locale, select, zh {中文} en {英文} other {未知}}"
   },
   "Manifest": {
     "name": ""
@@ -21,10 +21,7 @@
     "home": "Start",
     "pathnames": "Pfadnamen"
   },
-  "NotFoundPage": {
-    "description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln.",
-    "title": "Seite nicht gefunden"
-  },
+  
   "PageLayout": {
     "links": {
       "docs": {
@@ -44,11 +41,49 @@
     "title": "Pfadnamen"
   },
   "Home": {
+    "supportBtn": "X 上支持AIL2",
     "firstScreen": {
       "text": "最大的AIL2"
     },
+    "secondScreen": {
+      "title": "将去中心化人工智能开发速度提升100倍",
+      "text": "AI 模型完全去中心化运行，具有无限可扩展性，赋能开发者加速去中心化 AI 应用开发，在六条区块链（ETH、BSC、GIWA、XLayer、Base 和 Mantle）上实现 100 倍的开发速度提升。"
+    },
     "thirdScreen": {
       "text": "最大的去中心化人工智能应用社区驱动型生态系统。"
+    },
+    "fourthScreen": {
+      "title": "最大的人工智能L2",
+      "superLayer": "AI 超级层统一体<br></br>ETH、BSC、GIWA、XLayer、Base、Mantle",
+      "architecture": "AIL2 五层架构"
+    },
+    "fifthScreen": {
+      "acceleration": "AIL2 的实现使开发者能够在公共区块链上构建去中心化人工智能，<theme>速度提升100 倍</theme> 。"
+    },
+    "sixthScreen": {
+      "expert": "由全球顶尖<theme>人工智能专家</theme>提供支持",
+      "joinBuilders": "加入 <theme>AIL2 建设者</theme>行列，我们的社区正在迅速壮大——让我们携手共创去中心化人工智能的未来。",
+      "supported": "我们得到了以下机构的支持"
+    },
+    "seventhScreen": {
+      "partners": "生态系统合作伙伴",
+      "community": "加入 <theme>AIL2</theme> 全球社区",
+      "ecosystem": "了解最大的 AI L2 生态系统"
     }
+  },
+  "Footer": {
+    "emailTip": "订阅我们的<br></br>新闻简报",
+    "emailPlaceholder": "你的邮箱",
+    "emailBtnText": "订阅",
+    "copyright": "©2025 AIL2. All rights reserved.",
+    "socials": "社交",
+    "product": "产品",
+    "blog": "博客",
+    "ecosystem": "生态系统"
+  },
+  "NotFoundPage": {
+    "title": "页面未找到",
+    "description": "抱歉，我们找不到您要查找的页面。",
+    "backHome": "返回首页"
   }
 }

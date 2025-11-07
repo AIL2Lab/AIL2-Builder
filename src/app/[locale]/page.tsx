@@ -8,7 +8,7 @@ import ThirdScreen from '@/components/home/third-screen';
 import HomeFourthScreen from '@/components/home/fourth-screen';
 import HomeFifthScreen from '@/components/home/fifth';
 import HomeSixthScreen from '@/components/home/sixth-screen';
-import HomeSeventhScreen from '@/components/home/seventh';
+import HomeSeventhScreen from '@/components/home/seventh-screen';
 
 
 export default function IndexPage({params}: PageProps<'/[locale]'>) {

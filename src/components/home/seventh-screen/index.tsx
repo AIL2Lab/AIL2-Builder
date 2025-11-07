@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const floats = [
@@ -55,17 +56,20 @@ const floats = [
   },
 ];
 export default function HomeSeventhScreen() {
+  const t = useTranslations("Home")
   return (
-    <section className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 ">
-      <div className="justify-center flex flex-col items-center mb-20 md:mb-40">
-        <div className="ai-l2-btn w-fit text-xl border border-theme/30 py-2.5 px-5 rounded-2x">
-          Ecosystem Partners
+    <section className="container mx-auto lg:max-w-7xl my-6 sm:my-12 md:my-24 lg:my-32 px-5">
+      <div className="justify-center flex flex-col items-center mb-10 sm:mb-20 md:mb-20 lg:mb-40">
+        <div className="ai-l2-btn w-fit text-lg lg:text-xl border border-theme/30 py-2.5 px-5 rounded-2x">
+          {t('seventhScreen.partners')}
         </div>
-        <div className="mt-5 font-bold text-3xl">
-          Join AIL2 Global community
+        <div className="mt-5 font-bold text-2xl lg:text-3xl">
+          {t.rich('seventhScreen.community', {
+            theme: (chunks) => <span className="text-theme">{chunks}</span>
+          })}
         </div>
-        <div className="mt-5 text-theme text-3xl font-normal">
-          See the biggest AI L2 ecosystem
+        <div className="mt-5 text-theme text-2xl lg:text-3xl font-normal">
+          {t('seventhScreen.ecosystem')}
         </div>
       </div>
       <div className="flex justify-center items-center">

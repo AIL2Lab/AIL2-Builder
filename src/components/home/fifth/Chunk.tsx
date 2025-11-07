@@ -15,7 +15,7 @@ export default function ChunkItem({ children, className, title, tags }: Props) {
       <div className="text-theme font-bold text-lg">{title}</div>
       {children}
       {tags && tags.length > 0 && (
-        <div className="space-x-2 flex flex-wrap absolute w-full left-0 bottom-10 px-5">
+        <div className="space-x-2 lg:flex flex-wrap w-full hidden ">
           {tags.map((item, idx) => (
             <Tag text={item} key={idx} />
           ))}

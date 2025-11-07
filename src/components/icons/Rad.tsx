@@ -19,7 +19,7 @@ export const RadIcon = ({
       <path d="M2328 1595.5C2328 2476.67 1613.67 3191 732.5 3191C-148.67 3191 -863 2476.67 -863 1595.5C-863 714.33 -148.67 0 732.5 0C1613.67 0 2328 714.33 2328 1595.5Z" />
     </mask>
     <g
-      clip-path="url(#paint0_angular_1169_2881_clip_path)"
+      clipPath="url(#paint0_angular_1169_2881_clip_path)"
       data-figma-skip-parse="true"
       mask="url(#path-1-inside-1_1169_2881)"
     >

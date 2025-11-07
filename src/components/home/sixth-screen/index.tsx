@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Carousel3D from "./Carousel3D";
+import { useTranslations } from "next-intl";
 
 const supports = [
   {
@@ -73,10 +74,13 @@ const images = [
     
   ]
 export default function HomeSixthScreen() {
+  const t = useTranslations("Home")
   return (
-    <section className="w-full mx-auto lg:max-w-7xl md:my-24 lg:my-32 ">
-      <div className="text-center font-bold text-2xl mb-20">
-        Backed by Top AI Expert Worldwide
+    <section className="w-full mx-auto lg:max-w-7xl my-6 sm:my-12 md:my-24 lg:my-32 px-5">
+      <div className="text-center font-bold text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-20 px-20">
+        {t.rich('sixthScreen.expert', {
+          theme: (chunks) => <span className="text-theme">{chunks}</span>
+        })}
       </div>
       <div className="grid grid-cols-2 py-5 relative bg-[color:#121212] rounded-lg border-5 border-white/4">
         <div className="sm:col-span-1 col-span-2 flex flex-col items-center p-5 lg:p-0">
@@ -97,33 +101,34 @@ export default function HomeSixthScreen() {
         </div>
       </div>
       <div className="grid grid-cols-2 mt-20 mx-auto lg:max-w-5xl">
-        <div className="col-span-2 md:col-span-1">
-          <div className="text-2xl">
-            Join the AIL2 builders. Our community is rapidly expanding-Let’s the
-            future of decentralized AI together
+        <div className="col-span-2 lg:col-span-1 flex flex-col justify-center">
+          <div className="text-2xl font-bold mb-10">
+            {t.rich('sixthScreen.joinBuilders', {
+              theme: (chunks) => <span className="text-theme">{chunks}</span>
+            })}
           </div>
-          <div className="flex space-x-2.5">
-            <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold my-10">
+          <div className="flex space-x-2.5 text-sm sm:text-base">
+            <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold">
               Support AIL2 on X
             </div>
-            <div className="px-7 py-3 bg-theme/20 border-theme/30 border-2 text-theme w-fit rounded-xl font-bold my-10">
+            <div className="px-7 py-3 bg-theme/20 border-theme/30 border-2 text-theme w-fit rounded-xl font-bold">
               Join our TG
             </div>
           </div>
         </div>
-        <div className="col-span-2 md:col-span-1">
+        <div className="col-span-2 lg:col-span-1">
          <Carousel3D images={images} autoPlay={true} interval={4000} />
         </div>
       </div>
       <div>
-        <div className="text-center font-bold text-2xl mb-20">
-          We're Backed Supported By
+        <div className="text-center font-bold text-2xl mb-5 sm:mb-10 md:mb-20">
+          {t('sixthScreen.supported')}
         </div>
         <div className="grid grid-cols-12">
           {supports.map((item, idx) => (
             <div
               key={idx}
-              className="mb-5 mr-5 col-span-6 sm:col-span-4 md:col-span-3 flex justify-center items-center border-white/10 border-5 h-24"
+              className="m-2 rounded-4xl p-5 col-span-6 sm:col-span-4 md:col-span-3 flex justify-center items-center border-white/10 border-5 h-24"
             >
               <Image
                 src={item.src}

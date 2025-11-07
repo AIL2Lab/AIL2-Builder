@@ -12,7 +12,7 @@
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, zh {中文} en {English} other {Unknown}}"
+    "locale": "{locale, select, zh {Zh} en {En} other {Unknown}}"
   },
   "Manifest": {
     "name": "next-intl example"
@@ -20,10 +20,6 @@
   "Navigation": {
     "home": "Home",
     "pathnames": "Pathnames"
-  },
-  "NotFoundPage": {
-    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-    "title": "Page not found"
   },
   "PageLayout": {
     "links": {
@@ -43,17 +39,58 @@
     "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
     "title": "Pathnames"
   },
+
+
+
+
+
+
+
   "Home": {
+    "supportBtn": "Support AIL2 on X",
+    
     "firstScreen": {
       "text": "The Largest AIL2 for"
     },
+    "secondScreen": {
+      "title": "Accelerate Decentralized AI Development 100x",
+      "text": "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle"
+    },
     "thirdScreen": {
       "text": "The largest community-driven ecosystem for decentralized Al apps."
+    },
+    "fourthScreen": {
+      "title": "The Largest AI L2",
+      "superLayer": "The AI Superlayer Unifying<br></br>ETH, BSC, GIWA, XLayer, Base, Mantle",
+      "architecture": "AIL2 5 Layer Architecture"
+    },
+    "fifthScreen": {
+      "acceleration": "AThe of AIL2 enables developers to build decentralized AI on public blockchains with <theme>100x acceleration</theme>"
+    },
+    "sixthScreen": {
+      "expert": "Backed by Top <theme>AI Expert</theme> Worldwide",
+      "joinBuilders": "Join the <theme>AIL2 builders</theme>. Our community is rapidly expanding-Let’s the future of decentralized AI together",
+      "supported": "We're Backed Supported By"
+    },
+    "seventhScreen": {
+      "partners": "Ecosystem Partners",
+      "community": "Join <theme>AIL2</theme> Global community",
+      "ecosystem": "See the biggest AI L2 ecosystem"
     }
   },
   "Footer": {
-    "emailTip": "Sign up for our {br} newsletter",
+    "emailTip": "Sign up for our <br></br> newsletter",
     "emailPlaceholder": "Your email",
-    "emailBtnText": "Subscribe"
+    "emailBtnText": "Subscribe",
+    "copyright": "©2025 AIL2. All rights reserved.",
+    "socials": "Socials",
+    "product": "Product",
+    "blog": "Blog",
+    "ecosystem": "Ecosystem"
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "Sorry, we couldn’t find the page you ‘re looking for",
+    "backHome": "Back to home"
   }
 }

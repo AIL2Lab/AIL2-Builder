@@ -1,12 +1,13 @@
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 export default function HomeFourthScreen() {
+    const t = useTranslations("Home")
     return (
-        <div className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 ">
+        <div className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 px-5">
             <div className="justify-center flex flex-col items-center">
-                <div className="ai-l2-btn w-fit text-xl border border-theme/30 py-2.5 px-5 rounded-2xl">The Largest AI L2</div>
-                <div className="mt-5 font-bold text-3xl">The AI Superlayer Unifying</div>
-                <div className="font-bold text-3xl">ETH, BSC, GIWA, XLayer, Base, Mantle</div>
-                <div className="mt-5 text-theme text-3xl font-normal">AIL2 5 Layer Architecture</div>
+                <div className="ai-l2-btn w-fit text-base md:text-xl border border-theme/30 py-2.5 px-5 rounded-2xl">{t('fourthScreen.title')}</div>
+                <div className="mt-5 font-bold text-base md:text-3xl text-center whitespace-nowrap">{t.rich('fourthScreen.superLayer', {br: () => <br />})}</div>
+                <div className="mt-5 text-theme text-lg md:text-3xl font-normal">{t('fourthScreen.architecture')}</div>
             </div>
             <div className="w-full flex justify-center items-center relative">
                 <Image width={1512} height={1206} src="/images/screen-4-1.png" alt=""/>

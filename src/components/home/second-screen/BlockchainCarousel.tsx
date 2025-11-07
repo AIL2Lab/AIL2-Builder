@@ -86,11 +86,11 @@ const BlockchainCarousel = ({ autoPlay = true, interval = 2500 }) => {
   const { current, next } = getCurrentAndNext()
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden w-fit">
       {/* 背景图 */}
       <div className="absolute inset-0">
         <Image width={476} height={493} src="/images/Frame.png" alt="" />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" />
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" /> */}
       </div>
 
       {/* 主要内容 */}

@@ -2,63 +2,37 @@ import Logo from "@/components/Logo";
 import Image from "next/image";
 import Circle from "./Circle";
 import BlockchainCarousel from "./BlockchainCarousel";
+import { useTranslations } from "next-intl";
 export default function HomeSecondScreen() {
+  const t = useTranslations("Home")
   return (
-    <div className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32">
-      <div className="w-full relative">
-        <div className="abc w-full">
-          <Image
-            className="flex lg:hidden"
-            width={944}
-            height={546}
-            src="/images/Subtract-md.png"
-            alt=""
-          />
-          <Image
-            className="hidden lg:flex"
-            width={1175}
-            height={580}
-            src="/images/Subtract.png"
-            alt=""
-          />
-        </div>
-        <div className="absolute w-full h-full left-0 top-0 flex justify-between">
-          <div className="w-1/2 flex flex-col">
-            <div className="flex flex-1 justify-center items-center px-12">
-              <Image
-                src="/svg/logo.svg"
-                width={50}
-                height={50}
-                alt="logo"
-                className="mr-4"
-              />
-              <h3 className="text-2xl md:text-3xl lg:text-4xl">
-                Accelerate Decentralized AI Development 100x
-              </h3>
-            </div>
-            <div className="flex-1 flex flex-col justify-center  px-12">
-              <div>
-                AI models run fully decentralized, with infinite scalability,
-                empowering developers to accelerate decentralized AI application
-                development by 100x across six blockchains: ETH, BSC, GIWA,
-                XLayer, Base, and Mantle
-              </div>
-              <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5">
-                Support AIL2 on X
-              </div>
-            </div>
-          </div>
-          <div className="w-1/2 flex items-center justify-center">
-            {/* <Image width={476} height={493} src="/images/Frame.png" alt="" /> */}
-            <BlockchainCarousel 
-              autoPlay={true}
-              interval={1000}
+    <div className="w-full mx-auto lg:max-w-7xl my-8 sm:my-16 md:my-24 lg:my-32 px-5 sm:px-10 md:px-20">
+      <div className="sm:h-100 lg:h-140 sm:bg-[url(/images/Subtract-md.png)] lg:bg-[url(/images/Subtract.png)] bg-no-repeat bg-size-[100%_100%]">
+        <div className="w-full sm:flex justify-between h-full">
+          <div className="sm:flex sm:w-1/2 h-fit sm:mt-10 lg:mt-20 md:pl-10 lg:pl-20">
+            <Image
+              src="/svg/logo.svg"
+              width={50}
+              height={50}
+              alt="logo"
+              className="mr-4"
             />
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+              {t("secondScreen.title")}
+            </h3>
+          </div>
+          <div className="sm:w-1/2 flex justify-center items-center sm:p-10">
+            <BlockchainCarousel autoPlay={true} interval={1000} />
           </div>
         </div>
-      </div>
-      <div className="mt-60">
-        <Circle />
+        <div className="sm:w-1/2  md:px-12 sm:relative sm:-top-50 lg:-top-60">
+          <div className="text-sm lg:text-base">
+            {t("secondScreen.text")}
+          </div>
+          <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
+            {t("supportBtn")}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ export default function Circle() {
         isRightBorder
         text="800M+"
         subtext="Transactions on Testnet"
-        className="absolute left-20 top-20"
+        className="absolute top-15 sm:left-1/10 sm:top-1/10 lg:left-1/10 lg:top-1/10"
       >
         <ArrowIcon />
       </Tag>
@@ -33,7 +33,7 @@ export default function Circle() {
         isRightBorder
         text="10K+"
         subtext="Testnet Validators"
-        className="absolute left-50 top-80"
+        className="absolute -bottom-10 sm:left-1/8 sm:-bottom-1/10 lg:left-1/6 lg:bottom-1/8"
       >
         <ValidatorIcon />
       </Tag>
@@ -41,7 +41,7 @@ export default function Circle() {
         isRightBorder={false}
         text="20M+"
         subtext="Active accounts"
-        className="absolute right-20 top-20"
+        className="absolute -top-10 sm:right-1/6 sm:top-0 lg:right-1/6 lg:top-1/6"
       >
         <PersonIcon />
       </Tag>
@@ -49,7 +49,7 @@ export default function Circle() {
         isRightBorder={false}
         text="1000+"
         subtext="DeAI  APP"
-        className="absolute right-50 top-80"
+        className="absolute bottom-15 sm:right-1/10 sm:bottom-1/5 lg:right-3/10 lg:bottom-1/5"
       >
         <AppIcon />
       </Tag>

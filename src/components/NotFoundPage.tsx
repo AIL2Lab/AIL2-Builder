@@ -8,47 +8,47 @@ export default function NotFoundPage() {
   const t = useTranslations("NotFoundPage");
 
   return (
-    <PageLayout title={t("title")} isShowFooter={false}>
-      <div className="page-not-found flex-1 relative flex">
-        <div className="star-sky flex-1 container mx-auto lg:max-w-7xl pt-20">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1 flex flex-col justify-center ml-40">
+    <PageLayout title={t("title")} isShowFooter={false} className="pt-6 md:pt-12">
+      <div className="relative flex flex-1 flex-col bg-[url(/images/bg-star-sky.png)] bg-no-repeat bg-cover">
+        <div className="mx-20 lg:mx-auto flex-1 flex items-center">
+          <div className="w-full grid grid-cols-2 pt-10 sm:pt-20">
+            <div className="col-span-2 lg:col-span-1 flex flex-col justify-center lg:ml-10">
               <Image
                 src="/images/404.png"
                 alt="404"
                 width={315}
                 height={127}
-                className=""
+                className="mb-5"
               />
-              <div className="text-white font-semibold text-5xl ">
-                Page Not Found
+              <div className="text-white font-semibold text-lg sm:text-xl md:text-3xl lg:text-4xl my-2.5 sm:my-5">
+                {t('title')}
               </div>
-              <div className="text-white/50 text-2xl font-normal whitespace-nowrap">
-                Sorry, we couldn’t find the page you ‘re looking for{" "}
+              <div className="text-white/50 text-base sm:text-lg md:text-2xl lg:text-2xl font-normal my-2.5 sm:my-5 whitespace-nowrap">
+                {t('description')}
               </div>
               <div className="text-theme flex items-center bg-theme/10 w-fit px-10 py-2.5 rounded-lg">
                 <LeftArrowIcon
                   fill="var(--color-theme)"
                   width={32}
                   height={24}
+                  size={18}
                 />
-                <span className="text-xl ml-10">Back to home</span>
+                <span className="text-sm sm:text-base lg:text-xl ml-10">{t('backHome')}</span>
               </div>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-2 lg:col-span-1 flex justify-end">
               <Image
                 src="/images/astronaut.png"
                 alt="astronaut"
                 width={472}
                 height={478}
-                className="ml-25"
               />
             </div>
           </div>
         </div>
-        <div className="earth absolute bottom-0">
-          <div className="circle">12345</div>
-          <RadIcon />
+        <div className="w-full h-[280px] relative overflow-hidden">
+          <div className="circle bg-black w-[800px] h-[800px] sm:w-[1600px] sm:h-[1600px] lg:w-[3200px] lg:h-[3200px]"></div>
+          {/* <RadIcon /> */}
         </div>
       </div>
     </PageLayout>

@@ -1,7 +1,5 @@
 import { IconSvgProps } from "./type";
 
-export const Ethereum = () => {};
-
 export const EthereumIcon = ({
   size = 24,
   width,
