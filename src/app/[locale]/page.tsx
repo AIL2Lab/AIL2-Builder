@@ -1,4 +1,4 @@
-import {Locale, useTranslations} from 'next-intl';
+import {Locale} from 'next-intl';
 import {setRequestLocale} from 'next-intl/server';
 import {use} from 'react';
 import PageLayout from '@/components/PageLayout';
@@ -16,11 +16,8 @@ export default function IndexPage({params}: PageProps<'/[locale]'>) {
 
   // Enable static rendering
   setRequestLocale(locale as Locale);
-
-  const t = useTranslations('IndexPage');
-
   return (
-    <PageLayout title={t('title')} isShowFooter>
+    <PageLayout isShowFooter>
         <HomeFirstScreen />
         <HomeSecondScreen />
         <ThirdScreen />

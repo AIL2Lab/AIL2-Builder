@@ -55,7 +55,7 @@ export default function HomeFifthScreen() {
     const t = useTranslations("Home")
   return (
     <div className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 px-5">
-      <div className="font-bold text-2xl md:w-3/5 lg:w-1/2 ">
+      <div className="font-bold text-xl lg:text-2xl md:w-3/5 lg:w-1/2 ">
         {t.rich('fifthScreen.acceleration', {
             theme: (chunks) => <span className="text-theme">{chunks}</span>
         })}

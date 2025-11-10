@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { useState, useEffect, useRef, ReactNode } from "react";
 import { routing } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
@@ -15,7 +15,8 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const params = useParams();
-
+  const searchParams = useSearchParams()
+  
   const currentLanguage =
     routing.locales.find((lang) => lang === locale) || routing.locales[0];
 
@@ -24,8 +25,8 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
       // @ts-expect-error -- TypeScript will validate that only known `params`
       // are used in combination with a given `pathname`. Since the two will
       // always match for the current route, we can skip runtime checks.
-      { pathname, params },
-      { locale: newLocale }
+      { pathname, params},
+      { locale: newLocale, scroll: false }
     );
   };
 

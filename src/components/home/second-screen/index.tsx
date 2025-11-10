@@ -34,6 +34,9 @@ export default function HomeSecondScreen() {
           </div>
         </div>
       </div>
+      <div className="my-30 lg:mt-40">
+        <Circle />
+      </div>
     </div>
   );
 }

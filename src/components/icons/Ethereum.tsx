@@ -10,25 +10,18 @@ export const EthereumIcon = ({
     aria-label="ethereum"
     width={size || width}
     height={size || height}
-    viewBox="0 0 784.37 1277.39"
+    viewBox="0 0  32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
-    
   >
-    
- <g id="Layer_x0020_1" fill="#FFEB98">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_1421394342400">
-   <g>
-    <polygon fill="#343434" fillRule="nonzero" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54 "/>
-    <polygon fill="#8C8C8C" fillRule="nonzero" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33 "/>
-    <polygon fill="#3C3C3B" fillRule="nonzero" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89 "/>
-    <polygon fill="#8C8C8C" fillRule="nonzero" points="392.07,1277.38 392.07,956.52 -0,724.89 "/>
-    <polygon fill="#141414" fillRule="nonzero" points="392.07,882.29 784.13,650.54 392.07,472.33 "/>
-    <polygon fill="#393939" fillRule="nonzero" points="0,650.54 392.07,882.29 392.07,472.33 "/>
-   </g>
-  </g>
- </g>
-</svg>
+    <g fillRule="nonzero">
+      <path  fillOpacity=".6" d="M16.498 4v8.87l7.497 3.35z" />
+      <path d="M16.498 4L9 16.22l7.498-3.35z" />
+      <path fillOpacity=".6" d="M16.498 21.968v6.028L24 17.616z" />
+      <path fillOpacity=".6" d="M16.498 27.996v-6.028l-7.497-4.352z" />
+      <path fillOpacity=".2" d="M16.498 20.573l7.497-4.353-7.497-3.348z" />
+      <path fillOpacity=".6" d="M9 16.22l7.498 4.353v-7.701z" />
+    </g>
+  </svg>
 );

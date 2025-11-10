@@ -60,15 +60,15 @@ export default function HomeSeventhScreen() {
   return (
     <section className="container mx-auto lg:max-w-7xl my-6 sm:my-12 md:my-24 lg:my-32 px-5">
       <div className="justify-center flex flex-col items-center mb-10 sm:mb-20 md:mb-20 lg:mb-40">
-        <div className="ai-l2-btn w-fit text-lg lg:text-xl border border-theme/30 py-2.5 px-5 rounded-2x">
+        <div className="ai-l2-btn w-fit text-lg lg:text-xl border border-theme/30 py-2.5 px-8 rounded-2xl">
           {t('seventhScreen.partners')}
         </div>
-        <div className="mt-5 font-bold text-2xl lg:text-3xl">
+        <div className="mt-5 font-bold text-xl md:text-2xl lg:text-3xl text-center">
           {t.rich('seventhScreen.community', {
             theme: (chunks) => <span className="text-theme">{chunks}</span>
           })}
         </div>
-        <div className="mt-5 text-theme text-2xl lg:text-3xl font-normal">
+        <div className="mt-5 text-theme text-xl md:text-2xl font-normal text-center">
           {t('seventhScreen.ecosystem')}
         </div>
       </div>

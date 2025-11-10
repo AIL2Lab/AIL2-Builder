@@ -1,18 +1,29 @@
 "use client";
 import { useState, useEffect } from "react";
+import { EthereumIcon } from "@/components/icons/Ethereum";
+import { BnbIcon } from "@/components/icons/Bnb";
+import { OkxIcon } from "@/components/icons/Okx";
+import { MantleIcon } from "@/components/icons/Mantle";
 import Image from "next/image";
-import { TelegramIcon } from "@/components/icons/Telegram";
-
+interface DynamicIconProps {
+  icon: React.ComponentType<any>; 
+  size?: number;
+  fill?: string;
+}
+const DynamicIcon = ({icon,...props }: DynamicIconProps) => {
+  const IconComponent = icon;
+  return <IconComponent {...props} />;
+};
 export const BlockchainCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const blockchains = [
-    { name: "Ethereum", icon: "/ethereum-icon.svg", color: "#627EEA", offsetY: 40, },
-    { name: "BSC", icon: "/bsc-icon.svg", color: "#F0B90B", offsetY: 20, },
-    { name: "GIWA", icon: "/giwa-icon.svg", color: "#00D4FF", offsetY: 0,},
-    { name: "XLayer", icon: "/xlayer-icon.svg", color: "#FF6B6B", offsetY: 0 },
-    { name: "Base", icon: "/base-icon.svg", color: "#0052FF", offsetY: 20 },
-    { name: "Mantle", icon: "/mantle-icon.svg", color: "#7B3FF2", offsetY: 40 },
+    { name: "Ethereum", icon: EthereumIcon, color: "#627EEA", offsetY: 40, },
+    { name: "BSC", icon: BnbIcon, color: "#F0B90B", offsetY: 20, },
+    { name: "GIWA", icon: OkxIcon, color: "#00D4FF", offsetY: 0,},
+    { name: "XLayer", icon: OkxIcon, color: "#FF6B6B", offsetY: 0 },
+    { name: "Base", icon: OkxIcon, color: "#0052FF", offsetY: 20 },
+    { name: "Mantle", icon: MantleIcon, color: "#7B3FF2", offsetY: 40 },
   ];
 
   useEffect(() => {
@@ -45,11 +56,15 @@ export const BlockchainCarousel = () => {
                   ${
                     isActive
                       ? "bg-theme/20 border border-theme/30"
-                      : "bg-white/5 border border-white/10 hover:bg-white/10"
+                      : "bg-white/30 border border-white/50"
                   }
                 `}
                 >
-                  <TelegramIcon fill={isActive ? "var(--color-theme)" : ''} />
+                  {
+                    blockchain.name === 'Base' ? (
+                      <div className={`w-5 h-5 rounded-xs ${isActive ? 'bg-white' : 'bg-white/30'}`}></div>
+                    ) : blockchain.name === 'GIWA' ? <Image src="/images/giwa-logo.webp" className="w-2/3" width={30} height={39} alt="giwa" /> : <DynamicIcon icon={blockchain.icon} size={32} fill={isActive ? "var(--color-theme)" : ''} />
+                  }
                 </div>
             </div>
           );

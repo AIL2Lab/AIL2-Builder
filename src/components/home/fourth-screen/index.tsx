@@ -5,7 +5,7 @@ export default function HomeFourthScreen() {
     return (
         <div className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 px-5">
             <div className="justify-center flex flex-col items-center">
-                <div className="ai-l2-btn w-fit text-base md:text-xl border border-theme/30 py-2.5 px-5 rounded-2xl">{t('fourthScreen.title')}</div>
+                <div className="ai-l2-btn w-fit text-base md:text-xl border border-theme/30 py-2.5 px-8 rounded-2xl">{t('fourthScreen.title')}</div>
                 <div className="mt-5 font-bold text-base md:text-3xl text-center whitespace-nowrap">{t.rich('fourthScreen.superLayer', {br: () => <br />})}</div>
                 <div className="mt-5 text-theme text-lg md:text-3xl font-normal">{t('fourthScreen.architecture')}</div>
             </div>

@@ -28,7 +28,7 @@ export default function Footer() {
                 placeholder={t('emailPlaceholder')}
                 name="email"
                 maxLength={256}
-                className="sm:w-20 md:w-40"
+                className="w-20 md:w-40"
               />
               <button
                 type="submit"
