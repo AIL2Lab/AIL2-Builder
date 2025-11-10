@@ -8,7 +8,7 @@ export default function NotFoundPage() {
   const t = useTranslations("NotFoundPage");
 
   return (
-    <PageLayout title={t("title")} isShowFooter={false} className="pt-6 md:pt-12">
+    <PageLayout isShowFooter={false} className="pt-6 md:pt-12">
       <div className="relative flex flex-1 flex-col bg-[url(/images/bg-star-sky.png)] bg-no-repeat bg-cover">
         <div className="mx-20 lg:mx-auto flex-1 flex items-center">
           <div className="w-full grid grid-cols-2 pt-10 sm:pt-20">
