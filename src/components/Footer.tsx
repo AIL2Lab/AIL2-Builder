@@ -9,8 +9,6 @@ import { useActionState } from "react";
 export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
   const t = useTranslations("Footer")
-  console.log(state);
-  
   return (
     <footer className="footer w-full mx-auto lg:max-w-7xl my-8  md:my-24 lg:my-32">
       <div className="grid grid-cols-6 p-5 lg:p-10 xl:p-20">
