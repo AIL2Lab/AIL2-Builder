@@ -18,12 +18,12 @@
   --color-theme-30: --alpha(var(--theme) / 30%)
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
     --foreground: #171717;
   }
-}
+} */
 
 html,body {
   height: 100%;
