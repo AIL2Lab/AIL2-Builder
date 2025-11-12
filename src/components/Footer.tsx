@@ -4,14 +4,13 @@ import { TwitterIcon } from "./icons/Twitter";
 import { TelegramIcon } from "./icons/Telegram";
 import { MediumIcon } from "./icons/Medium";
 import { useTranslations } from "next-intl";
+import { useActionState } from "react";
+
 export default function Footer() {
+  const [state, submitAction, isPending] = useActionState(addEmail, null);
   const t = useTranslations("Footer")
-  const getEmail = async (formData: FormData) => {
-    const email = formData.get("email");
-    console.log(email);
-    // 数据库操作
-    addEmail(email as string);
-  };
+  console.log(state);
+  
   return (
     <footer className="footer w-full mx-auto lg:max-w-7xl my-8  md:my-24 lg:my-32">
       <div className="grid grid-cols-6 p-5 lg:p-10 xl:p-20">
@@ -22,13 +21,13 @@ export default function Footer() {
                 br: () => <br />
               })}
             </div>
-            <form action={getEmail} className="email-form border border-theme flex justify-between pl-2.5">
+            <form action={submitAction} className="email-form border border-theme flex justify-between pl-2.5">
               <input
                 type="text"
-                placeholder={t('emailPlaceholder')}
+                placeholder={ state?.success ? t('emailReceived') :t('emailPlaceholder')}
                 name="email"
                 maxLength={256}
-                className="w-20 md:w-40"
+                className="flex-1"
               />
               <button
                 type="submit"
