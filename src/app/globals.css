@@ -7,6 +7,12 @@
 }
 
 @theme inline {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -14,8 +20,8 @@
   --font-sora: var(--font-sora);
 
   --color-theme: var(--theme);
-  --color-theme-20: --alpha(var(--theme) / 20%)
-  --color-theme-30: --alpha(var(--theme) / 30%)
+  --color-theme-20: --alpha(var(--theme) / 20%);
+  --color-theme-30: --alpha(var(--theme) / 30%);
 }
 
 /* @media (prefers-color-scheme: dark) {

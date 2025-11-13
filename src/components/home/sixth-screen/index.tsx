@@ -76,7 +76,7 @@ const images = [
 export default function HomeSixthScreen() {
   const t = useTranslations("Home")
   return (
-    <section className="w-full mx-auto lg:max-w-7xl my-6 sm:my-12 md:my-24 lg:my-32 px-5">
+    <section className="w-full mx-auto lg:max-w-7xl my-5 sm:my-8 md:my-12 lg:my-16 px-5">
       <div className="text-center font-bold text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-20 px-20">
         {t.rich('sixthScreen.expert', {
           theme: (chunks) => <span className="text-theme">{chunks}</span>

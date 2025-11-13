@@ -5,6 +5,7 @@ import { BnbIcon } from "@/components/icons/Bnb";
 import { OkxIcon } from "@/components/icons/Okx";
 import { MantleIcon } from "@/components/icons/Mantle";
 import Image from "next/image";
+import useBreakpoint from "@/hooks/useBreakpoint";
 interface DynamicIconProps {
   icon: React.ComponentType<any>; 
   size?: number;
@@ -15,15 +16,17 @@ const DynamicIcon = ({icon,...props }: DynamicIconProps) => {
   return <IconComponent {...props} />;
 };
 export const BlockchainCarousel = () => {
+  const breakpoint = useBreakpoint();
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const blockchains = [
-    { name: "Ethereum", icon: EthereumIcon, color: "#627EEA", offsetY: 40, },
-    { name: "BSC", icon: BnbIcon, color: "#F0B90B", offsetY: 20, },
-    { name: "GIWA", icon: OkxIcon, color: "#00D4FF", offsetY: 0,},
-    { name: "XLayer", icon: OkxIcon, color: "#FF6B6B", offsetY: 0 },
-    { name: "Base", icon: OkxIcon, color: "#0052FF", offsetY: 20 },
-    { name: "Mantle", icon: MantleIcon, color: "#7B3FF2", offsetY: 40 },
+    { name: "Ethereum", icon: EthereumIcon, offsetY: 50, size: 50 },
+    { name: "BSC", icon: BnbIcon,  offsetY: 25, size: 50},
+    { name: "GIWA", icon: OkxIcon,  offsetY: 0, size: 50},
+    { name: "XLayer", icon: OkxIcon,  offsetY: 0 , size: 60},
+    { name: "Base", icon: OkxIcon,  offsetY: 25 , size: 50},
+    { name: "Mantle", icon: MantleIcon, offsetY: 50, size: 50 },
   ];
 
   useEffect(() => {
@@ -34,7 +37,7 @@ export const BlockchainCarousel = () => {
   }, [blockchains.length]);
   return (
     <div className="w-full flex items-center justify-center my-10">
-      <div className="w-full lg:w-[800px] flex justify-between px-5 sm:px-10">
+      <div className="w-full lg:w-[800px] xl:w-[1000px] flex justify-between px-5 sm:px-10">
         {blockchains.map((blockchain, index) => {
           const isActive = index === activeIndex;
 
@@ -51,7 +54,7 @@ export const BlockchainCarousel = () => {
                 { isActive && <div className="text-xs sm:text-sm md:text-base">{blockchain.name}</div>}
               <div
                   className={`
-                  relative w-8 h-8 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center
+                  relative w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-lg flex items-center justify-center
                   backdrop-blur-md transition-all duration-500
                   ${
                     isActive
@@ -62,8 +65,8 @@ export const BlockchainCarousel = () => {
                 >
                   {
                     blockchain.name === 'Base' ? (
-                      <div className={`w-5 h-5 rounded-xs ${isActive ? 'bg-white' : 'bg-white/30'}`}></div>
-                    ) : blockchain.name === 'GIWA' ? <Image src="/images/giwa-logo.webp" className="w-2/3" width={30} height={39} alt="giwa" /> : <DynamicIcon icon={blockchain.icon} size={32} fill={isActive ? "var(--color-theme)" : ''} />
+                      <div className={`w-5 h-5 lg:w-8 lg:h-8  rounded-xs ${isActive ? 'bg-white' : 'bg-white/30'}`}></div>
+                    ) : blockchain.name === 'GIWA' ? <Image src="/images/giwa-logo.webp" className="w-2/3" width={81} height={103} alt="giwa" /> : <DynamicIcon icon={blockchain.icon} size={breakpoint === 'xs'|| breakpoint === 'sm'  ? 30:50} fill={isActive ? "var(--color-theme)" : ''} />
                   }
                 </div>
             </div>

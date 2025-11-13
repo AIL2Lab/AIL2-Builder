@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function HomeFourthScreen() {
     const t = useTranslations("Home")
     return (
-        <div className="container mx-auto lg:max-w-7xl md:my-24 lg:my-32 px-5">
+        <div className="container mx-auto lg:max-w-7xl my-5 sm:my-8 md:my-12 lg:my-16 px-5">
             <div className="justify-center flex flex-col items-center">
                 <div className="ai-l2-btn w-fit text-base md:text-xl border border-theme/30 py-2.5 px-8 rounded-2xl">{t('fourthScreen.title')}</div>
                 <div className="mt-5 font-bold text-base md:text-3xl text-center whitespace-nowrap">{t.rich('fourthScreen.superLayer', {br: () => <br />})}</div>

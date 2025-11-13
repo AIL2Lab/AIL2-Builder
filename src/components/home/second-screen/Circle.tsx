@@ -27,7 +27,7 @@ export default function Circle() {
         isRightBorder
         text="800M+"
         subtext={t("tag1")}
-        className="absolute top-15 sm:left-1/10 sm:top-1/10 lg:left-1/10 lg:top-1/10"
+        className="absolute top-12 sm:left-1/10 sm:top-1/10 lg:left-1/10 lg:top-1/10"
       >
         <ArrowIcon />
       </Tag>
@@ -35,7 +35,7 @@ export default function Circle() {
         isRightBorder
         text="10K+"
         subtext={t("tag2")}
-        className="absolute -bottom-10 sm:left-1/8 sm:-bottom-1/10 lg:left-1/6 lg:bottom-1/8"
+        className="absolute -bottom-8 sm:left-1/8 sm:-bottom-1/10 lg:left-1/6 lg:bottom-1/8"
       >
         <ValidatorIcon />
       </Tag>

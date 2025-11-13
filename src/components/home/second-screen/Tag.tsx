@@ -18,7 +18,7 @@ export default function Tag({children, className, text, subtext, isRightBorder}:
                 {children}
             </div>
             <div className="flex flex-col">
-                <span className="text-lg sm:text-2xl md:text-xl font-medium text-theme">{text}</span>
+                <span className="text-base sm:text-lg md:text-xl font-medium text-theme">{text}</span>
                 <span className="text-sm md:text-base">{subtext}</span>
             </div>
         </div>

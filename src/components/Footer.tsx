@@ -10,7 +10,7 @@ export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
   const t = useTranslations("Footer")
   return (
-    <footer className="footer w-full mx-auto lg:max-w-7xl my-8  md:my-24 lg:my-32">
+    <footer className="footer w-full mx-auto lg:max-w-7xl my-5 sm:my-8 md:my-12 lg:my-16">
       <div className="grid grid-cols-6 p-5 lg:p-10 xl:p-20">
         <div className="col-span-6  md:col-span-3 px-0 lg:px-10">
           <div className="footer-email p-5 lg:p-10 space-y-2.5">

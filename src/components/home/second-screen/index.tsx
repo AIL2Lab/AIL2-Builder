@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 export default function HomeSecondScreen() {
   const t = useTranslations("Home")
   return (
-    <div className="w-full mx-auto lg:max-w-7xl my-8 sm:my-16 md:my-24 lg:my-32 px-5 sm:px-10 md:px-20">
+    <div className="w-full mx-auto lg:max-w-7xl my-4 sm:my-8 md:my-12 lg:my-16 px-5 sm:px-10 md:px-20">
       <div className="sm:h-100 lg:h-140 sm:bg-[url(/images/Subtract-md.png)] lg:bg-[url(/images/Subtract.png)] bg-no-repeat bg-size-[100%_100%]">
         <div className="w-full sm:flex justify-between h-full">
           <div className="sm:flex sm:w-1/2 h-fit sm:mt-10 lg:mt-20 md:pl-10 lg:pl-20">
@@ -34,7 +34,7 @@ export default function HomeSecondScreen() {
           </div>
         </div>
       </div>
-      <div className="my-30 lg:mt-40">
+      <div className="mt-20 mb-20 lg:mb-0">
         <Circle />
       </div>
     </div>
