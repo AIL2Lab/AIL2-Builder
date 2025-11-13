@@ -1,35 +1,34 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const items = [
-  {
-    id: 1,
-    title: "Endless scalability",
-    description:
-      "Scalability without limits, enabling Al and Web3 applications to achieve unrestricted growth.",
-    image: "https://picsum.photos/seed/design/800/600.jpg",
-  },
-  {
-    id: 2,
-    title: "GPU Driver",
-    description:
-      "GPU miners deploy Al models,developers don't need to manage or maintain them.",
-    image: "https://picsum.photos/seed/tech/800/600.jpg",
-  },
-  {
-    id: 3,
-    title: "Fluid Composability",
-    description:
-      "Developers can integrate effortlessly to build, link, and scale Al-powered Web3 applications with ease.",
-    image: "https://picsum.photos/seed/ux/800/600.jpg",
-  },
-];
+
 
 export default function Shower() {
+  const t = useTranslations("Home.thirdScreen.items")
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
+  const items = [
+    {
+      id: 1,
+      title: t("item1.title"),
+      description: t("item1.description"),
+      image: "https://picsum.photos/seed/design/800/600.jpg",
+    },
+    {
+      id: 2,
+      title: t("item2.title"),
+      description: t("item2.description"),
+      image: "https://picsum.photos/seed/tech/800/600.jpg",
+    },
+    {
+      id: 3,
+      title: t("item3.title"),
+      description: t("item3.description"),
+      image: "https://picsum.photos/seed/ux/800/600.jpg",
+    },
+  ];
   // 自动轮播
   useEffect(() => {
     if (isHovered) return;
@@ -120,19 +119,6 @@ export default function Shower() {
           </div>
         </div>
       </div>
-      {/* <div className="flex gap-2 mt-8 ml-8">
-        {items.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              activeIndex === index
-                ? "w-8 bg-blue-500"
-                : "bg-slate-300 hover:bg-slate-400"
-            }`}
-          />
-        ))}
-      </div> */}
     </div>
   );
 }

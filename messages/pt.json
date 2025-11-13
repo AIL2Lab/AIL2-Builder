@@ -1,0 +1,87 @@
+{
+  "site": {
+    "name": "AIL2 - o maior AIL2",
+    "description": "Modelos de IA rodam de forma totalmente descentralizada, com escalabilidade infinita, capacitando desenvolvedores a acelerar o desenvolvimento de aplicações de IA descentralizadas em 100x em seis blockchains: ETH, BSC, GIWA, XLayer, Base e Mantle."
+  },
+  "Error": {
+    "description": "<p>Infelizmente, encontramos um erro.</p><p>Você pode tentar <retry>recarregar a página</retry> que estava visitando.</p>",
+    "title": "Algo deu errado!"
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, zh {Chinês} en {Inglês} es {Espanhol} ko {Coreano} ja {Japonês} pt {Português} ru {Russo} tr {Turco} other {Desconhecido}}"
+  },
+  "Navbar": {
+    "research": "Pesquisa",
+    "ecosystem": "Ecossistema",
+    "learn": "Aprender",
+    "blog": "Blog"
+  },
+  "Home": {
+    "supportBtn": "Apoie o AIL2 no X",
+    
+    "firstScreen": {
+      "text": "O maior AIL2 para"
+    },
+    "secondScreen": {
+      "title": "Acelere o Desenvolvimento de IA Descentralizada 100x",
+      "text": "Modelos de IA rodam de forma totalmente descentralizada, com escalabilidade infinita, capacitando desenvolvedores a acelerar o desenvolvimento de aplicações de IA descentralizadas em 100x em seis blockchains: ETH, BSC, GIWA, XLayer, Base e Mantle.",
+      "tags": {
+        "tag1": "Transações na Testnet",
+        "tag2": "Validadores da Testnet",
+        "tag3": "Contas ativas",
+        "tag4": "App DeAI"
+      }
+    },
+    "thirdScreen": {
+      "text": "O maior ecossistema impulsionado pela comunidade para aplicações de IA descentralizadas.",
+      "items": {
+        "item1": {
+          "title": "Escalabilidade infinita",
+          "description": "Escalabilidade sem limites, permitindo que aplicações de IA e Web3 alcancem um crescimento irrestrito."
+        },
+        "item2": {
+          "title": "Driver de GPU",
+          "description": "Mineradores de GPU implantam modelos de IA, os desenvolvedores não precisam gerenciá-los ou mantê-los."
+        },
+        "item3": {
+          "title": "Componibilidade fluida",
+          "description": "Desenvolvedores podem se integrar sem esforço para construir, conectar e escalar aplicações Web3 alimentadas por IA com facilidade."
+        }
+      }
+    },
+    "fourthScreen": {
+      "title": "O Maior AI L2",
+      "superLayer": "A Super Camada de AI que Unifica<br></br>ETH, BSC, GIWA, XLayer, Base, Mantle",
+      "architecture": "Arquitetura de 5 Camadas do AIL2"
+    },
+    "fifthScreen": {
+      "acceleration": "A aceleração do AIL2 permite que os desenvolvedores construam IA descentralizada em blockchains públicas com <theme>100x de aceleração</theme>"
+    },
+    "sixthScreen": {
+      "expert": "Apoiado pelos principais <theme>especialistas em IA</theme> do mundo",
+      "joinBuilders": "Junte-se aos <theme>construtores da AIL2</theme>. Nossa comunidade está se expandindo rapidamente—Vamos construir o futuro da IA descentralizada juntos",
+      "supported": "Somos Apoiados Por"
+    },
+    "seventhScreen": {
+      "partners": "Parceiros do Ecossistema",
+      "community": "Junte-se à comunidade global da <theme>AIL2</theme>",
+      "ecosystem": "Veja o maior ecossistema de AI L2"
+    }
+  },
+  "Footer": {
+    "emailTip": "Assine nossa<br></br> newsletter",
+    "emailPlaceholder": "Seu e-mail",
+    "emailReceived": "Obrigado! Sua submissão foi recebida!",
+    "emailBtnText": "Assinar",
+    "copyright": "©2025 AIL2. Todos os direitos reservados.",
+    "socials": "Redes sociais",
+    "product": "Produto",
+    "blog": "Blog",
+    "ecosystem": "Ecossistema"
+  },
+  "NotFoundPage": {
+    "title": "Página Não Encontrada",
+    "description": "Desculpe, não conseguimos encontrar a página que você está procurando",
+    "backHome": "Voltar para o início"
+  }
+}

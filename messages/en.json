@@ -8,8 +8,13 @@
     "title": "Something went wrong!"
   },
   "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, zh {Zh} en {En} other {Unknown}}"
+    "locale": "{locale, select, zh {Chinese} en {English} es {Spanish} ko {Korean} ja {Japanese} pt {Portuguese} ru {Russian} tr {Turkish} other {Unknown}}"
+  },
+  "Navbar": {
+    "research": "Research",
+    "ecosystem": "Ecosystem",
+    "learn": "Learn",
+    "blog": "Blog"
   },
   "Home": {
     "supportBtn": "Support AIL2 on X",
@@ -19,10 +24,30 @@
     },
     "secondScreen": {
       "title": "Accelerate Decentralized AI Development 100x",
-      "text": "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle."
+      "text": "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle.",
+      "tags": {
+        "tag1": "Transactions on Testnet",
+        "tag2": "Testnet Validators",
+        "tag3": "Active accounts",
+        "tag4": "DeAI APP"
+      }
     },
     "thirdScreen": {
-      "text": "The largest community-driven ecosystem for decentralized Al apps."
+      "text": "The largest community-driven ecosystem for decentralized Al apps.",
+      "items": {
+        "item1": {
+          "title": "Endless scalability",
+          "description": "Scalability without limits, enabling Al and Web3 applications to achieve unrestricted growth."
+        },
+        "item2": {
+          "title": "GPU Driver",
+          "description": "GPU miners deploy Al models, developers don't need to manage or maintain them."
+        },
+        "item3": {
+          "title": "Fluid Composability",
+          "description": "Developers can integrate effortlessly to build, link, and scale Al-powered Web3 applications with ease."
+        }
+      }
     },
     "fourthScreen": {
       "title": "The Largest AI L2",

@@ -4,8 +4,10 @@ import { ValidatorIcon } from "@/components/icons/Validator";
 import { PersonIcon } from "@/components/icons/Person";
 import { AppIcon } from "@/components/icons/App";
 import Tag from "./Tag";
+import { useTranslations } from "next-intl";
 
 export default function Circle() {
+  const t = useTranslations("Home.secondScreen.tags")
   return (
     <div className="w-full flex items-center justify-center relative">
       <Image
@@ -24,7 +26,7 @@ export default function Circle() {
       <Tag
         isRightBorder
         text="800M+"
-        subtext="Transactions on Testnet"
+        subtext={t("tag1")}
         className="absolute top-15 sm:left-1/10 sm:top-1/10 lg:left-1/10 lg:top-1/10"
       >
         <ArrowIcon />
@@ -32,7 +34,7 @@ export default function Circle() {
       <Tag
         isRightBorder
         text="10K+"
-        subtext="Testnet Validators"
+        subtext={t("tag2")}
         className="absolute -bottom-10 sm:left-1/8 sm:-bottom-1/10 lg:left-1/6 lg:bottom-1/8"
       >
         <ValidatorIcon />
@@ -40,7 +42,7 @@ export default function Circle() {
       <Tag
         isRightBorder={false}
         text="20M+"
-        subtext="Active accounts"
+        subtext={t("tag3")}
         className="absolute -top-10 sm:right-1/6 sm:top-0 lg:right-1/6 lg:top-1/6"
       >
         <PersonIcon />
@@ -48,7 +50,7 @@ export default function Circle() {
       <Tag
         isRightBorder={false}
         text="1000+"
-        subtext="DeAI  APP"
+        subtext={t("tag4")}
         className="absolute bottom-15 sm:right-1/10 sm:bottom-1/5 lg:right-3/10 lg:bottom-1/5"
       >
         <AppIcon />

@@ -1,0 +1,87 @@
+{
+  "site": {
+    "name": "AIL2 - 最大のAIL2",
+    "description": "AIモデルは完全に分散化され、無限のスケーラビリティを備えています。これにより、開発者はETH、BSC、GIWA、XLayer、Base、Mantleの6つのブロックチェーンで、分散型AIアプリケーションの開発を100倍加速できます。"
+  },
+  "Error": {
+    "description": "<p>誠に申し訳ありません、エラーが発生しました。</p><p>アクセスしていたページを<retry>再読み込み</retry>してください。</p>",
+    "title": "問題が発生しました！"
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, zh {中国語} en {英語} es {スペイン語} ko {韓国語} ja {日本語} pt {ポルトガル語} ru {ロシア語} tr {トルコ語} other {不明}}"
+  },
+  "Navbar": {
+    "research": "リサーチ",
+    "ecosystem": "エコシステム",
+    "learn": "学ぶ",
+    "blog": "ブログ"
+  },
+  "Home": {
+    "supportBtn": "XでAIL2をサポート",
+    
+    "firstScreen": {
+      "text": "のための最大のAIL2"
+    },
+    "secondScreen": {
+      "title": "分散型AI開発を100倍加速",
+      "text": "AIモデルは完全に分散化され、無限のスケーラビリティを備えています。これにより、開発者はETH、BSC、GIWA、XLayer、Base、Mantleの6つのブロックチェーンで、分散型AIアプリケーションの開発を100倍加速できます。",
+      "tags": {
+        "tag1": "テストネットのトランザクション",
+        "tag2": "テストネットのバリデーター",
+        "tag3": "アクティブアカウント",
+        "tag4": "DeAIアプリ"
+      }
+    },
+    "thirdScreen": {
+      "text": "分散型AIアプリのための最大のコミュニティドリブンエコシステム。",
+      "items": {
+        "item1": {
+          "title": "無限のスケーラビリティ",
+          "description": "制限のないスケーラビリティにより、AIおよびWeb3アプリケーションが制約なく成長できるようにします。"
+        },
+        "item2": {
+          "title": "GPUドライバー",
+          "description": "GPUマイナーがAIモデルをデプロイするため、開発者が管理や保守を行う必要はありません。"
+        },
+        "item3": {
+          "title": "流動的なコンポーザビリティ",
+          "description": "開発者はシームレスに統合し、AI駆動のWeb3アプリケーションを簡単に構築、リンク、スケールできます。"
+        }
+      }
+    },
+    "fourthScreen": {
+      "title": "最大のAI L2",
+      "superLayer": "ETH、BSC、GIWA、XLayer、Base、Mantleを統合する<br></br>AIスーパーレイヤー",
+      "architecture": "AIL2 5層アーキテクチャ"
+    },
+    "fifthScreen": {
+      "acceleration": "AIL2の加速により、開発者はパブリックブロックチェーン上で分散型AIを構築し、<theme>100倍の加速</theme>を実現できます"
+    },
+    "sixthScreen": {
+      "expert": "世界トップクラスの<theme>AI専門家</theme>から支援を受けています",
+      "joinBuilders": "<theme>AIL2ビルダー</theme>に参加しましょう。私たちのコミュニティは急速に拡大していますー一緒に分散型AIの未来を築きましょう",
+      "supported": "支援元"
+    },
+    "seventhScreen": {
+      "partners": "エコシステムパートナー",
+      "community": "<theme>AIL2</theme>グローバルコミュニティに参加",
+      "ecosystem": "最大のAI L2エコシステムを見る"
+    }
+  },
+  "Footer": {
+    "emailTip": "ニュースレターの<br></br>ご登録",
+    "emailPlaceholder": "あなたのメールアドレス",
+    "emailReceived": "ありがとうございます！ご提出いただきました内容を受信しました！",
+    "emailBtnText": "購読する",
+    "copyright": "©2025 AIL2. すべての権利を保有。",
+    "socials": "ソーシャル",
+    "product": "プロダクト",
+    "blog": "ブログ",
+    "ecosystem": "エコシステム"
+  },
+  "NotFoundPage": {
+    "title": "ページが見つかりません",
+    "description": "申し訳ありません、お探しのページが見つかりませんでした",
+    "backHome": "ホームに戻る"
+  }
+}

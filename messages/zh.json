@@ -8,8 +8,13 @@
     "title": "出问题了！"
   },
   "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, zh {中文} en {英文} other {未知}}"
+    "locale": "{locale, select, zh {中文} en {英文} es {西班牙语} ko {韩语} ja {日语} pt {葡萄牙语} ru {俄语} tr {土耳其语} other {未知}}"
+  },
+  "Navbar": {
+    "research": "研究",
+    "ecosystem": "生态系统",
+    "learn": "学习",
+    "blog": "博客"
   },
   "Home": {
     "supportBtn": "X 上支持AIL2",
@@ -18,10 +23,30 @@
     },
     "secondScreen": {
       "title": "将去中心化人工智能开发速度提升100倍",
-      "text": "AI 模型完全去中心化运行，具有无限可扩展性，赋能开发者加速去中心化 AI 应用开发，在六条区块链（ETH、BSC、GIWA、XLayer、Base 和 Mantle）上实现 100 倍的开发速度提升。"
+      "text": "AI 模型完全去中心化运行，具有无限可扩展性，赋能开发者加速去中心化 AI 应用开发，在六条区块链（ETH、BSC、GIWA、XLayer、Base 和 Mantle）上实现 100 倍的开发速度提升。",
+      "tags": {
+        "tag1": "测试网上的交易",
+        "tag2": "测试网验证器",
+        "tag3": "活跃账户",
+        "tag4": "DeAI 应用"
+      }
     },
     "thirdScreen": {
-      "text": "最大的去中心化人工智能应用社区驱动型生态系统。"
+      "text": "最大的去中心化人工智能应用社区驱动型生态系统。",
+      "items": {
+        "item1": {
+          "title": "无限扩展性",
+          "description": "无限制的扩展能力，让AI和Web3应用实现无约束增长。"
+        },
+        "item2": {
+          "title": "GPU驱动",
+          "description": "GPU矿工部署AI模型，开发者无需管理和维护。"
+        },
+        "item3": {
+          "title": "流畅可组合性",
+          "description": "开发者可以轻松集成，构建、连接和扩展AI驱动的Web3应用。"
+        }
+      }
     },
     "fourthScreen": {
       "title": "最大的人工智能L2",

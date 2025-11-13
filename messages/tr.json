@@ -1,0 +1,87 @@
+{
+  "site": {
+    "name": "AIL2 - en büyük AIL2",
+    "description": "AI modelleri tamamen merkeziyetsiz olarak, sonsuz ölçeklenebilirlikle çalışır ve geliştiricileri ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı blockchain üzerinde merkeziyetsiz AI uygulama geliştirmelerini 100x hızlandırmak için güçlendirir."
+  },
+  "Error": {
+    "description": "<p>Ne yazık ki bir hatayla karşılaştık.</p><p>Ziyaret ettiğiniz sayfayı <retry>yeniden yüklemeyi</retry> deneyebilirsiniz.</p>",
+    "title": "Bir şeyler yanlış gitti!"
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, zh {Çince} en {İngilizce} es {İspanyolca} ko {Korece} ja {Japonca} pt {Portekizce} ru {Rusça} tr {Türkçe} other {Bilinmiyor}}"
+  },
+  "Navbar": {
+    "research": "Araştırma",
+    "ecosystem": "Ekosistem",
+    "learn": "Öğren",
+    "blog": "Blog"
+  },
+  "Home": {
+    "supportBtn": "X'te AIL2'yi Destekle",
+    
+    "firstScreen": {
+      "text": "İçin en büyük AIL2"
+    },
+    "secondScreen": {
+      "title": "Merkeziyetsiz AI Geliştirmeyi 100x Hızlandırın",
+      "text": "AI modelleri tamamen merkeziyetsiz olarak, sonsuz ölçeklenebilirlikle çalışır ve geliştiricileri ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı blockchain üzerinde merkeziyetsiz AI uygulama geliştirmelerini 100x hızlandırmak için güçlendirir.",
+      "tags": {
+        "tag1": "Testnet İşlemleri",
+        "tag2": "Testnet Doğrulayıcıları",
+        "tag3": "Aktif hesaplar",
+        "tag4": "DeAI Uygulaması"
+      }
+    },
+    "thirdScreen": {
+      "text": "Merkeziyetsiz AI uygulamaları için en büyük topluluk odaklı ekosistem.",
+      "items": {
+        "item1": {
+          "title": "Sonsuz ölçeklenebilirlik",
+          "description": "Sınırsız ölçeklenebilirlik, AI ve Web3 uygulamalarının kısıtsız büyüme achievedilmesini sağlar."
+        },
+        "item2": {
+          "title": "GPU Sürücüsü",
+          "description": "GPU madencileri AI modellerini devreye alır, geliştiricilerin bunları yönetmesine veya bakımını yapmasına gerek kalmaz."
+        },
+        "item3": {
+          "title": "Akıcı Bileşebilirlik",
+          "description": "Geliştiriciler, AI destekli Web3 uygulamalarını kolayca oluşturmak, bağlamak ve ölçeklendirmek için zahmetsizce entegre olabilir."
+        }
+      }
+    },
+    "fourthScreen": {
+      "title": "En Büyük AI L2",
+      "superLayer": "ETH, BSC, GIWA, XLayer, Base, Mantle'i birleştiren<br></br>AI Süper Katmanı",
+      "architecture": "AIL2 5 Katmanlı Mimarisi"
+    },
+    "fifthScreen": {
+      "acceleration": "AIL2'nin hızlandırması, geliştiricilerin herkese açık blockchain'lerde merkeziyetsiz AI oluşturmasını ve <theme>100x hızlanma</theme> sağlamasını sağlar"
+    },
+    "sixthScreen": {
+      "expert": "Dünyanın en iyi <theme>AI Uzmanları</theme> tarafından desteklenmektedir",
+      "joinBuilders": "<theme>AIL2 geliştiricilerine</theme> katılın. Topluluğumuz hızla genişliyor—Birlikte merkeziyetsiz AI'nın geleceğini inşa edelim",
+      "supported": "Bizi Destekleyenler"
+    },
+    "seventhScreen": {
+      "partners": "Ekosistem Ortakları",
+      "community": "<theme>AIL2</theme> Küresel Topluluğuna Katılın",
+      "ecosystem": "En büyük AI L2 ekosistemini görün"
+    }
+  },
+  "Footer": {
+    "emailTip": "Bültenimize<br></br> kaydolun",
+    "emailPlaceholder": "E-postanız",
+    "emailReceived": "Teşekkürler! Gönderiniz alındı!",
+    "emailBtnText": "Abone Ol",
+    "copyright": "©2025 AIL2. Tüm hakları saklıdır.",
+    "socials": "Sosyal Medya",
+    "product": "Ürün",
+    "blog": "Blog",
+    "ecosystem": "Ekosistem"
+  },
+  "NotFoundPage": {
+    "title": "Sayfa Bulunamadı",
+    "description": "Üzgünüz, aradığınız sayfayı bulamadık",
+    "backHome": "Ana sayfaya geri dön"
+  }
+}

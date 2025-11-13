@@ -1,0 +1,87 @@
+{
+  "site": {
+    "name": "AIL2 - 가장 큰 AIL2",
+    "description": "AI 모델은 완전히 분산되어 무한한 확장성을 가지며, 개발자가 ETH, BSC, GIWA, XLayer, Base, Mantle의 6개 블록체인에서 분산형 AI 애플리케이션 개발 속도를 100배 가속화하도록 지원합니다."
+  },
+  "Error": {
+    "description": "<p>죄송하게도 오류가 발생했습니다.</p><p>방문하시던 페이지를 <retry>새로고침</retry>해 보세요.</p>",
+    "title": "문제가 발생했습니다!"
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, zh {중국어} en {영어} es {스페인어} ko {한국어} ja {일본어} pt {포르투갈어} ru {러시아어} tr {터키어} other {알 수 없음}}"
+  },
+  "Navbar": {
+    "research": "리서치",
+    "ecosystem": "생태계",
+    "learn": "학습",
+    "blog": "블로그"
+  },
+  "Home": {
+    "supportBtn": "X에서 AIL2 지원하기",
+    
+    "firstScreen": {
+      "text": "을 위한 가장 큰 AIL2"
+    },
+    "secondScreen": {
+      "title": "분산형 AI 개발 100배 가속화",
+      "text": "AI 모델은 완전히 분산되어 무한한 확장성을 가지며, 개발자가 ETH, BSC, GIWA, XLayer, Base, Mantle의 6개 블록체인에서 분산형 AI 애플리케이션 개발 속도를 100배 가속화하도록 지원합니다.",
+      "tags": {
+        "tag1": "테스트넷 거래",
+        "tag2": "테스트넷 검증자",
+        "tag3": "활성 계정",
+        "tag4": "DeAI 앱"
+      }
+    },
+    "thirdScreen": {
+      "text": "분산형 AI 앱을 위한 가장 큰 커뮤니티 주도 생태계.",
+      "items": {
+        "item1": {
+          "title": "끝없는 확장성",
+          "description": "제한 없는 확장성으로 AI 및 Web3 애플리케이션이 제약 없는 성장을 이루도록 합니다."
+        },
+        "item2": {
+          "title": "GPU 드라이버",
+          "description": "GPU 채굴자가 AI 모델을 배포하므로, 개발자가 관리하거나 유지할 필요가 없습니다."
+        },
+        "item3": {
+          "title": "유연한 조합 가능성",
+          "description": "개발자는 손쉽게 통합하여 AI 기반 Web3 애플리케이션을 구축, 연결 및 확장할 수 있습니다."
+        }
+      }
+    },
+    "fourthScreen": {
+      "title": "가장 큰 AI L2",
+      "superLayer": "ETH, BSC, GIWA, XLayer, Base, Mantle를 통합하는<br></br>AI 슈퍼레이어",
+      "architecture": "AIL2 5계층 아키텍처"
+    },
+    "fifthScreen": {
+      "acceleration": "AIL2의 가속화는 개발자가 퍼블릭 블록체인에서 분산형 AI를 구축하고 <theme>100배 가속</theme>을 실현할 수 있게 합니다"
+    },
+    "sixthScreen": {
+      "expert": "전 세계 최고 <theme>AI 전문가</theme>들의 지원을 받습니다",
+      "joinBuilders": "<theme>AIL2 빌더</theme>에 동참하세요. 우리 커뮤니티는 빠르게 성장하고 있습니다-함께 분산형 AI의 미래를 만들어갑시다",
+      "supported": "지원해 주시는 분들"
+    },
+    "seventhScreen": {
+      "partners": "생태계 파트너",
+      "community": "<theme>AIL2</theme> 글로벌 커뮤니티 가입",
+      "ecosystem": "가장 큰 AI L2 생태계 보기"
+    }
+  },
+  "Footer": {
+    "emailTip": "뉴스레터 <br></br> 구독하기",
+    "emailPlaceholder": "이메일 주소",
+    "emailReceived": "감사합니다! 제출이 완료되었습니다!",
+    "emailBtnText": "구독",
+    "copyright": "©2025 AIL2. 모든 권리 보유.",
+    "socials": "소셜 미디어",
+    "product": "제품",
+    "blog": "블로그",
+    "ecosystem": "생태계"
+  },
+  "NotFoundPage": {
+    "title": "페이지를 찾을 수 없습니다",
+    "description": "죄송합니다, 찾으시는 페이지를 찾을 수 없습니다",
+    "backHome": "홈으로 돌아가기"
+  }
+}
