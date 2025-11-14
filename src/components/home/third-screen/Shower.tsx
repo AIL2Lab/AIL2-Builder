@@ -29,7 +29,6 @@ export default function Shower() {
       image: "https://picsum.photos/seed/ux/800/600.jpg",
     },
   ];
-  // 自动轮播
   useEffect(() => {
     if (isHovered) return;
 
@@ -39,9 +38,8 @@ export default function Shower() {
 
     return () => clearInterval(interval);
   }, [isHovered]);
-
-  // 计算游标位置
-  const cursorPosition = activeIndex * 33;
+  
+  const cursorPosition = activeIndex * 33.33;
   return (
     <div className="container mx-auto ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -53,7 +51,7 @@ export default function Shower() {
           <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10">
             <div
               style={{ top: `${cursorPosition}%` }}
-              className="c-cursor w-0.5 h-24 bg-theme transition-all duration-700 ease-in-out absolute left-1/2 -translate-x-1/2"
+              className="c-cursor w-0.5 h-1/3 bg-theme transition-all duration-700 ease-in-out absolute left-1/2 -translate-x-1/2"
             >
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm rounded-full w-6 h-6 flex justify-center items-center">
                 <div className="w-3 h-3 bg-theme rounded-full  shadow-lg"></div>
@@ -64,7 +62,7 @@ export default function Shower() {
             {items.map((item, index) => (
               <div
                 key={item.id}
-                className={`cursor-pointer transition-all duration-500 transform ${
+                className={`h-1/3 cursor-pointer transition-all duration-500 transform ${
                   activeIndex === index
                     ? "opacity-100"
                     : "opacity-60 hover:opacity-80"
@@ -79,11 +77,11 @@ export default function Shower() {
                   >
                     {item.title}
                   </h3>
-                  <div
+                  {/* <div
                     className={`my-2.5 h-px bg-white/10 transition-all duration-500 ${
                       activeIndex === index ? "opacity-100" : "opacity-0"
                     }`}
-                  ></div>
+                  ></div> */}
                   <p
                     className={`pl-10 leading-relaxed transition-all duration-500 text-base ${
                       activeIndex === index ? "text-white/60" : "text-white/30"

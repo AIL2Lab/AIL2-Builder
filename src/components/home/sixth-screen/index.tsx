@@ -82,7 +82,7 @@ export default function HomeSixthScreen() {
           theme: (chunks) => <span className="text-theme">{chunks}</span>
         })}
       </div>
-      <div className="grid grid-cols-2 py-5 relative bg-[color:#121212] rounded-lg border-5 border-white/4">
+      <div className="grid grid-cols-2 py-5 relative bg-[#121212] rounded-4xl border-5 border-white/4">
         <div className="sm:col-span-1 col-span-2 flex flex-col items-center p-5 lg:p-0">
           <Image src="/images/lorem.png" alt="" width={449} height={565} />
         </div>
@@ -120,7 +120,7 @@ export default function HomeSixthScreen() {
          <Carousel3D images={images} autoPlay={true} interval={4000} />
         </div>
       </div>
-      <div>
+      {/* <div>
         <div className="text-center font-bold text-xl md:text-2xl lg:text-3xl mb-5 sm:mb-10 md:mb-20">
           {t('sixthScreen.supported')}
         </div>
@@ -139,7 +139,7 @@ export default function HomeSixthScreen() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

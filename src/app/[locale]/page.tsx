@@ -24,7 +24,7 @@ export default function IndexPage({params}: PageProps<'/[locale]'>) {
         <HomeFourthScreen />
         <HomeFifthScreen />
         <HomeSixthScreen />
-        <HomeSeventhScreen />
+        {/* <HomeSeventhScreen /> */}
     </PageLayout>
   );
 }
