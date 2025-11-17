@@ -63,7 +63,7 @@ export default function Footer() {
             {t('copyright')}
           </div>
           <div className="col-span-2 sm:col-span-1 flex justify-between  sm:justify-end ">
-            <div className="text-theme text-base font-normal mr-25">
+            <div className="text-theme text-base font-normal mr-20">
               {t('socials')}
             </div>
             <div className="flex gap-2.5">
