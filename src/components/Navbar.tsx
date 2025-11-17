@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 export default function Navbar() {
   const t = useTranslations("Navbar")
   return (
-    <div className="w-full sticky flex items-center justify-center top-6 md:top-12 z-10">
+    <div className="w-full sticky flex items-center justify-center top-6 md:top-12 z-50">
       <nav className="items-center hidden md:grid grid-cols-2 bg-[#121212] relative h-[84px] rounded-2xl">
         <div className="flex col-span-1 items-center pr-20 space-x-4 lg:space-x-6 xl:space-x-12">
             <div className="text-base font-normal ml-5 lg:ml-10">

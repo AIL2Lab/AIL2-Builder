@@ -6,6 +6,7 @@ import { EthereumIcon } from "@/components/icons/Ethereum";
 import { BnbIcon } from "@/components/icons/Bnb";
 import { MantleIcon } from '@/components/icons/Mantle';
 import { OkxIcon } from '@/components/icons/Okx';
+import { GiwaIcon } from "@/components/icons/Giwa";
 import useBreakpoint from '@/hooks/useBreakpoint';
 import clsx from 'clsx';
 
@@ -29,7 +30,7 @@ const BlockchainCarousel = ({ autoPlay = true, interval = 2500 }) => {
     },
     {
       name: 'GIWA',
-      icon: <Image src="/images/giwa-logo.webp" className={clsx(isPadAndPhone ?"w-3/4":"w-full")} width={81} height={103} alt="giwa" />,
+      icon: <GiwaIcon size={isPadAndPhone ? 66 : 96} fill="var(--color-theme)" />,
       color: '#00D4FF',
       bgColor: 'from-cyan-500/20 to-blue-500/20'
     },
@@ -100,8 +101,8 @@ const BlockchainCarousel = ({ autoPlay = true, interval = 2500 }) => {
             </motion.div>
           </AnimatePresence>
           <div className='absolute inset-0 flex justify-center items-center'>
-              <div className="relative group -top-1/8 scale-50 opacity-20">
-                <div>{next.icon}</div>
+              <div className="relative group -top-1/8 scale-50 blur-xs opacity-50">
+                <div className='flex justify-between items-center'>{next.icon}</div>
               </div>
           </div>
     </div>

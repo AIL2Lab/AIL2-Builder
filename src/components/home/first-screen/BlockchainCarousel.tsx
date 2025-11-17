@@ -4,8 +4,9 @@ import { EthereumIcon } from "@/components/icons/Ethereum";
 import { BnbIcon } from "@/components/icons/Bnb";
 import { OkxIcon } from "@/components/icons/Okx";
 import { MantleIcon } from "@/components/icons/Mantle";
-import Image from "next/image";
+import { GiwaIcon } from "@/components/icons/Giwa";
 import useBreakpoint from "@/hooks/useBreakpoint";
+
 interface DynamicIconProps {
   icon: React.ComponentType<any>; 
   size?: number;
@@ -23,7 +24,7 @@ export const BlockchainCarousel = () => {
   const blockchains = [
     { name: "Ethereum", icon: EthereumIcon, offsetY: 50, size: 50 },
     { name: "BSC", icon: BnbIcon,  offsetY: 25, size: 50},
-    { name: "GIWA", icon: OkxIcon,  offsetY: 0, size: 50},
+    { name: "GIWA", icon: GiwaIcon,  offsetY: 0, size: 50},
     { name: "XLayer", icon: OkxIcon,  offsetY: 0 , size: 60},
     { name: "Base", icon: OkxIcon,  offsetY: 25 , size: 50},
     { name: "Mantle", icon: MantleIcon, offsetY: 50, size: 50 },
@@ -65,8 +66,8 @@ export const BlockchainCarousel = () => {
                 >
                   {
                     blockchain.name === 'Base' ? (
-                      <div className={`w-5 h-5 lg:w-8 lg:h-8  rounded-xs ${isActive ? 'bg-white' : 'bg-white/30'}`}></div>
-                    ) : blockchain.name === 'GIWA' ? <Image src="/images/giwa-logo.webp" className="w-2/3" width={81} height={103} alt="giwa" /> : <DynamicIcon icon={blockchain.icon} size={breakpoint === 'xs'|| breakpoint === 'sm'  ? 30:50} fill={isActive ? "var(--color-theme)" : ''} />
+                      <div className={`w-5 h-5 lg:w-8 lg:h-8  rounded-xs ${isActive ? 'bg-theme' : 'bg-white/30'}`}></div>
+                    )  : <DynamicIcon icon={blockchain.icon} size={breakpoint === 'xs'|| breakpoint === 'sm'  ? 30:50} fill={isActive ? "var(--color-theme)" : ''} />
                   }
                 </div>
             </div>
