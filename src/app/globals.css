@@ -130,6 +130,7 @@ body {
   background: linear-gradient(120deg, #121212 20%, #000000 20%, #332A04 120%);
   border: 2px solid rgba(255, 255, 255, 0.06);
   border-radius: 10px;
+  background-clip: padding-box;
 }
 .email-form {
   border: 2px solid rgba(255, 255, 255, 0.06);
