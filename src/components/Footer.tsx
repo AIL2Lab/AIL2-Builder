@@ -25,7 +25,7 @@ export default function Footer() {
                 placeholder={ state?.success ? t('emailReceived') :t('emailPlaceholder')}
                 name="email"
                 maxLength={256}
-                className="flex-1"
+                className="flex-1 min-w-[100px] sm:min-w-auto"
               />
               <button
                 type="submit"
