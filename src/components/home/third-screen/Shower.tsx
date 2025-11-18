@@ -14,19 +14,19 @@ export default function Shower() {
       id: 1,
       title: t("item1.title"),
       description: t("item1.description"),
-      image: "https://picsum.photos/seed/design/800/600.jpg",
+      image: "/images/endless-scalability.jpg",
     },
     {
       id: 2,
       title: t("item2.title"),
       description: t("item2.description"),
-      image: "https://picsum.photos/seed/tech/800/600.jpg",
+      image: "/images/gpu-driver.jpg",
     },
     {
       id: 3,
       title: t("item3.title"),
       description: t("item3.description"),
-      image: "https://picsum.photos/seed/ux/800/600.jpg",
+      image: "/images/fluid-composability.jpg",
     },
   ];
   useEffect(() => {
