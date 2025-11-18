@@ -3,6 +3,9 @@ import Image from "next/image";
 import Circle from "./Circle";
 import BlockchainCarousel from "./BlockchainCarousel";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
+
 export default function HomeSecondScreen() {
   const t = useTranslations("Home")
   return (
@@ -30,7 +33,8 @@ export default function HomeSecondScreen() {
             {t("secondScreen.text")}
           </div>
           <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
-            {t("supportBtn")}
+            
+            <Link href={siteConfig.xUrl} target="_blank">{t("supportBtn")}</Link>
           </div>
         </div>
       </div>

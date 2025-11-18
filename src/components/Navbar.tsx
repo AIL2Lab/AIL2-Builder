@@ -5,6 +5,7 @@ import { Document } from "./icons/document";
 import Menu from "./Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
+import { siteConfig } from "@/config/site";
 
 export default function Navbar() {
   const t = useTranslations("Navbar")
@@ -27,7 +28,7 @@ export default function Navbar() {
               <Link href="/">{t("blog")}</Link>
             </div>
             <div className="text-base font-normal flex flex-1 justify-end ml-4 lg:ml-8">
-              <Link href="/" className="github-icon">
+              <Link href={siteConfig.githubUrl} target="_blank" className="github-icon">
                 <Github />
               </Link>
               <Link href="/" className="document-icon ml-2.5">

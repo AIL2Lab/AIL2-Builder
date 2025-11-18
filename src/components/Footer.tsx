@@ -5,6 +5,8 @@ import { TelegramIcon } from "./icons/Telegram";
 import { MediumIcon } from "./icons/Medium";
 import { useTranslations } from "next-intl";
 import { useActionState } from "react";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
@@ -67,9 +69,11 @@ export default function Footer() {
               {t('socials')}
             </div>
             <div className="flex gap-2.5">
-              <TwitterIcon fill="var(--color-theme)" />
-              <TelegramIcon fill="var(--color-theme)" />
-              <MediumIcon fill="var(--color-theme)" />
+              <Link href={siteConfig.githubUrl} target="_blank">
+                <TwitterIcon fill="var(--color-theme)" />
+              </Link>
+              {/* <TelegramIcon fill="var(--color-theme)" />
+              <MediumIcon fill="var(--color-theme)" /> */}
             </div>
           </div>
         </div>

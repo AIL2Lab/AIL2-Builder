@@ -6,7 +6,7 @@ import { useState, useEffect, useRef, ReactNode } from "react";
 import { routing } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import clsx from "clsx";
-
+import { localeLabels } from "@/i18n/locales";
 const LanguageSwitcherSelect = ({className}: {className?:string}) => {
   const locale = useLocale();
   const t = useTranslations("LocaleSwitcher");
@@ -87,7 +87,7 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
                 className={`cursor-pointer block w-full text-left px-4 py-2 text-sm hover:bg-black/30`}
                 role="menuitem"
               >
-                {t("locale", { locale: lang })}
+                {localeLabels[lang]}
               </button>
             ))}
           </div>

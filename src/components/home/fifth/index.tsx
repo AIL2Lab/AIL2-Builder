@@ -1,6 +1,8 @@
 import Image from "next/image";
 import ChunkItem from "./Chunk";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
 const chunks = [
     {
         title: "DApps & Developers",
@@ -61,7 +63,7 @@ export default function HomeFifthScreen() {
         })}
       </div>
       <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold my-10">
-        {t('supportBtn')}
+        <Link href={siteConfig.xUrl} target="_blank">{t("supportBtn")}</Link>
       </div>
       <div className="grid grid-cols-6 gap-5">
             {

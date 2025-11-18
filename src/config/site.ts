@@ -2,6 +2,7 @@
 
 
 export const siteConfig = {
-    name: 'AIL2 - the largest AIL2',
-    description: 'Accelerate Decentralized AI Development 100x'
+    xUrl: 'https://x.com/AIL2Lab',
+    githubUrl: 'https://github.com/AIL2Lab',
+    telegramUrl: ''
 }
