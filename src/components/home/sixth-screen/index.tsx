@@ -79,11 +79,11 @@ export default function HomeSixthScreen() {
   const t = useTranslations("Home")
   return (
     <section className="w-full mx-auto lg:max-w-7xl my-5 sm:my-8 md:my-12 lg:my-16 px-5">
-      <div className="text-center font-bold text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-20 px-20">
+      {/* <div className="text-center font-bold text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-20 px-20">
         {t.rich('sixthScreen.expert', {
           theme: (chunks) => <span className="text-theme">{chunks}</span>
         })}
-      </div>
+      </div> */}
       {/* <div className="grid grid-cols-2 py-5 relative bg-[#121212] rounded-4xl border-5 border-white/4">
         <div className="sm:col-span-1 col-span-2 flex flex-col items-center p-5 lg:p-0">
           <Image src="/images/lorem.png" alt="" width={449} height={565} />
@@ -102,7 +102,7 @@ export default function HomeSixthScreen() {
           </div>
         </div>
       </div> */}
-      <div className="bg-white/5 p-5 sm:p-10 lg:p-20 rounded-4xl">
+      {/* <div className="bg-white/5 p-5 sm:p-10 lg:p-20 rounded-4xl">
           <Image className="mb-5" src="/images/neo-ventures.png" width={233} height={33} alt="neo-ventures" />
           <div className="mb-5 text-theme font-semibold text-lg md:text-2xl">Lorem ipsum dolor sit amet</div>
           <div className="mb-5 text-sm sm:text-base md:text-lg text-[#B4B2B2]">consectetur. Eget purus eget lacus eu duis lacus in duis. Nisl vel velit lacinia fringilla laoreet bibendum mattis sagittis. Nunc neque imperdiet sed posuere egestas accumsan ut enim. Turpis nec at placerat amet adipiscing turpis magna. Malesuada sed vffjfj fdd eweiuw</div>
@@ -113,7 +113,7 @@ export default function HomeSixthScreen() {
               <span className="text-white/60 text-sm sm:text-base md:text-lg">{t('sixthScreen.founder')}</span>
             </div>
           </div>
-      </div>
+      </div> */}
       <div className="grid grid-cols-2 mt-20 mx-auto lg:max-w-5xl">
         <div className="col-span-2 lg:col-span-2 flex flex-col justify-center">
           <div className="text-xl lg:text-2xl font-bold mb-10">
