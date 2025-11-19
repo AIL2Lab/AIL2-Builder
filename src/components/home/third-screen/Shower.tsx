@@ -14,19 +14,19 @@ export default function Shower() {
       id: 1,
       title: t("item1.title"),
       description: t("item1.description"),
-      image: "/images/endless-scalability-1.jpg",
+      image: "/images/endless-scalability.jpg",
     },
     {
       id: 2,
       title: t("item2.title"),
       description: t("item2.description"),
-      image: "/images/gpu-driver-2.jpg",
+      image: "/images/gpu-driver.jpg",
     },
     {
       id: 3,
       title: t("item3.title"),
       description: t("item3.description"),
-      image: "/images/fluid-composability-3.jpg",
+      image: "/images/fluid-composability.jpg",
     },
   ];
   useEffect(() => {
