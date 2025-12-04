@@ -92,6 +92,12 @@ body {
   box-shadow: 0px 0px 5.5px 0px rgba(241, 194, 1, 0.25);
   box-shadow: 0px -5px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
+.btn2 {
+background: rgba(195, 157, 0, 0.12);
+border: 1px solid rgba(255, 255, 255, 0.32);
+box-shadow: 0px 0px 5.5px rgba(241, 194, 1, 0.25), inset 0px -5px 4px rgba(0, 0, 0, 0.25), inset 3px 4px 8.8px rgba(255, 255, 255, 0.46);
+border-radius: 12px;
+}
 
 .side-bar {
   top: 116px;
@@ -175,4 +181,25 @@ body {
   box-shadow: 0px 0px 12.16px 0px rgba(248, 199, 0, 1);
   box-shadow: 0px 0px 20.84px 0px rgba(248, 199, 0, 1);
   box-shadow: 0px 0px 36.48px 0px rgba(248, 199, 0, 1);
+}
+
+
+.accelerate-ail2 {
+font-family: 'Sora';
+font-style: normal;
+font-weight: 800;
+display: inline-flex;
+align-items: center;
+text-align: center;
+background: linear-gradient(100.09deg, #F8C700 12.95%, #FFFFFF 47.59%, #F8C700 88.88%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+border: 1px solid #000000;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
 }

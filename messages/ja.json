@@ -1,6 +1,7 @@
 {
   "site": {
     "name": "AIL2 - 最大のAIL2",
+    "subtitle": "最大のAIL2",
     "description": "AIモデルは完全に分散化され、無限のスケーラビリティを備えています。これにより、開発者はETH、BSC、GIWA、XLayer、Base、Mantleの6つのブロックチェーンで、分散型AIアプリケーションの開発を100倍加速できます。"
   },
   "Error": {

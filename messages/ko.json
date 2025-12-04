@@ -1,6 +1,7 @@
 {
   "site": {
     "name": "AIL2 - 가장 큰 AIL2",
+    "subtitle": "가장 큰 AIL2",
     "description": "AI 모델은 완전히 분산되어 무한한 확장성을 가지며, 개발자가 ETH, BSC, GIWA, XLayer, Base, Mantle의 6개 블록체인에서 분산형 AI 애플리케이션 개발 속도를 100배 가속화하도록 지원합니다."
   },
   "Error": {
