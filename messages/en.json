@@ -15,7 +15,10 @@
     "research": "Research",
     "ecosystem": "Ecosystem",
     "learn": "Learn",
-    "blog": "Blog"
+    "blog": "Blog",
+    "platform": "Platform",
+    "accelerate": "Accelerate",
+    "fqa": "Fqa"
   },
   "Home": {
     "supportBtn": "Support AIL2 on X",

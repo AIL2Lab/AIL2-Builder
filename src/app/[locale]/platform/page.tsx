@@ -1,28 +1,15 @@
 import PageLayout from "@/components/PageLayout";
 import Plant from "@/components/Plant";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import {
-  Github,
-  FileText,
-  Menu,
-  Box,
-  Layers,
-  Cpu,
-  Database,
-  Globe,
-  ShieldCheck,
-  Zap,
-  HardDrive,
-  Twitter,
-  Send,
-} from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { EthereumIcon } from "@/components/icons/Ethereum";
 import { BnbIcon } from "@/components/icons/Bnb";
 import { OkxIcon } from "@/components/icons/Okx";
 import { MantleIcon } from "@/components/icons/Mantle";
 import { GiwaIcon } from "@/components/icons/Giwa";
 import Image from "next/image";
+import { use } from "react";
+import { Locale } from "next-intl";
 export async function generateMetadata({
   params,
 }: {
@@ -187,7 +174,11 @@ const Web3Feature = () => {
     </section>
   );
 };
-export default function PlatformPage() {
+export default function PlatformPage({params}: PageProps<'/[locale]/platform'>) {
+  const {locale} = use(params);
+  
+    // Enable static rendering
+  setRequestLocale(locale as Locale);
   return (
     <PageLayout isShowFooter>
       <div className="flex flex-col">

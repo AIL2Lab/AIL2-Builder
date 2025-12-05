@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "AIL2 - el AIL2 más grande",
-    
+    "subtitle": "the largest AIL2",
     "description": "Los modelos de IA se ejecutan de forma completamente descentralizada, con escalabilidad infinita, empoderando a los desarrolladores para acelerar el desarrollo de aplicaciones de IA descentralizadas 100 veces en seis blockchains: ETH, BSC, GIWA, XLayer, Base y Mantle."
   },
   "Error": {
@@ -15,7 +15,10 @@
     "research": "Investigación",
     "ecosystem": "Ecosistema",
     "learn": "Aprender",
-    "blog": "Blog"
+    "blog": "Blog",
+    "platform": "Plataforma",
+    "accelerate": "Acelerar",
+    "fqa": "Preguntas Frecuentes"
   },
   "Home": {
     "supportBtn": "Apoya a AIL2 en X",

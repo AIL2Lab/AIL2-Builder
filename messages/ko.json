@@ -15,7 +15,10 @@
     "research": "리서치",
     "ecosystem": "생태계",
     "learn": "학습",
-    "blog": "블로그"
+    "blog": "블로그",
+    "platform": "플랫폼",
+    "accelerate": "가속",
+    "fqa": "자주 묻는 질문"
   },
   "Home": {
     "supportBtn": "X에서 AIL2 지원하기",

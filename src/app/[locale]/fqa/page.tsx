@@ -1,7 +1,9 @@
 import PageLayout from "@/components/PageLayout";
 import QuestionSelector from "@/components/fqa/QuestionSelector";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { Locale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { use } from "react";
 const questions = [
   {
     id: 1,
@@ -35,16 +37,24 @@ Innovatively streamlines workflows, ensuring efficient and scalable cross-chain 
   },
 ];
 
-export async function generateMetadata({params}: { params: Promise<{ locale: string }> }) : Promise<Metadata>  {
-    const { locale } = await params
-    const t = await getTranslations({locale, namespace: 'site'})
-    return {
-      title: `FQA | ${t('subtitle')}`,
-      description: 'Frequently asked questions'
-    }
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "site" });
+  return {
+    title: `FQA | ${t("subtitle")}`,
+    description: "Frequently asked questions",
+  };
 }
 
-export default function FAQPage() {
+export default function FAQPage({ params }: PageProps<"/[locale]/fqa">) {
+  const { locale } = use(params);
+
+  // Enable static rendering
+  setRequestLocale(locale as Locale);
   return (
     <PageLayout isShowFooter>
       <section className="w-full mx-auto lg:max-w-6xl my-5 sm:my-8 md:my-12 lg:my-16 px-5">

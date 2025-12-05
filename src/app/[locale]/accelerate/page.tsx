@@ -1,28 +1,10 @@
 import Image from "next/image";
-import {
-  Github,
-  FileText,
-  Globe,
-  X,
-  Send,
-  Box,
-  Zap,
-  Heart,
-  Users,
-  Layers,
-} from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import { TwitterIcon } from "@/components/icons/Twitter";
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
+import { Locale } from "next-intl";
 
-// 模拟导航链接
-const NavLinks = [
-  { name: "Research", href: "#" },
-  { name: "Ecosystem", href: "#" },
-  { name: "Accelerate", href: "#", active: true },
-  { name: "Blog", href: "#" },
-];
-
-// 特性数据
 const Features = [
   {
     icon: "/images/accelerate-icon-1.png",
@@ -51,50 +33,15 @@ const Features = [
   },
 ];
 
-export default function AcceleratePage() {
+export default function AcceleratePage({
+  params,
+}: PageProps<"/[locale]/accelerate">) {
+  const { locale } = use(params);
+
+  // Enable static rendering
+  setRequestLocale(locale as Locale);
   return (
     <PageLayout isShowFooter>
-      {/* <section className="w-full mt-20 sm:mt-40 px-5 max-w-6xl mx-auto flex flex-col md:flex-row items-center relative pb-5">
-        <div className="md:w-1/2 space-y-6 z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold sm:leading-tight">
-            Build Beyond Limits <br />
-            with{" "}
-            <span className="accelerate-ail2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-              AIL2
-            </span>
-          </h1>
-          <p className="max-w-lg text-lg">
-            Accelerating the journey of the next wave of AI founders, propelling
-            ideas forward with funding, expert guidance, and go-to-market
-            support.
-          </p>
-          <div className="flex flex-col flex-row gap-4 pt-4">
-            <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
-              Apply Now
-            </div>
-            <button className="px-7 py-3 btn2 w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
-              Learn more
-            </button>
-          </div>
-        </div>
-        <div className="relative md:w-1/2 mt-10 md:mt-0">
-          <Image
-            src="/images/accelerate-rocket.png"
-            alt="Rocket representing acceleration"
-            width={1227}
-            height={1315}
-            className="w-full h-auto"
-            priority
-          />
-        </div>
-        <Image
-          src="/images/accelerate-grid.png"
-          alt="Background grid pattern"
-          width={1512}
-          height={255}
-          className="absolute bottom-0 left-0 w-full -z-10"
-        />
-      </section> */}
       <section className="relative w-full max-w-6xl mx-auto px-5 pb-20 flex flex-col md:flex-row items-center overflow-hidden">
         <div className="w-full md:w-[50%] space-y-6 z-10 text-center md:text-left mt-20 lg:mt-30">
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
@@ -116,23 +63,15 @@ export default function AcceleratePage() {
             </button>
           </div>
         </div>
-
-        {/* 右边图片 - 调整宽度为 55% 并放大图片 */}
         <div className="w-full md:w-[55%] mt-10 md:mt-0 flex justify-center md:justify-end relative">
           <Image
             src="/images/accelerate-rocket.png"
             alt="Rocket"
             width={1227}
             height={1315}
-            // 关键修改点：
-            // 1. md:w-full: 占满扩大的容器
-            // 2. md:scale-125: 在 PC 端额外放大 25%
-            // 3. md:translate-x-6: 稍微向右平移，防止放大后遮挡左侧文字
             className="w-full h-auto object-contain md:scale-150 md:translate-x-6 origin-center md:translate-y-40 lg:translate-y-50"
           />
         </div>
-
-        {/* 底部背景 - 保持不变 */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1512px] -z-10">
           <Image
             src="/images/accelerate-grid.png"
@@ -143,7 +82,6 @@ export default function AcceleratePage() {
           />
         </div>
       </section>
-      {/* --- Who We Are Section --- */}
       <section className="py-12 md:py-24 px-5 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
         <div className="flex-1">
           <Image
@@ -176,8 +114,6 @@ export default function AcceleratePage() {
           </h2>
         </div>
       </section>
-
-      {/* --- Features Grid --- */}
       <section className="py-12 md:py-24 px-5 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Features.map((item, idx) => (
@@ -192,12 +128,8 @@ export default function AcceleratePage() {
               </p>
             </div>
           ))}
-
-          {/* Last Special Card */}
           <div className="p-8 rounded-2xl flex flex-col justify-center h-full relative overflow-hidden">
-            {/* Background glow for this card */}
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/5 pointer-events-none" />
-
+            <div className="absolute inset-0 bg-linear-to-br from-transparent to-white/5 pointer-events-none" />
             <h2 className="text-5xl font-bold mb-4">AIL2</h2>
             <p className="text-gray-400 text-sm mb-8">
               Redefines how decentralized application is built, deployed, and
@@ -210,8 +142,6 @@ export default function AcceleratePage() {
           </div>
         </div>
       </section>
-
-      {/* --- Decentralized AI Section (Avatar) --- */}
       <section className="py-12 md:py-24 px-5 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <Image
           src="/images/accelerate-man.png"
@@ -238,7 +168,7 @@ export default function AcceleratePage() {
               "Multi-Chain Support: Provides native support for six major blockchains: ETH, BSC, GIWA, XLayer, Base, and Mantle.",
             ].map((text, i) => (
               <li key={i} className="flex gap-3 text-gray-300 text-sm">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-500 flex-shrink-0" />
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-500 shrink-0" />
                 {text}
               </li>
             ))}

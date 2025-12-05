@@ -2,14 +2,16 @@
 
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useParams, useSearchParams } from "next/navigation";
-import { useState, useEffect, useRef, ReactNode } from "react";
+import { useState, useEffect, useRef } from "react";
 import { routing } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import clsx from "clsx";
-import { localeLabels } from "@/i18n/locales";
+import { localeLabels, shortLocaleLabels } from "@/i18n/locales";
+import { ChevronDown } from "lucide-react";
 const LanguageSwitcherSelect = ({className}: {className?:string}) => {
   const locale = useLocale();
-  const t = useTranslations("LocaleSwitcher");
+  console.log(locale);
+  
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -56,20 +58,8 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
           aria-expanded="true"
           aria-haspopup="true"
         >
-          {t("locale", { locale: currentLanguage })}
-          <svg
-            className="-mr-1 ml-2 h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
+          {shortLocaleLabels[currentLanguage]}
+          <ChevronDown size={20}/>
         </button>
       </div>
       {isOpen && (
