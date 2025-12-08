@@ -4,6 +4,11 @@
     "subtitle": "the largest AIL2",
     "description": "Los modelos de IA se ejecutan de forma completamente descentralizada, con escalabilidad infinita, empoderando a los desarrolladores para acelerar el desarrollo de aplicaciones de IA descentralizadas 100 veces en seis blockchains: ETH, BSC, GIWA, XLayer, Base y Mantle."
   },
+  "Common": {
+    "all": "Todos",
+    "applyBtn": "Aplicar ahora",
+    "learnMore": "Saber más"
+  },
   "Error": {
     "description": "<p>Lamentablemente, hemos encontrado un error.</p><p>Puedes intentar <retry>recargar la página</retry> que estabas visitando.</p>",
     "title": "¡Algo salió mal!"
@@ -88,5 +93,83 @@
     "title": "Página No Encontrada",
     "description": "Lo sentimos, no pudimos encontrar la página que buscas",
     "backHome": "Volver al inicio"
+  },
+  "Ecosystem": {
+    "title": "Explora<br></br>el Ecosistema AIL2",
+    "subtitle": "• Una plataforma consolidada para los últimos avances en tecnología AI L2. <br></br>• El repositorio central para proyectos pioneros de edge computing en AI L2."
+  },
+  "Platform": {
+    "title": "Plataforma de<br></br>Aceleración de IA Descentralizada",
+    "subtitle": "6 blockchains y la aceleración más rápida",
+    "powered": "Aceleración Multi-Chain e Innovación<br></br>Impulsada por GPU para IA Descentralizada",
+    "section1": {
+      "title": "Aceleración<br></br>Multi-Chain e Interoperabilidad Sin Fronteras",
+      "content": "AIL2 proporciona un desarrollo de IA descentralizada 100 veces más rápido en ETH, BSC, GIWA, XLayer, Base y Mantle. Supera las limitaciones de una sola cadena para operaciones multi-chain sin fisuras. Permite el despliegue de aplicaciones de IA multi-chain sin barreras técnicas. Simplifica innovadoramente los flujos de trabajo, garantizando una integración multi-chain de IA eficiente y escalable."
+    },
+    "section2": {
+      "title": "Potencia de Cómputo<br></br>Descentralizada Impulsada por GPU",
+      "item1": "Impulsado por una red de mineros de GPU, AIL2 elimina las cargas de los desarrolladores en el despliegue y mantenimiento de modelos de IA.",
+      "item2": "La infraestructura GPU descentralizada ofrece recursos de cómputo bajo demanda y escalables para operaciones de IA.",
+      "item3": "Reutiliza de forma innovadora los recursos de minería de criptomonedas para tareas de IA.",
+      "item4": "Esto crea una solución de cómputo rentable y de alto rendimiento."
+    },
+    "section3": {
+      "title": "Almacenamiento<br></br>Descentralizado con Escalabilidad Infinita",
+      "content": "La Red Integrada de Cómputo y Almacenamiento de IA proporciona almacenamiento de datos descentralizado e infinitamente escalable. Los datos se distribuyen por la red para mayor seguridad y disponibilidad. Soporta enormes conjuntos de datos de IA con una infraestructura robusta. Este diseño se alinea con los principios nativos de Web3, permitiendo un crecimiento ilimitado de las aplicaciones de IA."
+    },
+    "section4": {
+      "title": "Sinergia y Componibilidad de Datos Web3",
+      "item1": "AIL2 permite la integración perfecta de datos Web3 (on-chain, DAO, etc.) en modelos de IA a través de su arquitectura unificada.",
+      "item2": "Esta sinergia potencia casos de uso innovadores de IA para Web3.",
+      "item3": "Los ejemplos van desde el análisis on-chain hasta operaciones de agentes autónomos.",
+      "item4": "Conecta las capacidades de IA con los ecosistemas de datos de Web3, expandiendo los límites de las aplicaciones."
+    }
+  },
+  "Accelerate": {
+    "section1": {
+      "title": "Construye Sin Límites<br></br>con <theme>AIL2</theme>",
+      "content": "Acelerando el viaje de la próxima ola de fundadores de IA, impulsando ideas hacia adelante con financiación, guía experta y soporte para salir al mercado."
+    },
+    "section2": {
+      "btn": "Quiénes somos",
+      "content": "Aprovecha la Capa de IA de AIL2 para Acelerar el Desarrollo Futuro de la <theme>Inteligencia Artificial</theme>. Construida para Escalabilidad, Apertura e Integración Web3 Ilimitadas."
+    },
+    "section3": {
+      "item1": {
+        "title": "Guía Técnica",
+        "description": "Obtén integración guiada por expertos y revisión de arquitectura. Alinea tu hoja de ruta con la nuestra."
+      },
+      "item2": {
+        "title": "Promoción de Marketing Conjunto",
+        "description": "Alinea estrategias de marketing con AIL2. Ejecuta copromoción en canales clave."
+      },
+      "item3": {
+        "title": "Manual de Estrategia de Marketing y Recaudación de Fondos",
+        "description": "Desarrolla planes de crecimiento del ecosistema con el equipo de AIL2. Recibe referencias a capitalistas de riesgo de primer nivel."
+      },
+      "item4": {
+        "title": "Descuentos de Socios",
+        "description": "Acelera con descuentos de socios. Accede a servicios preferenciales. Obtén apoyo clave."
+      },
+      "item5": {
+        "title": "Apoyo de Bienestar",
+        "description": "Únete a cursos de meditación y actividades de bienestar. AIL2 redefine la inteligencia descentralizada."
+      },
+      "item6": {
+        "title": "AIL2",
+        "description": "Redefine cómo se construyen, despliegan y escalan las aplicaciones descentralizadas.",
+        "followBtn": "Síguenos en"
+      }
+    },
+    "section4": {
+      "title": "Acelera el Desarrollo de IA Descentralizada 100x",
+      "content": "Una plataforma diseñada para acelerar masivamente el desarrollo de aplicaciones de IA descentralizadas proporcionando modelos de IA completamente descentralizados e infinitamente escalables a través de múltiples blockchains.",
+      "item1": "Núcleo Descentralizado y Escalable: Opera en una red completamente descentralizada con escalabilidad ilimitada para modelos de IA.",
+      "item2": "Aceleración para Desarrolladores: Empodera a los desarrolladores para construir aplicaciones de IA descentralizadas 100 veces más rápido.",
+      "item3": "Soporte Multi-Chain: Proporciona soporte nativo para seis blockchains principales: ETH, BSC, GIWA, XLayer, Base y Mantle."
+    }
+  },
+  "Fqa": {
+    "description": "Preguntas frecuentes"
   }
 }

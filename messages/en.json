@@ -4,6 +4,11 @@
     "subtitle": "the largest AIL2",
     "description": "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle."
   },
+  "Common": {
+    "all": "All",
+    "applyBtn": "Apply Now",
+    "learnMore": "Learn more"
+  },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"
@@ -88,5 +93,83 @@
     "title": "Page Not Found",
     "description": "Sorry, we couldn’t find the page you ‘re looking for",
     "backHome": "Back to home"
+  },
+  "Ecosystem": {
+    "title": "Explore<br></br>the AIL2 Ecosystem",
+    "subtitle": "• A consolidated platform for the latest advancements in AI L2 technology. <br></br>• The central repository for pioneering edge computing projects in AI L2."
+  },
+  "Platform": {
+    "title": "Decentralized<br></br>AI Acceleration Platform",
+    "subtitle": "6 blockchains and the fastest acceleration",
+    "powered": "Multi-Chain Acceleration & GPU-Powered<br></br>Innovation for Decentralized AI",
+    "section1": {
+      "title": "Multi-Chain<br></br>Acceleration & Seamless Interoperability",
+      "content": "AIL2 provides 100x faster decentralized AI development across ETH, BSC, GIWA, XLayer, Base, and Mantle. It overcomes single-chain limitations for seamless multi-chain operations.Enables effortless cross-chain AI application deployment without technical barriers. Innovatively streamlines workflows, ensuring efficient and scalable cross-chain AI integration."
+    },
+    "section2": {
+      "title": "GPU-Driven<br></br>Decentralized Computing Power",
+      "item1": "Powered by a GPU miner network, AIL2 eliminates developer burdens in AI model deployment and maintenance.",
+      "item2": "The decentralized GPU infrastructure offers on-demand,scalable computing resources for AI operations.",
+      "item3": " It innovatively repurposes crypto mining resources for AI tasks.",
+      "item4": "This creates a cost-effective and high-performance computing solution."
+    },
+    "section3": {
+      "title": "Decentralized<br></br>Storage with Infinite Scalability",
+      "content": "The integrated AI Compute & Storage Network provides decentralized, infinitely scalable data storage. Data is distributed across the network for enhanced security and availability. It supports massive AI datasets with robust infrastructure. This design aligns with Web3 native principles,enabling unconstrained growth of AI applications."
+    },
+    "section4": {
+      "title": "Web3 Data Synergy & Composability",
+      "item1": "AIL2 enables seamless integration of Web3 data (on-chain, DAO,etc.) into AI models via its unified architecture.",
+      "item2": "This synergy empowers innovative AI-driven Web3 use cases.",
+      "item3": "Examples range from on-chain analysis to autonomous agent operations.",
+      "item4": "It bridges AI capabilities with Web3 data ecosystems,expanding application boundaries."
+    }
+  },
+  "Accelerate": {
+    "section1": {
+      "title": "Build Beyond Limits<br></br>with <theme>AIL2</theme>",
+      "content": "Accelerating the journey of the next wave of AI founders, propelling ideas forward with funding, expert guidance, and go-to-market support."
+    },
+    "section2": {
+      "btn": "Who we are",
+      "content": "Leverage the AI Layer of AIL2 to Accelerate the Future Development of <theme>Artificial Intelligence</theme>. Built for Unlimited Scalability, Openness, and Web3 Integration."
+    },
+    "section3": {
+      "item1": {
+        "title": "Technical Guidance",
+        "description": "Get expert-guided integration and architecture review. Align your roadmap with ours."
+      },
+      "item2": {
+        "title": "Joint Marketing Promotion",
+        "description": "Align marketing strategies with AIL2. Execute co-promotion across key channels."
+      },
+      "item3": {
+        "title": "Marketing and Fundraising Strategy Playbook",
+        "description": "Develop ecosystem growth plans with the AIL2 team. Get referred to top-tier venture capitalists."
+      },
+      "item4": {
+        "title": "Partner Discounts",
+        "description": "Accelerate with partner discounts. Access preferential services. Get key support."
+      },
+      "item5": {
+        "title": "Wellness Support",
+        "description": "Join meditation courses and wellness activities. AIL2 redefines decentralized intelligence."
+      },
+      "item6": {
+        "title": "AIL2",
+        "description": "Redefines how decentralized application is built, deployed, and scaled.",
+        "followBtn": "Follow us on"
+      }
+    },
+    "section4": {
+      "title": "Accelerate Decentralized AI Development 100x",
+      "content": "A platform designed to massively accelerate decentralized AI application development by providing fully decentralized and infinitely scalable AI models across multiple blockchains.",
+      "item1": "Decentralized & Scalable Core: Operates on a fully decentralized network with unlimited scalability for AI models.",
+      "item2": "Developer Acceleration: Empowers developers to build decentralized AI applications 100 times faster.",
+      "item3": "Multi-Chain Support: Provides native support for six major blockchains: ETH, BSC, GIWA, XLayer, Base, and Mantle."
+    }
+  },
+  "Fqa": {
+    "description": "Frequently asked questions"
   }
 }

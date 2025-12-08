@@ -5,7 +5,7 @@ import { TwitterIcon } from "@/components/icons/Twitter";
 import TagFilter from "@/components/ecosystem/TagFilter";
 import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
-import { Locale } from "next-intl";
+import { Locale, useTranslations } from "next-intl";
 
 const ecosystemItems = Array.from({ length: 12 }).map((_, i) => ({
   id: i,
@@ -18,6 +18,7 @@ const ecosystemItems = Array.from({ length: 12 }).map((_, i) => ({
 export default function EcosystemPage({
   params,
 }: PageProps<"/[locale]/ecosystem">) {
+  const t = useTranslations("Ecosystem")
   const { locale } = use(params);
 
   // Enable static rendering
@@ -28,15 +29,12 @@ export default function EcosystemPage({
         <section className="mt-30 sm:mt-60">
           <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8">
-              Explore <br />
-              the AIL2 Ecosystem
+              {t.rich('title', {br: () => <br />})}
             </h1>
 
-            <div className="bg-[#FFD700]/5 border border-[#FFD700]/20 rounded-2xl p-4 md:p-6 max-w-2xl backdrop-blur-sm">
-              <p className="text-[#FFD700] text-sm md:text-base leading-relaxed">
-                • A consolidated platform for the latest advancements in AI L2
-                technology. <br />• A comprehensive repository of cutting-edge
-                AI L2 initiatives.
+            <div className="border border-theme/20 rounded-2xl p-4 md:p-6 max-w-2xl backdrop-blur-sm">
+              <p className="text-theme text-sm md:text-base leading-relaxed">
+                {t.rich('subtitle', {br: () => <br />})}
               </p>
             </div>
           </div>

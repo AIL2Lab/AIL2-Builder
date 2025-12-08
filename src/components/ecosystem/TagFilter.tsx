@@ -1,25 +1,28 @@
 'use client'
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-const filterTags = [
-  "All",
-  "AI - Compute & Execution",
-  "AI - Agents",
-  "AI - Apps",
-  "AI - Inference & Models",
-  "DeFi",
-  "AI - Training",
-  "AI - Data & Dataset",
-  "L1/L2",
-  "Interoperability",
-  "Gaming",
-  "Community",
-  "Depin",
-  "Launchpad",
-];
+
 
 export default function TagFilter() {
+  const t = useTranslations("Common")
   const [activeFilter, setActiveFilter] = useState("All");
+  const filterTags = [
+    t("all"),
+    "AI - Compute & Execution",
+    "AI - Agents",
+    "AI - Apps",
+    "AI - Inference & Models",
+    "DeFi",
+    "AI - Training",
+    "AI - Data & Dataset",
+    "L1/L2",
+    "Interoperability",
+    "Gaming",
+    "Community",
+    "Depin",
+    "Launchpad",
+  ];
   return (
     <section className="relative z-10 px-4 max-w-6xl mx-auto mb-16 sm:-top-10 mt-10 sm:mt-0">
       <div className="flex flex-wrap justify-center gap-3">

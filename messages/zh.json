@@ -4,6 +4,11 @@
     "subtitle": "最大的人工智能L2",
     "description": "AI 模型完全去中心化运行，具有无限可扩展性，赋能开发者加速去中心化 AI 应用开发，在六条区块链（ETH、BSC、GIWA、XLayer、Base 和 Mantle）上实现 100 倍的开发速度提升。"
   },
+  "Common": {
+    "all": "全部",
+    "applyBtn": "立即申请",
+    "learnMore": "了解更多"
+  },
   "Error": {
     "description": "<p>很抱歉，我们遇到了一个错误。</p><p>您可以尝试<retry>重新加载</retry>您正在访问的页面。</p>",
     "title": "出问题了！"
@@ -87,5 +92,83 @@
     "title": "页面未找到",
     "description": "抱歉，我们找不到您要查找的页面。",
     "backHome": "返回首页"
+  },
+  "Ecosystem": {
+    "title": "探索<br></br>AIL2 生态系统",
+    "subtitle": "• 一个整合 AI L2 技术最新进展的综合性平台。<br></br>• AI L2 领域先锋边缘计算项目的中央存储库。"
+  },
+  "Platform": {
+    "title": "去中心化<br></br>AI 加速平台",
+    "subtitle": "6 条区块链与最快加速",
+    "powered": "多链加速与 GPU 驱动<br></br>赋能去中心化 AI 创新",
+    "section1": {
+      "title": "多链<br></br>加速与无缝互操作性",
+      "content": "AIL2 在 ETH、BSC、GIWA、XLayer、Base 和 Mantle 上提供 100 倍更快的去中心化 AI 开发速度。它克服了单链限制，实现无缝的多链操作。让开发者能够无技术障碍地轻松部署跨链 AI 应用。创新地简化了工作流程，确保高效且可扩展的跨链 AI 集成。"
+    },
+    "section2": {
+      "title": "GPU 驱动<br></br>的去中心化算力",
+      "item1": "由 GPU 矿工网络驱动，AIL2 消除了开发者在 AI 模型部署和维护中的负担。",
+      "item2": "去中心化的 GPU 基础设施为 AI 运算提供按需、可扩展的计算资源。",
+      "item3": "它创新地将加密挖矿资源重新用于 AI 任务。",
+      "item4": "这创造了一种经济高效且高性能的计算解决方案。"
+    },
+    "section3": {
+      "title": "无限可扩展的<br></br>去中心化存储",
+      "content": "集成的 AI 计算与存储网络提供去中心化、无限可扩展的数据存储。数据分布在网络各处以增强安全性和可用性。它通过强大的基础设施支持海量 AI 数据集。此设计符合 Web3 原生原则，使 AI 应用能够无限制地增长。"
+    },
+    "section4": {
+      "title": "Web3 数据协同与可组合性",
+      "item1": "AIL2 通过其统一架构，能够将 Web3 数据（链上、DAO 等）无缝集成到 AI 模型中。",
+      "item2": "这种协同作用为创新的 AI 驱动型 Web3 用例赋能。",
+      "item3": "示例范围从链上分析到自主代理操作。",
+      "item4": "它连接了 AI 能力与 Web3 数据生态系统，扩展了应用边界。"
+    }
+  },
+  "Accelerate": {
+    "section1": {
+      "title": "超越限制，构建未来<br></br>与 <theme>AIL2</theme> 一同",
+      "content": "加速下一波 AI 创始人的征程，通过资金、专业指导和市场支持推动想法前进。"
+    },
+    "section2": {
+      "btn": "我们是谁",
+      "content": "利用 AIL2 的 AI 层来加速 <theme>人工智能</theme> 的未来发展。为无限可扩展性、开放性和 Web3 集成而构建。"
+    },
+    "section3": {
+      "item1": {
+        "title": "技术指导",
+        "description": "获得专家引导的集成和架构审查。使您的路线图与我们的保持一致。"
+      },
+      "item2": {
+        "title": "联合市场推广",
+        "description": "与 AIL2 对齐市场策略。在关键渠道执行联合推广。"
+      },
+      "item3": {
+        "title": "市场与融资策略手册",
+        "description": "与 AIL2 团队共同制定生态系统增长计划。获得顶级风险投资家的推荐。"
+      },
+      "item4": {
+        "title": "合作伙伴折扣",
+        "description": "通过合作伙伴折扣加速发展。获取优惠服务。获得关键支持。"
+      },
+      "item5": {
+        "title": "健康支持",
+        "description": "参加冥想课程和健康活动。AIL2 重新定义去中心化智能。"
+      },
+      "item6": {
+        "title": "AIL2",
+        "description": "重新定义去中心化应用的构建、部署和扩展方式。",
+        "followBtn": "关注我们"
+      }
+    },
+    "section4": {
+      "title": "将去中心化 AI 开发速度提升 100 倍",
+      "content": "该平台旨在通过在多条区块链上提供完全去中心化和无限可扩展的 AI 模型，从而大规模加速去中心化 AI 应用程序的开发。",
+      "item1": "去中心化与可扩展核心：在完全去中心化的网络上运行，为 AI 模型提供无限的可扩展性。",
+      "item2": "开发者加速：赋能开发者以快 100 倍的速度构建去中心化 AI 应用程序。",
+      "item3": "多链支持：为六条主要区块链提供原生支持：ETH、BSC、GIWA、XLayer、Base 和 Mantle。"
+    }
+  },
+  "Fqa": {
+    "description": "常见问题"
   }
 }
