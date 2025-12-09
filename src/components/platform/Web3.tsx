@@ -12,7 +12,7 @@ export default function Web3() {
     <section className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div className="flex justify-center">
         <Image
-          src="/images/platform-compare-3.jpg"
+          src="/images/platform-compare-4.jpg"
           alt="gpu"
           width={2730}
           height={1535}
