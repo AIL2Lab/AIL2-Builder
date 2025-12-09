@@ -46,7 +46,9 @@ export async function generateMetadata({params}: { params: Promise<{ locale: str
     description: t('description'),
   }
 }
-
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children,

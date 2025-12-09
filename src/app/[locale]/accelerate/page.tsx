@@ -2,19 +2,31 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 import { TwitterIcon } from "@/components/icons/Twitter";
 import { use } from "react";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale, useTranslations } from "next-intl";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "site" });
+  return {
+    title: `${t("accelerate.title")} | ${t("subtitle")}`,
+    description: `${t("accelerate.description")}`,
+  };
+}
 
 export default function AcceleratePage({
   params,
 }: PageProps<"/[locale]/accelerate">) {
-  const t = useTranslations("Accelerate");
-  const t_common = useTranslations("Common");
   const { locale } = use(params);
-
   // Enable static rendering
   setRequestLocale(locale as Locale);
-
+  const t = useTranslations("Accelerate");
+  const t_common = useTranslations("Common");
   const Features = [
     {
       icon: "/images/accelerate-icon-1.png",

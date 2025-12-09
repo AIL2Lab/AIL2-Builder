@@ -2,12 +2,29 @@
   "site": {
     "name": "AIL2",
     "subtitle": "the largest AIL2",
-    "description": "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle."
+    "description": "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle.",
+    "platform": {
+      "title": "Platform",
+      "description": "Decentralized AI Acceleration Platform"
+    },
+    "accelerate": {
+      "title": "Accelerate",
+      "description": "Accelerating the journey of the next wave of AI founders, propelling ideas forward with funding,  expert guidance, and go-to-market support."
+    },
+    "fqa": {
+      "title": "FQA",
+      "description": "Frequently asked questions"
+    },
+    "ecosystem": {
+      "title": "Ecosystem",
+      "description": "A consolidated platform for the latest advancements in AI L2 technology.A comprehensive repository of cutting-edge AI L2 initiatives."
+    }
   },
   "Common": {
     "all": "All",
     "applyBtn": "Apply Now",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "comparisonImages": "Comparison Images"
   },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
@@ -27,7 +44,7 @@
   },
   "Home": {
     "supportBtn": "Support AIL2 on X",
-    
+
     "firstScreen": {
       "text": "The Largest AIL2 for"
     },

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { routing } from "@/i18n/routing";
 import { useLocale } from "next-intl";
@@ -10,14 +10,11 @@ import { localeLabels, shortLocaleLabels } from "@/i18n/locales";
 import { ChevronDown } from "lucide-react";
 const LanguageSwitcherSelect = ({className}: {className?:string}) => {
   const locale = useLocale();
-  console.log(locale);
-  
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const params = useParams();
-  const searchParams = useSearchParams()
   
   const currentLanguage =
     routing.locales.find((lang) => lang === locale) || routing.locales[0];

@@ -2,12 +2,29 @@
   "site": {
     "name": "AIL2 - 最大的人工智能L2",
     "subtitle": "最大的人工智能L2",
-    "description": "AI 模型完全去中心化运行，具有无限可扩展性，赋能开发者加速去中心化 AI 应用开发，在六条区块链（ETH、BSC、GIWA、XLayer、Base 和 Mantle）上实现 100 倍的开发速度提升。"
+    "description": "AI 模型完全去中心化运行，具有无限可扩展性，赋能开发者加速去中心化 AI 应用开发，在六条区块链（ETH、BSC、GIWA、XLayer、Base 和 Mantle）上实现 100 倍的开发速度提升。",
+    "platform": {
+      "title": "平台",
+      "description": "去中心化 AI 加速平台"
+    },
+    "accelerate": {
+      "title": "加速",
+      "description": "加速下一波 AI 创始人的征程，通过资金、专业指导和市场支持推动想法前进。"
+    },
+    "fqa": {
+      "title": "常见问题",
+      "description": "常见问题"
+    },
+    "ecosystem": {
+      "title": "生态系统",
+      "description": "一个整合 AI L2 技术最新进展的综合性平台。一个全面的尖端 AI L2 项目的存储库。"
+    }
   },
   "Common": {
     "all": "全部",
     "applyBtn": "立即申请",
-    "learnMore": "了解更多"
+    "learnMore": "了解更多",
+    "comparisonImages": "对比图片"
   },
   "Error": {
     "description": "<p>很抱歉，我们遇到了一个错误。</p><p>您可以尝试<retry>重新加载</retry>您正在访问的页面。</p>",

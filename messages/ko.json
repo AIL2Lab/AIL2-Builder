@@ -2,12 +2,29 @@
   "site": {
     "name": "AIL2 - 가장 큰 AIL2",
     "subtitle": "가장 큰 AIL2",
-    "description": "AI 모델은 완전히 분산되어 무한한 확장성을 가지며, 개발자가 ETH, BSC, GIWA, XLayer, Base, Mantle의 6개 블록체인에서 분산형 AI 애플리케이션 개발 속도를 100배 가속화하도록 지원합니다."
+    "description": "AI 모델은 완전히 분산되어 무한한 확장성을 가지며, 개발자가 ETH, BSC, GIWA, XLayer, Base, Mantle의 6개 블록체인에서 분산형 AI 애플리케이션 개발 속도를 100배 가속화하도록 지원합니다.",
+    "platform": {
+      "title": "플랫폼",
+      "description": "분산형 AI 가속 플랫폼"
+    },
+    "accelerate": {
+      "title": "가속화",
+      "description": "다음 세대 AI 창업자들의 여정을 가속화하고, 자금, 전문가 가이드, 시장 진출 지원으로 아이디어를 앞으로 나아갑니다."
+    },
+    "fqa": {
+      "title": "자주 묻는 질문",
+      "description": "자주 묻는 질문"
+    },
+    "ecosystem": {
+      "title": "생태계",
+      "description": "AI L2 기술의 최신 발전을 위한 통합 플랫폼입니다. 최첨단 AI L2 프로젝트의 포괄적인 저장소입니다."
+    }
   },
   "Common": {
     "all": "전체",
     "applyBtn": "지금 신청",
-    "learnMore": "더 알아보기"
+    "learnMore": "더 알아보기",
+    "comparisonImages": "비교 이미지"
   },
   "Error": {
     "description": "<p>죄송하게도 오류가 발생했습니다.</p><p>방문하시던 페이지를 <retry>새로고침</retry>해 보세요.</p>",

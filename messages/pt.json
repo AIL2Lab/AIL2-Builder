@@ -2,12 +2,29 @@
   "site": {
     "name": "AIL2 - o maior AIL2",
     "subtitle": "o maior AIL2",
-    "description": "Modelos de IA rodam de forma totalmente descentralizada, com escalabilidade infinita, capacitando desenvolvedores a acelerar o desenvolvimento de aplicações de IA descentralizadas em 100x em seis blockchains: ETH, BSC, GIWA, XLayer, Base e Mantle."
+    "description": "Modelos de IA rodam de forma totalmente descentralizada, com escalabilidade infinita, capacitando desenvolvedores a acelerar o desenvolvimento de aplicações de IA descentralizadas em 100x em seis blockchains: ETH, BSC, GIWA, XLayer, Base e Mantle.",
+    "platform": {
+      "title": "Plataforma",
+      "description": "Plataforma de Aceleração de IA Descentralizada"
+    },
+    "accelerate": {
+      "title": "Acelerar",
+      "description": "Acelerando a jornada da próxima onda de fundadores de IA, impulsionando ideias para frente com financiamento, orientação especializada e suporte para ir ao mercado."
+    },
+    "fqa": {
+      "title": "Perguntas Frequentes",
+      "description": "Perguntas frequentes"
+    },
+    "ecosystem": {
+      "title": "Ecossistema",
+      "description": "Uma plataforma consolidada para os últimos avanços em tecnologia AI L2. Um repositório abrangente de iniciativas de ponta de AI L2."
+    }
   },
   "Common": {
     "all": "Todos",
     "applyBtn": "Inscreva-se agora",
-    "learnMore": "Saiba mais"
+    "learnMore": "Saiba mais",
+    "comparisonImages": "Imagens de comparação"
   },
   "Error": {
     "description": "<p>Infelizmente, encontramos um erro.</p><p>Você pode tentar <retry>recarregar a página</retry> que estava visitando.</p>",

@@ -4,7 +4,34 @@ import { Metadata } from "next";
 import { Locale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
-const questions = [
+import { routing } from "@/i18n/routing";
+
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "site" });
+  return {
+    title: `${t("fqa.title")} | ${t("subtitle")}`,
+    description: `${t("fqa.description")}`,
+  };
+}
+
+export function generateStaticParams() {
+  const {locales} = routing
+  return locales.map((locale) => ({ locale }));
+}
+
+export default function FAQPage({ params }: PageProps<"/[locale]/fqa">) {
+  const { locale } = use(params);
+  // Enable static rendering
+  setRequestLocale(locale as Locale);
+
+  const t = useTranslations("Fqa")
+  const questions = [
   {
     id: 1,
     text: "How to achieve 100x speedup",
@@ -16,26 +43,6 @@ Enables effortless cross-chain AI application deployment without technical barri
 Innovatively streamlines workflows, ensuring efficient and scalable cross-chain AI integration.`,
   }
 ];
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "site" });
-  return {
-    title: `FQA | ${t("subtitle")}`,
-    description: "Frequently asked questions",
-  };
-}
-
-export default function FAQPage({ params }: PageProps<"/[locale]/fqa">) {
-  const t = useTranslations("Fqa")
-  const { locale } = use(params);
-
-  // Enable static rendering
-  setRequestLocale(locale as Locale);
   return (
     <PageLayout isShowFooter>
       <section className="w-full mx-auto lg:max-w-6xl my-5 sm:my-8 md:my-12 lg:my-16 px-5">

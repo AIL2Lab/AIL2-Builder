@@ -2,12 +2,29 @@
   "site": {
     "name": "AIL2 - en büyük AIL2",
     "subtitle": "en büyük AIL2",
-    "description": "AI modelleri tamamen merkeziyetsiz olarak, sonsuz ölçeklenebilirlikle çalışır ve geliştiricileri ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı blockchain üzerinde merkeziyetsiz AI uygulama geliştirmelerini 100x hızlandırmak için güçlendirir."
+    "description": "AI modelleri tamamen merkeziyetsiz olarak, sonsuz ölçeklenebilirlikle çalışır ve geliştiricileri ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı blockchain üzerinde merkeziyetsiz AI uygulama geliştirmelerini 100x hızlandırmak için güçlendirir.",
+    "platform": {
+      "title": "Platform",
+      "description": "Merkezi Olmayan AI Hızlandırma Platformu"
+    },
+    "accelerate": {
+      "title": "Hızlandır",
+      "description": "Bir sonraki AI kurucu dalgasının yolculuğunu hızlandırıyor, fikirleri finansman, uzman rehberliği ve pazara giriş desteğiyle ileriye taşıyoruz."
+    },
+    "fqa": {
+      "title": "Sıkça Sorulan Sorular",
+      "description": "Sıkça sorulan sorular"
+    },
+    "ecosystem": {
+      "title": "Ekosistem",
+      "description": "AI L2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. Kütük AI L2 girişimlerinin kapsamlı bir deposu."
+    }
   },
   "Common": {
     "all": "Tümü",
     "applyBtn": "Şimdi Başvur",
-    "learnMore": "Daha fazla öğren"
+    "learnMore": "Daha fazla öğren",
+    "comparisonImages": "Karşılaştırma Görselleri"
   },
   "Error": {
     "description": "<p>Ne yazık ki bir hatayla karşılaştık.</p><p>Ziyaret ettiğiniz sayfayı <retry>yeniden yüklemeyi</retry> deneyebilirsiniz.</p>",
