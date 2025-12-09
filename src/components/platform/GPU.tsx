@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 export default function GPU() {
   const t = useTranslations("Platform");
-  const t_common = useTranslations("Common");
   const items = [
     t("section2.item1"),
     t("section2.item2"),
@@ -28,9 +27,6 @@ export default function GPU() {
             <li key={idx}>{item}</li>
           ))}
         </ul>
-        {/* <button className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer">
-          {t_common("comparisonImages")}
-        </button> */}
       </div>
     </section>
   );

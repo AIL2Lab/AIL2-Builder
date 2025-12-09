@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 export default function Web3() {
   const t = useTranslations("Platform");
-  const t_common = useTranslations("Common");
   const web3Items = [
     t("section2.item1"),
     t("section2.item2"),
@@ -19,7 +18,6 @@ export default function Web3() {
           height={1535}
         />
       </div>
-
       <div>
         <h3 className="text-xl sm:text-2xl  md:text-3xl font-bold text-white mb-6">
           {t("section4.title")}
@@ -29,9 +27,6 @@ export default function Web3() {
             <li key={idx}>{item}</li>
           ))}
         </ul>
-        {/* <button className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer">
-          {t_common("comparisonImages")}
-        </button> */}
       </div>
     </section>
   );
