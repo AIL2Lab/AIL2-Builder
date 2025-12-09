@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sora } from "next/font/google";
-import { hasLocale, NextIntlClientProvider, useTranslations } from "next-intl";
+import { Sora } from "next/font/google";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ViewTransition } from "react";
-import { siteConfig } from "@/config/site";
 import "../globals.css";
 
 
