@@ -1,9 +1,6 @@
-"use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useState } from "react";
 export default function GPU() {
-  const [isCompared, setIsCompared] = useState(false);
   const t = useTranslations("Platform");
   const t_common = useTranslations("Common");
   const items = [
@@ -15,21 +12,12 @@ export default function GPU() {
   return (
     <section className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div className="flex justify-center">
-        {isCompared ? (
-          <Image
-            src="/images/platform-compare-2.jpg"
-            alt="gpu"
-            width={2730}
-            height={1535}
-          />
-        ) : (
-          <Image
-            src="/images/platform-gpu.png"
-            alt="gpu"
-            width={756}
-            height={521}
-          />
-        )}
+        <Image
+          src="/images/platform-compare-2.jpg"
+          alt="gpu"
+          width={2730}
+          height={1535}
+        />
       </div>
       <div>
         <h3 className="text-xl sm:text-2xl  md:text-3xl font-bold text-white mb-2">
@@ -40,12 +28,9 @@ export default function GPU() {
             <li key={idx}>{item}</li>
           ))}
         </ul>
-        <button
-          className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer"
-          onClick={() => setIsCompared(!isCompared)}
-        >
+        {/* <button className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer">
           {t_common("comparisonImages")}
-        </button>
+        </button> */}
       </div>
     </section>
   );
