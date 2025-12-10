@@ -1,11 +1,13 @@
+'use client'
+import useBreakpoint, { Breakpoint } from "@/hooks/useBreakpoint";
+
 type Props = {
   rotate?: number
 }
 
 export default function Plant({ rotate = 0 }: Props) {
-  // 设置圆弧厚度
-  const thickness = 8; 
-
+  const breakpoint = useBreakpoint() as Breakpoint;
+  const thickness = (breakpoint === 'xs' || breakpoint === 'sm') ? 4 : 8; 
   return (
     <div className="w-full relative h-40 sm:h-60 md:h-80 lg:h-100 overflow-hidden">
       <div className="circle bg-background w-[800px] h-[800px] sm:w-[1600px] sm:h-[1600px] lg:w-[3200px] lg:h-[3200px]"></div>

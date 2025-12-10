@@ -8,11 +8,15 @@ import Image from "next/image";
 import AizelNetwork_logo from "@/assets/images/Partners_AizelNetwork_logo.png";
 import AltLayer_logo from "@/assets/images/Partners_AltLayer_logo.svg";
 import Alchemy_logo from "@/assets/images/Partners_Alchemy_logo.svg";
+import Fireblocks_logo from "@/assets/images/Partners_Fireblock_logo.svg";
+import Conwai_logo from "@/assets/images/Partners_Conwai_logo.webp";
+import Raiinmaker_logo from "@/assets/images/Partners_Raiinmaker_logo.png";
+
 export default function TagFilter() {
   const t = useTranslations("Common");
   const [activeFilter, setActiveFilter] = useState("All");
   const filterTags = [
-    t("all"),
+    "All",
     "AI - Compute & Execution",
     "AI - Agents",
     "AI - Apps",
@@ -42,7 +46,7 @@ export default function TagFilter() {
       twitter: "https://x.com/aizel_network",
       description:
         "Aizel Network is the fastest and most scalable modular network dedicated to verifiable and private intelligence.",
-      types: [t("all"), "AI - Compute & Execution", "AI - Agents", "AI - Inference & Models", ],
+      types: ["All", "AI - Compute & Execution", "AI - Agents", "AI - Inference & Models", ],
     },
     {
       title: "AltLayer",
@@ -51,7 +55,7 @@ export default function TagFilter() {
       twitter: "https://x.com/alt_layer",
       description:
         "AltLayer is a Rollups as a Service provider for Web3. They offer Restaked Rollups and Rollups as a Service to accelerate scaling for Web3 applications. AltLayer is backed by prominent investors and has collaborated with various projects in the blockcha...",
-      types: [t("all"), "Others"],
+      types: ["All", "Others"],
     },
     {
       title: "Alchemy",
@@ -60,7 +64,39 @@ export default function TagFilter() {
       twitter: "https://x.com/Alchemy",
       description:
         "Alchemy is a web3 development platform that provides a powerful set of web3 APIs for building and scaling decentralized applications. It offers services such as NFT APIs, webhooks, blockchain connections, subgraphs, and token APIs, making it faster, more reliable, and scalable than other solutions. Alchemy empowers companies to build decentralized applications without managing blockchain infrastructure in-house, with top projects like Augur, Cryptokitties, and OpenSea relying on its services.",
-      types: [t("all"), "Others"],
+      types: ["All", "Others"],
+    },
+    {
+      title: "Fireblocks",
+      logo: <Image src={Fireblocks_logo} alt="Fireblocks_logo" />,
+      url: "https://www.fireblocks.com/",
+      twitter: "https://x.com/FireblocksHQ",
+      description:
+        "Fireblocks is a top institutional digital asset custody, transfer, and settlement platform with MPC CMP wallet technology. It offers a comprehensive suite of tools for managing and securing digital assets, enabling secure tokenized asset management and",
+      types: ["All", "DeFi"],
+    },
+    {
+      title: "Conwai",
+      logo: (
+        <div className="flex items-center">
+          <Image src={Conwai_logo} alt="Conwai_logo" />
+          <span className="ml-2.5 font-bold text-2xl">Conwai</span>
+        </div>
+      ),
+      url: "https://www.conwai.net/",
+      twitter: "http://x.com/conwainet",
+      description:
+        "One chain covering the full Artificial Intelligence lifecycle. From data collection, labeling and preprocessing to model training, evaluation, fine-tuning, inference, RAG, RLHF and autonomous agents.",
+      types: ["All", "L1/L2"],
+    },
+    {
+      title: "Raiinmaker",
+      logo: <Image src={Raiinmaker_logo} alt="Raiinmaker_logo" className="w-1/2" />,
+      url: "https://www.raiinmaker.com/",
+      twitter: "https://x.com/Raiinmakerapp",
+      description:
+        "Raiinmaker is a decentralized AI platform at the forefront of integrating human-in-the-loop (HITL) systems for AI model training and data validation. Our proprietary R.A.I.I.N. (Reinforced AI Insight Network) taps into a global community of 237,000 validators who have collectively completed over 1.5 million data annotations, contributing to a diverse, high-quality data ecosystem",
+      types: ["All", "AI - Apps"],
     },
   ];
   const filterItems = ecosystemItems.filter((item) =>
