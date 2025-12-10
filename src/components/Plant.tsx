@@ -19,11 +19,6 @@ export default function Plant({ rotate = 0 }: Props) {
           className="absolute inset-0 rounded-full"
           style={{
             background: `conic-gradient(from 0deg, rgba(252, 241, 192, 1) 0deg, rgba(255, 255, 255, 0) 11.63deg, rgba(255, 255, 255, 0) 348.37deg, rgba(252, 241, 192, 1) 360deg)`,
-            /* 
-               修改说明：
-               1. 内圈：从 calc(100% - 12px) 突变到 +0.5px，消除内侧模糊。
-               2. 外圈：从 calc(100% - 1px) 突变到 100%，消除原本 99.5% 带来的 8px 模糊。
-            */
             maskImage: `radial-gradient(closest-side, 
               transparent calc(100% - ${thickness}px), 
               black calc(100% - ${thickness}px + 0.5px), 
