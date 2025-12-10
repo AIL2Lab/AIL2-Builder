@@ -49,7 +49,7 @@ export default function PlanetCarousel() {
   const currentRotation = (activeIndex - centerIndex) * rotationStep;
   const circleSizeClass =
     "w-[800px] h-[800px] sm:w-[1600px] sm:h-[1600px] lg:w-[3200px] lg:h-[3200px]";
-  const thickness = 8; 
+  const thickness = (breakpoint === 'xs' || breakpoint === 'sm') ? 4 : 8; 
   return (
     <div className="mt-20">
       <div className="w-full flex items-center justify-center my-10">
@@ -134,7 +134,7 @@ export default function PlanetCarousel() {
             )`,
             }}
           />
-          <div className="absolute top-1 left-1/2 -translate-x-1/2 w-full h-full">
+          <div className="absolute top-0 md:top-1 left-1/2 -translate-x-1/2 w-full h-full">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-full w-6 h-6 md:w-8 md:h-8 flex justify-center items-center">
                 <div className="w-3 h-3 md:w-4 md:h-4 bg-theme rounded-full shadow-lg"></div>
