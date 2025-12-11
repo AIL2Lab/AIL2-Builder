@@ -4,29 +4,34 @@ import { Github } from "./icons/Github";
 import { Document } from "./icons/document";
 import Menu from "./Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useTranslations } from "next-intl";
-import { siteConfig } from "@/config/site";
+import { useLocale, useTranslations } from "next-intl";
+import { siteConfig, getNavbarConfig } from "@/config/site";
+import NavDropdown from "./NavDropdown";
 
 export default function Navbar() {
   const t = useTranslations("Navbar")
+  const locale = useLocale()
+  const {navbarLeft, navbarRight, allNavbar} = getNavbarConfig(t)
   return (
     <div className="w-full sticky flex items-center justify-center top-6 md:top-12 z-50">
       <nav className="items-center hidden md:grid grid-cols-2 bg-[#121212] relative h-[84px] rounded-2xl">
         <div className="flex col-span-1 items-center pr-20 space-x-4 lg:space-x-6 xl:space-x-12">
-            <div className="text-base font-normal ml-5 lg:ml-10">
-              <Link href="/">{t("research")}</Link>
-            </div>
-            <div className="text-base font-normal md:red">
-              <Link href="/">{t("ecosystem")}</Link>
-            </div>
-            <div className="text-base font-normal">
-              <Link href="/">{t("learn")}</Link>
-            </div>
+            {
+              navbarLeft.map((item,idx) => (
+                <div key={idx} className={`${idx === 0 ? 'ml-5 lg:ml-10' : ''} text-base font-normal`}>
+                  <NavDropdown locale={locale} item={item} />
+                </div>
+              ))
+            }
         </div>
         <div className="flex col-span-1 items-center pl-20 space-x-4 lg:space-x-6 xl:space-x-12">
-          <div className="text-base font-normal">
-              <Link href="/">{t("blog")}</Link>
-            </div>
+            {
+              navbarRight.map((item,idx) => (
+                <div key={idx} className="text-base font-normal">
+                  <NavDropdown locale={locale} item={item} />
+                </div>
+              ))
+            }
             <div className="text-base font-normal flex flex-1 justify-end ml-4 lg:ml-8">
               <Link href={siteConfig.githubUrl} target="_blank" className="github-icon">
                 <Github />
@@ -42,7 +47,7 @@ export default function Navbar() {
       {/* mobile menu */}
       <nav className="w-full flex items-center justify-between md:hidden px-2.5">
         <div className="flex-1">
-          <Menu />
+          <Menu data={allNavbar} />
         </div>
         <Logo size="small" />
         <div className="flex-1 flex justify-end">

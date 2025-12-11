@@ -1,7 +1,30 @@
 {
   "site": {
     "name": "AIL2 - en büyük AIL2",
-    "description": "AI modelleri tamamen merkeziyetsiz olarak, sonsuz ölçeklenebilirlikle çalışır ve geliştiricileri ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı blockchain üzerinde merkeziyetsiz AI uygulama geliştirmelerini 100x hızlandırmak için güçlendirir."
+    "subtitle": "en büyük AIL2",
+    "description": "AI modelleri tamamen merkeziyetsiz olarak, sonsuz ölçeklenebilirlikle çalışır ve geliştiricileri ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı blockchain üzerinde merkeziyetsiz AI uygulama geliştirmelerini 100x hızlandırmak için güçlendirir.",
+    "platform": {
+      "title": "Platform",
+      "description": "Merkezi Olmayan AI Hızlandırma Platformu"
+    },
+    "accelerate": {
+      "title": "Hızlandır",
+      "description": "Bir sonraki AI kurucu dalgasının yolculuğunu hızlandırıyor, fikirleri finansman, uzman rehberliği ve pazara giriş desteğiyle ileriye taşıyoruz."
+    },
+    "fqa": {
+      "title": "Sıkça Sorulan Sorular",
+      "description": "Sıkça sorulan sorular"
+    },
+    "ecosystem": {
+      "title": "Ekosistem",
+      "description": "AI L2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. Kütük AI L2 girişimlerinin kapsamlı bir deposu."
+    }
+  },
+  "Common": {
+    "all": "Tümü",
+    "applyBtn": "Şimdi Başvur",
+    "learnMore": "Daha fazla öğren",
+    "comparisonImages": "Karşılaştırma Görselleri"
   },
   "Error": {
     "description": "<p>Ne yazık ki bir hatayla karşılaştık.</p><p>Ziyaret ettiğiniz sayfayı <retry>yeniden yüklemeyi</retry> deneyebilirsiniz.</p>",
@@ -14,7 +37,10 @@
     "research": "Araştırma",
     "ecosystem": "Ekosistem",
     "learn": "Öğren",
-    "blog": "Blog"
+    "blog": "Blog",
+    "platform": "Platform",
+    "accelerate": "Hızlandırma",
+    "fqa": "Sıkça Sorulan Sorular"
   },
   "Home": {
     "supportBtn": "X'te AIL2'yi Destekle",
@@ -84,5 +110,83 @@
     "title": "Sayfa Bulunamadı",
     "description": "Üzgünüz, aradığınız sayfayı bulamadık",
     "backHome": "Ana sayfaya geri dön"
+  },
+  "Ecosystem": {
+    "title": "AIL2 Ekosistemini<br></br>Keşfedin",
+    "subtitle": "• AI L2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. <br></br>• AI L2'deki öncü edge computing projeleri için merkezi depo."
+  },
+  "Platform": {
+    "title": "Merkezi Olmayan<br></br>AI Hızlandırma Platformu",
+    "subtitle": "6 blockchain ve en hızlı hızlandırma",
+    "powered": "Merkezi Olmayan AI için<br></br>Çok Zincirli Hızlandırma ve GPU Destekli İnovasyon",
+    "section1": {
+      "title": "Çok Zincirli<br></br>Hızlandırma ve Kusursuz Birlikte Çalışabilirlik",
+      "content": "AIL2, ETH, BSC, GIWA, XLayer, Base ve Mantle üzerinde 100 kat daha hızlı merkezi olmayan AI geliştirimi sağlar. Kusursuz çok zincirli operasyonlar için tek zincir sınırlamalarını aşar. Teknik engeller olmadan zahmetsiz çok zincirli AI uygulaması dağıtımını sağlar. Verimli ve ölçeklenebilir çok zincirli AI entegrasyonu sağlayarak iş akışlarını yenilikçi bir şekilde basitleştirir."
+    },
+    "section2": {
+      "title": "GPU Destekli<br></br>Merkezi Olmayan Hesaplama Gücü",
+      "item1": "Bir GPU madenci ağı tarafından desteklenen AIL2, AI modeli dağıtımı ve bakımında geliştirici yüklerini ortadan kaldırır.",
+      "item2": "Merkezi olmayan GPU altyapısı, AI işlemleri için talep üzerine, ölçeklenebilir hesaplama kaynakları sunar.",
+      "item3": " Kripto madencilik kaynaklarını AI görevleri için yenilikçi bir şekilde yeniden kullanır.",
+      "item4": "Bu, uygun maliyetli ve yüksek performanslı bir hesaplama çözümü oluşturur."
+    },
+    "section3": {
+      "title": "Sonsuz Ölçeklenebilirlik ile<br></br>Merkezi Olmayan Depolama",
+      "content": "Entegre AI Hesaplama ve Depolama Ağı, merkezi olmayan, sonsuz ölçeklenebilir veri depolama sağlar. Veriler, güvenlik ve kullanılabilirliği artırmak için ağa dağıtılır. Sağlam altyapı ile devasa AI veri setlerini destekler. Bu tasarım, Web3 yerel ilkeleriyle uyumludur ve AI uygulamalarının kısıtsız büyümesini sağlar."
+    },
+    "section4": {
+      "title": "Web3 Veri Sinerjisi ve Bileşebilirliği",
+      "item1": "AIL2, birleştirilmiş mimarisi aracılığıyla Web3 verilerini (on-chain, DAO vb.) AI modellerine sorunsuz bir şekilde entegre etmeyi sağlar.",
+      "item2": "Bu sinerji, yenilikçi AI destekli Web3 kullanım senaryolarını mümkün kılar.",
+      "item3": "Örnekler, on-chain analizinden otonom ajan işlemlerine kadar uzanır.",
+      "item4": "AI yeteneklerini Web3 veri ekosistemleriyle birleştirerek uygulama sınırlarını genişletir."
+    }
+  },
+  "Accelerate": {
+    "section1": {
+      "title": "Sınırları Aşın<br></br><theme>AIL2</theme> ile",
+      "content": "Bir sonraki AI kurucu dalgasının yolculuğunu hızlandırıyor, fikirleri finansman, uzman rehberliği ve pazara giriş desteğiyle ileriye taşıyoruz."
+    },
+    "section2": {
+      "btn": "Kimiz",
+      "content": "AIL2'nin AI Katmanını kullanarak <theme>Yapay Zeka</theme>'nın Gelecekteki Gelişimini Hızlandırın. Sınırsız Ölçeklenebilirlik, Açıklık ve Web3 Entegrasyonu için İnşa Edildi."
+    },
+    "section3": {
+      "item1": {
+        "title": "Teknik Rehberlik",
+        "description": "Uzman yönlendirmeli entegrasyon ve mimari incelemesi alın. Yol haritanızı bizimkiyle uyumlu hale getirin."
+      },
+      "item2": {
+        "title": "Ortak Pazarlama Promosyonu",
+        "description": "Pazarlama stratejilerinizi AIL2 ile uyumlu hale getirin. Ana kanallarda ortak promosyon yürütün."
+      },
+      "item3": {
+        "title": "Pazarlama ve Fonlama Strateji Kitabı",
+        "description": "AIL2 ekibiyle ekosistem büyüme planları geliştirin. Üst düzey risk sermayedarlarına yönlendirme alın."
+      },
+      "item4": {
+        "title": "Ortak İndirimleri",
+        "description": "Ortak indirimlerle hızlandırın. Tercihli hizmetlere erişin. Kilit desteği alın."
+      },
+      "item5": {
+        "title": "İyi Olma Desteği",
+        "description": "Meditasyon kurslarına ve iyi olma aktivitelerine katılın. AIL2, merkezi olmayan zekayı yeniden tanımlıyor."
+      },
+      "item6": {
+        "title": "AIL2",
+        "description": "Merkezi olmayan uygulamaların nasıl oluşturulduğunu, dağıtıldığını ve ölçeklendirildiğini yeniden tanımlar.",
+        "followBtn": "Bizi takip edin"
+      }
+    },
+    "section4": {
+      "title": "Merkezi Olmayan AI Geliştirmeyi 100 Kat Hızlandırın",
+      "content": "Birden fazla blockchain üzerinde tamamen merkezi olmayan ve sonsuz ölçeklenebilir AI modelleri sağlayarak merkezi olmayan AI uygulama geliştirmesini büyük ölçüde hızlandırmak için tasarlanmış bir platform.",
+      "item1": "Merkezi Olmayan ve Ölçeklenebilir Çekirdek: AI modelleri için sınırsız ölçeklenebilirliğe sahip tamamen merkezi olmayan bir ağda çalışır.",
+      "item2": "Geliştirici Hızlandırması: Geliştiricilerin 100 kat daha hızlı merkezi olmayan AI uygulamaları oluşturmasını sağlar.",
+      "item3": "Çok Zincirli Destek: ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı ana blockchain için yerel destek sağlar."
+    }
+  },
+  "Fqa": {
+    "description": "Sıkça sorulan sorular"
   }
 }

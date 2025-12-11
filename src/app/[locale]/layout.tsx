@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sora } from "next/font/google";
-import { hasLocale, NextIntlClientProvider, useTranslations } from "next-intl";
+import { Sora } from "next/font/google";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ViewTransition } from "react";
-import { siteConfig } from "@/config/site";
 import ContextProvider from "@/context/providers";
 import { headers } from "next/headers";
 import { Toaster } from "@/components/ui/sonner"
@@ -41,7 +40,9 @@ export async function generateMetadata({params}: { params: Promise<{ locale: str
     creator: "AIL2Lab",
   }
 }
-
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children,

@@ -1,7 +1,30 @@
 {
   "site": {
     "name": "AIL2 - o maior AIL2",
-    "description": "Modelos de IA rodam de forma totalmente descentralizada, com escalabilidade infinita, capacitando desenvolvedores a acelerar o desenvolvimento de aplicações de IA descentralizadas em 100x em seis blockchains: ETH, BSC, GIWA, XLayer, Base e Mantle."
+    "subtitle": "o maior AIL2",
+    "description": "Modelos de IA rodam de forma totalmente descentralizada, com escalabilidade infinita, capacitando desenvolvedores a acelerar o desenvolvimento de aplicações de IA descentralizadas em 100x em seis blockchains: ETH, BSC, GIWA, XLayer, Base e Mantle.",
+    "platform": {
+      "title": "Plataforma",
+      "description": "Plataforma de Aceleração de IA Descentralizada"
+    },
+    "accelerate": {
+      "title": "Acelerar",
+      "description": "Acelerando a jornada da próxima onda de fundadores de IA, impulsionando ideias para frente com financiamento, orientação especializada e suporte para ir ao mercado."
+    },
+    "fqa": {
+      "title": "Perguntas Frequentes",
+      "description": "Perguntas frequentes"
+    },
+    "ecosystem": {
+      "title": "Ecossistema",
+      "description": "Uma plataforma consolidada para os últimos avanços em tecnologia AI L2. Um repositório abrangente de iniciativas de ponta de AI L2."
+    }
+  },
+  "Common": {
+    "all": "Todos",
+    "applyBtn": "Inscreva-se agora",
+    "learnMore": "Saiba mais",
+    "comparisonImages": "Imagens de comparação"
   },
   "Error": {
     "description": "<p>Infelizmente, encontramos um erro.</p><p>Você pode tentar <retry>recarregar a página</retry> que estava visitando.</p>",
@@ -14,7 +37,10 @@
     "research": "Pesquisa",
     "ecosystem": "Ecossistema",
     "learn": "Aprender",
-    "blog": "Blog"
+    "blog": "Blog",
+    "platform": "Plataforma",
+    "accelerate": "Acelerar",
+    "fqa": "Perguntas Frequentes"
   },
   "Home": {
     "supportBtn": "Apoie o AIL2 no X",
@@ -84,5 +110,83 @@
     "title": "Página Não Encontrada",
     "description": "Desculpe, não conseguimos encontrar a página que você está procurando",
     "backHome": "Voltar para o início"
+  },
+  "Ecosystem": {
+    "title": "Explore<br></br>o Ecossistema AIL2",
+    "subtitle": "• Uma plataforma consolidada para os últimos avanços em tecnologia AI L2. <br></br>• O repositório central para projetos pioneiros de edge computing em AI L2."
+  },
+  "Platform": {
+    "title": "Plataforma de<br></br>Aceleração de IA Descentralizada",
+    "subtitle": "6 blockchains e a aceleração mais rápida",
+    "powered": "Aceleração Multi-Chain e Inovação<br></br>Impulsionada por GPU para IA Descentralizada",
+    "section1": {
+      "title": "Aceleração<br></br>Multi-Chain e Interoperabilidade Perfeita",
+      "content": "A AIL2 oferece desenvolvimento de IA descentralizada 100x mais rápido em ETH, BSC, GIWA, XLayer, Base e Mantle. Supera as limitações de cadeia única para operações multi-chain perfeitas. Permite o esforçless deploy de aplicações de IA multi-chain sem barreiras técnicas. Simplifica inovadoramente os fluxos de trabalho, garantindo uma integração de IA multi-chain eficiente e escalável."
+    },
+    "section2": {
+      "title": "Poder de Computação<br></br>Descentralizada Impulsionada por GPU",
+      "item1": "Alimentada por uma rede de mineradores de GPU, a AIL2 elimina as cargas dos desenvolvedores na implantação e manutenção de modelos de IA.",
+      "item2": "A infraestrutura GPU descentralizada oferece recursos de computação sob demanda e escaláveis para operações de IA.",
+      "item3": "Reutiliza de forma inovadora os recursos de mineração de criptomoedas para tarefas de IA.",
+      "item4": "Isso cria uma solução de computação econômica e de alto desempenho."
+    },
+    "section3": {
+      "title": "Armazenamento<br></br>Descentralizado com Escalabilidade Infinita",
+      "content": "A Rede Integrada de Computação e Armazenamento de IA fornece armazenamento de dados descentralizado e infinitamente escalável. Os dados são distribuídos pela rede para maior segurança e disponibilidade. Suporta grandes conjuntos de dados de IA com infraestrutura robusta. Este design está alinhado com os princípios nativos da Web3, permitindo o crescimento irrestrito de aplicações de IA."
+    },
+    "section4": {
+      "title": "Sinergia e Componibilidade de Dados Web3",
+      "item1": "A AIL2 permite a integração perfeita de dados Web3 (on-chain, DAO, etc.) em modelos de IA através de sua arquitetura unificada.",
+      "item2": "Essa sinergia capacita casos de uso inovadores de IA para Web3.",
+      "item3": "Os exemplos variam de análise on-chain a operações de agentes autônomos.",
+      "item4": "Ponteia as capacidades de IA com ecossistemas de dados Web3, expandindo os limites das aplicações."
+    }
+  },
+  "Accelerate": {
+    "section1": {
+      "title": "Construa Sem Limites<br></br>com <theme>AIL2</theme>",
+      "content": "Acelerando a jornada da próxima onda de fundadores de IA, impulsionando ideias para frente com financiamento, orientação especializada e suporte para ir ao mercado."
+    },
+    "section2": {
+      "btn": "Quem somos",
+      "content": "Aproveite a Camada de IA da AIL2 para Acelerar o Desenvolvimento Futuro da <theme>Inteligência Artificial</theme>. Construída para Escalabilidade, Abertura e Integração Web3 Ilimitadas."
+    },
+    "section3": {
+      "item1": {
+        "title": "Orientação Técnica",
+        "description": "Obtenha integração guiada por especialistas e revisão de arquitetura. Alinhe seu roadmap com o nosso."
+      },
+      "item2": {
+        "title": "Promoção de Marketing Conjunta",
+        "description": "Alinhe estratégias de marketing com a AIL2. Execute copromoção em canais-chave."
+      },
+      "item3": {
+        "title": "Livro de Estratégia de Marketing e Captação de Recursos",
+        "description": "Desenvolva planos de crescimento do ecossistema com a equipe da AIL2. Seja indicado a capitalistas de risco de primeira linha."
+      },
+      "item4": {
+        "title": "Descontos de Parceiros",
+        "description": "Acelere com descontos de parceiros. Acesse serviços preferenciais. Obtenha suporte chave."
+      },
+      "item5": {
+        "title": "Suporte de Bem-Estar",
+        "description": "Junte-se a cursos de meditação e atividades de bem-estar. A AIL2 redefine a inteligência descentralizada."
+      },
+      "item6": {
+        "title": "AIL2",
+        "description": "Redefine como as aplicações descentralizadas são construídas, implantadas e escaladas.",
+        "followBtn": "Siga-nos em"
+      }
+    },
+    "section4": {
+      "title": "Acelere o Desenvolvimento de IA Descentralizada 100x",
+      "content": "Uma plataforma projetada para acelerar massivamente o desenvolvimento de aplicações de IA descentralizadas, fornecendo modelos de IA completamente descentralizados e infinitamente escaláveis em múltiplas blockchains.",
+      "item1": "Núcleo Descentralizado e Escalável: Opera em uma rede completamente descentralizada com escalabilidade ilimitada para modelos de IA.",
+      "item2": "Aceleração para Desenvolvedores: Capacita os desenvolvedores a construir aplicações de IA descentralizadas 100 vezes mais rápido.",
+      "item3": "Suporte Multi-Chain: Fornece suporte nativo para seis blockchains principais: ETH, BSC, GIWA, XLayer, Base e Mantle."
+    }
+  },
+  "Fqa": {
+    "description": "Perguntas frequentes"
   }
 }
