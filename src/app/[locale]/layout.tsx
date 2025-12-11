@@ -6,8 +6,10 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ViewTransition } from "react";
 import { siteConfig } from "@/config/site";
+import ContextProvider from "@/context/providers";
+import { headers } from "next/headers";
+import { Toaster } from "@/components/ui/sonner"
 import "../globals.css";
-
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -23,20 +25,6 @@ const sora = Sora({
   variable: '--font-sora',
   subsets: ['latin'],
 })
-// export const metadata: Metadata = {
-//   title: {
-//     default: siteConfig.name,
-//     template: `%s | ${siteConfig.name}`
-//   },
-//   description: "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle",
-//   authors: [
-//     {
-//       name: 'AIL2Lab',
-//       url: 'https://github.com/AIL2Lab'
-//     }
-//   ],
-//   creator: "AIL2Lab",
-// };
 
 export async function generateMetadata({params}: { params: Promise<{ locale: string }> }) : Promise<Metadata> {
   const { locale } = await params
@@ -44,6 +32,13 @@ export async function generateMetadata({params}: { params: Promise<{ locale: str
   return {
     title: t('name'),
     description: t('description'),
+    authors: [
+      {
+        name: 'AIL2Lab',
+        url: 'https://github.com/AIL2Lab'
+      }
+    ],
+    creator: "AIL2Lab",
   }
 }
 
@@ -59,16 +54,20 @@ export default async function RootLayout({
 
   // Enable static rendering
   setRequestLocale(locale);
-
+  const headersList = await headers()
+  const cookies = headersList.get('cookie');
   return (
-    <html lang={locale}>
+    <html lang={locale} className="dark">
       <body
         className={`${sora.variable} antialiased`}
       >
         <NextIntlClientProvider locale={locale}>
-          <ViewTransition>
-            {children}
-          </ViewTransition>
+          <ContextProvider cookies={cookies}>
+            <ViewTransition>
+              {children}
+            </ViewTransition>
+            <Toaster />
+          </ContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>

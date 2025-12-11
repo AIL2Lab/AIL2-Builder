@@ -5,6 +5,9 @@ const cspHeader = [
   "default-src 'self';",
   "script-src 'self' 'unsafe-eval' 'unsafe-inline';",
   "style-src 'self' 'unsafe-inline';",
+  "connect-src 'self' https://api.web3modal.org https://cloud.reown.com https://cca-lite.coinbase.com https://pulse.walletconnect.org https://rpc-testnet.dbcwallet.io https://rpc2.dbcwallet.io;" ,
+  "font-src 'self' https://fonts.reown.com;",
+  "img-src 'self' data: blob: https:;",
 ].join(' ');
 
 const nextConfig: NextConfig = {
@@ -30,6 +33,10 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/seed/**",
         search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
     ],
   },

@@ -8,7 +8,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Subscriber {
   id        Int      @id @default(autoincrement())
   email     String   @unique
@@ -16,4 +15,17 @@ model Subscriber {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("subscribers")
+}
+
+model Agent {
+  id          String   @id @default(uuid())
+  name        String
+  symbol      String
+  description String
+  avatar      String?
+  socialLinks String?
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("agent")
 }

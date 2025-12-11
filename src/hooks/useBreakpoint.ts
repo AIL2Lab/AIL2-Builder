@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 
 // 定义断点类型，方便类型提示
-type Breakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type Breakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 export default function useBreakpoint() {
   const [breakpoint, setBreakpoint] = useState<Breakpoint | null>(null);
