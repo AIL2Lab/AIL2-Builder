@@ -7,7 +7,12 @@ export default function MyAIModelBtn() {
     const { open } = useAppKit()
     const { address, isConnected, status } = useAppKitAccount()
     const openModel = () => {
-        open({ view: 'Connect' });
+        if(address) {
+            open({ view: 'Account' });
+        } else {
+            open({ view: 'Connect' });
+        }
+        
     }
     return (
         <>

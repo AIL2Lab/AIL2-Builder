@@ -1,8 +1,6 @@
 import { createPublicClient, http, parseAbiItem, Log } from 'viem';
-import { PrismaClient } from '@prisma/client';
+import prisma from "@/lib/prisma";
 import { dbcMainnet } from '@/config/network.config';
-
-const prisma = new PrismaClient();
 
 // 配置
 const CHAIN = dbcMainnet;

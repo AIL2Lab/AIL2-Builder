@@ -41,6 +41,7 @@ export async function POST(request: NextRequest) {
     }
 
     const [conflictAgent, userCheck] = await Promise.all(checkPromises);
+    
     if (conflictAgent) {
       // 注意：这里需要转小写比较，因为数据库查询用了 insensitive
       if (conflictAgent.name.toLowerCase() === name.toLowerCase()) {
