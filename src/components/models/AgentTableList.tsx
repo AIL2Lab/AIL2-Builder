@@ -14,11 +14,11 @@ import { useAgentList } from "@/hooks/useAgentQueries";
 import { agentFilterAtom } from "@/store/agent";
 import { useAtom } from "jotai";
 import { useQuery } from "@tanstack/react-query";
-import { ApiResponse } from "@/types/response.type";
-import { getAgents, GetAgentsResult } from "@/actions/agents";
+import { ApiResponse } from "@/types/api";
+import { getAgents } from "@/actions/agents";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-
+import { fetchAgents, GetAgentsResult } from "@/services/agents.service";
 const columns = [
     { key: 'id', label: 'ID', sortable: true },
     { key: 'name', label: 'Name', sortable: true },
@@ -47,16 +47,16 @@ export default function AgentTableList() {
   const pageSize = 10
 
 const {
-    data: response,
+    data: apiResponse,
     isLoading,
     isError,
     error,
   } = useQuery<ApiResponse<GetAgentsResult>>({
     queryKey: ['agents', currentPage, pageSize],
-    queryFn: () => getAgents(currentPage, pageSize),
+    queryFn: () => fetchAgents({page:currentPage,pageSize,query: ''}),
     // keepPreviousData: true, 
   })
-  const agents = response?.data?.agents ?? []
+  const agents = apiResponse?.data?.list ?? []
   const goModelDetail = (id: string) => {
     router.push(`/${locale}/models/detail/${id}`)
   }
@@ -89,8 +89,8 @@ const {
             </TableCell>
           </TableRow>
         ) : (
-          agents.map(agent => (
-            <TableRow>
+          agents.map((agent, idx) => (
+            <TableRow key={idx}>
               <TableCell className="font-medium" onClick={() => goModelDetail(agent.id)}>{agent.name}</TableCell>
               <TableCell>{agent.symbol}</TableCell>
               <TableCell>{agent.type}</TableCell>

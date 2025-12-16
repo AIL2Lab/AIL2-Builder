@@ -18,6 +18,11 @@ CREATE TABLE "agent" (
     "socialLinks" TEXT,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
+    "category" TEXT NOT NULL,
+    "iaoContractAddress" TEXT,
+    "iaoSuccessChecked" BOOLEAN NOT NULL DEFAULT false,
+    "iaoSuccessful" BOOLEAN,
+    "iaoSuccessCheckTime" TIMESTAMP(3),
 
     CONSTRAINT "agent_pkey" PRIMARY KEY ("id")
 );

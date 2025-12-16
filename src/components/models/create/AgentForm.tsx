@@ -18,25 +18,24 @@ import { Input } from "@/components/ui/input"
 
 
 import { createAgentSchema, type CreateAgentInput } from "@/lib/validations"
-import { createAgent } from "@/actions/agents"
-import { ApiResponse } from "@/types/response.type"
+import { ApiResponse } from "@/types/api"
 import { Agent } from "@/generated/client"
 import { ImageUpload } from "@/components/ui/image-upload"
 import { Textarea } from "@/components/ui/textarea"
 import { useRouter } from "next/navigation"
 import { useLocale } from "next-intl"
+import { createAgentApi } from "@/services/agents.service"
 
 export function CreateAgentForm() {
   const router = useRouter()
   const locale = useLocale()
   const queryClient = useQueryClient()
   const mutation = useMutation<ApiResponse<Agent>, Error, CreateAgentInput>({
-    mutationFn: (data: CreateAgentInput) => createAgent(data as any),
+    mutationFn: (data: CreateAgentInput) => createAgentApi(data),
     onSuccess: (data) => {
       if (data.code === 201) {
         toast.success(data.message)
         form.reset() 
-        // 3. 使 'agents' 列表的缓存失效，触发列表页面重新获取数据
         queryClient.invalidateQueries({ queryKey: ['agents'] })
         router.push(`/${locale}/models`)
       } else {
