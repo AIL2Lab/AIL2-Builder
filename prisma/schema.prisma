@@ -71,3 +71,14 @@ model User {
 
   @@map("user")
 }
+
+
+model AuthNonce {
+  id        String   @id @default(uuid())
+  nonce     String   @unique
+  address   String
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+
+  @@map("authNonce")
+}
