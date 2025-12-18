@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t('product')}</div>
             <div>
-              <Link href="/research">AIL2 Core</Link>
+              <Link href="/">AIL2 Core</Link>
             </div>
             <div><Link href="/ecosystem">AIL2 Builder</Link></div>
             {/* <Link href="/">AIL2 Creator</Link> */}
