@@ -49,7 +49,11 @@ export default function Footer() {
           </div>
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t("blog")}</div>
-            <div>Docs</div>
+            <div>
+              <a href="/doc/HPVIDEO_WhitePaperv3.pdf" target="_blank" rel="noopener noreferrer">
+                Docs
+              </a>
+            </div>
             <div>Blog</div>
             <div><Link href="/research">Research</Link></div>
           </div>

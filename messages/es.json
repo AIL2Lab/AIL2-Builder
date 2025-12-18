@@ -11,13 +11,17 @@
       "title": "Acelerar",
       "description": "Acelerando el viaje de la próxima ola de fundadores de IA, impulsando ideas hacia adelante con financiación, guía experta y soporte para salir al mercado."
     },
-    "fqa": {
+    "faq": {
       "title": "Preguntas Frecuentes",
       "description": "Preguntas frecuentes"
     },
     "ecosystem": {
       "title": "Ecosistema",
       "description": "Una plataforma consolidada para los últimos avances en tecnología AI L2. Un repositorio completo de iniciativas de vanguardia de AI L2."
+    },
+    "research": {
+      "title": "Investigación",
+      "description": "El Sistema Operativo de IA Descentralizado"
     }
   },
   "Common": {
@@ -40,7 +44,7 @@
     "blog": "Blog",
     "platform": "Plataforma",
     "accelerate": "Acelerar",
-    "fqa": "Preguntas Frecuentes"
+    "faq": "Preguntas Frecuentes"
   },
   "Home": {
     "supportBtn": "Apoya a AIL2 en X",
@@ -186,7 +190,55 @@
       "item3": "Soporte Multi-Chain: Proporciona soporte nativo para seis blockchains principales: ETH, BSC, GIWA, XLayer, Base y Mantle."
     }
   },
-  "Fqa": {
+  "Faq": {
     "description": "Preguntas frecuentes"
+  },
+  "Research": {
+    "title": "El Sistema Operativo de IA <br></br><theme>Descentralizado</theme>",
+    "subtitle": "AIL2 cierra la brecha entre los masivos requisitos de cómputo y el consenso de blockchain distribuido, escalando la inteligencia hasta el infinito.",
+    "buildBtn": "Comenzar a Construir",
+    "readBtn": "Leer el Libro Blanco",
+    "section1": {
+      "title": "Optimización de la Infraestructura",
+      "item1": {
+        "title": "Consenso Hiperescalable",
+        "description": "Las capas actuales de blockchain no pueden manejar el rendimiento necesario para el entrenamiento de modelos en tiempo real. AIL2 introduce un <theme>novedoso mecanismo de sharding</theme> que trata los estados de los modelos de IA como paquetes de datos fluidos."
+      },
+      "item2": {
+        "title": "Virtualización de GPU con Cero Overhead",
+        "description": "Eliminamos la fricción entre la minería de criptomonedas y la inferencia de IA. Nuestro <theme>protocolo \"GPU Driver\"</theme> actúa como una capa de traducción universal, permitiendo que el poder de cómputo bruto sea aprovisionado instantáneamente."
+      },
+      "item3": {
+        "title": "Motor de Componibilidad Fluido",
+        "description": "Los desarrolladores no deberían necesitar reconstruir la pila. AIL2 proporciona una <theme>superficie API universal</theme> que te permite encadenar distintos agentes de IA y conjuntos de datos verificados."
+      }
+    },
+    "section2": {
+      "title": "Desglose Técnico",
+      "item1": {
+        "title": "Inferencia Verificable",
+        "description": "Asegurando que los modelos descentralizados devuelvan resultados correctos. Utilizamos <theme>ZK-Rollups Optimistas</theme> para verificar criptográficamente que el cómputo realizado por un nodo no confiable coincide con la ruta de ejecución esperada del modelo."
+      },
+      "item2": {
+        "title": "Canales de Estado Dinámicos para Agentes",
+        "description": "Para soportar sistemas multiagente, implementamos <theme>canales de estado efímeros</theme> que permiten a los agentes negociar, debatir e intercambiar datos fuera de la cadena con latencia casi nula, settle solo el consenso final en la cadena."
+      },
+      "item3": {
+        "title": "Estandarización Universal de Modelos",
+        "description": "Un estándar a nivel de protocolo para empaquetar modelos de IA (Pesos + Configuración + Código de Inferencia) en un <theme>único activo portátil</theme> que puede ser desplegado en cualquier nodo compatible con AIL2 en segundos."
+      }
+    },
+    "section3": {
+      "title": "Nuevo Sistema de Blockchain Potenciado por la Tecnología <theme>Multiagente</theme>",
+      "subtitle": "Los sistemas multiagente basados en LLM coordinan tareas complejas a través de la inteligencia distribuida, alineándose perfectamente con la arquitectura de blockchain.",
+      "item1": {
+        "title": "Gestión Autónoma de Contratos Inteligentes",
+        "description": "Los contratos inteligentes son cruciales para automatizar transacciones. Implementamos una solución multiagente donde distintos agentes analizan, auditan la seguridad y optimizan la lógica de los contratos inteligentes en tiempo real, aumentando la cadena con capacidades de autocuración."
+      },
+      "item2": {
+        "title": "Detección Descentralizada de Anomalías",
+        "description": "Para prevenir la interferencia maliciosa durante la ejecución, desplegamos un \"Enjambre Watchdog\"—un sistema de agentes especializados que monitorea continuamente los mecanismos de consenso. Al coordinar sus observaciones, mejoran la confiabilidad de todo el entorno."
+      }
+    }
   }
 }

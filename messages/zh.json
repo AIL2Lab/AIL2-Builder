@@ -11,13 +11,17 @@
       "title": "加速",
       "description": "加速下一波 AI 创始人的征程，通过资金、专业指导和市场支持推动想法前进。"
     },
-    "fqa": {
+    "faq": {
       "title": "常见问题",
       "description": "常见问题"
     },
     "ecosystem": {
       "title": "生态系统",
       "description": "一个整合 AI L2 技术最新进展的综合性平台。一个全面的尖端 AI L2 项目的存储库。"
+    },
+    "research": {
+      "title": "研究",
+      "description": "去中心化 AI 操作系统"
     }
   },
   "Common": {
@@ -40,7 +44,7 @@
     "blog": "博客",
     "platform": "平台",
     "accelerate": "加速",
-    "fqa": "常见问题"
+    "faq": "常见问题"
   },
   "Home": {
     "supportBtn": "X 上支持AIL2",
@@ -185,7 +189,55 @@
       "item3": "多链支持：为六条主要区块链提供原生支持：ETH、BSC、GIWA、XLayer、Base 和 Mantle。"
     }
   },
-  "Fqa": {
+  "Faq": {
     "description": "常见问题"
+  },
+  "Research": {
+    "title": "<theme>去中心化</theme> <br></br> AI 操作系统",
+    "subtitle": "AIL2 在庞大的计算需求与分布式区块链共识之间架起桥梁，将智能扩展至无限。",
+    "buildBtn": "开始构建",
+    "readBtn": "阅读白皮书",
+    "section1": {
+      "title": "基础设施优化",
+      "item1": {
+        "title": "高可扩展性共识",
+        "description": "当前的区块链层无法处理实时模型训练所需的吞吐量。AIL2 引入了一种<theme>新颖的分片机制</theme>，将 AI 模型状态视为流动的数据包。"
+      },
+      "item2": {
+        "title": "零开销 GPU 虚拟化",
+        "description": "我们消除了加密挖矿和 AI 推理之间的摩擦。我们的<theme>“GPU 驱动”协议</theme>作为一个通用翻译层，允许原始计算能力被即时配置。"
+      },
+      "item3": {
+        "title": "流畅可组合性引擎",
+        "description": "开发者不应该需要重建技术栈。AIL2 提供了一个<theme>通用 API 接口</theme>，让您可以将不同的 AI 智能体和经过验证的数据集链接在一起。"
+      }
+    },
+    "section2": {
+      "title": "技术解析",
+      "item1": {
+        "title": "可验证推理",
+        "description": "确保去中心化模型返回正确的结果。我们利用<theme>乐观 ZK-Rollups</theme>来以加密方式验证不可信节点执行的计算是否符合预期的模型执行路径。"
+      },
+      "item2": {
+        "title": "面向智能体的动态状态通道",
+        "description": "为了支持多智能体系统，我们实现了<theme>临时状态通道</theme>，允许智能体以近乎零延迟进行链下协商、辩论和数据交换，仅将最终的共识在链上结算。"
+      },
+      "item3": {
+        "title": "通用模型标准化",
+        "description": "这是一个协议级别的标准，用于将 AI 模型（权重 + 配置 + 推理代码）打包成一个<theme>单一的可移植资产</theme>，可在几秒钟内部署到任何兼容 AIL2 的节点上。"
+      }
+    },
+    "section3": {
+      "title": "由<theme>多智能体</theme>技术赋能的<br></br>全新区块链系统",
+      "subtitle": "基于 LLM 的多智能体系统通过分布式智能协调复杂任务，与区块链架构完美契合。",
+      "item1": {
+        "title": "自主智能合约管理",
+        "description": "智能合约对于自动化交易至关重要。我们实施了一个多智能体解决方案，其中不同的智能体实时分析、安全审计和优化智能合约逻辑，为区块链赋予自愈能力。"
+      },
+      "item2": {
+        "title": "去中心化异常检测",
+        "description": "为了防止执行过程中的恶意干扰，我们部署了一个“看门狗集群”——一个由专门智能体组成的系统，持续监控共识机制。通过协调它们的观察结果，它们增强了整个环境的可信度。"
+      }
+    }
   }
 }
