@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import StorageImg from '@/assets/images/platform_storage.svg'
 export default function Storage() {
   const t = useTranslations("Platform");
   return (
@@ -14,10 +15,8 @@ export default function Storage() {
       </div>
       <div className="flex justify-center order-1 lg:order-2">
         <Image
-          src="/images/platform-compare-3.jpg"
-          alt="gpu"
-          width={696}
-          height={432}
+          src={StorageImg}
+          alt="storage"
         />
       </div>
     </section>

@@ -6,7 +6,7 @@ import { MediumIcon } from "./icons/Medium";
 import { useTranslations } from "next-intl";
 import { useActionState } from "react";
 import { siteConfig } from "@/config/site";
-import Link from "next/link";
+import {Link} from "@/i18n/navigation";
 
 export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
@@ -41,21 +41,22 @@ export default function Footer() {
         <div className="text-sm sm:text-base col-span-6 md:col-span-3 grid grid-cols-3 pl-0 sm:pl-10  lg:pl-20 xl:pl-40 my-10">
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t('product')}</div>
-            <div>AIL2 Core</div>
-            <div>AIL2 Builder</div>
-            <div>AIL2 Creator</div>
+            <div>
+              <Link href="/research">AIL2 Core</Link>
+            </div>
+            <div><Link href="/ecosystem">AIL2 Builder</Link></div>
+            {/* <Link href="/">AIL2 Creator</Link> */}
           </div>
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t("blog")}</div>
             <div>Docs</div>
             <div>Blog</div>
-            <div>Research</div>
+            <div><Link href="/research">Research</Link></div>
           </div>
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t("ecosystem")}</div>
-            <div>Incubator</div>
             <div>Contact Us</div>
-            <div className="whitespace-nowrap">Ecosystem Fund</div>
+            <Link className="whitespace-nowrap" href="/ecosystem">Ecosystem Fund</Link>
           </div>
         </div>
       </div>
@@ -69,7 +70,7 @@ export default function Footer() {
               {t('socials')}
             </div>
             <div className="flex gap-2.5">
-              <Link href={siteConfig.githubUrl} target="_blank">
+              <Link href={siteConfig.xUrl} target="_blank">
                 <TwitterIcon fill="var(--color-theme)" />
               </Link>
               {/* <TelegramIcon fill="var(--color-theme)" />

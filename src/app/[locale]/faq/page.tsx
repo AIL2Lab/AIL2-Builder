@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import QuestionSelector from "@/components/fqa/QuestionSelector";
+import QuestionSelector from "@/components/faq/QuestionSelector";
 import { Metadata } from "next";
 import { Locale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -15,8 +15,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "site" });
   return {
-    title: `${t("fqa.title")} | ${t("subtitle")}`,
-    description: `${t("fqa.description")}`,
+    title: `${t("faq.title")} | ${t("subtitle")}`,
+    description: `${t("faq.description")}`,
   };
 }
 
@@ -25,12 +25,12 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function FAQPage({ params }: PageProps<"/[locale]/fqa">) {
+export default function FAQPage({ params }: PageProps<"/[locale]/faq">) {
   const { locale } = use(params);
   // Enable static rendering
   setRequestLocale(locale as Locale);
 
-  const t = useTranslations("Fqa")
+  const t = useTranslations("Faq")
   const questions = [
   {
     id: 1,

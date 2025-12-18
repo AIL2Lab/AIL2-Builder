@@ -1,0 +1,23 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#333333" />
+  <rect x="400" width="400" height="400" fill="#111111" />
+  
+  <!-- Left: Chaos -->
+  <text x="200" y="50" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Traditional: Fragmented</text>
+  <path d="M150,150 L170,140 L160,160 Z" fill="#777" transform="rotate(20 160 150)"/>
+  <rect x="180" y="200" width="30" height="30" fill="#777" transform="rotate(15 195 215)"/>
+  <circle cx="250" cy="150" r="20" fill="#777" />
+  <rect x="220" y="250" width="40" height="10" fill="#777" transform="rotate(-10 240 255)"/>
+  
+  <!-- Right: Connected Sphere -->
+  <text x="600" y="50" font-family="Arial" font-size="24" fill="#F8C700" text-anchor="middle">AIL2: Synergy</text>
+  <circle cx="600" cy="200" r="80" fill="none" stroke="#F8C700" stroke-width="2" />
+  <circle cx="600" cy="200" r="60" fill="none" stroke="#F8C700" stroke-width="1" stroke-dasharray="5,5">
+      <animateTransform attributeName="transform" type="rotate" from="0 600 200" to="360 600 200" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="200" r="40" fill="#F8C700" opacity="0.3" />
+  
+  <line x1="600" y1="120" x2="600" y2="280" stroke="#F8C700" stroke-width="1" opacity="0.5"/>
+  <line x1="520" y1="200" x2="680" y2="200" stroke="#F8C700" stroke-width="1" opacity="0.5"/>
+</svg>

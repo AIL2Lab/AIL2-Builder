@@ -8,7 +8,7 @@ export function getNavbarConfig(t: (key: string) => string) {
   const navbarLeft = [
     {
       label: t("research"),
-      href: "/",
+      href: "/research",
     },
     {
       label: t("ecosystem"),
@@ -27,8 +27,8 @@ export function getNavbarConfig(t: (key: string) => string) {
           href: "/accelerate",
         },
         {
-          label: t("fqa"),
-          href: "/fqa",
+          label: t("faq"),
+          href: "/faq",
         },
       ],
     },

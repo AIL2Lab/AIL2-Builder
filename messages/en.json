@@ -11,13 +11,17 @@
       "title": "Accelerate",
       "description": "Accelerating the journey of the next wave of AI founders, propelling ideas forward with funding,  expert guidance, and go-to-market support."
     },
-    "fqa": {
+    "faq": {
       "title": "FQA",
       "description": "Frequently asked questions"
     },
     "ecosystem": {
       "title": "Ecosystem",
       "description": "A consolidated platform for the latest advancements in AI L2 technology.A comprehensive repository of cutting-edge AI L2 initiatives."
+    },
+    "research": {
+      "title": "Research",
+      "description": "The Decentralized AI Operating System"
     }
   },
   "Common": {
@@ -40,7 +44,7 @@
     "blog": "Blog",
     "platform": "Platform",
     "accelerate": "Accelerate",
-    "fqa": "Fqa"
+    "faq": "Faq"
   },
   "Home": {
     "supportBtn": "Support AIL2 on X",
@@ -186,7 +190,55 @@
       "item3": "Multi-Chain Support: Provides native support for six major blockchains: ETH, BSC, GIWA, XLayer, Base, and Mantle."
     }
   },
-  "Fqa": {
+  "Faq": {
     "description": "Frequently asked questions"
+  },
+  "Research": {
+    "title": "The <theme>Decentralized</theme> <br></br> AI Operating System",
+    "subtitle": "AIL2 bridges the gap between massive compute requirements and distributed blockchain consensus, scaling intelligence to infinity.",
+    "buildBtn": "Start Building",
+    "readBtn": "Read Whitepaper",
+    "section1": {
+      "title": "Infrastructure Optimization",
+      "item1": {
+        "title": "Hyper-Scalable Consensus",
+        "description": "Current blockchain layers cannot handle the throughput required for real-time model training. AIL2 introduces a <theme>novel sharding mechanism</theme> that treats AI model states as fluid data packets."
+      },
+      "item2": {
+        "title": "Zero-overhead GPU Virtualization",
+        "description": "Zero-overhead GPU Virtualization We eliminate the friction between crypto-mining and AI inference. Our <theme>\"GPU Driver\" protocol</theme> acts as a universal translation layer, allowing raw compute power to be instantly provisioned."
+      },
+      "item3": {
+        "title": "Fluid Composability Engine",
+        "description": "Developers shouldn't need to rebuild the stack. AIL2 provides a <theme>universal API surface</theme> that lets you chain together distinct AI agents and verified datasets."
+      }
+    },
+    "section2": {
+      "title": "Technical Breakdown",
+      "item1": {
+        "title": "Verifiable Inference (PoI)",
+        "description": "Ensuring that decentralized models return correct results. We utilize <theme>Optimistic ZK-Rollups</theme> to cryptographically verify that the compute performed by an untrusted node matches the expected model execution path."
+      },
+      "item2": {
+        "title": "Dynamic State Channels for Agents",
+        "description": "To support multi-agent systems, we implement <theme>ephemeral state channels</theme> that allow agents to negotiate, debate, and exchange data off-chain with near-zero latency, settling only the final consensus on-chain."
+      },
+      "item3": {
+        "title": "Universal Model Standardization",
+        "description": "A protocol-level standard for packaging AI models (Weights + Config + Inference Code) into a <theme>single portable asset</theme> that can be deployed across any AIL2-compatible node in seconds."
+      }
+    },
+    "section3": {
+      "title": "New Blockchain System Empowered by<br></br> <theme>Multi-Agent</theme> Technology",
+      "subtitle": "LLM-based multi-agent systems coordinate complex tasks through distributed intelligence, perfectly aligning with blockchain architecture.",
+      "item1": {
+        "title": "Autonomous Smart Contract Management",
+        "description": "Smart contracts are critical for automating transactions. We implement a multi-agent solution where distinct agents analyze, security-audit, and optimize smart contract logic in real-time, augmenting the chain with self-healing capabilities."
+      },
+      "item2": {
+        "title": "Decentralized Anomaly Detection",
+        "description": "To prevent malicious interference during execution, we deploy a \"Watchdog Swarm\"—a system of specialized agents that continuously monitor consensus mechanisms. By coordinating their observations, they enhance the trustworthiness of the entire environment."
+      }
+    }
   }
 }
