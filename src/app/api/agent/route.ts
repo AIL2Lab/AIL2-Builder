@@ -4,10 +4,14 @@ import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
-  let decoded = {
-    address: "x000",
-  };
   try {
+    const requestHeaders = request.headers;
+    console.log(requestHeaders);
+    
+    const userId = requestHeaders.get("x-user-id")
+    const address = requestHeaders.get("x-user-address") as string;
+    console.log('userId',userId);
+    console.log('address',address);
     const body = await request.json();
     const { name, description, symbol, ...otherFields } = body;
     // check params
@@ -34,7 +38,7 @@ export async function POST(request: NextRequest) {
     if (shouldCheckLimit) {
       checkPromises.push(
         prisma.user.findUnique({
-          where: { address: decoded.address },
+          where: { address: address },
           select: { agents: { select: { id: true }, take: 1 } }, // 只取一个以此判断是否存在
         })
       );
@@ -70,18 +74,18 @@ export async function POST(request: NextRequest) {
 
     // const newId = uuidv4();
     const result = await prisma.$transaction(async (tx) => {
-      const user = await tx.user.upsert({
-        where: { address: decoded.address },
-        update: {},
-        create: { address: decoded.address },
-        select: { id: true },
-      });
+      // const user = await tx.user.upsert({
+      //   where: { address: address },
+      //   update: {},
+      //   create: { address: address },
+      //   select: { id: true },
+      // });
       const agentData: any = {
         // id: newId,
         name,
         description,
         status: otherFields.status || "CREATING",
-        creatorId: user.id,
+        creatorId: userId,
         symbol,
         avatar: otherFields.avatar || null,
         socialLinks: otherFields.socialLinks || null,
@@ -93,7 +97,7 @@ export async function POST(request: NextRequest) {
           type: "DEPLOY_IAO",
           status: "PENDING",
           agentId: agent.id,
-          createdBy: decoded.address,
+          createdBy: address,
         },
       });
 

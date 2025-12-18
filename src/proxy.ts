@@ -5,13 +5,18 @@ import createMiddleware from 'next-intl/middleware';
 import { routing } from "./i18n/routing";
 import { errorResponse } from "./lib/api-response";
 // 需要认证的路由匹配规则
-const protectedPaths: string[] = ['/api/agent/list'];
+const protectedPaths: string[] = [
+  // '/api/agent/list',
+  '/api/user/profile',
+  '/api/agent'
+];
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isApiRoute = pathname.startsWith("/api");
   // 1. 判断是否是受保护路径
-  const isProtected = protectedPaths.some((path) => pathname.startsWith(path));
+  const isProtected = protectedPaths.some((path) => pathname === path);
+  
   if (!isProtected) {
     return NextResponse.next();
   }
@@ -41,9 +46,9 @@ export async function proxy(request: NextRequest) {
     // 4. 【关键】将用户信息传递给 Server Components
     // 由于中间件不能直接传对象给组件，我们通过设置新的 Request Headers 传递
     const requestHeaders = new Headers(request.headers);
-    requestHeaders.set("x-user-id", payload.id);
+    requestHeaders.set("x-user-id", payload.userId);
     requestHeaders.set("x-user-address", payload.address);
-
+    
     // 5. 放行请求，并带上新的 Headers
     return NextResponse.next({
       request: {

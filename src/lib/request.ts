@@ -1,15 +1,17 @@
 import { ApiResponse } from '@/types/api';
+import { getToken } from './utils';
+import { TOKEN_KEY } from '@/config/storage.config';
 
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 interface RequestConfig extends RequestInit {
   params?: Record<string, string | number | undefined>;
+  skipAuth?: boolean;
 }
 
 async function http<T>(path: string, config: RequestConfig = {}): Promise<ApiResponse<T>> {
-  const { params, headers, ...rest } = config;
-  
+  const { params, headers = {}, skipAuth = false, ...rest } = config;
   // 1、deal params
   let url = `${BASE_URL}${path}`;
   if (params) {
@@ -25,18 +27,40 @@ async function http<T>(path: string, config: RequestConfig = {}): Promise<ApiRes
     }
   }
 
+// 2. deal Headers & Token
+  const finalHeaders: HeadersInit = {
+    'Content-Type': 'application/json',
+    ...headers,
+  };
+
+if (!skipAuth) {
+    const token = getToken();
+    if (token) {
+      // @ts-ignore
+      finalHeaders['Authorization'] = `Bearer ${token}`;
+    }
+  }
+
+
+
+
+
+
   // 2. send request
   try {
     const response = await fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        ...headers,
-      },
+      headers: finalHeaders,
       ...rest,
     });
 
     // 3. parse JSON
     const data: ApiResponse<T> = await response.json();
+    if (response.status === 401) {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem(TOKEN_KEY);
+      }
+      throw new Error('Unauthorized: Please login again.');
+    }
 
     // 4. Unified handling of non-200 HTTP status codes or business logic errors.
     if (!response.ok || !data.success) {
