@@ -79,7 +79,7 @@ export default function ResearchPage({
             </div>
             <div className="flex gap-4 justify-center items-center ">
               <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer">
-                <Link href="/ecosystem">{t("buildBtn")}</Link>
+                <Link href="/">{t("buildBtn")}</Link>
               </div>
               <button className="px-7 py-3 btn2 w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
                 <a href="/doc/HPVIDEO_WhitePaperv3.pdf" target="_blank" rel="noopener noreferrer">
