@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
 import { Link } from "@/i18n/navigation";
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "@/i18n/navigation";
 interface NavItem {
   label: string;
   href?: string;
@@ -19,7 +20,15 @@ interface NavDropdownProps {
 }
 
 const NavDropdown = ({item, locale }: NavDropdownProps) => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
+  const checkActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/' || pathname === `/${locale}`;
+    }
+    return pathname === href || pathname === `/${locale}${href}` || pathname.startsWith(`/${locale}${href}/`);
+  };
   const hasChildren = item?.children && item?.children?.length > 0;
   if(!hasChildren) {
     return (
@@ -67,17 +76,20 @@ const NavDropdown = ({item, locale }: NavDropdownProps) => {
           aria-orientation="vertical"
         >
           <div className="py-1">
-            {item.children?.map((child, idx) => (
+            {item.children?.map((child, idx) => {
+              const isActive = checkActive(child.href || "");
+              return (
               <Link
                 key={idx}
                 href={child.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2.5 text-sm text-gray-200 hover:bg-white/10 hover:text-white transition-colors text-center"
+                className={`block px-4 py-2.5 text-sm text-gray-200 hover:bg-white/10 hover:text-white transition-colors text-center ${isActive ? 'text-theme':''}`}
                 role="menuitem"
               >
                 {child.label}
               </Link>
-            ))}
+            )
+            })}
           </div>
         </div>
       )}

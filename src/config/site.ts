@@ -7,6 +7,10 @@ export const siteConfig = {
 export function getNavbarConfig(t: (key: string) => string) {
   const navbarLeft = [
     {
+      label: t("product"),
+      href: "/",
+    },
+    {
       label: t("research"),
       href: "/research",
     },
@@ -16,7 +20,7 @@ export function getNavbarConfig(t: (key: string) => string) {
     },
     {
       label: t("learn"),
-      href: "/",
+      href: "",
       children: [
         {
           label: t("platform"),
@@ -37,7 +41,7 @@ export function getNavbarConfig(t: (key: string) => string) {
   const navbarRight = [
     {
       label: t("blog"),
-      href: "/",
+      href: "",
     },
   ];
 
