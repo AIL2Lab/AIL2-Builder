@@ -28,7 +28,9 @@
     "all": "Todos",
     "applyBtn": "Inscreva-se agora",
     "learnMore": "Saiba mais",
-    "comparisonImages": "Imagens de comparação"
+    "comparisonImages": "Imagens de comparação",
+    "contactUs": "Fale Conosco",
+    "ourEmail": "nosso e-mail"
   },
   "Error": {
     "description": "<p>Infelizmente, encontramos um erro.</p><p>Você pode tentar <retry>recarregar a página</retry> que estava visitando.</p>",
@@ -49,7 +51,7 @@
   },
   "Home": {
     "supportBtn": "Apoie o AIL2 no X",
-    
+
     "firstScreen": {
       "text": "O maior AIL2 para"
     },
@@ -218,15 +220,31 @@
       "title": "Análise Técnica",
       "item1": {
         "title": "Inferência Verificável",
-        "description": "Garantindo que modelos descentralizados retornem resultados corretos. Utilizamos <theme>ZK-Rollups Otimistas</theme> para verificar criptograficamente que o computador realizado por um nó não confiável corresponde ao caminho de execução esperado do modelo."
+        "description": "Garantindo que modelos descentralizados retornem resultados corretos. Utilizamos <theme>ZK-Rollups Otimistas</theme> para verificar criptograficamente que o computador realizado por um nó não confiável corresponde ao caminho de execução esperado do modelo.",
+        "btn1": "Livro Branco",
+        "btn2": "Documentação",
+        "dialogTitle": "Documentação de Inferência Verificável",
+        "dialogText1": "Documentação técnica detalhada sobre Provas de Conhecimento Zero para Aprendizado de Máquina (ZKML) está disponível.",
+        "dialogText2": "O protocolo PoI garante:<br></br>1. Execução Determinística <br></br>2. Verificação Criptográfica de Pesos <br></br>3. Condições de Slashing para nós desonestos."
       },
       "item2": {
         "title": "Canais de Estado Dinâmicos para Agentes",
-        "description": "Para suportar sistemas multiagente, implementamos <theme>canais de estado efêmeros</theme> que permitem aos agentes negociar, debater e trocar dados off-chain com latência quase zero, liquidando apenas o consenso final on-chain."
+        "description": "Para suportar sistemas multiagente, implementamos <theme>canais de estado efêmeros</theme> que permitem aos agentes negociar, debater e trocar dados fora da cadeia com latência quase zero, liquidando apenas o consenso final na cadeia.",
+        "btn1": "Arquitetura",
+        "btn2": "Saiba Mais",
+        "dialogTitle": "Arquitetura de Canais de Estado",
+        "dialogText1": "Nossos Canais de Estado usam uma abordagem de dupla camada:<br></br>- Camada 1: Liquidação e Resolução de Disputas<br></br>- Camada 2: Interação de Alta Frequência de Agentes",
+        "dialogText2": "Isso permite que os agentes troquem contexto e resultados de inferência milhões de vezes por segundo sem taxas de gás."
       },
       "item3": {
         "title": "Padronização Universal de Modelos",
-        "description": "Um padrão em nível de protocolo para empacotar modelos de IA (Pesos + Configuração + Código de Inferência) em um <theme>único ativo portátil</theme> que pode ser implantado em qualquer nó compatível com AIL2 em segundos."
+        "description": "Um padrão em nível de protocolo para empacotar modelos de IA (Pesos + Configuração + Código de Inferência) em um <theme>único ativo portátil</theme> que pode ser implantado em qualquer nó compatível com AIL2 em segundos.",
+        "btn1": "Ler Especificações",
+        "btn2": "Exemplos",
+        "dialogTitle": "Padrão Universal de Modelos - Exemplos Práticos",
+        "dialogText1": "1. Arquivo de Manifesto (ail2.yaml)",
+        "dialogText2": "Cada contêiner .ail requer um manifesto estrito definindo as restrições de hardware.",
+        "dialogText3": "2. Implantação do SDK do Python"
       }
     },
     "section3": {

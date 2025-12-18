@@ -7,10 +7,21 @@ import { useTranslations } from "next-intl";
 import { useActionState } from "react";
 import { siteConfig } from "@/config/site";
 import {Link} from "@/i18n/navigation";
-
+import PopupBtn from "@/components/PopupBtn";
+import CopyButton from "./CopyButton";
 export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
   const t = useTranslations("Footer")
+  const t_common = useTranslations("Common")
+  const popupContent = (
+    <div className="flex flex-col justify-center items-center">
+      <div>{t_common("ourEmail")}: {siteConfig.email}</div>
+      <CopyButton textToCopy={siteConfig.email}/>
+    </div>
+  )
+  const popupLabel = (
+    <div>Contact Us</div>
+  )
   return (
     <footer className="footer w-full mx-auto lg:max-w-7xl my-5 sm:my-8 md:my-12 lg:my-16">
       <div className="grid grid-cols-6 p-5 lg:p-10 xl:p-20">
@@ -50,7 +61,7 @@ export default function Footer() {
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t("blog")}</div>
             <div>
-              <a href="/doc/HPVIDEO_WhitePaperv3.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/doc/AIL2_Whitepaper_v1.5_EN.pdf" target="_blank" rel="noopener noreferrer">
                 Docs
               </a>
             </div>
@@ -59,7 +70,9 @@ export default function Footer() {
           </div>
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t("ecosystem")}</div>
-            <div>Contact Us</div>
+            <PopupBtn label={popupLabel}
+                      title={t_common("contactUs")}
+                      content={popupContent} />
             <Link className="whitespace-nowrap" href="/ecosystem">Ecosystem Fund</Link>
           </div>
         </div>

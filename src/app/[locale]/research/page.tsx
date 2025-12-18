@@ -5,8 +5,9 @@ import { use } from "react";
 import { Locale, useTranslations } from "next-intl";
 import Plant from "@/components/Plant";
 import Image from "next/image";
-import section3Img from '@/assets/images/research-section3.jpg'
+import section3Img from "@/assets/images/research-section3.jpg";
 import { Link } from "@/i18n/navigation";
+import PopupBtn from "@/components/PopupBtn";
 export async function generateMetadata({
   params,
 }: {
@@ -60,7 +61,81 @@ export default function ResearchPage({
         theme: (chunks) => <span className="text-theme">{chunks}</span>,
       }),
     },
-  ]
+  ];
+  const popupContent1 = (
+    <div>
+      <p>{t("section2.item1.dialogText1")}</p>
+      <p className="mt-5">
+        {t.rich("section2.item1.dialogText2", {
+          br: () => <br />
+        })}
+      </p>
+    </div>
+  );
+  const popupContent2 = (
+    <div>
+      <p>
+        {t.rich("section2.item2.dialogText1", {
+          br: () => <br />
+        })}
+      </p>
+      <p className="mt-5">
+        {t("section2.item2.dialogText2")}
+      </p>
+    </div>
+  );
+  const yamlManifest = `model:
+    id: "llama-3-8b-instruct-v2"
+    architecture: "transformer"
+    version: "1.0.4"
+
+  requirements:
+    min_vram: "16GB"
+    quantization: "gptq-4bit"
+    framework: "vull/0.2.1"
+
+  verification:
+    zk_circuit_id: "0x8a92...b71c"
+    slashing_stake: 500 AIL`;
+
+  const pythonSdkCode = `from ail2 import ModelRegistry
+
+  # Package and Sign the model
+  container = ModelRegistry.pack(
+      weights="./weights",
+      config="ail2.yaml"
+  )
+
+  # Deploy to Network
+  tx_hash = container.deploy(
+      stake=500,
+      provider="https://rpc.ail2.org"
+  )
+  print(f"Model live at {tx_hash}")`;
+  const popupContent3 = (
+    <div className="font-mono leading-snug space-y-6">
+      <div>
+        <h4 className="text-yellow-400 mb-3 text-lg font-semibold">
+          {t("section2.item3.dialogText1")}
+        </h4>
+        <p className="text-sm text-zinc-400 mb-3">
+          {t("section2.item3.dialogText2")}
+        </p>
+        <pre className="bg-zinc-800 p-4 rounded-md border border-zinc-700 overflow-x-auto text-zinc-200">
+          <code>${yamlManifest}</code>
+        </pre>
+      </div>
+
+      <div>
+        <h4 className="text-yellow-400 mb-3 text-lg font-semibold">
+          {t("section2.item3.dialogText3")}
+        </h4>
+        <pre className="bg-zinc-800 p-4 rounded-md border border-zinc-700 overflow-x-auto text-cyan-300">
+          <code>${pythonSdkCode}</code>
+        </pre>
+      </div>
+    </div>
+  );
   return (
     <PageLayout isShowFooter>
       <div className="flex flex-col">
@@ -82,7 +157,11 @@ export default function ResearchPage({
                 <Link href="/">{t("buildBtn")}</Link>
               </div>
               <button className="px-7 py-3 btn2 w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
-                <a href="/doc/HPVIDEO_WhitePaperv3.pdf" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="/doc/AIL2_Whitepaper_v1.5_EN.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {t("readBtn")}
                 </a>
               </button>
@@ -136,6 +215,21 @@ export default function ResearchPage({
                   <h3 className="text-2xl font-bold mb-3 text-white">
                     {t("section2.item1.title")}
                   </h3>
+                  <div className="text-theme sm:text-base md:text-lg lg:text-xl  font-bold">
+                    <a
+                      className="mr-5 hover:underline"
+                      href="/doc/AIL2_Whitepaper_v1.5_EN.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t("section2.item1.btn1")}
+                    </a>
+                    <PopupBtn
+                      label={t("section2.item1.btn2")}
+                      title={t("section2.item1.dialogTitle")}
+                      content={popupContent1}
+                    />
+                  </div>
                   <div className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed grow">
                     {t.rich("section2.item1.description", {
                       br: () => <br />,
@@ -165,6 +259,21 @@ export default function ResearchPage({
                   <h3 className="text-2xl font-bold mb-3 text-white">
                     {t("section2.item2.title")}
                   </h3>
+                  <div className="text-theme sm:text-base md:text-lg lg:text-xl  font-bold">
+                    <a
+                      className="mr-5 hover:underline"
+                      href="/doc/AIL2_Architecture.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t("section2.item2.btn1")}
+                    </a>
+                    <PopupBtn
+                      label={t("section2.item2.btn2")}
+                      title={t("section2.item2.dialogTitle")}
+                      content={popupContent2}
+                    />
+                  </div>
                   <div className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed grow">
                     {t.rich("section2.item2.description", {
                       br: () => <br />,
@@ -197,6 +306,21 @@ export default function ResearchPage({
                   <h3 className="text-2xl font-bold mb-3 text-white">
                     {t("section2.item3.title")}
                   </h3>
+                  <div className="text-theme sm:text-base md:text-lg lg:text-xl  font-bold">
+                    <a
+                      className="mr-5 hover:underline"
+                      href="/doc/AIL2_Whitepaper_v1.5_EN.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t("section2.item3.btn1")}
+                    </a>
+                    <PopupBtn
+                      label={t("section2.item3.btn2")}
+                      title={t("section2.item3.dialogTitle")}
+                      content={popupContent3}
+                    />
+                  </div>
                   <div className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed grow">
                     {t.rich("section2.item3.description", {
                       br: () => <br />,
@@ -226,12 +350,8 @@ export default function ResearchPage({
           </div>
           <div className="container mx-auto ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-              <div
-                className="relative order-2 lg:order-1"
-              >
-                <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10">
-                  
-                </div>
+              <div className="relative order-2 lg:order-1">
+                <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10"></div>
                 <div className="">
                   {section3Items.map((item, index) => (
                     <div
@@ -239,14 +359,10 @@ export default function ResearchPage({
                       className="h-1/3 cursor-pointer transition-all duration-500 transform"
                     >
                       <div className="p-10">
-                        <h3
-                        className="text-2xl font-bold transition-colors duration-700 text-theme"
-                        >
+                        <h3 className="text-2xl font-bold transition-colors duration-700 text-theme">
                           {item.title}
                         </h3>
-                        <p
-                        className="leading-relaxed transition-all duration-500 text-base text-white/60"
-                        >
+                        <p className="leading-relaxed transition-all duration-500 text-base text-white/60">
                           {item.description}
                         </p>
                       </div>
@@ -261,7 +377,7 @@ export default function ResearchPage({
                     alt="Multi-Agent System Architecture"
                     className="w-3/4 filter grayscale sepia hue-rotate-10 saturate-200"
                     priority
-                    />
+                  />
                 </div>
               </div>
             </div>

@@ -28,7 +28,9 @@
     "all": "All",
     "applyBtn": "Apply Now",
     "learnMore": "Learn more",
-    "comparisonImages": "Comparison Images"
+    "comparisonImages": "Comparison Images",
+    "contactUs": "Contact Us",
+    "ourEmail": "our email"
   },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
@@ -218,15 +220,31 @@
       "title": "Technical Breakdown",
       "item1": {
         "title": "Verifiable Inference (PoI)",
-        "description": "Ensuring that decentralized models return correct results. We utilize <theme>Optimistic ZK-Rollups</theme> to cryptographically verify that the compute performed by an untrusted node matches the expected model execution path."
+        "description": "Ensuring that decentralized models return correct results. We utilize <theme>Optimistic ZK-Rollups</theme> to cryptographically verify that the compute performed by an untrusted node matches the expected model execution path.",
+        "btn1": "Whitepaper",
+        "btn2": "Documentation",
+        "dialogTitle": "Verifiable Inference Documentation",
+        "dialogText1": "Detailed technical documentation on Zero-Knowledge Proofs for Machine Learning (ZKML) is available.",
+        "dialogText2":  "The PoI protocol ensures:<br></br>1. Deterministic Execution <br></br>2. Cryptographic Weight Verification <br></br>3. Slashing conditions for dishonest nodes."
       },
       "item2": {
         "title": "Dynamic State Channels for Agents",
-        "description": "To support multi-agent systems, we implement <theme>ephemeral state channels</theme> that allow agents to negotiate, debate, and exchange data off-chain with near-zero latency, settling only the final consensus on-chain."
+        "description": "To support multi-agent systems, we implement <theme>ephemeral state channels</theme> that allow agents to negotiate, debate, and exchange data off-chain with near-zero latency, settling only the final consensus on-chain.",
+        "btn1": "Architecture",
+        "btn2": "Learn More",
+        "dialogTitle": "State Channel Architecture",
+        "dialogText1": "Our State Channels use a dual-layer approach:<br></br>- Layer 1: Settlement & Dispute Resolution<br></br>- Layer 2: High-frequency Agent Interaction",
+        "dialogText2": "This allows agents to trade context and inference results millions of times per second without gas fees."
       },
       "item3": {
         "title": "Universal Model Standardization",
-        "description": "A protocol-level standard for packaging AI models (Weights + Config + Inference Code) into a <theme>single portable asset</theme> that can be deployed across any AIL2-compatible node in seconds."
+        "description": "A protocol-level standard for packaging AI models (Weights + Config + Inference Code) into a <theme>single portable asset</theme> that can be deployed across any AIL2-compatible node in seconds.",
+        "btn1": "Read Spec",
+        "btn2": "Examples",
+        "dialogTitle": "Universal Model Standard - Practical Examples",
+        "dialogText1": "1. Manifest File (ail2.yaml)",
+        "dialogText2": "Every .ail container requires a strict manifest defining hardware constrains.",
+        "dialogText3": "2. Python SDK Deployment"
       }
     },
     "section3": {

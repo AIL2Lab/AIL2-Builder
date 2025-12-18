@@ -28,7 +28,9 @@
     "all": "全部",
     "applyBtn": "立即申请",
     "learnMore": "了解更多",
-    "comparisonImages": "对比图片"
+    "comparisonImages": "对比图片",
+    "contactUs": "联系我们",
+    "ourEmail": "我们的邮箱"
   },
   "Error": {
     "description": "<p>很抱歉，我们遇到了一个错误。</p><p>您可以尝试<retry>重新加载</retry>您正在访问的页面。</p>",
@@ -217,15 +219,31 @@
       "title": "技术解析",
       "item1": {
         "title": "可验证推理",
-        "description": "确保去中心化模型返回正确的结果。我们利用<theme>乐观 ZK-Rollups</theme>来以加密方式验证不可信节点执行的计算是否符合预期的模型执行路径。"
+        "description": "确保去中心化模型返回正确的结果。我们利用<theme>乐观 ZK-Rollups</theme>来以加密方式验证不可信节点执行的计算是否符合预期的模型执行路径。",
+        "btn1": "白皮书",
+        "btn2": "文档",
+        "dialogTitle": "可验证推理文档",
+        "dialogText1": "关于机器学习零知识证明的详细技术文档现已提供。",
+        "dialogText2": "PoI 协议确保：<br></br>1. 确定性执行 <br></br>2. 加密权重验证 <br></br>3. 对不诚实节点的罚没条件。"
       },
       "item2": {
         "title": "面向智能体的动态状态通道",
-        "description": "为了支持多智能体系统，我们实现了<theme>临时状态通道</theme>，允许智能体以近乎零延迟进行链下协商、辩论和数据交换，仅将最终的共识在链上结算。"
+        "description": "为了支持多智能体系统，我们实现了<theme>临时状态通道</theme>，允许智能体以近乎零延迟进行链下协商、辩论和数据交换，仅将最终的共识在链上结算。",
+        "btn1": "架构",
+        "btn2": "了解更多",
+        "dialogTitle": "状态通道架构",
+        "dialogText1": "我们的状态通道采用双层方法：<br></br>- 第 1 层：结算与争议解决<br></br>- 第 2 层：高频智能体交互",
+        "dialogText2": "这使得智能体每秒可以交换数百万次上下文和推理结果，而无需支付 Gas 费。"
       },
       "item3": {
         "title": "通用模型标准化",
-        "description": "这是一个协议级别的标准，用于将 AI 模型（权重 + 配置 + 推理代码）打包成一个<theme>单一的可移植资产</theme>，可在几秒钟内部署到任何兼容 AIL2 的节点上。"
+        "description": "这是一个协议级别的标准，用于将 AI 模型（权重 + 配置 + 推理代码）打包成一个<theme>单一的可移植资产</theme>，可在几秒钟内部署到任何兼容 AIL2 的节点上。",
+        "btn1": "阅读规范",
+        "btn2": "示例",
+        "dialogTitle": "通用模型标准 - 实践示例",
+        "dialogText1": "1. 清单文件 (ail2.yaml)",
+        "dialogText2": "每个 .ail 容器都需要一个严格的清单来定义硬件约束。",
+        "dialogText3": "2. Python SDK 部署"
       }
     },
     "section3": {

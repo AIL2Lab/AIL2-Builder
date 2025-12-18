@@ -28,7 +28,9 @@
     "all": "Tümü",
     "applyBtn": "Şimdi Başvur",
     "learnMore": "Daha fazla öğren",
-    "comparisonImages": "Karşılaştırma Görselleri"
+    "comparisonImages": "Karşılaştırma Görselleri",
+    "contactUs": "Bize Ulaşın",
+    "ourEmail": "e-postamız"
   },
   "Error": {
     "description": "<p>Ne yazık ki bir hatayla karşılaştık.</p><p>Ziyaret ettiğiniz sayfayı <retry>yeniden yüklemeyi</retry> deneyebilirsiniz.</p>",
@@ -49,7 +51,7 @@
   },
   "Home": {
     "supportBtn": "X'te AIL2'yi Destekle",
-    
+
     "firstScreen": {
       "text": "İçin en büyük AIL2"
     },
@@ -218,15 +220,31 @@
       "title": "Teknik Analiz",
       "item1": {
         "title": "Doğrulanabilir Çıkarım",
-        "description": "Merkezi olmayan modellerin doğru sonuçlar döndürdüğünü sağlamak. <theme>İyimser ZK-Rollups</theme> kullanarak, güvenilmeyen bir düğüm tarafından gerçekleştirilen işlemin, beklenen model yürütme yoluyla eşleştiğini kriptografik olarak doğruluyoruz."
+        "description": "Merkezi olmayan modellerin doğru sonuçlar döndürdüğünü sağlamak. <theme>İyimser ZK-Rollups</theme> kullanarak, güvenilmeyen bir düğüm tarafından gerçekleştirilen işlemin, beklenen model yürütme yoluyla eşleştiğini kriptografik olarak doğruluyoruz.",
+        "btn1": "Whitepaper",
+        "btn2": "Dokümantasyon",
+        "dialogTitle": "Doğrulanabilir Çıkarım Dokümantasyonu",
+        "dialogText1": "Makine Öğrenimi için Sıfır Bilgi Kanıtları (ZKML) hakkında detaylı teknik dokümantasyon mevcuttur.",
+        "dialogText2": "PoI protokolü şunları sağlar:<br></br>1. Deterministik Yürütme <br></br>2. Kriptografik Ağırlık Doğrulaması <br></br>3. Hileli düğümler için ceza kesme koşulları."
       },
       "item2": {
         "title": "Ajanlar için Dinamik Durum Kanalları",
-        "description": "Çoklu ajan sistemlerini desteklemek için, ajanların neredeyse sıfır gecikmeyle zincir dışında müzakere etmesine, tartışmasına ve veri alışverişi yapmasına olanak tanıyan, yalnızca nihai konsensusu zincir üzerinde settle eden <theme>geçici durum kanalları</theme> uyguluyoruz."
+        "description": "Çoklu ajan sistemlerini desteklemek için, ajanların neredeyse sıfır gecikmeyle zincir dışında müzakere etmesine, tartışmasına ve veri alışverişi yapmasına olanak tanıyan, yalnızca nihai konsensusu zincir üzerinde settle eden <theme>geçici durum kanalları</theme> uyguluyoruz.",
+        "btn1": "Mimari",
+        "btn2": "Daha Fazla Bilgi Alın",
+        "dialogTitle": "Durum Kanalı Mimarisi",
+        "dialogText1": "Durum Kanallarımız çift katmanlı bir yaklaşım kullanır:<br></br>- Katman 1: Uzlaşma & Anlaşmazlık Çözümü<br></br>- Katman 2: Yüksek Frekanslı Ajan Etkileşimi",
+        "dialogText2": "Bu, ajanların gas ücreti olmadan saniyede milyonlarca kez bağlam ve çıkarım sonucu exchange etmesine olanak tanır."
       },
       "item3": {
         "title": "Evrensel Model Standardizasyonu",
-        "description": "AI modellerini (Ağırlıklar + Yapılandırma + Çıkarım Kodu) saniyeler içinde herhangi bir AIL2 uyumlu düğüme dağıtılabilen <theme>tek bir taşınabilir varlığa</theme> paketlemek için protokol düzeyinde bir standart."
+        "description": "AI modellerini (Ağırlıklar + Yapılandırma + Çıkarım Kodu) saniyeler içinde herhangi bir AIL2 uyumlu düğüme dağıtılabilen <theme>tek bir taşınabilir varlığa</theme> paketlemek için protokol düzeyinde bir standart.",
+        "btn1": "Spesifikasyonu Oku",
+        "btn2": "Örnekler",
+        "dialogTitle": "Evrensel Model Standardı - Pratik Örnekler",
+        "dialogText1": "1. Manifest Dosyası (ail2.yaml)",
+        "dialogText2": "Her .ail konteyneri, donanım kısıtlamalarını tanımlayan katı bir manifest gerektirir.",
+        "dialogText3": "2. Python SDK Dağıtımı"
       }
     },
     "section3": {
