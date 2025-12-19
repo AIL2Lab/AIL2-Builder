@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
 
 
 
@@ -12,13 +12,13 @@ export default function ContactForm() {
     message: ''
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:FormEvent) => {
     e.preventDefault()
     // Handle form submission here
     console.log('Form submitted:', formData)
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
