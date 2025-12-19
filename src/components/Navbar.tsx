@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Logo from "./Logo";
 import { Github } from "./icons/Github";
 import { Document } from "./icons/document";
@@ -51,7 +51,7 @@ export default function Navbar() {
               <Link href={siteConfig.githubUrl} target="_blank" className="github-icon">
                 <Github />
               </Link>
-              <Link href="/" className="document-icon ml-2.5">
+              <Link href="/docs" className="document-icon ml-2.5">
                 <Document />
               </Link>
               <LanguageSwitcher className="ml-6 mr-4 lg:ml-10 lg:mr-6" />
@@ -69,7 +69,7 @@ export default function Navbar() {
           <Link href="/" className="bg-white/10 justify-center items-center rounded-xl px-2.5  hidden sm:flex">
             <Github />
           </Link>
-          <Link href="/" className="bg-white/10 justify-center items-center rounded-xl px-2.5  mx-2.5 hidden sm:flex">
+          <Link href="/docs" className="bg-white/10 justify-center items-center rounded-xl px-2.5  mx-2.5 hidden sm:flex">
             <Document />
           </Link>
           <LanguageSwitcher />

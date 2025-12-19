@@ -26,14 +26,20 @@ export function getNavbarConfig(t: (key: string) => string) {
         {
           label: t("platform"),
           href: "/platform",
+          description: 'AI Acceleration Platform',
+          icon: 'Zap'
         },
         {
           label: t("accelerate"),
           href: "/accelerate",
+          description: 'Accelerating the journey',
+          icon: 'Cpu'
         },
         {
           label: t("faq"),
           href: "/faq",
+          description: 'Frequently asked questions',
+          icon: 'Sparkles'
         },
       ],
     },
