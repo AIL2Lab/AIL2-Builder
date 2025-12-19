@@ -25,7 +25,7 @@ export default function ContactForm() {
     })
   }
     return (
-        <div className="bg-[#111111] rounded-xl p-8 md:p-12">
+        <div className="bg-[#111111] rounded-xl p-8 md:p-12 border border-white/8 hover:border-theme/80 hover:-translate-y-2 transition-all duration-300">
                 <form onSubmit={handleSubmit}>
                   <div className="mb-6">
                     <label className="block text-sm text-gray-400 mb-2">Name</label>
@@ -62,7 +62,7 @@ export default function ContactForm() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-theme font-semibold py-4 rounded-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-200"
+                    className="text-black transition-all duration-300 hover:scale-105 hover:bg-white  w-full bg-theme font-semibold py-4 rounded-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-200"
                   >
                     Send Message
                   </button>

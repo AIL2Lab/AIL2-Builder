@@ -45,7 +45,7 @@ export default function ContactPage({
               <ContactForm />
               {/* Office and Social Info */}
               <div className="space-y-8">
-                <div className="bg-[#111111] rounded-xl p-8">
+                <div className="bg-[#111111] rounded-xl p-8 border border-white/8 hover:border-theme/80 hover:-translate-y-2 transition-all duration-300">
                   <h4 className="text-yellow-500 text-xl font-semibold mb-4">Global Offices</h4>
                   <div className="space-y-3 text-gray-400">
                     <p>San Francisco, CA</p>
@@ -53,7 +53,7 @@ export default function ContactPage({
                     <p>Zug, Switzerland</p>
                   </div>
                 </div>
-                <div className="bg-[#111111] rounded-xl p-8">
+                <div className="bg-[#111111] rounded-xl p-8 border border-white/8 hover:border-theme/80 hover:-translate-y-2 transition-all duration-300">
                   <h4 className="text-yellow-500 text-xl font-semibold mb-4">Social Channels</h4>
                   <div className="flex space-x-6">
                     <a
