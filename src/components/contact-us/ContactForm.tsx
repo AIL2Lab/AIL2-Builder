@@ -18,7 +18,7 @@ export default function ContactForm() {
     console.log('Form submitted:', formData)
   }
 
-  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e:any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
