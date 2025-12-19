@@ -16,9 +16,11 @@ interface NavItem {
 
 interface DocsSidebarProps {
   items: NavItem[];
+  className?: string; // Allow overriding styles
+  onItemClick?: () => void; // Allow closing mobile menu on click
 }
 
-export default function DocsSidebar({ items }: DocsSidebarProps) {
+export default function DocsSidebar({ items, className, onItemClick }: DocsSidebarProps) {
   // Simple active state tracking for demo purposes. 
   // In a real one-page docs, this would be a scroll spy.
   const [activeId, setActiveId] = useState<string>("");
@@ -32,7 +34,7 @@ export default function DocsSidebar({ items }: DocsSidebarProps) {
   }, [items]);
 
   return (
-    <aside className="docs-sidebar hidden md:block w-[280px] sticky top-[120px] h-[calc(100vh-160px)] overflow-y-auto shrink-0">
+    <aside className={clsx("docs-sidebar overflow-y-auto shrink-0", className || "hidden md:block w-[280px] sticky top-[120px] h-[calc(100vh-160px)]")}>
       {items.map((section, idx) => (
         <div key={idx} className="sidebar-section mb-8">
           <h4 className="text-sm uppercase tracking-[0.1em] text-theme mb-4 font-bold">
@@ -45,7 +47,10 @@ export default function DocsSidebar({ items }: DocsSidebarProps) {
                 <Link
                   key={childIdx}
                   href={child.href}
-                  onClick={() => setActiveId(child.href)}
+                  onClick={() => {
+                    setActiveId(child.href);
+                    onItemClick?.();
+                  }}
                   className={clsx(
                     "sidebar-link block py-2 text-[0.9375rem] transition-colors",
                     isActive

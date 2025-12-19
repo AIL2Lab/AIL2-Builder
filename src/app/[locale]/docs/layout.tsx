@@ -1,4 +1,5 @@
 import DocsSidebar from "@/components/DocsSidebar";
+import DocsMobileMenu from "@/components/DocsMobileMenu";
 import PageLayout from "@/components/PageLayout";
 import { routing } from "@/i18n/routing";
 import { hasLocale } from "next-intl";
@@ -50,9 +51,10 @@ export default async function DocsLayout({
 
   return (
     <PageLayout isShowFooter>
-      <div className="container mx-auto flex gap-12 pt-[120px] pb-20 px-6">
+      <div className="container mx-auto flex flex-col md:flex-row gap-8 md:gap-12 pt-[100px] md:pt-[120px] pb-20 px-6">
+        <DocsMobileMenu items={docsItems} />
         <DocsSidebar items={docsItems} />
-        <main className="docs-content flex-1 max-w-[800px]">{children}</main>
+        <main className="docs-content flex-1 max-w-full md:max-w-[800px]">{children}</main>
       </div>
     </PageLayout>
   );
