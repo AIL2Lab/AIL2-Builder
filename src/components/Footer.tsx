@@ -70,10 +70,11 @@ export default function Footer() {
           </div>
           <div className="col-span-1">
             <div className="text-theme font-bold text-base sm:text-lg">{t("ecosystem")}</div>
+            <Link className="whitespace-nowrap" href="/incubator">Incubator</Link>
             <PopupBtn label={popupLabel}
                       title={t_common("contactUs")}
                       content={popupContent} />
-            <Link className="whitespace-nowrap" href="/ecosystem">Ecosystem Fund</Link>
+            <Link className="whitespace-nowrap" href="/foud">Ecosystem Fund</Link>
           </div>
         </div>
       </div>

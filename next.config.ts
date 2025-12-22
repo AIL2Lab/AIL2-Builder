@@ -5,6 +5,7 @@ const cspHeader = [
   "default-src 'self';",
   "script-src 'self' 'unsafe-eval' 'unsafe-inline';",
   "style-src 'self' 'unsafe-inline';",
+  "img-src 'self' https://picsum.photos;"
 ].join(' ');
 
 const nextConfig: NextConfig = {
@@ -37,7 +38,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "picsum.photos",
         port: "",
-        pathname: "/seed/**",
+        pathname: "/**",
         search: "",
       },
     ],

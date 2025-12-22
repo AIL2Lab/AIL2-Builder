@@ -85,7 +85,7 @@
     "fourthScreen": {
       "title": "En Büyük AI L2",
       "superLayer": "ETH, BSC, GIWA, XLayer, Base, Mantle'i birleştiren<br></br>AI Süper Katmanı",
-      "architecture": "AIL2 5 Katmanlı Mimarisi"
+      "architecture": "AIL2 6 Katmanlı Mimarisi"
     },
     "fifthScreen": {
       "acceleration": "AIL2'nin hızlandırması, geliştiricilerin herkese açık blockchain'lerde merkeziyetsiz AI oluşturmasını ve <theme>100x hızlanma</theme> sağlamasını sağlar"

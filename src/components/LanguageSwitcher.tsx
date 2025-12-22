@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { routing } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 import clsx from "clsx";
-import { localeLabels, shortLocaleLabels } from "@/i18n/locales";
+import { localeMap } from "@/i18n/locales";
 import { ChevronDown } from "lucide-react";
 const LanguageSwitcherSelect = ({className}: {className?:string}) => {
   const locale = useLocale();
@@ -18,7 +18,7 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
   
   const currentLanguage =
     routing.locales.find((lang) => lang === locale) || routing.locales[0];
-
+  
   const handleLanguageChange = (newLocale: string) => {
     router.replace(
       // @ts-expect-error -- TypeScript will validate that only known `params`
@@ -55,7 +55,8 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
           aria-expanded="true"
           aria-haspopup="true"
         >
-          {shortLocaleLabels[currentLanguage]}
+          <span className={`fi fi-${localeMap[currentLanguage].flag.toLowerCase()}`} />
+          {localeMap[currentLanguage].label}
           <ChevronDown size={20}/>
         </button>
       </div>
@@ -74,7 +75,8 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
                 className={`cursor-pointer block w-full text-left px-4 py-2 text-sm hover:bg-black/30`}
                 role="menuitem"
               >
-                {localeLabels[lang]}
+                <span className={`fi fi-${localeMap[lang].flag.toLowerCase()}`} />
+                {localeMap[lang].label}
               </button>
             ))}
           </div>
