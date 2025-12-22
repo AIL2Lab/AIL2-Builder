@@ -40,14 +40,23 @@
     "locale": "{locale, select, zh {중국어} en {영어} es {스페인어} ko {한국어} ja {일본어} pt {포르투갈어} ru {러시아어} tr {터키어} other {알 수 없음}}"
   },
   "Navbar": {
-    "research": "리서치",
+    "research": "연구",
     "ecosystem": "생태계",
     "learn": "학습",
     "blog": "블로그",
-    "platform": "플랫폼",
-    "accelerate": "가속",
+    "platform": "AIL2 플랫폼",
+    "accelerate": "AIL2 가속",
     "faq": "자주 묻는 질문",
-    "product": "제품"
+    "product": "제품",
+    "core": "AIL2 코어",
+    "builder": "AIL2 빌더",
+    "description": {
+      "platform": "AI 가속 플랫폼",
+      "accelerate": "여정 가속화",
+      "faq": "자주 묻는 질문",
+      "core": "실행 레이어",
+      "builder": "모델 발사대"
+    }
   },
   "Home": {
     "supportBtn": "X에서 AIL2 지원하기",
@@ -111,7 +120,8 @@
     "socials": "소셜 미디어",
     "product": "제품",
     "blog": "블로그",
-    "ecosystem": "생태계"
+    "ecosystem": "생태계",
+    "network": "네트워크 상태"
   },
   "NotFoundPage": {
     "title": "페이지를 찾을 수 없습니다",
@@ -259,5 +269,100 @@
         "description": "실행 중 악의적인 간섭을 방지하기 위해, 저희는 컨센서스 메커니즘을 지속적으로 모니터링하는 전문 에이전트 시스템인 \"와치독 스웜\"을 배포합니다. 이들의 관찰을 조정함으로써 전체 환경의 신뢰성을 향상시킵니다."
       }
     }
+  },
+  "EcosystemFond": {
+    "title": "AIL2 <theme>생태계 펀드</theme>",
+    "description": "차세대 분산형 AI 인프라, 모델 및 소비자 애플리케이션을 부트스트랩하기 위한 5천만 달러의 약속.",
+    "card1": {
+      "title": "인프라",
+      "description": "AI를 위한 분산형 스토리지, 컴퓨팅 네트워크 및 DA 레이어."
+    },
+    "card2": {
+      "title": "기본 모델",
+      "description": "AIL2 노드에 최적화된 오픈소스 파인튜닝 모델."
+    },
+    "card3": {
+      "title": "에이전트 앱",
+      "description": "온체인에서 실제 문제를 해결하는 자율 에이전트."
+    },
+    "card4": {
+      "title": "개발 도구",
+      "description": "AI 빌더를 위한 SDK, 디버거 및 모니터링 스택."
+    },
+    "weOffer": "제공하는 것",
+    "offer1": {
+      "title": "전략적 그랜트",
+      "description": "1만 달러에서 10만 달러까지의 마일스톤 기반 펀딩."
+    },
+    "offer2": {
+      "title": "컴퓨팅 크레딧",
+      "description": "훈련을 위한 AIL2의 H100 GPU 클러스터에 대한 무료 액세스."
+    },
+    "offer3": {
+      "title": "VC 소개",
+      "description": "최상위 티어의 암호화폐 및 AI 벤처 캐피탈로의 직접적인 파이프라인."
+    }
+  },
+  "Incubator": {
+    "title": "AIL2 <theme>인큐베이터</theme>",
+    "description": "자본, 컴퓨팅 및 전략적 지원을 통해 분산형 AI 공간의 가장 유망한 스타트업을 가속화합니다.",
+    "subtitle": "<theme>창업자</theme>를 위해",
+    "subDescription": "저희는 10만 달러에서 50만 달러의 초기 자금, 심층 기술 멘토십 및 AIL2 고성능 GPU 메시에 대한 무제한 액세스를 제공합니다.",
+    "applyBtn": "4기 지원하기",
+    "viewBtn": "혜택 보기",
+    "PortfolioCompanies": "포트폴리오 회사",
+    "card1": {
+      "title": "Nexus AI",
+      "description": "자율 LLM 확장"
+    },
+    "card2": {
+      "title": "TensorFlow DAO",
+      "description": "온체인 훈련 엔진"
+    },
+    "card3": {
+      "title": "OpenWeights",
+      "description": "분산형 모델 스토어"
+    },
+    "card4": {
+      "title": "ComputeX",
+      "description": "지연 시간 최적화"
+    },
+    "IncubationProcess": "인큐베이팅 <theme>프로세스</theme>",
+    "process1": {
+      "title": "기술 평가",
+      "description": "저희 핵심 엔지니어가 귀하의 모델 아키텍처와 AIL2에서의 확장 잠재력을 검토합니다."
+    },
+    "process2": {
+      "title": "전략적 정렬",
+      "description": "저희는 AIL2 생태계 내에서 귀하의 토크노믹스와 사용자 획득 전략을 계획합니다."
+    },
+    "process3": {
+      "title": "코치 시작",
+      "description": "자금을 지원받고 깊은 유동성과 커뮤니티 지원을 통해 라이브로 전환합니다."
+    }
+  },
+  "Contact": {
+    "title": "<theme>저희</theme>에게 연락",
+    "description": "분산형 지능의 미래를 구축하는 팀과 연락하세요.",
+    "globalOffices": "글로벌 오피스",
+    "address1": "샌프란시스코, 캘리포니아",
+    "address2": "싱가포르",
+    "address3": "추크, 스위스",
+    "social": "소셜 채널",
+    "form": {
+      "name": {
+        "col": "이름",
+        "placeholder": "이름을 입력하세요"
+      },
+      "email": {
+        "col": "이메일",
+        "placeholder": "이메일을 입력하세요"
+      },
+      "message": {
+        "col": "메시지",
+        "placeholder": "어떻게 도와드릴까요?"
+      }
+    },
+    "sendBtn": "메시지 보내기"
   }
 }

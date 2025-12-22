@@ -44,10 +44,19 @@
     "ecosystem": "Ekosistem",
     "learn": "Öğren",
     "blog": "Blog",
-    "platform": "Platform",
-    "accelerate": "Hızlandırma",
+    "platform": "AIL2 Platformu",
+    "accelerate": "AIL2 Hızlandırma",
     "faq": "Sıkça Sorulan Sorular",
-    "product": "Ürün"
+    "product": "Ürün",
+    "core": "AIL2 Çekirdeği",
+    "builder": "AIL2 Oluşturucu",
+    "description": {
+      "platform": "AI Hızlandırma Platformu",
+      "accelerate": "Yolculuğu hızlandırma",
+      "faq": "Sıkça sorulan sorular",
+      "core": "Yürütme Katmanı",
+      "builder": "Model Başlatma Platformu"
+    }
   },
   "Home": {
     "supportBtn": "X'te AIL2'yi Destekle",
@@ -111,7 +120,8 @@
     "socials": "Sosyal Medya",
     "product": "Ürün",
     "blog": "Blog",
-    "ecosystem": "Ekosistem"
+    "ecosystem": "Ekosistem",
+    "network": "Ağ Durumu"
   },
   "NotFoundPage": {
     "title": "Sayfa Bulunamadı",
@@ -259,5 +269,100 @@
         "description": "Yürütme sırasında kötü niyetli müdahaleyi önlemek için, konsensüs mekanizmalarını sürekli olarak izleyen uzmanlaşmış ajanlardan oluşan bir sistem olan \"Gözetçi Sürü\"nü devreye alıyoruz. Gözlemlerini koordine ederek tüm ortamın güvenilirliğini artırırlar."
       }
     }
+  },
+  "EcosystemFond": {
+    "title": "AIL2 <theme>Ekosistem Fonu</theme>",
+    "description": "Merkezi olmayan yapay zeka altyapısının, modellerinin ve tüketici uygulamalarının bir sonraki neslini başlatmak için 50 milyon dolarlık bir taahhüt.",
+    "card1": {
+      "title": "Altyapı",
+      "description": "Yapay zeka için merkezi olmayan depolama, hesaplama ağları ve DA katmanları."
+    },
+    "card2": {
+      "title": "Temel Modeller",
+      "description": "AIL2 düğümleri için optimize edilmiş açık kaynaklı ince ayarlı modeller."
+    },
+    "card3": {
+      "title": "Ajan Uygulamaları",
+      "description": "Zincir üzerinde gerçek dünya sorunlarını çözen otonom ajanlar."
+    },
+    "card4": {
+      "title": "Geliştirici Araçları",
+      "description": "Yapay zeka geliştiricileri için SDK'lar, hata ayıklayıcılar ve izleme yığınları."
+    },
+    "weOffer": "Sunduklarımız",
+    "offer1": {
+      "title": "Stratejik Hibeler",
+      "description": "10 bin dolardan 100 bin dolara kadar kilometre taşı tabanlı finansman."
+    },
+    "offer2": {
+      "title": "Hesaplama Kredileri",
+      "description": "Eğitim için AIL2'nin H100 GPU kümelerine ücretsiz erişim."
+    },
+    "offer3": {
+      "title": "VC Tanıtımı",
+      "description": "Birinci seviye kripto ve yapay zeka risk sermayesine doğrudan erişim."
+    }
+  },
+  "Incubator": {
+    "title": "AIL2 <theme>Kuluçka Merkezi</theme>",
+    "description": "Sermaye, hesaplama gücü ve stratejik destekle merkezi olmayan yapay zeka alanındaki en umut verici girişimleri hızlandırıyoruz.",
+    "subtitle": "<theme>Kurucular</theme> İçin İnşa Edildi",
+    "subDescription": "100 bin ila 500 bin dolarlık ilk finansman, derin teknik mentorluk ve AIL2'nin yüksek performanslı GPU ağına sınırsız erişim sunuyoruz.",
+    "applyBtn": "4. Grup için Başvur",
+    "viewBtn": "Faydaları Görüntüle",
+    "PortfolioCompanies": "Portföy Şirketleri",
+    "card1": {
+      "title": "Nexus AI",
+      "description": "Otonom LLM Ölçeklendirme"
+    },
+    "card2": {
+      "title": "TensorFlow DAO",
+      "description": "Zincir Üzeri Eğitim Motoru"
+    },
+    "card3": {
+      "title": "OpenWeights",
+      "description": "Merkezi Olmayan Model Mağazası"
+    },
+    "card4": {
+      "title": "ComputeX",
+      "description": "Gecikme Optimizasyonu"
+    },
+    "IncubationProcess": "Kuluçka <theme>Süreci</theme>",
+    "process1": {
+      "title": "Teknik Değerlendirme",
+      "description": "Temel mühendislerimiz, model mimarinizi ve AIL2 üzerindeki ölçeklendirme potansiyelinizi inceler."
+    },
+    "process2": {
+      "title": "Stratejik Uyum",
+      "description": "Tokenomiklerinizi ve AIL2 ekosistemi içindeki kullanıcı edinme stratejinizi planlıyoruz."
+    },
+    "process3": {
+      "title": "Grup Başlangıcı",
+      "description": "Finansman alın ve derin likidite ile topluluk desteğiyle canlıya geçin."
+    }
+  },
+  "Contact": {
+    "title": "<theme>Bizimle</theme> İletişime Geçin",
+    "description": "Merkezi olmayan zekanın geleceğini inşa eden ekiple iletişime geçin.",
+    "globalOffices": "Küresel Ofisler",
+    "address1": "San Francisco, CA",
+    "address2": "Singapur",
+    "address3": "Zug, İsviçre",
+    "social": "Sosyal Kanallar",
+    "form": {
+      "name": {
+        "col": "Ad",
+        "placeholder": "Adınız"
+      },
+      "email": {
+        "col": "E-posta",
+        "placeholder": "E-postanız"
+      },
+      "message": {
+        "col": "Mesaj",
+        "placeholder": "Nasıl yardımcı olabiliriz?"
+      }
+    },
+    "sendBtn": "Mesaj Gönder"
   }
 }

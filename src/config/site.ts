@@ -24,21 +24,33 @@ export function getNavbarConfig(t: (key: string) => string) {
       href: "",
       children: [
         {
+          label: t("core"),
+          href: "/",
+          description: t("description.core"),
+          icon: 'Activity'
+        },
+        {
+          label: t("builder"),
+          href: "/ecosystem",
+          description: t("description.builder"),
+          icon: 'Rocket'
+        },
+        {
           label: t("platform"),
           href: "/platform",
-          description: 'AI Acceleration Platform',
+          description: t("description.platform"),
           icon: 'Zap'
         },
         {
           label: t("accelerate"),
           href: "/accelerate",
-          description: 'Accelerating the journey',
+          description: t("description.accelerate"),
           icon: 'Cpu'
         },
         {
           label: t("faq"),
           href: "/faq",
-          description: 'Frequently asked questions',
+          description: t("description.faq"),
           icon: 'Sparkles'
         },
       ],

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
-import { ChevronDown, Sparkles, Zap, Cpu } from 'lucide-react';
+import { ChevronDown, Activity, Rocket, Sparkles, Zap, Cpu } from 'lucide-react';
 interface NavItem {
   label: string;
   href?: string;
@@ -56,6 +56,8 @@ const NavDropdown = ({ item, locale }: NavDropdownProps) => {
     };
   }, []);
   const iconMap:any = {
+    'Activity': <Activity className="text-theme" size={18}   />,
+    'Rocket': <Rocket className="text-theme" size={18}   />,
     'Zap': <Zap className="text-theme" size={18}   />,
     'Cpu':<Cpu className="text-theme" size={18}  />,
     'Sparkles': <Sparkles className="text-theme" size={18} />

@@ -44,10 +44,19 @@
     "ecosystem": "Ecosystem",
     "learn": "Learn",
     "blog": "Blog",
-    "platform": "Platform",
-    "accelerate": "Accelerate",
+    "platform": "AIL2 Platform",
+    "accelerate": "AIL2 Accelerate",
     "faq": "FAQ",
-    "product": "Product"
+    "product": "Product",
+    "core": "AIL2 Core",
+    "builder": "AIL2 Builder",
+    "description": {
+      "platform": "AI Acceleration Platform",
+      "accelerate": "Accelerating the journey",
+      "faq": "Frequently asked questions",
+      "core": "Execution Layer",
+      "builder": "Model Launchpad"
+    }
   },
   "Home": {
     "supportBtn": "Support AIL2 on X",
@@ -111,7 +120,8 @@
     "socials": "Socials",
     "product": "Product",
     "blog": "Blog",
-    "ecosystem": "Ecosystem"
+    "ecosystem": "Ecosystem",
+    "network": "Network Status"
   },
   "NotFoundPage": {
     "title": "Page Not Found",
@@ -225,7 +235,7 @@
         "btn2": "Documentation",
         "dialogTitle": "Verifiable Inference Documentation",
         "dialogText1": "Detailed technical documentation on Zero-Knowledge Proofs for Machine Learning (ZKML) is available.",
-        "dialogText2":  "The PoI protocol ensures:<br></br>1. Deterministic Execution <br></br>2. Cryptographic Weight Verification <br></br>3. Slashing conditions for dishonest nodes."
+        "dialogText2": "The PoI protocol ensures:<br></br>1. Deterministic Execution <br></br>2. Cryptographic Weight Verification <br></br>3. Slashing conditions for dishonest nodes."
       },
       "item2": {
         "title": "Dynamic State Channels for Agents",
@@ -259,5 +269,100 @@
         "description": "To prevent malicious interference during execution, we deploy a \"Watchdog Swarm\"—a system of specialized agents that continuously monitor consensus mechanisms. By coordinating their observations, they enhance the trustworthiness of the entire environment."
       }
     }
+  },
+  "EcosystemFond": {
+    "title": "AIL2 <theme>Ecosystem Fund</theme>",
+    "description": "A $50M commitment to bootstrap the next generation of decentralized AI infrastructure, models, and consumer applications.",
+    "card1": {
+      "title": "Infrastructure",
+      "description": "Decentralized storage, compute networks, and DA layers for AI."
+    },
+    "card2": {
+      "title": "Base Models",
+      "description": "Open-source fine-tuned models optimized for AIL2 nodes."
+    },
+    "card3": {
+      "title": "Agentic Apps",
+      "description": "Autonomous agents solving real-world problems on-chain."
+    },
+    "card4": {
+      "title": "Dev Tools",
+      "description": "SDKs, debuggers, and monitoring stacks for AI builders."
+    },
+    "weOffer": "What we offer",
+    "offer1": {
+      "title": "Strategic Grants",
+      "description": "Milestone-based funding from $10k to $100k."
+    },
+    "offer2": {
+      "title": "Compute Credits",
+      "description": "Free access to AIL2's H100 GPU clusters for training."
+    },
+    "offer3": {
+      "title": "VC Introduction",
+      "description": "Direct pipeline to leading Tier-1 crypto and AI venture capital."
+    }
+  },
+  "Incubator": {
+    "title": "AIL2 <theme>Incubator</theme>",
+    "description": "Accelerating the most promising startups in the decentralized AI space with capital, compute, and strategic support.",
+    "subtitle": "Built for <theme>Founders</theme>",
+    "subDescription": "We provide $100k - $500k in initial funding, deep technical mentorship, and unlimited access to the AIL2 high-performance GPU mesh.",
+    "applyBtn": "Apply for Cohort 4",
+    "viewBtn": "View Benefits",
+    "PortfolioCompanies": "Portfolio Companies",
+    "card1": {
+      "title": "Nexus AI",
+      "description": "Autonomous LLM Scaling"
+    },
+    "card2": {
+      "title": "TensorFlow DAO",
+      "description": "On-chain Training Engine"
+    },
+    "card3": {
+      "title": "OpenWeights",
+      "description": "Decentralized Model Store"
+    },
+    "card4": {
+      "title": "ComputeX",
+      "description": "Latency Optimization"
+    },
+    "IncubationProcess": "Incubation <theme>Process</theme>",
+    "process1": {
+      "title": "Technical Evaluation",
+      "description": "Our core engineers review your model architecture and scaling potential on AIL2."
+    },
+    "process2": {
+      "title": "Strategic Alignment",
+      "description": "We map out your tokenomics and user acquisition strategy within the AIL2 ecosystem."
+    },
+    "process3": {
+      "title": "Cohort Launch",
+      "description": "Receive funding and go live with deep liquidity and community support."
+    }
+  },
+  "Contact": {
+    "title": "Contact <theme>Us</theme>",
+    "description": "Get in touch with the team building the future of decentralized intelligence.",
+    "globalOffices": "Global Offices",
+    "address1": "San Francisco, CA",
+    "address2": "Singapore",
+    "address3": "Zug, Switzerland",
+    "social": "Social Channels",
+    "form": {
+      "name": {
+        "col": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "col": "Email",
+        "placeholder": "Your email"
+      },
+      "message": {
+        "col": "Message",
+        "placeholder": "How can we help?"
+      }
+    },
+    "sendBtn": "Send Message"
   }
 }

@@ -44,10 +44,19 @@
     "ecosystem": "Ecosistema",
     "learn": "Aprender",
     "blog": "Blog",
-    "platform": "Plataforma",
-    "accelerate": "Acelerar",
+    "platform": "Plataforma AIL2",
+    "accelerate": "AIL2 Acelera",
     "faq": "Preguntas Frecuentes",
-    "product": "Producto"
+    "product": "Producto",
+    "core": "AIL2 Core",
+    "builder": "AIL2 Builder",
+    "description": {
+      "platform": "Plataforma de Aceleración de IA",
+      "accelerate": "Acelerando el viaje",
+      "faq": "Preguntas frecuentes",
+      "core": "Capa de Ejecución",
+      "builder": "Plataforma de Lanzamiento de Modelos"
+    }
   },
   "Home": {
     "supportBtn": "Apoya a AIL2 en X",
@@ -111,7 +120,8 @@
     "socials": "Redes sociales",
     "product": "Producto",
     "blog": "Blog",
-    "ecosystem": "Ecosistema"
+    "ecosystem": "Ecosistema",
+    "network": "Estado de la Red"
   },
   "NotFoundPage": {
     "title": "Página No Encontrada",
@@ -259,5 +269,100 @@
         "description": "Para prevenir la interferencia maliciosa durante la ejecución, desplegamos un \"Enjambre Watchdog\"—un sistema de agentes especializados que monitorea continuamente los mecanismos de consenso. Al coordinar sus observaciones, mejoran la confiabilidad de todo el entorno."
       }
     }
+  },
+  "EcosystemFond": {
+    "title": "Fondo del <theme>Ecosistema AIL2</theme>",
+    "description": "Un compromiso de 50 millones de dólares para impulsar la próxima generación de infraestructura, modelos y aplicaciones de consumo de IA descentralizada.",
+    "card1": {
+      "title": "Infraestructura",
+      "description": "Almacenamiento descentralizado, redes de cómputo y capas de DA para IA."
+    },
+    "card2": {
+      "title": "Modelos Base",
+      "description": "Modelos de código abierto ajustados y optimizados para nodos AIL2."
+    },
+    "card3": {
+      "title": "Aplicaciones de Agentes",
+      "description": "Agentes autónomos resolviendo problemas del mundo real en la cadena."
+    },
+    "card4": {
+      "title": "Herramientas de Desarrollo",
+      "description": "SDKs, depuradores y pilas de monitoreo para constructores de IA."
+    },
+    "weOffer": "Lo que ofrecemos",
+    "offer1": {
+      "title": "Subvenciones Estratégicas",
+      "description": "Financiación basada en hitos desde $10k hasta $100k."
+    },
+    "offer2": {
+      "title": "Créditos de Cómputo",
+      "description": "Acceso gratuito a los clústeres de GPU H100 de AIL2 para entrenamiento."
+    },
+    "offer3": {
+      "title": "Introducción a VC",
+      "description": "Acceso directo a capital de riesgo de primer nivel en cripto e IA."
+    }
+  },
+  "Incubator": {
+    "title": "<theme>Incubadora</theme> AIL2",
+    "description": "Acelerando las startups más prometedoras en el espacio de la IA descentralizada con capital, cómputo y apoyo estratégico.",
+    "subtitle": "Construida para <theme>Fundadores</theme>",
+    "subDescription": "Ofrecemos de $100k a $500k en financiación inicial, mentoría técnica profunda y acceso ilimitado a la malla de GPU de alto rendimiento de AIL2.",
+    "applyBtn": "Aplicar para la Cohorte 4",
+    "viewBtn": "Ver Beneficios",
+    "PortfolioCompanies": "Empresas de la Cartera",
+    "card1": {
+      "title": "Nexus AI",
+      "description": "Escalado Autónomo de LLM"
+    },
+    "card2": {
+      "title": "TensorFlow DAO",
+      "description": "Motor de Entrenamiento en la Cadena"
+    },
+    "card3": {
+      "title": "OpenWeights",
+      "description": "Tienda de Modelos Descentralizada"
+    },
+    "card4": {
+      "title": "ComputeX",
+      "description": "Optimización de Latencia"
+    },
+    "IncubationProcess": "<theme>Proceso</theme> de Incubación",
+    "process1": {
+      "title": "Evaluación Técnica",
+      "description": "Nuestros ingenieros principales revisan tu arquitectura de modelo y potencial de escalabilidad en AIL2."
+    },
+    "process2": {
+      "title": "Alineación Estratégica",
+      "description": "Trazamos tu tokenomía y estrategia de adquisición de usuarios dentro del ecosistema AIL2."
+    },
+    "process3": {
+      "title": "Lanzamiento de la Cohorte",
+      "description": "Recibe financiación y sal al aire con liquidez profunda y apoyo de la comunidad."
+    }
+  },
+  "Contact": {
+    "title": "Contacta <theme>con Nosotros</theme>",
+    "description": "Ponte en contacto con el equipo que está construyendo el futuro de la inteligencia descentralizada.",
+    "globalOffices": "Oficinas Globales",
+    "address1": "San Francisco, CA",
+    "address2": "Singapur",
+    "address3": "Zug, Suiza",
+    "social": "Canales Sociales",
+    "form": {
+      "name": {
+        "col": "Nombre",
+        "placeholder": "Tu nombre"
+      },
+      "email": {
+        "col": "Correo",
+        "placeholder": "Tu correo"
+      },
+      "message": {
+        "col": "Mensaje",
+        "placeholder": "¿Cómo podemos ayudar?"
+      }
+    },
+    "sendBtn": "Enviar Mensaje"
   }
 }

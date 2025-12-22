@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 export function BenefitItem({ title, desc }: { title: string, desc: string }) {
   return (
     <div className="flex gap-4">
-      <div className="flex-shrink-0 mt-1">
+      <div className="shrink-0 mt-1">
         <CheckCircle className="text-yellow-400" size={24} />
       </div>
       <div>
