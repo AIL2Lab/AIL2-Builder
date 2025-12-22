@@ -22,6 +22,18 @@
     "research": {
       "title": "Research",
       "description": "The Decentralized AI Operating System"
+    },
+    "incubator": {
+      "title": "Incubator",
+      "description": "Accelerating the most promising startups in the decentralized AI space with capital, compute, and strategic support."
+    },
+    "Fund": {
+      "title": "Ecosystem-Fund",
+      "description": "A $50M commitment to bootstrap the next generation of decentralized AI infrastructure, models, and consumer applications."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with the team building the future of decentralized intelligence."
     }
   },
   "Common": {
@@ -270,7 +282,7 @@
       }
     }
   },
-  "EcosystemFond": {
+  "EcosystemFund": {
     "title": "AIL2 <theme>Ecosystem Fund</theme>",
     "description": "A $50M commitment to bootstrap the next generation of decentralized AI infrastructure, models, and consumer applications.",
     "card1": {

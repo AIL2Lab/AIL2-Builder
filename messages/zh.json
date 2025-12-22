@@ -22,6 +22,18 @@
     "research": {
       "title": "研究",
       "description": "去中心化 AI 操作系统"
+    },
+    "incubator": {
+      "title": "孵化器",
+      "description": "通过资本、计算和战略支持，加速去中心化AI领域最有前途的初创公司。"
+    },
+    "Fund": {
+      "title": "生态系统基金",
+      "description": "我们承诺投入5000万美元，用于启动下一代去中心化AI基础设施、模型和消费者应用。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "description": "与构建去中心化智能未来的团队取得联系。"
     }
   },
   "Common": {
@@ -269,7 +281,7 @@
       }
     }
   },
-  "EcosystemFond": {
+  "EcosystemFund": {
     "title": "AIL2 <theme>生态系统基金</theme>",
     "description": "我们承诺投入5000万美元，用于启动下一代去中心化AI基础设施、模型和消费者应用。",
     "card1": {

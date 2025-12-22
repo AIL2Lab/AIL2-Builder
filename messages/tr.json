@@ -22,6 +22,18 @@
     "research": {
       "title": "Araştırma",
       "description": "Merkezi Olmayan AI İşletim Sistemi"
+    },
+    "incubator": {
+      "title": "Kuluçka Merkezi",
+      "description": "Sermaye, hesaplama gücü ve stratejik destekle merkezi olmayan yapay zeka alanındaki en umut verici girişimleri hızlandırıyoruz."
+    },
+    "Fund": {
+      "title": "Ekosistem Fonu",
+      "description": "Merkezi olmayan yapay zeka altyapısının, modellerinin ve tüketici uygulamalarının bir sonraki neslini başlatmak için 50 milyon dolarlık bir taahhüt."
+    },
+    "contact": {
+      "title": "Bize Ulaşın",
+      "description": "Merkezi olmayan zekanın geleceğini inşa eden ekiple iletişime geçin."
     }
   },
   "Common": {
@@ -270,7 +282,7 @@
       }
     }
   },
-  "EcosystemFond": {
+  "EcosystemFund": {
     "title": "AIL2 <theme>Ekosistem Fonu</theme>",
     "description": "Merkezi olmayan yapay zeka altyapısının, modellerinin ve tüketici uygulamalarının bir sonraki neslini başlatmak için 50 milyon dolarlık bir taahhüt.",
     "card1": {

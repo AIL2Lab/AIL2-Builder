@@ -1,5 +1,4 @@
 import PageLayout from "@/components/PageLayout";
-import Plant from "@/components/Plant";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
@@ -10,11 +9,10 @@ import {
   Cpu,
   Database,
   Activity,
-  Menu,
-  Twitter,
-  Github,
 } from "lucide-react";
 import { ProcessStep } from "@/components/incubator/ProcessStep";
+import Img from '@/assets/images/incubator-s.jpg'
+import Image from "next/image";
 export async function generateMetadata({
   params,
 }: {
@@ -23,12 +21,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "site" });
   return {
-    title: `${t("platform.title")} | ${t("subtitle")}`,
-    description: `${t("platform.description")}`,
+    title: `${t("incubator.title")} | ${t("subtitle")}`,
+    description: `${t("incubator.description")}`,
   };
 }
 
-export default function PlatformPage({
+export default function IncubatorPage({
   params,
 }: PageProps<"/[locale]/incubator">) {
   const { locale } = use(params);
@@ -142,8 +140,8 @@ export default function PlatformPage({
 
             <div className="relative aspect-square rounded-2xl overflow-hidden border border-yellow-400/30 group">
               {/* Using a standard img tag for simplicity, replace with next/image in production */}
-              <img
-                src="https://picsum.photos/800/800?random=15"
+              <Image
+                src={Img}
                 alt="Incubation Process"
                 className="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700"
               />

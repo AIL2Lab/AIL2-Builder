@@ -22,6 +22,18 @@
     "research": {
       "title": "Investigación",
       "description": "El Sistema Operativo de IA Descentralizado"
+    },
+    "incubator": {
+      "title": "Incubadora",
+      "description": "Acelerando las startups más prometedoras en el espacio de la IA descentralizada con capital, cómputo y apoyo estratégico."
+    },
+    "Fund": {
+      "title": "Fondo del Ecosistema",
+      "description": "Un compromiso de 50 millones de dólares para impulsar la próxima generación de infraestructura, modelos y aplicaciones de consumo de IA descentralizada."
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "description": "Ponte en contacto con el equipo que está construyendo el futuro de la inteligencia descentralizada."
     }
   },
   "Common": {
@@ -270,7 +282,7 @@
       }
     }
   },
-  "EcosystemFond": {
+  "EcosystemFund": {
     "title": "Fondo del <theme>Ecosistema AIL2</theme>",
     "description": "Un compromiso de 50 millones de dólares para impulsar la próxima generación de infraestructura, modelos y aplicaciones de consumo de IA descentralizada.",
     "card1": {

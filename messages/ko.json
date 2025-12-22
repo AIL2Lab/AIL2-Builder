@@ -22,6 +22,18 @@
     "research": {
       "title": "연구",
       "description": "분산형 AI 운영체제"
+    },
+    "incubator": {
+      "title": "인큐베이터",
+      "description": "자본, 컴퓨팅 및 전략적 지원을 통해 분산형 AI 공간의 가장 유망한 스타트업을 가속화합니다."
+    },
+    "Fund": {
+      "title": "생태계 펀드",
+      "description": "차세대 분산형 AI 인프라, 모델 및 소비자 애플리케이션을 부트스트랩하기 위한 5천만 달러의 약속."
+    },
+    "contact": {
+      "title": "문의하기",
+      "description": "분산형 지능의 미래를 구축하는 팀과 연락하세요."
     }
   },
   "Common": {
@@ -270,7 +282,7 @@
       }
     }
   },
-  "EcosystemFond": {
+  "EcosystemFund": {
     "title": "AIL2 <theme>생태계 펀드</theme>",
     "description": "차세대 분산형 AI 인프라, 모델 및 소비자 애플리케이션을 부트스트랩하기 위한 5천만 달러의 약속.",
     "card1": {
