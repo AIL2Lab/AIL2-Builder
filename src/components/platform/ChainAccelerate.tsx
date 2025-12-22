@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Img from '@/assets/images/platform_interoperability.svg'
 export default function ChainAccelerate() {
   const t = useTranslations("Platform");
   return (
@@ -14,10 +15,8 @@ export default function ChainAccelerate() {
       </div>
       <div className="order-1 lg:order-2 flex justify-center">
         <Image
-          src="/images/platform-compare-1.png"
-          alt="gpu"
-          width={696}
-          height={432}
+          src={Img}
+          alt="Interoperability"
         />
       </div>
     </section>

@@ -11,20 +11,26 @@
       "title": "Acelerar",
       "description": "Acelerando a jornada da próxima onda de fundadores de IA, impulsionando ideias para frente com financiamento, orientação especializada e suporte para ir ao mercado."
     },
-    "fqa": {
+    "faq": {
       "title": "Perguntas Frequentes",
       "description": "Perguntas frequentes"
     },
     "ecosystem": {
       "title": "Ecossistema",
       "description": "Uma plataforma consolidada para os últimos avanços em tecnologia AI L2. Um repositório abrangente de iniciativas de ponta de AI L2."
+    },
+    "research": {
+      "title": "Pesquisa",
+      "description": "O Sistema Operacional de IA Descentralizado"
     }
   },
   "Common": {
     "all": "Todos",
     "applyBtn": "Inscreva-se agora",
     "learnMore": "Saiba mais",
-    "comparisonImages": "Imagens de comparação"
+    "comparisonImages": "Imagens de comparação",
+    "contactUs": "Fale Conosco",
+    "ourEmail": "nosso e-mail"
   },
   "Error": {
     "description": "<p>Infelizmente, encontramos um erro.</p><p>Você pode tentar <retry>recarregar a página</retry> que estava visitando.</p>",
@@ -40,11 +46,12 @@
     "blog": "Blog",
     "platform": "Plataforma",
     "accelerate": "Acelerar",
-    "fqa": "Perguntas Frequentes"
+    "faq": "Perguntas Frequentes",
+    "product": "Produto"
   },
   "Home": {
     "supportBtn": "Apoie o AIL2 no X",
-    
+
     "firstScreen": {
       "text": "O maior AIL2 para"
     },
@@ -186,7 +193,71 @@
       "item3": "Suporte Multi-Chain: Fornece suporte nativo para seis blockchains principais: ETH, BSC, GIWA, XLayer, Base e Mantle."
     }
   },
-  "Fqa": {
+  "Faq": {
     "description": "Perguntas frequentes"
+  },
+  "Research": {
+    "title": "O Sistema Operacional de IA <br></br><theme>Descentralizado</theme>",
+    "subtitle": "AIL2 preenche a lacuna entre os massive requisitos de computação e o consenso de blockchain distribuído, escalando a inteligência ao infinito.",
+    "buildBtn": "Começar a Construir",
+    "readBtn": "Ler o Livro Branco",
+    "section1": {
+      "title": "Otimização de Infraestrutura",
+      "item1": {
+        "title": "Consenso Hiperescalável",
+        "description": "As camadas atuais de blockchain não conseguem lidar com a taxa de transferência necessária para o treinamento de modelos em tempo real. AIL2 introduz um <theme>mecanismo de sharding inédito</theme> que trata os estados dos modelos de IA como pacotes de dados fluidos."
+      },
+      "item2": {
+        "title": "Virtualização de GPU com Zero Overhead",
+        "description": "Eliminamos a fricção entre a mineração de criptomoedas e a inferência de IA. Nosso <theme>protocolo \"GPU Driver\"</theme> atua como uma camada de tradução universal, permitindo que o poder de computação bruto seja provisionado instantaneamente."
+      },
+      "item3": {
+        "title": "Motor de Componibilidade Fluido",
+        "description": "Os desenvolvedores não deveriam precisar reconstruir a pilha. AIL2 fornece uma <theme>superfície de API universal</theme> que permite encadear diferentes agentes de IA e conjuntos de dados verificados."
+      }
+    },
+    "section2": {
+      "title": "Análise Técnica",
+      "item1": {
+        "title": "Inferência Verificável",
+        "description": "Garantindo que modelos descentralizados retornem resultados corretos. Utilizamos <theme>ZK-Rollups Otimistas</theme> para verificar criptograficamente que o computador realizado por um nó não confiável corresponde ao caminho de execução esperado do modelo.",
+        "btn1": "Livro Branco",
+        "btn2": "Documentação",
+        "dialogTitle": "Documentação de Inferência Verificável",
+        "dialogText1": "Documentação técnica detalhada sobre Provas de Conhecimento Zero para Aprendizado de Máquina (ZKML) está disponível.",
+        "dialogText2": "O protocolo PoI garante:<br></br>1. Execução Determinística <br></br>2. Verificação Criptográfica de Pesos <br></br>3. Condições de Slashing para nós desonestos."
+      },
+      "item2": {
+        "title": "Canais de Estado Dinâmicos para Agentes",
+        "description": "Para suportar sistemas multiagente, implementamos <theme>canais de estado efêmeros</theme> que permitem aos agentes negociar, debater e trocar dados fora da cadeia com latência quase zero, liquidando apenas o consenso final na cadeia.",
+        "btn1": "Arquitetura",
+        "btn2": "Saiba Mais",
+        "dialogTitle": "Arquitetura de Canais de Estado",
+        "dialogText1": "Nossos Canais de Estado usam uma abordagem de dupla camada:<br></br>- Camada 1: Liquidação e Resolução de Disputas<br></br>- Camada 2: Interação de Alta Frequência de Agentes",
+        "dialogText2": "Isso permite que os agentes troquem contexto e resultados de inferência milhões de vezes por segundo sem taxas de gás."
+      },
+      "item3": {
+        "title": "Padronização Universal de Modelos",
+        "description": "Um padrão em nível de protocolo para empacotar modelos de IA (Pesos + Configuração + Código de Inferência) em um <theme>único ativo portátil</theme> que pode ser implantado em qualquer nó compatível com AIL2 em segundos.",
+        "btn1": "Ler Especificações",
+        "btn2": "Exemplos",
+        "dialogTitle": "Padrão Universal de Modelos - Exemplos Práticos",
+        "dialogText1": "1. Arquivo de Manifesto (ail2.yaml)",
+        "dialogText2": "Cada contêiner .ail requer um manifesto estrito definindo as restrições de hardware.",
+        "dialogText3": "2. Implantação do SDK do Python"
+      }
+    },
+    "section3": {
+      "title": "Novo Sistema de Blockchain Capacitado pela Tecnologia <theme>Multiagente</theme>",
+      "subtitle": "Sistemas multiagente baseados em LLM coordenam tarefas complexas através de inteligência distribuída, alinhando-se perfeitamente com a arquitetura blockchain.",
+      "item1": {
+        "title": "Gerenciamento Autônomo de Contratos Inteligentes",
+        "description": "Contratos inteligentes são críticos para automatizar transações. Implementamos uma solução multiagente onde agentes distintos analisam, auditam a segurança e otimizam a lógica de contratos inteligentes em tempo real, aumentando a cadeia com capacidades de autocura."
+      },
+      "item2": {
+        "title": "Detecção Descentralizada de Anomalias",
+        "description": "Para prevenir interferência maliciosa durante a execução, implantamos um \"Enxame Watchdog\"—um sistema de agentes especializados que monitora continuamente os mecanismos de consenso. Ao coordenar suas observações, eles aumentam a confiabilidade de todo o ambiente."
+      }
+    }
   }
 }

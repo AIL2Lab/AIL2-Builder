@@ -2,13 +2,18 @@ export const siteConfig = {
   xUrl: "https://x.com/AIL2Lab",
   githubUrl: "https://github.com/AIL2Lab",
   telegramUrl: "",
+  email: "creator@hpvideo.ai"
 };
 
 export function getNavbarConfig(t: (key: string) => string) {
   const navbarLeft = [
     {
-      label: t("research"),
+      label: t("product"),
       href: "/",
+    },
+    {
+      label: t("research"),
+      href: "/research",
     },
     {
       label: t("ecosystem"),
@@ -16,19 +21,25 @@ export function getNavbarConfig(t: (key: string) => string) {
     },
     {
       label: t("learn"),
-      href: "/",
+      href: "",
       children: [
         {
           label: t("platform"),
           href: "/platform",
+          description: 'AI Acceleration Platform',
+          icon: 'Zap'
         },
         {
           label: t("accelerate"),
           href: "/accelerate",
+          description: 'Accelerating the journey',
+          icon: 'Cpu'
         },
         {
-          label: t("fqa"),
-          href: "/fqa",
+          label: t("faq"),
+          href: "/faq",
+          description: 'Frequently asked questions',
+          icon: 'Sparkles'
         },
       ],
     },
@@ -37,7 +48,7 @@ export function getNavbarConfig(t: (key: string) => string) {
   const navbarRight = [
     {
       label: t("blog"),
-      href: "/",
+      href: "",
     },
   ];
 

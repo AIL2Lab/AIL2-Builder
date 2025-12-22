@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import GpuImg from '@/assets/images/platform_gpu_compute.svg'
 export default function GPU() {
   const t = useTranslations("Platform");
   const items = [
@@ -12,10 +13,8 @@ export default function GPU() {
     <section className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div className="flex justify-center">
         <Image
-          src="/images/platform-compare-2.jpg"
+          src={GpuImg}
           alt="gpu"
-          width={2730}
-          height={1535}
         />
       </div>
       <div>

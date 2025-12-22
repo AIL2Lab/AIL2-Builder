@@ -11,20 +11,26 @@
       "title": "Hızlandır",
       "description": "Bir sonraki AI kurucu dalgasının yolculuğunu hızlandırıyor, fikirleri finansman, uzman rehberliği ve pazara giriş desteğiyle ileriye taşıyoruz."
     },
-    "fqa": {
+    "faq": {
       "title": "Sıkça Sorulan Sorular",
       "description": "Sıkça sorulan sorular"
     },
     "ecosystem": {
       "title": "Ekosistem",
       "description": "AI L2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. Kütük AI L2 girişimlerinin kapsamlı bir deposu."
+    },
+    "research": {
+      "title": "Araştırma",
+      "description": "Merkezi Olmayan AI İşletim Sistemi"
     }
   },
   "Common": {
     "all": "Tümü",
     "applyBtn": "Şimdi Başvur",
     "learnMore": "Daha fazla öğren",
-    "comparisonImages": "Karşılaştırma Görselleri"
+    "comparisonImages": "Karşılaştırma Görselleri",
+    "contactUs": "Bize Ulaşın",
+    "ourEmail": "e-postamız"
   },
   "Error": {
     "description": "<p>Ne yazık ki bir hatayla karşılaştık.</p><p>Ziyaret ettiğiniz sayfayı <retry>yeniden yüklemeyi</retry> deneyebilirsiniz.</p>",
@@ -40,11 +46,12 @@
     "blog": "Blog",
     "platform": "Platform",
     "accelerate": "Hızlandırma",
-    "fqa": "Sıkça Sorulan Sorular"
+    "faq": "Sıkça Sorulan Sorular",
+    "product": "Ürün"
   },
   "Home": {
     "supportBtn": "X'te AIL2'yi Destekle",
-    
+
     "firstScreen": {
       "text": "İçin en büyük AIL2"
     },
@@ -186,7 +193,71 @@
       "item3": "Çok Zincirli Destek: ETH, BSC, GIWA, XLayer, Base ve Mantle olmak üzere altı ana blockchain için yerel destek sağlar."
     }
   },
-  "Fqa": {
+  "Faq": {
     "description": "Sıkça sorulan sorular"
+  },
+  "Research": {
+    "title": "<theme>Merkezi Olmayan</theme> <br></br> AI İşletim Sistemi",
+    "subtitle": "AIL2, devasa bilgi işlem gereksinimleri ile dağıtık blok zinciri konsensüsü arasındaki boşluğu doldurarak zekayı sonsuza kadar ölçeklendirir.",
+    "buildBtn": "Geliştirmeye Başla",
+    "readBtn": "Whitepaper'ı Oku",
+    "section1": {
+      "title": "Altyapı Optimizasyonu",
+      "item1": {
+        "title": "Hiper Ölçeklenebilir Konsensüs",
+        "description": "Mevcut blok zinciri katmanları, gerçek zamanlı model eğitimi için gereken verimi işleyemez. AIL2, AI model durumlarını akışkan veri paketleri olarak ele alan <theme>yeni bir parçalama (sharding) mekanizması</theme> sunar."
+      },
+      "item2": {
+        "title": "Sıfır Gecikmeli GPU Sanallaştırması",
+        "description": "Kripto madenciliği ile AI çıkarımı arasındaki sürtünmeyi ortadan kaldırıyoruz. <theme>\"GPU Driver\" protokolümüz</theme>, evrensel bir çeviri katmanı olarak görev yaparak ham bilgi işlem gücünün anında sağlanmasını sağlar."
+      },
+      "item3": {
+        "title": "Akıcı Bileşilebilirlik Motoru",
+        "description": "Geliştiricilerin yığını yeniden oluşturması gerekmemelidir. AIL2, farklı AI ajanlarını ve doğrulanmış veri kümelerini birbirine zincirlemenize olanak tanıyan <theme>evrensel bir API yüzeyi</theme> sağlar."
+      }
+    },
+    "section2": {
+      "title": "Teknik Analiz",
+      "item1": {
+        "title": "Doğrulanabilir Çıkarım",
+        "description": "Merkezi olmayan modellerin doğru sonuçlar döndürdüğünü sağlamak. <theme>İyimser ZK-Rollups</theme> kullanarak, güvenilmeyen bir düğüm tarafından gerçekleştirilen işlemin, beklenen model yürütme yoluyla eşleştiğini kriptografik olarak doğruluyoruz.",
+        "btn1": "Whitepaper",
+        "btn2": "Dokümantasyon",
+        "dialogTitle": "Doğrulanabilir Çıkarım Dokümantasyonu",
+        "dialogText1": "Makine Öğrenimi için Sıfır Bilgi Kanıtları (ZKML) hakkında detaylı teknik dokümantasyon mevcuttur.",
+        "dialogText2": "PoI protokolü şunları sağlar:<br></br>1. Deterministik Yürütme <br></br>2. Kriptografik Ağırlık Doğrulaması <br></br>3. Hileli düğümler için ceza kesme koşulları."
+      },
+      "item2": {
+        "title": "Ajanlar için Dinamik Durum Kanalları",
+        "description": "Çoklu ajan sistemlerini desteklemek için, ajanların neredeyse sıfır gecikmeyle zincir dışında müzakere etmesine, tartışmasına ve veri alışverişi yapmasına olanak tanıyan, yalnızca nihai konsensusu zincir üzerinde settle eden <theme>geçici durum kanalları</theme> uyguluyoruz.",
+        "btn1": "Mimari",
+        "btn2": "Daha Fazla Bilgi Alın",
+        "dialogTitle": "Durum Kanalı Mimarisi",
+        "dialogText1": "Durum Kanallarımız çift katmanlı bir yaklaşım kullanır:<br></br>- Katman 1: Uzlaşma & Anlaşmazlık Çözümü<br></br>- Katman 2: Yüksek Frekanslı Ajan Etkileşimi",
+        "dialogText2": "Bu, ajanların gas ücreti olmadan saniyede milyonlarca kez bağlam ve çıkarım sonucu exchange etmesine olanak tanır."
+      },
+      "item3": {
+        "title": "Evrensel Model Standardizasyonu",
+        "description": "AI modellerini (Ağırlıklar + Yapılandırma + Çıkarım Kodu) saniyeler içinde herhangi bir AIL2 uyumlu düğüme dağıtılabilen <theme>tek bir taşınabilir varlığa</theme> paketlemek için protokol düzeyinde bir standart.",
+        "btn1": "Spesifikasyonu Oku",
+        "btn2": "Örnekler",
+        "dialogTitle": "Evrensel Model Standardı - Pratik Örnekler",
+        "dialogText1": "1. Manifest Dosyası (ail2.yaml)",
+        "dialogText2": "Her .ail konteyneri, donanım kısıtlamalarını tanımlayan katı bir manifest gerektirir.",
+        "dialogText3": "2. Python SDK Dağıtımı"
+      }
+    },
+    "section3": {
+      "title": "<theme>Çoklu Ajan</theme> Teknolojisi ile Güçlendirilmiş<br></br> Yeni Blok Zinciri Sistemi",
+      "subtitle": "LLM tabanlı çoklu ajan sistemleri, dağıtık zeka aracılığıyla karmaşık görevleri koordine eder ve blok zinciri mimarisiyle mükemmel bir şekilde uyum sağlar.",
+      "item1": {
+        "title": "Otonom Akıllı Kontrat Yönetimi",
+        "description": "Akıllı kontratlar, işlemleri otomatikleştirmek için kritik öneme sahiptir. Farklı ajanların akıllı kontrat mantığını gerçek zamanlı olarak analiz ettiği, güvenlik denetimi yaptığı ve optimize ettiği, zinciri kendini iyileştirme yetenekleriyle güçlendiren çoklu ajan çözümü uyguluyoruz."
+      },
+      "item2": {
+        "title": "Merkezi Olmayan Anormallik Tespiti",
+        "description": "Yürütme sırasında kötü niyetli müdahaleyi önlemek için, konsensüs mekanizmalarını sürekli olarak izleyen uzmanlaşmış ajanlardan oluşan bir sistem olan \"Gözetçi Sürü\"nü devreye alıyoruz. Gözlemlerini koordine ederek tüm ortamın güvenilirliğini artırırlar."
+      }
+    }
   }
 }
