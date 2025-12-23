@@ -38,6 +38,10 @@
     "core": {
       "title": "AIL2 Core",
       "description": "在分布式 GPU 网络上构建去中心化 AI 应用。"
+    },
+    "docs": {
+      "title": "AIL2 文档",
+      "description": "AIL2 网络的技术指南、API 参考和架构概述。"
     }
   },
   "Common": {
@@ -503,6 +507,83 @@
       "title": "准备好集成 AIL2 核心了吗？",
       "openBtn": "打开控制台",
       "readBtn": "阅读文档"
+    }
+  },
+  "Docs": {
+    "title": "文档",
+    "description": "AIL2 网络的技术指南、API 参考和架构概述。",
+    "introduction": {
+      "title": "AIL2 简介",
+      "description": "AIL2 是专为人工智能工作负载设计的第 2 层扩展解决方案。它弥合了海量计算需求与分布式区块链共识之间的鸿沟，将智能扩展至无限。",
+      "note": "<text>注意：</text> AIL2 主网测试版目前已上线。开发者可以立即开始在分布式 GPU 网络上部署模型。"
+    },
+    "sdk": {
+      "title": "1. SDK 安装",
+      "text1": "要开始使用 AIL2 进行开发，请安装我们的核心 SDK 及其对等依赖项。该 SDK 提供了与 AIL2 网络交互、提交推理任务和管理模型所需的所有工具。",
+      "text2": "安装后，你可以在项目中引入 SDK 并配置你的项目 ID 和 API 密钥以进行初始化："
+    },
+    "quickstart": {
+      "title": "2. 5分钟内部署",
+      "text": "在从开发者控制台获取你的 project_id 后，只需一次 API 调用即可开始构建。以下是一个向 nebula-ai 模型提交推理任务的完整示例：",
+      "example": "响应示例:"
+    },
+    "coreConcepts": {
+      "title": "3. 核心概念",
+      "inference": {
+        "title": "推理证明",
+        "description": "AIL2 网络的核心共识机制。它通过乐观 ZK-Rollup 技术，密码学地验证不可信计算节点执行 AI 模型的过程与预期完全一致，确保去中心化推理结果的正确性，并为诚实节点提供激励基础。"
+      },
+      "stateChannels": {
+        "title": "状态通道",
+        "description": "为实现无限扩展性而设计的高效链下交易层。它允许用户在 AIL2 核心 Rollup 之外进行高频、低成本的微交易和状态交互，仅在最终结算时与底层区块链同步，极大提升了 AI 应用的可组合性和用户体验。"
+      },
+      "token": {
+        "title": "代币经济学",
+        "description": "AIL2 生态系统的激励层。通证用于支付网络计算资源（GPU）、质押成为验证节点、参与治理，并奖励为网络提供算力、存储和验证服务的参与者，驱动整个去中心化 AI 网络持续运转。"
+      }
+    },
+    "api": {
+      "title": "4. API 参考",
+      "inference": "推理 API",
+      "text1": "提交 AI 模型推理任务的核心端点。",
+      "text2": "响应：返回包含 task_id、status 和异步 results 的 JSON 对象。",
+      "col1": "你的项目唯一标识。",
+      "col2": "要调用的模型 ID（如 nebula-ai）。",
+      "col3": "模型特定的输入数据，通常包含 prompt 等字段。",
+      "col4": "可选的推理参数，如 temperature, max_tokens。",
+      "modelRegistry": "模型注册表",
+      "text3": "查询可用 AI 模型列表或获取特定模型详情的端点。",
+      "col5": "指定模型 ID 以获取其详细信息。若省略，则返回列表。",
+      "text4": "响应：返回模型数组或单个模型对象，包含 ID、名称、描述、输入输出格式等元数据。"
+    },
+    "bill": {
+      "title": "5. 计费与使用",
+      "description": "AIL2 采用按实际使用量计费的模型。费用基于你所调用的 AI 模型复杂度、消耗的 GPU 计算时长（以秒计）和处理的数据量（输入/输出令牌数）进行核算。",
+      "item1": {
+        "title": "查看用量与余额",
+        "description": "你可以在开发者控制台的 “Billing” 面板中实时查看当前项目的资源消耗详情、剩余额度及历史账单。"
+      },
+      "item2": {
+        "title": "计费提醒",
+        "description": "系统会在你的额度低于设定阈值时通过电子邮件发送提醒，确保你的 AI 服务不会因为余额不足而中断。"
+      },
+      "pay": "支付方式 (多链支持)",
+      "text": "目前支持通过以下六条主流区块链上的 AIL2 原生通证进行结算，充分利用了 AIL2 作为统一 AI 超级层的多链优势："
+    },
+    "sidebar": {
+      "gettingStarted": "快速入门",
+      "introduction": "简介",
+      "setup": "SDK 设置",
+      "quickStart": "快速开始",
+      "coreConcepts": "核心概念",
+      "pol": "推论证明",
+      "stateChannels": "状态通道",
+      "tokenEconomics": "代币经济学",
+      "apiReference": "API 参考",
+      "inferenceAPI": "推理 API(/v1/infer)",
+      "modelRegistry": "模型注册表(/v1/models)",
+      "management": "管理",
+      "billing": "计费与使用"
     }
   }
 }

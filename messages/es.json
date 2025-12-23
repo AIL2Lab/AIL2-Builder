@@ -38,6 +38,10 @@
     "core": {
       "title": "AIL2 Core",
       "description": "Construya aplicaciones de IA descentralizada en una red GPU distribuida."
+    },
+    "docs": {
+      "title": "Documentación AIL2",
+      "description": "Guías técnicas, referencias de API y descripciones generales de la arquitectura para la red AIL2."
     }
   },
   "Common": {
@@ -504,6 +508,83 @@
       "title": "¿Listo para integrar AIL2 Core?",
       "openBtn": "Abrir Consola",
       "readBtn": "Leer Documentación"
+    }
+  },
+  "Docs": {
+    "title": "Documentación",
+    "description": "Guías técnicas, referencias de API y descripciones generales de la arquitectura para la red AIL2.",
+    "introduction": {
+      "title": "Introducción a AIL2",
+      "description": "AIL2 es una solución de escalado de Capa 2 diseñada específicamente para cargas de trabajo de Inteligencia Artificial. Salva la brecha entre los masivos requisitos de cómputo y el consenso de blockchain distribuido, escalando la inteligencia al infinito.",
+      "note": "<text>Nota:</text> La Beta de la Red Principal de AIL2 está actualmente en vivo. Los desarrolladores pueden comenzar a desplegar modelos en nuestra red GPU distribuida inmediatamente."
+    },
+    "sdk": {
+      "title": "1. Instalación del SDK",
+      "text1": "Para comenzar a desarrollar con AIL2, instale nuestro SDK principal y sus dependencias pares. El SDK proporciona todas las herramientas necesarias para interactuar con la red AIL2, enviar tareas de inferencia y gestionar modelos.",
+      "text2": "Después de la instalación, puede importar el SDK en su proyecto y configurar su ID de proyecto y clave API para la inicialización:"
+    },
+    "quickstart": {
+      "title": "2. Lance en 5 Minutos",
+      "text": "Después de obtener su project_id desde la consola de desarrollador, puede comenzar a construir con una sola llamada a la API. A continuación se muestra un ejemplo completo para enviar una tarea de inferencia al modelo nebula-ai:",
+      "example": "Ejemplo de respuesta:"
+    },
+    "coreConcepts": {
+      "title": "3. Conceptos Básicos",
+      "inference": {
+        "title": "Prueba de Inferencia",
+        "description": "El mecanismo de consenso central de la red AIL2. A través de la tecnología Optimistic ZK-Rollup, verifica criptográficamente que el proceso de ejecución de modelos de IA por parte de nodos de cómputo no confiables coincide exactamente con lo esperado, asegurando la corrección de los resultados de inferencia descentralizados y proporcionando la base de incentivos para nodos honestos."
+      },
+      "stateChannels": {
+        "title": "Canales de Estado",
+        "description": "Una capa de transacción fuera de la cadena eficiente diseñada para lograr escalabilidad infinita. Permite a los usuarios realizar microtransacciones de alta frecuencia e interacciones de estado fuera del Core Rollup de AIL2, sincronizándose con la blockchain subyacente solo en el momento de la liquidación final, mejorando enormemente la composibilidad y la experiencia del usuario de las aplicaciones de IA."
+      },
+      "token": {
+        "title": "Economía de Tokens",
+        "description": "La capa de incentivos del ecosistema AIL2. Los tokens se utilizan para pagar los recursos de cómputo de la red (GPU), hacer staking para convertirse en nodos validadores, participar en la gobernanza y recompensar a los participantes que proporcionan poder de cómputo, almacenamiento y servicios de validación a la red, impulsando el funcionamiento continuo de toda la red de IA descentralizada."
+      }
+    },
+    "api": {
+      "title": "4. REFERENCIA DE API",
+      "inference": "API de Inferencia",
+      "text1": "El punto final central para enviar tareas de inferencia de modelos de IA.",
+      "text2": "Respuesta: Devuelve un objeto JSON que contiene task_id, status y results asincrónicos.",
+      "col1": "Identificador único de tu proyecto.",
+      "col2": "ID del modelo a invocar (ej. nebula-ai).",
+      "col3": "Datos de entrada específicos del modelo, generalmente contiene campos como prompt.",
+      "col4": "Parámetros de inferencia opcionales, como temperature, max_tokens.",
+      "modelRegistry": "Registro de Modelos",
+      "text3": "Punto final para consultar la lista de modelos de IA disponibles u obtener detalles de un modelo específico.",
+      "col5": "Especifica el ID del modelo para obtener su información detallada. Si se omite, devuelve la lista.",
+      "text4": "Respuesta: Devuelve un array de modelos o un solo objeto de modelo, que contiene metadatos como ID, nombre, descripción, formatos de entrada/salida, etc."
+    },
+    "bill": {
+      "title": "5. Facturación y Uso",
+      "description": "AIL2 adopta un modelo de facturación por uso real. Las tarifas se calculan en función de la complejidad del modelo de IA invocado, la duración del cómputo de GPU consumida (en segundos) y el volumen de datos procesados (número de tokens de entrada/salida).",
+      "item1": {
+        "title": "Ver uso y saldo",
+        "description": "Puede ver los detalles del consumo de recursos, el saldo restante y el historial de facturación del proyecto actual en tiempo real en el panel 'Billing' de la consola de desarrollador."
+      },
+      "item2": {
+        "title": "Alertas de facturación",
+        "description": "El sistema enviará un recordatorio por correo electrónico cuando su saldo caiga por debajo del umbral establecido, asegurando que su servicio de IA no se interrumpa por saldo insuficiente."
+      },
+      "pay": "Métodos de pago (Soporte Multi-cadena)",
+      "text": "Actualmente se admite la liquidación a través del token nativo AIL2 en las siguientes seis cadenas de blockchain principales, aprovechando plenamente la ventaja multi-cadena de AIL2 como una capa IA unificada:"
+    },
+    "sidebar": {
+      "gettingStarted": "PRIMEROS PASOS",
+      "introduction": "Introducción",
+      "setup": "Configuración del SDK",
+      "quickStart": "Inicio Rápido",
+      "coreConcepts": "CONCEPTOS CLAVE",
+      "pol": "Prueba de Inferencia(Pol)",
+      "stateChannels": "Canales de Estado",
+      "tokenEconomics": "Economía de Tokens",
+      "apiReference": "REFERENCIA DE API",
+      "inferenceAPI": "API de Inferencia(/v1/infer)",
+      "modelRegistry": "Registro de Modelos(/v1/models)",
+      "management": "GESTIÓN",
+      "billing": "Facturación y Uso"
     }
   }
 }

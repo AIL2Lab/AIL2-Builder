@@ -38,6 +38,10 @@
     "core": {
       "title": "AIL2 Core",
       "description": "Dağıtılmış bir GPU ağı üzerinde merkezi olmayan AI uygulamaları oluşturun."
+    },
+    "docs": {
+      "title": "AIL2 Dokümantasyonu",
+      "description": "AIL2 ağı için teknik rehberler, API referansları ve mimari genel bakışlar."
     }
   },
   "Common": {
@@ -504,6 +508,83 @@
       "title": "AIL2 Core'u entegre etmeye hazır mısınız?",
       "openBtn": "Konsolu Aç",
       "readBtn": "Belgeleri Oku"
+    }
+  },
+  "Docs": {
+    "title": "Dokümantasyon",
+    "description": "AIL2 ağı için teknik rehberler, API referansları ve mimari genel bakışlar.",
+    "introduction": {
+      "title": "AIL2'ye Giriş",
+      "description": "AIL2, yapay zeka iş yükleri için özel olarak tasarlanmış bir Katman 2 ölçeklendirme çözümüdür. Devasa bilgi işlem gereksinimleri ve dağıtık blockchain konsensüsü arasındaki boşluğu doldurarak zekayı sonsuza kadar ölçeklendirir.",
+      "note": "<text>Not:</text> AIL2 Ana Ağ Beta şu anda canlı. Geliştiriciler, modellerini hemen dağıtık GPU ağımıza dağıtmaya başlayabilirler."
+    },
+    "sdk": {
+      "title": "1. SDK Kurulumu",
+      "text1": "AIL2 ile geliştirmeye başlamak için çekirdek SDK'mızı ve eş bağımlılıklarını yükleyin. SDK, AIL2 ağıyla etkileşim kurmak, çıkarım görevleri göndermek ve modelleri yönetmek için gereken tüm araçları sağlar.",
+      "text2": "Yüklemeden sonra, projenizde SDK'yı içe aktarabilir ve başlatma için proje kimliğinizi ve API anahtarınızı yapılandırabilirsiniz:"
+    },
+    "quickstart": {
+      "title": "2. 5 Dakikada Yayınlayın",
+      "text": "Geliştirici konsolundan project_id'nizi aldıktan sonra, tek bir API çağrısıyla oluşturmaya başlayabilirsiniz. Aşağıda, nebula-ai modeline bir çıkarım görevi göndermek için tam bir örnek yer almaktadır:",
+      "example": "Yanıt Örneği:"
+    },
+    "coreConcepts": {
+      "title": "3. Temel Kavramlar",
+      "inference": {
+        "title": "Çıkarım Kanıtı",
+        "description": "AIL2 ağının temel konsensüs mekanizması. Optimistic ZK-Rollup teknolojisi aracılığıyla, güvenilmeyen bilgi işlem düğümlerinin AI modellerini yürütme sürecinin beklendiği gibi tam olarak eşleştiğini kriptografik olarak doğrular, merkeziyetsiz çıkarım sonuçlarının doğruluğunu garanti eder ve dürüst düğümler için teşvik temeli sağlar."
+      },
+      "stateChannels": {
+        "title": "Durum Kanalları",
+        "description": "Sınırsız ölçeklenebilirliği gerçekleştirmek için tasarlanmış verimli bir zincir dışı işlem katmanı. Kullanıcıların AIL2 Çekirdek Rollup'un dışında yüksek frekanslı, düşük maliyetli mikro işlemler ve durum etkileşimleri gerçekleştirmesine izin verir ve yalnızca nihai mutabakatta temel blok zinciriyle senkronize olur, bu da AI uygulamalarının birleştirilebilirliğini ve kullanıcı deneyimini büyük ölçüde artırır."
+      },
+      "token": {
+        "title": "Token Ekonomisi",
+        "description": "AIL2 ekosisteminin teşvik katmanı. Token, ağ bilgi işlem kaynaklarının (GPU) ödenmesi, doğrulayıcı düğümü olunması için staking, yönetişime katılım ve ağa bilgi işlem gücü, depolama ve doğrulama hizmeti sağlayan katılımcıları ödüllendirmek için kullanılır ve tüm merkeziyetsiz AI ağının sürekli çalışmasını sağlar."
+      }
+    },
+    "api": {
+      "title": "4. API REFERANSI",
+      "inference": "Çıkarım API'si",
+      "text1": "AI modeli çıkarım görevleri göndermek için temel uç nokta.",
+      "text2": "Yanıt: task_id, status ve asenkron results içeren bir JSON nesnesi döndürür.",
+      "col1": "Projenizin benzersiz tanımlayıcısı.",
+      "col2": "Çağrılacak model ID'si (örneğin nebula-ai).",
+      "col3": "Modela özgü giriş verileri, genellikle prompt gibi alanları içerir.",
+      "col4": "Temperature, max_tokens gibi isteğe bağlı çıkarım parametreleri.",
+      "modelRegistry": "Model Kayıt Defteri",
+      "text3": "Kullanılabilir AI modellerinin listesini sorgulamak veya belirli bir modelin ayrıntılarını almak için uç nokta.",
+      "col5": "Ayrıntılı bilgilerini almak için bir model ID'si belirtin. Atlanırsa liste döndürülür.",
+      "text4": "Yanıt: ID, ad, açıklama, giriş/çıkış formatları gibi meta verileri içeren bir model dizisi veya tek bir model nesnesi döndürür."
+    },
+    "bill": {
+      "title": "5. Faturalandırma ve Kullanım",
+      "description": "AIL2, gerçek kullanıma dayalı bir faturalandırma modeli benimser. Ücretler, çağırdığınız AI modelinin karmaşıklığına, tüketilen GPU bilgi işlem süresine (saniye cinsinden) ve işlenen veri hacmine (girdi/çıktı token sayısı) göre hesaplanır.",
+      "item1": {
+        "title": "Kullanım ve Bakiyeyi Görüntüleme",
+        "description": "Geliştirici konsolunun 'Faturalandırma' panelinde geçerli projenin kaynak tüketim ayrıntılarını, kalan bakiyesini ve geçmiş faturaları gerçek zamanlı olarak görüntüleyebilirsiniz."
+      },
+      "item2": {
+        "title": "Faturalandırma Uyarıları",
+        "description": "Sistem, bakiyeniz belirlenen eşiğin altına düştüğünde bir e-posta hatırlatması gönderir ve böylece AI hizmetinizin yetersiz bakiye nedeniyle kesintiye uğramamasını sağlar."
+      },
+      "pay": "Ödeme Yöntemleri (Çoklu Zincir Desteği)",
+      "text": "Şu anda aşağıdaki altı ana blok zincirindeki AIL2 yerel tokeni ile mutabakat desteklenmekte ve birleştirilmiş AI süper katmanı olarak AIL2'nin çoklu zincir avantajı tam olarak kullanılmaktadır:"
+    },
+    "sidebar": {
+      "gettingStarted": "BAŞLARKEN",
+      "introduction": "Giriş",
+      "setup": "SDK Kurulumu",
+      "quickStart": "Hızlı Başlangıç",
+      "coreConcepts": "TEMEL KAVRAMLAR",
+      "pol": "Çıkarım Kanıtı(Pol)",
+      "stateChannels": "Durum Kanalları",
+      "tokenEconomics": "Token Ekonomisi",
+      "apiReference": "API REFERANSI",
+      "inferenceAPI": "Çıkarım API'si(/v1/infer)",
+      "modelRegistry": "Model Kayıt Defteri(/v1/models)",
+      "management": "YÖNETİM",
+      "billing": "Faturalandırma ve Kullanım"
     }
   }
 }

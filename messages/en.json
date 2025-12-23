@@ -38,6 +38,10 @@
     "core": {
       "title": "AIL2 Core",
       "description": "Build decentralized AI apps on a distributed GPU network."
+    },
+    "docs": {
+      "title": "AIL2 Document",
+      "description": "Technical guides, API references, and architecture overviews for the AIL2 network."
     }
   },
   "Common": {
@@ -386,15 +390,15 @@
     "description": "Integrate via SDK & contracts. AIL2 handles routing, scheduling, receipts, settlement, and miner incentives—so you ship faster across Ethereum, BNB Chain, XLayer, Base, Mantle, and GIWA.",
     "openBtn": "Open Developer Console",
     "readBtn": "Read Core Docs",
-    "card1" : {
+    "card1": {
       "title": "Router & Scheduler",
       "description": "Multi-objective routing (latency / reliability / cost / risk)"
     },
-    "card2" : {
+    "card2": {
       "title": "Receipts & Settlement",
       "description": "Auditable receipts + batch settlement + auto split"
     },
-    "card3" : {
+    "card3": {
       "title": "Cross-chain Native",
       "description": "One integration, serve users across chains"
     },
@@ -504,6 +508,83 @@
       "title": "Ready to integrate AIL2 Core?",
       "openBtn": "Open Console",
       "readBtn": "Read Documentation"
+    }
+  },
+  "Docs": {
+    "title": "Documentation",
+    "description": "Technical guides, API references, and architecture overviews for the AIL2 network.",
+    "introduction": {
+      "title": "Introduction to AIL2",
+      "description": "AIL2 is a Layer 2 scaling solution specifically designed for Artificial Intelligence workloads. It bridges gap between massive compute requirements and distributed blockchain consensus, scaling intelligence to infinity.",
+      "note": "<text>Note:</text> AIL2 Mainnet Beta is currently live. Developers can begin deploying models to our distributed GPU network immediately."
+    },
+    "sdk": {
+      "title": "1. SDK Installation",
+      "text1": "To start developing with AIL2, please install our core SDK and its peer dependencies. The SDK provides all the tools needed to interact with the AIL2 network, submit inference tasks, and manage models.",
+      "text2": "After installation, you can import the SDK into your project and configure your Project ID and API Key for initialization:"
+    },
+    "quickstart": {
+      "title": "2. Ship in 5 Minutes",
+      "text": "After obtaining your project_id from the Developer Console, you can start building with a single API call. Here is a complete example of submitting an inference task to the nebula-ai model:",
+      "example": "Response Example:"
+    },
+    "coreConcepts": {
+      "title": "3. Core Concepts",
+      "inference": {
+        "title": "Proof of Inference",
+        "description": "The core consensus mechanism of the AIL2 network. Through Optimistic ZK-Rollup technology, it cryptographically verifies that the process of untrusted computing nodes executing AI models matches expectations exactly, ensuring the correctness of decentralized inference results and providing the incentive basis for honest nodes."
+      },
+      "stateChannels": {
+        "title": "State Channels",
+        "description": "An efficient off-chain transaction layer designed for infinite scalability. It allows users to perform high-frequency, low-cost micro-transactions and state interactions outside the AIL2 Core Rollup, syncing with the underlying blockchain only upon final settlement, greatly enhancing the composability and user experience of AI applications."
+      },
+      "token": {
+        "title": "Token Economics",
+        "description": "The incentive layer of the AIL2 ecosystem. Tokens are used to pay for network compute resources (GPU), stake to become validator nodes, participate in governance, and reward participants who provide computing power, storage, and verification services to the network, driving the continuous operation of the entire decentralized AI network."
+      }
+    },
+    "api": {
+      "title": "4. API REFERENCE",
+      "inference": "Inference API",
+      "text1": "The core endpoint for submitting AI model inference tasks.",
+      "text2": "Response: Returns a JSON object containing task_id, status, and asynchronous results.",
+      "col1": "Your unique project identifier.",
+      "col2": "The ID of the model to invoke (e.g., nebula-ai).",
+      "col3": "Model-specific input data, usually containing fields like prompt.",
+      "col4": "Optional inference parameters, such as temperature, max_tokens.",
+      "modelRegistry": "Model Registry",
+      "text3": "The endpoint to query the list of available AI models or get specific model details.",
+      "col5": "Specify the Model ID to get its detailed information. If omitted, the list is returned.",
+      "text4": "Response: Returns a model array or a single model object, containing metadata such as ID, name, description, input/output formats, etc."
+    },
+    "bill": {
+      "title": "5. Billing & Usage",
+      "description": "AIL2 adopts a pay-as-you-go billing model. Fees are calculated based on the complexity of the AI model invoked, the GPU compute duration consumed (in seconds), and the volume of data processed (number of input/output tokens).",
+      "item1": {
+        "title": "View Usage & Balance",
+        "description": "You can view real-time details of resource consumption, remaining credits, and historical bills for your current project in the 'Billing' panel of the Developer Console."
+      },
+      "item2": {
+        "title": "Billing Alerts",
+        "description": "The system will send an email alert when your credit falls below the set threshold, ensuring your AI service is not interrupted due to insufficient balance."
+      },
+      "pay": "Payment Methods (Multi-Chain Support)",
+      "text": "Currently supports settlement via AIL2 native tokens on the following six mainstream blockchains, fully leveraging AIL2's multi-chain advantage as a unified AI super layer:"
+    },
+    "sidebar": {
+      "gettingStarted": "GETTING STARTED",
+      "introduction": "Introduction",
+      "setup": "SDK Setup",
+      "quickStart": "Quick Start",
+      "coreConcepts": "CORE CONCEPTS",
+      "pol": "Proof of Inference(Pol)",
+      "stateChannels": "State Channels",
+      "tokenEconomics": "Token Economics",
+      "apiReference": "API REFERENCE",
+      "inferenceAPI": "Inference API(/v1/infer)",
+      "modelRegistry": "Model Registry(/v1/models)",
+      "management": "MANAGEMENT",
+      "billing": "Billing & Usage"
     }
   }
 }
