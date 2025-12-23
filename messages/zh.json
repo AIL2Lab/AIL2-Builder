@@ -34,6 +34,10 @@
     "contact": {
       "title": "联系我们",
       "description": "与构建去中心化智能未来的团队取得联系。"
+    },
+    "core": {
+      "title": "AIL2 Core",
+      "description": "在分布式 GPU 网络上构建去中心化 AI 应用。"
     }
   },
   "Common": {
@@ -375,5 +379,130 @@
       }
     },
     "sendBtn": "发送消息"
+  },
+  "Core": {
+    "title": "在<theme>分布式 GPU 网络</theme>上构建去中心化 AI 应用",
+    "description": "通过 SDK 和合约集成。AIL2 处理路由、调度、收据、结算和矿工激励——以便您在 Ethereum, BNB Chain, XLayer, Base, Mantle, 和 GIWA 上更快部署。",
+    "openBtn": "打开开发者控制台",
+    "readBtn": "阅读核心文档",
+    "card1": {
+      "title": "路由与调度器",
+      "description": "多目标路由（延迟 / 可靠性 / 成本 / 风险）"
+    },
+    "card2": {
+      "title": "收据与结算",
+      "description": "可审计收据 + 批量结算 + 自动分账"
+    },
+    "card3": {
+      "title": "原生跨链",
+      "description": "一次集成，服务多链用户"
+    },
+    "coreStack": {
+      "title": "用于去中心化 AI 的协议级核心栈。",
+      "card1": {
+        "title": "您提供",
+        "item1": "模型容器",
+        "item2": "定价策略",
+        "item3": "收入分成政策"
+      },
+      "card2": {
+        "title": "AIL2 提供",
+        "item1": "全球 GPU 网络",
+        "item2": "智能路由",
+        "item3": "反欺诈与结算"
+      },
+      "card3": {
+        "title": "您获得",
+        "item1": "无限可扩展性",
+        "item2": "可审计账目",
+        "item3": "即时激励"
+      }
+    },
+    "CoreProtocol": {
+      "title": "核心协议能力",
+      "description": "专为高吞吐量 AI 推理设计的模块化栈。",
+      "card1": {
+        "title": "路由与调度器",
+        "description": "预测排队时间，对节点评分，在整个去中心化网格中自动重试/故障转移。"
+      },
+      "card2": {
+        "title": "模型容器",
+        "description": "版本控制、金丝雀发布、回滚。矿工拉取您的自定义镜像并在安全隔离环境中运行它们。"
+      },
+      "card3": {
+        "title": "使用收据",
+        "description": "包含 token 数、GPU 秒数和费用的签名收据。默克尔批量证明确保绝对可审计性。"
+      },
+      "card4": {
+        "title": "AI L2 结算",
+        "description": "批量完成推理证明，带有争议窗口和向代币持有者自动分配收入。"
+      },
+      "card5": {
+        "title": "SLA 与声誉",
+        "description": "实时监控节点成功率和 p95 延迟。声誉分数影响路由优先级。"
+      },
+      "card6": {
+        "title": "安全与反欺诈",
+        "description": "风险加权奖励，以及对伪造收据或重复工作检测的自动罚没。"
+      }
+    },
+    "Settlement": {
+      "title": "从请求到结算",
+      "description": "去中心化推理请求的生命周期。",
+      "item1": "通过 SDK/网关使用项目凭据发起请求。",
+      "item2": "路由器验证授权、速率限制并检查信用余额。",
+      "item3": "调度器根据延迟和声誉选择最佳 GPU 节点。",
+      "item4": "容器执行推理并返回签名结果 + 收据。",
+      "item5": "收据被打包进默克尔树进行 L2 结算和分账支付。",
+      "subDescription": "一切都是可衡量、可审计和可编程的。"
+    },
+    "start": {
+      "title": "5分钟内部署",
+      "description": "通过一次 API 调用开始构建。",
+      "item1": {
+        "title": "创建项目",
+        "description": "在控制台中获取您唯一的 project_id。"
+      },
+      "item2": {
+        "title": "生成 API 密钥",
+        "description": "安全签署您的推理请求。"
+      },
+      "item3": {
+        "title": "注册模型",
+        "description": "定义需求、定价和收入分成。"
+      }
+    },
+    "CoreCap": {
+      "title": "核心能力矩阵",
+      "th1": "能力",
+      "th2": "您获得的功能",
+      "th3": "备注",
+      "tr1": "所有模型的同步/异步端点",
+      "tr2": "Token-by-token 或基于事件的流式传输",
+      "tr3": "版本控制、金丝雀发布和即时回滚",
+      "tr4": "签名且默克尔可证明的使用收据",
+      "tr5": "L2 自动分账执行",
+      "tr6": "自定义速率限制和区域地理围栏"
+    },
+    "FAQ": {
+      "title": "常见问题",
+      "q1": {
+        "question": "矿工的硬件要求是什么？",
+        "answer": "矿工必须配备具有高带宽互连的企业级 GPU（Nvidia A100, H100, 或 RTX 4090），以满足 AIL2 核心性能 SLA。"
+      },
+      "q2": {
+        "question": "AIL2 如何处理模型隐私？",
+        "answer": "AIL2 支持基于 TEE（可信执行环境）的容器，用于要求权重或输入在整个推理周期内保持加密的模型。"
+      },
+      "q3": {
+        "question": "我可以自定义模型的计费策略吗？",
+        "answer": "是的。开发者可以直接在模型注册合约中定义按 Token、按 GPU 秒或按推理任务的自定义定价。"
+      }
+    },
+    "Integrate": {
+      "title": "准备好集成 AIL2 核心了吗？",
+      "openBtn": "打开控制台",
+      "readBtn": "阅读文档"
+    }
   }
 }

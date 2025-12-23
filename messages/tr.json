@@ -34,6 +34,10 @@
     "contact": {
       "title": "Bize Ulaşın",
       "description": "Merkezi olmayan zekanın geleceğini inşa eden ekiple iletişime geçin."
+    },
+    "core": {
+      "title": "AIL2 Core",
+      "description": "Dağıtılmış bir GPU ağı üzerinde merkezi olmayan AI uygulamaları oluşturun."
     }
   },
   "Common": {
@@ -376,5 +380,130 @@
       }
     },
     "sendBtn": "Mesaj Gönder"
+  },
+  "Core": {
+    "title": "<theme>Dağıtılmış bir GPU ağı</theme> üzerinde merkezi olmayan AI uygulamaları oluşturun",
+    "description": "SDK ve sözleşmeler aracılığıyla entegre olun. AIL2 yönlendirme, zamanlama, makbuzlar, mutabakat ve madenci teşviklerini ele alır—böylece Ethereum, BNB Chain, XLayer, Base, Mantle ve GIWA'da daha hızlı yayınlarsınız.",
+    "openBtn": "Geliştirici Konsolunu Aç",
+    "readBtn": "Core Belgelerini Oku",
+    "card1": {
+      "title": "Yönlendirici ve Zamanlayıcı",
+      "description": "Çok amaçlı yönlendirme (gecikme / güvenilirlik / maliyet / risk)"
+    },
+    "card2": {
+      "title": "Makbuzlar ve Mutabakat",
+      "description": "Denetlenebilir makbuzlar + toplu mutabakat + otomatik bölme"
+    },
+    "card3": {
+      "title": "Çapraz Zincir Yerel",
+      "description": "Tek entegrasyon, zincirler arası kullanıcıları hizmet etme"
+    },
+    "coreStack": {
+      "title": "Merkezi olmayan AI için protokol düzeyinde bir çekirdek yığın.",
+      "card1": {
+        "title": "Siz Sağlarsınız",
+        "item1": "Model konteyneri (Docker)",
+        "item2": "Fiyatlandırma Stratejisi",
+        "item3": "Gelir Bölme Politikası"
+      },
+      "card2": {
+        "title": "AIL2 Sağlar",
+        "item1": "Küresel GPU ağı",
+        "item2": "Akıllı Yönlendirme",
+        "item3": "Dolandırıcılık Karşıtı ve Mutabakat"
+      },
+      "card3": {
+        "title": "Siz Elde Edersiniz",
+        "item1": "Sınırsız Ölçeklenebilirlik",
+        "item2": "Denetlenebilir Muhasebe",
+        "item3": "Anlık Teşvikler"
+      }
+    },
+    "CoreProtocol": {
+      "title": "Çekirdek Protokol Yetenekleri",
+      "description": "Yüksek verimli AI çıkarımı için tasarlanmış modüler bir yığın.",
+      "card1": {
+        "title": "Yönlendirici ve Zamanlayıcı",
+        "description": "Kuyruk süresini tahmin edin, düğümleri puanlayın ve tüm merkeziyetsiz ağ üzerinde otomatik yeniden deneme/yeğleme yapın."
+      },
+      "card2": {
+        "title": "Model Konteynerleri",
+        "description": "Sürüm oluşturma, kanarya dağıtımı, geri alma. Madenciler özel imajlarınızı çeker ve bunları güvenli izole ortamlarda çalıştırır."
+      },
+      "card3": {
+        "title": "Kullanım Makbuzları",
+        "description": "Token sayıları, GPU saniyeleri ve ücretleri içeren imzalı makbuzlar. Merkle toplu kanıtları mutlak denetlenebilirliği sağlar."
+      },
+      "card4": {
+        "title": "AI L2 Mutabakatı",
+        "description": "Bir anlaşmazlık penceresi ve token sahiplerine otomatik gelir dağıtımı ile çıkarım kanıtlarını toplu olarak sonlandırın."
+      },
+      "card5": {
+        "title": "SLA ve İtibar",
+        "description": "Düğüm başarı oranlarının ve p95 gecikmesinin gerçek zamanlı izlenmesi. İtibar puanları yönlendirme önceliğini etkiler."
+      },
+      "card6": {
+        "title": "Güvenlik ve Dolandırıcılık Karşıtı",
+        "description": "Sahte makbuzlar veya yinelenen iş tespiti için risk ağırlıklı ödüller ve otomatik slashing."
+      }
+    },
+    "Settlement": {
+      "title": "İşlemden Mutabakata",
+      "description": "Merkeziyetsiz bir çıkarım isteğinin yaşam döngüsü.",
+      "item1": "Proje kimlik bilgileri ile SDK/Ağ Geçidi üzerinden istek başlatılır.",
+      "item2": "Yönlendirici yetkiyi doğrular, hız sınırlarını uygular ve kredi bakiyesini kontrol eder.",
+      "item3": "Zamanlayıcı, gecikme ve itibara dayalı olarak en uygun GPU düğümünü seçer.",
+      "item4": "Konteyner çıkarımı gerçekleştirir ve imzalı sonuç + makbuz döndürür.",
+      "item5": "Makbuz, Katman 2 mutabakatı ve bölünmüş ödeme için bir Merkle ağacına toplu olarak dahil edilir.",
+      "subDescription": "Her şey ölçülebilir, denetlenebilir ve programlanabilirdir."
+    },
+    "start": {
+      "title": "5 Dakikada Yayınlayın",
+      "description": "Tek bir API çağrısıyla oluşturmaya başlayın.",
+      "item1": {
+        "title": "Proje Oluştur",
+        "description": "Konsolda benzersiz project_id'nizi alın."
+      },
+      "item2": {
+        "title": "API Anahtarı Oluştur",
+        "description": "Çıkarım isteklerinizi güvenli bir şekilde imzalayın."
+      },
+      "item3": {
+        "title": "Model Kaydı",
+        "description": "Gereksinimleri, fiyatlandırmayı ve gelir bölmesini tanımlayın."
+      }
+    },
+    "CoreCap": {
+      "title": "Çekirdek Yetenek Matrisi",
+      "th1": "Yetenek",
+      "th2": "Ne elde edersiniz",
+      "th3": "Notlar",
+      "tr1": "Tüm modeller için Eşzamanlı/Eşzamansız uç noktalar",
+      "tr2": "Token token veya olay tabanlı akış",
+      "tr3": "Sürümler, kanarya ve anlık geri almalar",
+      "tr4": "İmzalı Merkle kanıtlanabilir kullanım makbuzları",
+      "tr5": "Katman 2 otomatik bölme yürütme",
+      "tr6": "Özel hız sınırları ve bölgesel coğrafi sınırlandırma"
+    },
+    "FAQ": {
+      "title": "Sıkça Sorulan Sorular",
+      "q1": {
+        "question": "Madenciler için donanım gereksinimleri nelerdir?",
+        "answer": "Madenciler, AIL2 Çekirdek performans SLA'sını karşılamak için yüksek bant genişliğine sahip ara bağlantılara sahip kurumsal düzeyde GPU'lar (Nvidia A100, H100 veya RTX 4090) sağlamalıdır."
+      },
+      "q2": {
+        "question": "AIL2 model gizliliğini nasıl ele alır?",
+        "answer": "AIL2, ağırlıkların veya girdilerin çıkarım döngüsü boyunca şifreli kalmasını gerektiren modeller için TEE tabanlı (Güvenilir Yürütme Ortamları) konteynerleri destekler."
+      },
+      "q3": {
+        "question": "Modelim için faturalandırma politikasını özelleştirebilir miyim?",
+        "answer": "Evet. Geliştiriciler, model kayıt sözleşmesinde doğrudan token başına, GPU saniyesi başına veya çıkarım görevi başına özel fiyatlar tanımlayabilir."
+      }
+    },
+    "Integrate": {
+      "title": "AIL2 Core'u entegre etmeye hazır mısınız?",
+      "openBtn": "Konsolu Aç",
+      "readBtn": "Belgeleri Oku"
+    }
   }
 }

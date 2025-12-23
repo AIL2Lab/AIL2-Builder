@@ -34,6 +34,10 @@
     "contact": {
       "title": "Fale Conosco",
       "description": "Entre em contato com a equipe que está construindo o futuro da inteligência descentralizada."
+    },
+    "core": {
+      "title": "AIL2 Core",
+      "description": "Construa aplicativos de IA descentralizados em uma rede GPU distribuída."
     }
   },
   "Common": {
@@ -376,5 +380,130 @@
       }
     },
     "sendBtn": "Enviar Mensagem"
+  },
+  "Core": {
+    "title": "Construa aplicativos de IA descentralizados em uma <theme>rede GPU distribuída</theme>",
+    "description": "Integre via SDK e contratos. A AIL2 lida com roteamento, agendamento, recibos, liquidação e incentivos para mineradores—para que você lance mais rápido em Ethereum, BNB Chain, XLayer, Base, Mantle e GIWA.",
+    "openBtn": "Abrir Console do Desenvolvedor",
+    "readBtn": "Ler Documentos Core",
+    "card1": {
+      "title": "Roteador e Agendador",
+      "description": "Roteamento multiobjetivo (latência / confiabilidade / custo / risco)"
+    },
+    "card2": {
+      "title": "Recibos e Liquidação",
+      "description": "Recibos auditáveis + liquidação em lote + divisão automática"
+    },
+    "card3": {
+      "title": "Nativo Multi-cadeia",
+      "description": "Uma integração, servir usuários através de cadeias"
+    },
+    "coreStack": {
+      "title": "Um stack principal de nível de protocolo para IA descentralizada.",
+      "card1": {
+        "title": "Você Traz",
+        "item1": "Contêiner de modelo (Docker)",
+        "item2": "Estratégia de Preços",
+        "item3": "Política de Divisão de Receitas"
+      },
+      "card2": {
+        "title": "AIL2 Fornece",
+        "item1": "Rede GPU global",
+        "item2": "Roteamento Inteligente",
+        "item3": "Anti-fraude e Liquidação"
+      },
+      "card3": {
+        "title": "Você Obtém",
+        "item1": "Escalabilidade Infinita",
+        "item2": "Contabilidade Auditável",
+        "item3": "Incentivos Instantâneos"
+      }
+    },
+    "CoreProtocol": {
+      "title": "Capacidades do Protocolo Principal",
+      "description": "Um stack modular projetado para inferência de IA de alto rendimento.",
+      "card1": {
+        "title": "Roteador e Agendador",
+        "description": "Preveja o tempo na fila, pontue nós, com tente/fallback automaticamente em toda a malha descentralizada."
+      },
+      "card2": {
+        "title": "Contêineres de Modelo",
+        "description": "Versionamento, implantação canary, rollback. Mineradores baixam suas imagens personalizadas e as executam em ambientes isolados seguros."
+      },
+      "card3": {
+        "title": "Recibos de Uso",
+        "description": "Recibos assinados com contagens de tokens, segundos de GPU e taxas. Provas em lote Merkle garantem auditoria absoluta."
+      },
+      "card4": {
+        "title": "Liquidação AI L2",
+        "description": "Finalização em lote de provas de inferência com uma janela de disputa e distribuição automática de receita para detentores de tokens."
+      },
+      "card5": {
+        "title": "SLA e Reputação",
+        "description": "Monitoramento em tempo real das taxas de sucesso dos nós e latência p95. Pontuações de reputação afetam a prioridade de roteamento."
+      },
+      "card6": {
+        "title": "Segurança e Anti-fraude",
+        "description": "Recompensas ponderadas por risco e slashing automático para detecção de recibos falsificados ou trabalho duplicado."
+      }
+    },
+    "Settlement": {
+      "title": "Da Solicitação à Liquidação",
+      "description": "O ciclo de vida de uma solicitação de inferência descentralizada.",
+      "item1": "Solicitação iniciada via SDK/Gateway com credenciais do projeto.",
+      "item2": "Roteador valida autorização, limites de taxa e verifica saldo de crédito.",
+      "item3": "Agendador seleciona o nó GPU ideal baseado em latência e reputação.",
+      "item4": "Contêiner executa inferência e retorna resultado assinado + recibo.",
+      "item5": "Recibo é agrupado em árvore Merkle para liquidação de Camada 2 e pagamento dividido.",
+      "subDescription": "Tudo é mensurável, auditável e programável."
+    },
+    "start": {
+      "title": "Lance em 5 Minutos",
+      "description": "Comece a construir com uma única chamada de API.",
+      "item1": {
+        "title": "Criar Projeto",
+        "description": "Obtenha seu project_id único no console."
+      },
+      "item2": {
+        "title": "Gerar Chave API",
+        "description": "Assine suas solicitações de inferência com segurança."
+      },
+      "item3": {
+        "title": "Registrar Modelo",
+        "description": "Defina requisitos, preços e divisão de receitas."
+      }
+    },
+    "CoreCap": {
+      "title": "Matriz de Capacidades Principais",
+      "th1": "Capacidade",
+      "th2": "O que você obtém",
+      "th3": "Notas",
+      "tr1": "Endpoints Síncronos/Assíncronos para todos os modelos",
+      "tr2": "Streaming token por token ou baseado em eventos",
+      "tr3": "Versões, canary e rollbacks instantâneos",
+      "tr4": "Recibos de uso com prova Merkle assinada",
+      "tr5": "Execução de divisão automatizada de Camada 2",
+      "tr6": "Limites de taxa personalizados e geofencing regional"
+    },
+    "FAQ": {
+      "title": "Perguntas Frequentes",
+      "q1": {
+        "question": "Quais são os requisitos de hardware para mineradores?",
+        "answer": "Os mineradores devem fornecer GPUs de nível empresarial (Nvidia A100, H100 ou RTX 4090) com interconexões de alta largura de banda para atender ao SLA de desempenho do AIL2 Core."
+      },
+      "q2": {
+        "question": "Como a AIL2 lida com a privacidade do modelo?",
+        "answer": "A AIL2 suporta contêineres baseados em TEE (Ambientes de Execução Confiável) para modelos que exigem que pesos ou entradas permaneçam criptografados durante todo o ciclo de inferência."
+      },
+      "q3": {
+        "question": "Posso personalizar a política de cobrança para meu modelo?",
+        "answer": "Sim. Os desenvolvedores podem definir preços personalizados por token, por segundo de GPU ou por tarefa de inferência diretamente no contrato de registro do modelo."
+      }
+    },
+    "Integrate": {
+      "title": "Pronto para integrar o AIL2 Core?",
+      "openBtn": "Abrir Console",
+      "readBtn": "Ler Documentação"
+    }
   }
 }

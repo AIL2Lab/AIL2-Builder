@@ -34,6 +34,10 @@
     "contact": {
       "title": "Contact Us",
       "description": "Get in touch with the team building the future of decentralized intelligence."
+    },
+    "core": {
+      "title": "AIL2 Core",
+      "description": "Build decentralized AI apps on a distributed GPU network."
     }
   },
   "Common": {
@@ -376,5 +380,130 @@
       }
     },
     "sendBtn": "Send Message"
+  },
+  "Core": {
+    "title": "Build decentralized AI apps on a <theme>distributed GPU network</theme>",
+    "description": "Integrate via SDK & contracts. AIL2 handles routing, scheduling, receipts, settlement, and miner incentives—so you ship faster across Ethereum, BNB Chain, XLayer, Base, Mantle, and GIWA.",
+    "openBtn": "Open Developer Console",
+    "readBtn": "Read Core Docs",
+    "card1" : {
+      "title": "Router & Scheduler",
+      "description": "Multi-objective routing (latency / reliability / cost / risk)"
+    },
+    "card2" : {
+      "title": "Receipts & Settlement",
+      "description": "Auditable receipts + batch settlement + auto split"
+    },
+    "card3" : {
+      "title": "Cross-chain Native",
+      "description": "One integration, serve users across chains"
+    },
+    "coreStack": {
+      "title": "A protocol-grade core stack for decentralized AI.",
+      "card1": {
+        "title": "You Bring",
+        "item1": "Model container (Docker)",
+        "item2": "Pricing Strategy",
+        "item3": "Revenue Split Policy"
+      },
+      "card2": {
+        "title": "AIL2 Provides",
+        "item1": "Global GPU network",
+        "item2": "Intelligent Routing",
+        "item3": "Anti-fraud & Settlement"
+      },
+      "card3": {
+        "title": "You Get",
+        "item1": "Infinite Scalability",
+        "item2": "Auditable Accounting",
+        "item3": "Instant Incentives"
+      }
+    },
+    "CoreProtocol": {
+      "title": "Core Protocol Capabilities",
+      "description": "A modular stack designed for high-throughput AI inference.",
+      "card1": {
+        "title": "Router & Scheduler",
+        "description": "Predict queue time, score nodes, retry/fallback automatically across the entire decentralized mesh."
+      },
+      "card2": {
+        "title": "Model Containers",
+        "description": "Versioning, canary rollout, rollback. Miners pull your custom images and run them in secure isolated environments."
+      },
+      "card3": {
+        "title": "Usage Receipts",
+        "description": "Signed receipts with token counts, GPU seconds, and fees. Merkle batch proofs ensure absolute auditability."
+      },
+      "card4": {
+        "title": "AI L2 Settlement",
+        "description": "Batch finalize inference proofs with a dispute window and automatic revenue distribution to token holders."
+      },
+      "card5": {
+        "title": "SLA & Reputation",
+        "description": "Real-time monitoring of node success rates and p95 latency. Reputation scores affect routing priority."
+      },
+      "card6": {
+        "title": "Security & Anti-fraud",
+        "description": "Risk-weighted rewards and automated slashing for forged receipts or duplicated work detection."
+      }
+    },
+    "Settlement": {
+      "title": "From Request to Settlement",
+      "description": "The lifecycle of a decentralized inference request.",
+      "item1": "Request initiated via SDK/Gateway with project credentials.",
+      "item2": "Router validates authorization, rate-limits, and checks credit balance.",
+      "item3": "Scheduler selects optimal GPU node based on latency and reputation.",
+      "item4": "Container executes inference and returns signed result + receipt.",
+      "item5": "Receipt is batched into Merkle tree for Layer 2 settlement and split payment.",
+      "subDescription": "Everything is measurable, auditable, and programmable."
+    },
+    "start": {
+      "title": "Ship in 5 Minutes",
+      "description": "Start building with a single API call.",
+      "item1": {
+        "title": "Create Project",
+        "description": "Get your unique project_id in the console."
+      },
+      "item2": {
+        "title": "Generate API Key",
+        "description": "Securely sign your inference requests."
+      },
+      "item3": {
+        "title": "Register Model",
+        "description": "Define requirements, pricing, and revenue split."
+      }
+    },
+    "CoreCap": {
+      "title": "Core Capabilities Matrix",
+      "th1": "Capability",
+      "th2": "What you get",
+      "th3": "Notes",
+      "tr1": "Sync/Async endpoints for all models",
+      "tr2": "Token-by-token or event-based streaming",
+      "tr3": "Versions, canary, and instant rollbacks",
+      "tr4": "Signed Merkle-provable usage receipts",
+      "tr5": "Layer 2 automated split execution",
+      "tr6": "Custom rate-limits and region geofencing"
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What are the hardware requirements for miners?",
+        "answer": "Miners must provide enterprise-grade GPUs (Nvidia A100, H100, or RTX 4090) with high-bandwidth interconnects to meet the AIL2 Core performance SLA."
+      },
+      "q2": {
+        "question": "How does AIL2 handle model privacy?",
+        "answer": "AIL2 supports TEE-based (Trusted Execution Environments) containers for models that require weights or inputs to remain encrypted throughout the inference cycle."
+      },
+      "q3": {
+        "question": "Can I customize the billing policy for my model?",
+        "answer": "Yes. Developers can define custom pricing per token, per GPU second, or per inference task directly in the model registration contract."
+      }
+    },
+    "Integrate": {
+      "title": "Ready to integrate AIL2 Core?",
+      "openBtn": "Open Console",
+      "readBtn": "Read Documentation"
+    }
   }
 }

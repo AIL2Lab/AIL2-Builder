@@ -7,7 +7,6 @@ import { useTranslations } from "next-intl";
 import { useActionState } from "react";
 import { siteConfig } from "@/config/site";
 import { Link } from "@/i18n/navigation";
-import PopupBtn from "@/components/PopupBtn";
 import CopyButton from "./CopyButton";
 export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
@@ -63,7 +62,7 @@ export default function Footer() {
             </div>
             <div>
               <div className="flex justify-between">
-                <Link href="/">AIL2 Core</Link>
+                <Link href="/core">AIL2 Core</Link>
                 <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
                   SDK
                 </span>
@@ -198,8 +197,8 @@ export default function Footer() {
               <Link href={siteConfig.xUrl} target="_blank">
                 <TwitterIcon fill="var(--color-theme)" />
               </Link>
-              {/* <TelegramIcon fill="var(--color-theme)" />
-              <MediumIcon fill="var(--color-theme)" /> */}
+              <TelegramIcon fill="var(--color-theme)" />
+              <MediumIcon fill="var(--color-theme)" />
             </div>
           </div>
         </div>

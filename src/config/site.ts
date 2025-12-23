@@ -1,8 +1,9 @@
 export const siteConfig = {
   xUrl: "https://x.com/AIL2Lab",
   githubUrl: "https://github.com/AIL2Lab",
-  telegramUrl: "",
-  email: "creator@hpvideo.ai"
+  telegramUrl: "/",
+  email: "creator@hpvideo.ai",
+  mediumUrl: "/"
 };
 
 export function getNavbarConfig(t: (key: string) => string) {
@@ -25,7 +26,7 @@ export function getNavbarConfig(t: (key: string) => string) {
       children: [
         {
           label: t("core"),
-          href: "/",
+          href: "/core",
           description: t("description.core"),
           icon: 'Activity'
         },
