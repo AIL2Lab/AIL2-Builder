@@ -1,11 +1,12 @@
 
-export interface LocalAgent {
+export interface LocalModel {
   id: string;
   name: string;
   description: string;
   descriptionJA?: string;
   descriptionKO?: string;
   descriptionZH?: string;
+  descriptionZH_TW?: string;
 
   longDescription?: string | null;
   category: string;
@@ -49,7 +50,7 @@ export interface LocalAgent {
   miningOwnerTransferred?: boolean;
 }
 
-export interface GetAgentsParams {
+export interface GetModelsParams {
   page?: number;
   pageSize?: number;
   searchKeyword?: string;
@@ -61,7 +62,7 @@ export interface GetAgentsParams {
 }
 
 
-export enum AgentSortField {
+export enum ModelSortField {
   INVESTED_XAA = 'investedXAA',
   HOLDERS_COUNT = 'holdersCount',
   MARKET_CAP = 'marketCap',
@@ -70,43 +71,41 @@ export enum AgentSortField {
 
 
 export const STATUS_SORT_OPTIONS_MAP: Record<string, { 
-  options: { value: AgentSortField, label: string }[], 
-  default: AgentSortField 
+  options: { value: ModelSortField, label: string }[], 
+  default: ModelSortField 
 }> = {
   '': {  // 全部状态
     options: [
-      { value: AgentSortField.MARKET_CAP, label: 'marketCap' },
-      { value: AgentSortField.LATEST, label: 'latest' },
+      { value: ModelSortField.MARKET_CAP, label: 'marketCap' },
+      { value: ModelSortField.LATEST, label: 'latest' },
     ],
-    default: AgentSortField.MARKET_CAP,
+    default: ModelSortField.MARKET_CAP,
   },
   'IAO_ONGOING': {
     options: [
-      { value: AgentSortField.INVESTED_XAA, label: 'investedXAA' },
-      { value: AgentSortField.LATEST, label: 'latest' },
+      { value: ModelSortField.INVESTED_XAA, label: 'investedXAA' },
+      { value: ModelSortField.LATEST, label: 'latest' },
     ],
-    default: AgentSortField.INVESTED_XAA,
+    default: ModelSortField.INVESTED_XAA,
   },
   'TRADABLE': {
     options: [
-      { value: AgentSortField.MARKET_CAP, label: 'marketCap' },
-      { value: AgentSortField.LATEST, label: 'latest' },
+      { value: ModelSortField.MARKET_CAP, label: 'marketCap' },
+      { value: ModelSortField.LATEST, label: 'latest' },
     ],
-    default: AgentSortField.MARKET_CAP,
+    default: ModelSortField.MARKET_CAP,
   },
   'IAO_COMING_SOON': {
     options: [
-      { value: AgentSortField.LATEST, label: 'latest' },
+      { value: ModelSortField.LATEST, label: 'latest' },
     ],
-    default: AgentSortField.LATEST,
+    default: ModelSortField.LATEST,
   },
   'FAILED': {
     options: [
-      { value: AgentSortField.INVESTED_XAA, label: 'investedXAA' },
-      { value: AgentSortField.LATEST, label: 'latest' },
+      { value: ModelSortField.INVESTED_XAA, label: 'investedXAA' },
+      { value: ModelSortField.LATEST, label: 'latest' },
     ],
-    default: AgentSortField.INVESTED_XAA,
+    default: ModelSortField.INVESTED_XAA,
   }
 };
-
-

@@ -1,12 +1,12 @@
 'use server'
 
 import prisma from "@/lib/prisma";
-import { type Agent } from '@/generated/client'
+import { type Model } from '@/generated/client'
 import { ApiResponse } from '@/types/response.type'
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 
-export interface GetAgentsResult {
-  agents: Agent[]
+export interface GetModelsResult {
+  models: Model[]
   totalCount: number
   totalPages: number
   currentPage: number
@@ -19,11 +19,11 @@ interface QueryParams {
   query?: string
 }
 
-export async function getAgents(
+export async function getModels(
   pageOrParams: number | QueryParams = 1,
   pageSize: number = 10,
   query?: string
-): Promise<ApiResponse<GetAgentsResult>> {
+): Promise<ApiResponse<GetModelsResult>> {
   // 处理参数重载
   let page = 1;
   let size = 10;
@@ -50,8 +50,8 @@ export async function getAgents(
     : {}
 
   try {
-    const [agents, totalCount] = await prisma.$transaction([
-      prisma.agent.findMany({
+    const [models, totalCount] = await prisma.$transaction([
+      prisma.model.findMany({
         where,
         skip,
         take: size,
@@ -59,12 +59,12 @@ export async function getAgents(
           createdAt: 'desc',
         },
       }),
-      prisma.agent.count({ where }),
+      prisma.model.count({ where }),
     ])
 
     const totalPages = Math.ceil(totalCount / size)
-    const resultData: GetAgentsResult = {
-      agents,
+    const resultData: GetModelsResult = {
+      models,
       totalCount,
       totalPages,
       currentPage: page,
@@ -72,133 +72,133 @@ export async function getAgents(
     return {
       code: 200,
       data: resultData,
-      message: 'Agents fetched successfully.',
+      message: 'Models fetched successfully.',
     }
   } catch (error: any) {
-    console.error('Failed to fetch agents:', error)
+    console.error('Failed to fetch models:', error)
     return {
       code: 500,
-      message: `Could not fetch agents. Reason: ${error.message}`,
+      message: `Could not fetch models. Reason: ${error.message}`,
     }
   }
 }
 
 
-export async function createAgent(
-  data: Omit<Agent, 'id' | 'createdAt' | 'updatedAt'>
-): Promise<ApiResponse<Agent>> {
+export async function createModel(
+  data: Omit<Model, 'id' | 'createdAt' | 'updatedAt'>
+): Promise<ApiResponse<Model>> {
   try {
-    const newAgent = await prisma.agent.create({
+    const newModel = await prisma.model.create({
       data,
     })
 
     return {
       code: 201,
-      data: newAgent,
-      message: 'Agent created successfully.',
+      data: newModel,
+      message: 'Model created successfully.',
     }
   } catch (error: any) {
-    console.error('Failed to create agent:', error)
+    console.error('Failed to create model:', error)
 
     if (error instanceof PrismaClientKnownRequestError && error.code === 'P2002') {
       const target = (error.meta?.target as string[])?.join(', ') || 'field'
       return {
         code: 409, // 409 Conflict
-        message: `An agent with this ${target} already exists.`,
+        message: `An model with this ${target} already exists.`,
       }
     }
 
     return {
       code: 500,
-      message: `Could not create agent. Reason: ${error.message}`,
+      message: `Could not create model. Reason: ${error.message}`,
     }
   }
 }
 
 
-export async function deleteAgent(id: string): Promise<ApiResponse<null>> {
+export async function deleteModel(id: string): Promise<ApiResponse<null>> {
   try {
-    await prisma.agent.delete({
+    await prisma.model.delete({
       where: { id },
     })
 
     return {
       code: 200,
-      message: 'Agent deleted successfully.',
+      message: 'Model deleted successfully.',
     }
   } catch (error: any) {
-    console.error(`Failed to delete agent with ID ${id}:`, error)
+    console.error(`Failed to delete model with ID ${id}:`, error)
 
     if (error instanceof PrismaClientKnownRequestError && error.code === 'P2025') {
       return {
         code: 404,
-        message: `Agent with ID ${id} not found. Cannot delete.`,
+        message: `Model with ID ${id} not found. Cannot delete.`,
       }
     }
 
     return {
       code: 500,
-      message: `Could not delete agent. Reason: ${error.message}`,
+      message: `Could not delete model. Reason: ${error.message}`,
     }
   }
 }
 
-export async function updateAgent(
+export async function updateModel(
   id: string,
-  data: Partial<Omit<Agent, 'id' | 'createdAt'>>
-): Promise<ApiResponse<Agent>> {
+  data: Partial<Omit<Model, 'id' | 'createdAt'>>
+): Promise<ApiResponse<Model>> {
   try {
-    const updatedAgent = await prisma.agent.update({
+    const updatedModel = await prisma.model.update({
       where: { id },
       data,
     })
 
     return {
       code: 200,
-      data: updatedAgent,
-      message: 'Agent updated successfully.',
+      data: updatedModel,
+      message: 'Model updated successfully.',
     }
   } catch (error: any) {
-    console.error(`Failed to update agent with ID ${id}:`, error)
+    console.error(`Failed to update model with ID ${id}:`, error)
 
     if (error instanceof PrismaClientKnownRequestError && error.code === 'P2025') {
       return {
         code: 404,
-        message: `Agent with ID ${id} not found. Cannot update.`,
+        message: `Model with ID ${id} not found. Cannot update.`,
       }
     }
 
     return {
       code: 500,
-      message: `Could not update agent. Reason: ${error.message}`,
+      message: `Could not update model. Reason: ${error.message}`,
     }
   }
 }
 
 
-export async function getAgentById(id: string): Promise<ApiResponse<Agent>> {
+export async function getModelById(id: string): Promise<ApiResponse<Model>> {
   try {
-    const agent = await prisma.agent.findUnique({
+    const model = await prisma.model.findUnique({
       where: { id },
     })
 
-    if (!agent) {
+    if (!model) {
       return {
         code: 404,
-        message: `Agent with ID ${id} not found.`,
+        message: `Model with ID ${id} not found.`,
       }
     }
 
     return {
       code: 200,
-      data: agent,
-      message: 'Agent fetched successfully.',
+      data: model,
+      message: 'Model fetched successfully.',
     }
   } catch (error: any) {
-    console.error(`Failed to fetch agent with ID ${id}:`, error)
+    console.error(`Failed to fetch model with ID ${id}:`, error)
     return {
       code: 500,
-      message: `Could not fetch agent. Reason: ${error.message}`,
+      message: `Could not fetch model. Reason: ${error.message}`,
     }
   }
 }

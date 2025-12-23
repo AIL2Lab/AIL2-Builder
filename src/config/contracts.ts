@@ -1,27 +1,27 @@
 // 合约类型定义
 type TestnetContracts = {
     XAA_TOKEN: `0x${string}`;
-    USERAGENT_TOKEN: `0x${string}`;
+    USERMODEL_TOKEN: `0x${string}`;
     SIC_TOKEN: `0x${string}`;
 };
 
 type MainnetContracts = {
     XAA_TOKEN: `0x${string}`;
-    USERAGENT_TOKEN: `0x${string}`;
+    USERMODEL_TOKEN: `0x${string}`;
     SIC_TOKEN: `0x${string}`;
 };
 
 // 测试网合约地址
 export const TESTNET_CONTRACTS: TestnetContracts = {
     XAA_TOKEN: '0xC21155334688E2c1Cf89D4aB09d38D30002717DD',
-    USERAGENT_TOKEN: '0xC21155334688E2c1Cf89D4aB09d38D30002717DD', // 替换为实际地址
+    USERMODEL_TOKEN: '0xC21155334688E2c1Cf89D4aB09d38D30002717DD', // 替换为实际地址
     SIC_TOKEN: '0x07D325030dA1A8c1f96C414BFFbe4fBD539CED45',
 } as const;
 
 // 主网合约地址
 export const MAINNET_CONTRACTS: MainnetContracts = {
     XAA_TOKEN: process.env.NEXT_PUBLIC_XAA_TEST_VERSION === "true" ? "0x8a88a1D2bD0a13BA245a4147b7e11Ef1A9d15C8a" : "0x16d83F6B17914a4e88436251589194CA5AC0f452",
-    USERAGENT_TOKEN: process.env.NEXT_PUBLIC_XAA_TEST_VERSION === "true" ? "0x8a88a1D2bD0a13BA245a4147b7e11Ef1A9d15C8a" : "0x16d83F6B17914a4e88436251589194CA5AC0f452", // 替换为实际地址
+    USERMODEL_TOKEN: process.env.NEXT_PUBLIC_XAA_TEST_VERSION === "true" ? "0x8a88a1D2bD0a13BA245a4147b7e11Ef1A9d15C8a" : "0x16d83F6B17914a4e88436251589194CA5AC0f452", // 替换为实际地址
     SIC_TOKEN: '0x07D325030dA1A8c1f96C414BFFbe4fBD539CED45',
 } as const;
 
@@ -949,8 +949,8 @@ export const MAINNET_IAO_CONTRACT_ABI = [
 
 
 
-// 主网 UserAgent IAO 合约 ABI
-export const MAINNET_USERAGENT_IAO_CONTRACT_ABI = [
+// 主网 UserModel IAO 合约 ABI
+export const MAINNET_USERMODEL_IAO_CONTRACT_ABI = [
     {
         "inputs": [],
         "stateMutability": "nonpayable",
@@ -1795,7 +1795,7 @@ export const MAINNET_USERAGENT_IAO_CONTRACT_ABI = [
     }
 ] as const
 
-export const TESTNET_USERAGENT_STAKE_CONTRACT_ABI = [
+export const TESTNET_USERMODEL_STAKE_CONTRACT_ABI = [
     {
         "inputs": [],
         "stateMutability": "nonpayable",

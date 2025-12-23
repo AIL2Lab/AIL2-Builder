@@ -391,7 +391,7 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 
 export const ModelName = {
   Subscriber: 'Subscriber',
-  Agent: 'Agent',
+  Model: 'Model',
   Task: 'Task',
   User: 'User',
   AuthNonce: 'AuthNonce'
@@ -410,7 +410,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "subscriber" | "agent" | "task" | "user" | "authNonce"
+    modelProps: "subscriber" | "model" | "task" | "user" | "authNonce"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -488,77 +488,77 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
-    Agent: {
-      payload: Prisma.$AgentPayload<ExtArgs>
-      fields: Prisma.AgentFieldRefs
+    Model: {
+      payload: Prisma.$ModelPayload<ExtArgs>
+      fields: Prisma.ModelFieldRefs
       operations: {
         findUnique: {
-          args: Prisma.AgentFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload> | null
+          args: Prisma.ModelFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload> | null
         }
         findUniqueOrThrow: {
-          args: Prisma.AgentFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>
+          args: Prisma.ModelFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>
         }
         findFirst: {
-          args: Prisma.AgentFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload> | null
+          args: Prisma.ModelFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload> | null
         }
         findFirstOrThrow: {
-          args: Prisma.AgentFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>
+          args: Prisma.ModelFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>
         }
         findMany: {
-          args: Prisma.AgentFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>[]
+          args: Prisma.ModelFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>[]
         }
         create: {
-          args: Prisma.AgentCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>
+          args: Prisma.ModelCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>
         }
         createMany: {
-          args: Prisma.AgentCreateManyArgs<ExtArgs>
+          args: Prisma.ModelCreateManyArgs<ExtArgs>
           result: BatchPayload
         }
         createManyAndReturn: {
-          args: Prisma.AgentCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>[]
+          args: Prisma.ModelCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>[]
         }
         delete: {
-          args: Prisma.AgentDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>
+          args: Prisma.ModelDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>
         }
         update: {
-          args: Prisma.AgentUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>
+          args: Prisma.ModelUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>
         }
         deleteMany: {
-          args: Prisma.AgentDeleteManyArgs<ExtArgs>
+          args: Prisma.ModelDeleteManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateMany: {
-          args: Prisma.AgentUpdateManyArgs<ExtArgs>
+          args: Prisma.ModelUpdateManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateManyAndReturn: {
-          args: Prisma.AgentUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>[]
+          args: Prisma.ModelUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>[]
         }
         upsert: {
-          args: Prisma.AgentUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$AgentPayload>
+          args: Prisma.ModelUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ModelPayload>
         }
         aggregate: {
-          args: Prisma.AgentAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateAgent>
+          args: Prisma.ModelAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateModel>
         }
         groupBy: {
-          args: Prisma.AgentGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AgentGroupByOutputType>[]
+          args: Prisma.ModelGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ModelGroupByOutputType>[]
         }
         count: {
-          args: Prisma.AgentCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AgentCountAggregateOutputType> | number
+          args: Prisma.ModelCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ModelCountAggregateOutputType> | number
         }
       }
     }
@@ -833,7 +833,7 @@ export const SubscriberScalarFieldEnum = {
 export type SubscriberScalarFieldEnum = (typeof SubscriberScalarFieldEnum)[keyof typeof SubscriberScalarFieldEnum]
 
 
-export const AgentScalarFieldEnum = {
+export const ModelScalarFieldEnum = {
   id: 'id',
   name: 'name',
   symbol: 'symbol',
@@ -852,7 +852,7 @@ export const AgentScalarFieldEnum = {
   iaoSuccessCheckTime: 'iaoSuccessCheckTime'
 } as const
 
-export type AgentScalarFieldEnum = (typeof AgentScalarFieldEnum)[keyof typeof AgentScalarFieldEnum]
+export type ModelScalarFieldEnum = (typeof ModelScalarFieldEnum)[keyof typeof ModelScalarFieldEnum]
 
 
 export const TaskScalarFieldEnum = {
@@ -860,7 +860,7 @@ export const TaskScalarFieldEnum = {
   type: 'type',
   status: 'status',
   result: 'result',
-  agentId: 'agentId',
+  modelId: 'modelId',
   createdBy: 'createdBy',
   createdAt: 'createdAt',
   startedAt: 'startedAt',
@@ -1087,7 +1087,7 @@ export interface PrismaClientOptions {
 }
 export type GlobalOmitConfig = {
   subscriber?: Prisma.SubscriberOmit
-  agent?: Prisma.AgentOmit
+  model?: Prisma.ModelOmit
   task?: Prisma.TaskOmit
   user?: Prisma.UserOmit
   authNonce?: Prisma.AuthNonceOmit

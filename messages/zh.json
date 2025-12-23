@@ -13,7 +13,7 @@
     },
     "creator": {
       "title": "创造者",
-      "description": "使用去中心化模型构建强大的AI代理并发起初始代理发行（IAO）。"
+      "description": "使用去中心化模型构建强大的AI模型并发起初始代理发行（IAO）。"
     },
     "faq": {
       "title": "常见问题",
@@ -143,6 +143,11 @@
     "failedToLoad": "加载代理失败。",
     "retry": "重试",
     "noMoreAgents": "没有更多代理了",
+    "empty": {
+      "title": "暂无模型",
+      "description": "目前还没有任何模型。成为第一个启动 IAO 的人吧！",
+      "btn": "启动 IAO"
+    },
     "table": {
       "modelInfo": "模型信息",
       "symbol": "符号",
@@ -410,5 +415,42 @@
       }
     },
     "sendBtn": "发送消息"
+  },
+  "ModelForm": {
+    "name": {
+      "label": "AI模型项目名称",
+      "placeholder": "1-12个字母"
+    },
+    "symbol": {
+      "label": "代币名称",
+      "placeholder": "3-5个大写英文字母"
+    },
+    "description": {
+      "label": "AI模型描述",
+      "placeholder": "描述你的AI模型功能"
+    },
+    "avatar": {
+      "label": "产品图片"
+    },
+    "twitter": {
+      "label": "推特链接 (可选)",
+      "placeholder": "https://x.com/your_ai_model"
+    },
+    "telegram": {
+      "label": "Telegram链接 (可选)",
+      "placeholder": "https://t.me/your_project"
+    },
+    "submit": "立即创建",
+    "error": {
+      "unexpected": "发生了意外错误。",
+      "upload_failed": "上传失败"
+    }
+  },
+  "ImageUpload": {
+    "alt": "上传的图片",
+    "uploading": "正在上传...",
+    "drop_here": "将图片拖到这里...",
+    "drag_drop": "拖放图片到这里，或点击选择",
+    "select_file": "选择文件"
   }
 }

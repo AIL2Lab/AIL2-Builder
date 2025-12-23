@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { getAgents } from '@/actions/agents';
+import { getModels } from '@/actions/models';
 import { successResponse, errorResponse } from '@/lib/api-response';
 
 export async function GET(request: NextRequest) {
@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     const pageSize = parseInt(searchParams.get('pageSize') || '10');
     const query = searchParams.get('query') || undefined;
 
-    const result = await getAgents(page, pageSize, query);
+    const result = await getModels(page, pageSize, query);
 
     if (result.code === 200) {
       return successResponse(result.data, result.message);

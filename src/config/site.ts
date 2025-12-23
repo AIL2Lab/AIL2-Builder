@@ -34,7 +34,7 @@ export function getNavbarConfig(t: (key: string) => string) {
         },
         {
           label: t("builder"),
-          href: "/ecosystem",
+          href: "/models",
           description: t("description.builder"),
           icon: 'Rocket'
         },
@@ -43,10 +43,6 @@ export function getNavbarConfig(t: (key: string) => string) {
           href: "/platform",
           description: t("description.platform"),
           icon: 'Zap'
-        },
-        {
-          label: t("creator"),
-          href: "/creator",
         },
         {
           label: t("accelerate"),

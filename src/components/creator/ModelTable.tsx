@@ -1,12 +1,12 @@
 import React from 'react';
-import { Agent } from '@/generated/client';
+import { Model } from '@/generated/client';
 import { useTranslations } from 'next-intl';
 
 interface ModelTableProps {
-  agents: Agent[];
+  models: Model[];
 }
 
-export const ModelTable: React.FC<ModelTableProps> = ({ agents }) => {
+export const ModelTable: React.FC<ModelTableProps> = ({ models }) => {
   const t = useTranslations('Creator.table');
 
   return (
@@ -28,9 +28,9 @@ export const ModelTable: React.FC<ModelTableProps> = ({ agents }) => {
 
         {/* Table Body */}
         <div className="divide-y divide-white/10">
-          {agents.map((agent, index) => {
+          {models.map((model, index) => {
              // TODO: Implement mock data or helpers for fields not in schema
-            const ticker = agent.symbol ? `$${agent.symbol}` : 'N/A';
+            const ticker = model.symbol ? `$${model.symbol}` : 'N/A';
             const holders = '0';
             const mCap = '0';
             const change24h = '0%';
@@ -38,16 +38,16 @@ export const ModelTable: React.FC<ModelTableProps> = ({ agents }) => {
             const vol = '0';
             const liquidity = '0';
             const isPositive = true;
-            const type = 'AGENT';
+            const type = 'MODEL';
 
             return (
-              <div key={agent.id || index} className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-white/5 transition-colors group">
-                {/* Agent Info */}
+              <div key={model.id || index} className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-white/5 transition-colors group">
+                {/* Model Info */}
                 <div className="col-span-3 flex items-center gap-4 pl-4">
                   <div className={`w-10 h-10 rounded-xl border flex items-center justify-center font-bold text-lg border-blue-500 text-blue-500`}>
-                    {agent.symbol ? agent.symbol[0] : '?'}
+                    {model.symbol ? model.symbol[0] : '?'}
                   </div>
-                  <span className="font-bold text-white">{agent.name}</span>
+                  <span className="font-bold text-white">{model.name}</span>
                 </div>
 
                 {/* Symbol */}

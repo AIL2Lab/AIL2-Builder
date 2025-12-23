@@ -23,10 +23,10 @@ export * from './enums';
  */
 export type Subscriber = Prisma.SubscriberModel
 /**
- * Model Agent
+ * Model Model
  * 
  */
-export type Agent = Prisma.AgentModel
+export type Model = Prisma.ModelModel
 /**
  * Model Task
  * 

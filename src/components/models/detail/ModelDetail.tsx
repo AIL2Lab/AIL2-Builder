@@ -1,7 +1,7 @@
 "use client";
 
-import { getAgentById } from "@/actions/agents";
-import { Agent } from "@/generated/client";
+import { getModelById } from "@/actions/models";
+import { Model } from "@/generated/client";
 import { ApiResponse } from "@/types/response.type";
 import { useQuery } from "@tanstack/react-query";
 
@@ -16,11 +16,11 @@ export default function ModelDetail({id, locale}: Props) {
     isLoading,
     isError,
     error,
-  } = useQuery<ApiResponse<Agent>>({
-    queryKey: ["agent", id],
-    queryFn: () => getAgentById(id),
+  } = useQuery<ApiResponse<Model>>({
+    queryKey: ["model", id],
+    queryFn: () => getModelById(id),
   });
-  const detail = (response?.data ?? {}) as Agent
+  const detail = (response?.data ?? {}) as Model
   return (
     <section className="container mx-auto lg:max-w-5xl my-4 sm:my-8 md:my-12 lg:my-16 px-5">
       <div>{detail.id}</div>

@@ -9,7 +9,7 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/Subscriber'
-export type * from './models/Agent'
+export type * from './models/Model'
 export type * from './models/Task'
 export type * from './models/User'
 export type * from './models/AuthNonce'

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Agent } from '@/generated/client';
+import { Model } from '@/generated/client';
 import { useTranslations } from 'next-intl';
 
 interface ModelCardProps {
-  agent: Agent;
+  model: Model;
 }
 
-export const ModelCard: React.FC<ModelCardProps> = ({ agent }) => {
+export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
   const t = useTranslations('Creator.table');
   // TODO: Implement mock data or helpers for fields not in schema (ticker, holders, etc.)
   // For now, we'll use placeholders or derived data
-  const ticker = agent.symbol ? `$${agent.symbol}` : 'N/A';
+  const ticker = model.symbol ? `$${model.symbol}` : 'N/A';
   // Mock data to match previous UI, should be replaced with real data when available
   const holders = '0';
   const mCap = '0';
@@ -19,7 +19,7 @@ export const ModelCard: React.FC<ModelCardProps> = ({ agent }) => {
   const vol = '0';
   const liquidity = '0';
   const isPositive = true;
-  const type = 'AGENT';
+  const type = 'MODEL';
 
   return (
     <div className="p-4 bg-white/5 space-y-4">
@@ -27,10 +27,10 @@ export const ModelCard: React.FC<ModelCardProps> = ({ agent }) => {
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3">
           <div className={`w-12 h-12 rounded-xl border flex items-center justify-center font-bold text-xl border-blue-500 text-blue-500`}>
-            {agent.symbol ? agent.symbol[0] : '?'}
+            {model.symbol ? model.symbol[0] : '?'}
           </div>
           <div>
-            <div className="font-bold text-white text-lg">{agent.name}</div>
+            <div className="font-bold text-white text-lg">{model.name}</div>
             <div className="text-gray-400 text-sm">{ticker}</div>
           </div>
         </div>

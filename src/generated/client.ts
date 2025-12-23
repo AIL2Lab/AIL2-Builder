@@ -50,10 +50,10 @@ path.join(process.cwd(), "src/generated/libquery_engine-debian-openssl-3.0.x.so.
  */
 export type Subscriber = Prisma.SubscriberModel
 /**
- * Model Agent
+ * Model Model
  * 
  */
-export type Agent = Prisma.AgentModel
+export type Model = Prisma.ModelModel
 /**
  * Model Task
  * 

@@ -12,7 +12,7 @@ const publicClient = createPublicClient({
 export async function processPendingIaoChecks() {
   const now = Math.floor(Date.now() / 1000);
   
-  const pendingAgents = await prisma.agent.findMany({
+  const pendingModels = await prisma.model.findMany({
     where: {
       iaoSuccessChecked: false, 
       iaoEndTime: {
@@ -32,16 +32,16 @@ export async function processPendingIaoChecks() {
     }
   });
 
-  if (pendingAgents.length === 0) {
-    return { count: 0, message: 'No Agent needs to be checked' };
+  if (pendingModels.length === 0) {
+    return { count: 0, message: 'No Model needs to be checked' };
   }
 
-  console.log(`[Cron] Start batch checking ${pendingAgents.length} agents`);
+  console.log(`[Cron] Start batch checking ${pendingModels.length} models`);
   
-  const contractCalls = pendingAgents.map(agent => {
+  const contractCalls = pendingModels.map(model => {
     return {
-      address: agent.iaoContractAddress as `0x${string}`,
-      abi: getContractABI(agent.symbol),
+      address: model.iaoContractAddress as `0x${string}`,
+      abi: getContractABI(model.symbol),
       functionName: 'isSuccess',
     };
   });
@@ -53,18 +53,18 @@ export async function processPendingIaoChecks() {
     });
     
     const updatePromises = results.map(async (result, index) => {
-      const agent = pendingAgents[index];
+      const model = pendingModels[index];
       if (result.status === 'failure') {
-        console.error(`[Cron] Agent ${agent.name} Contract call failed:`, result.error);
+        console.error(`[Cron] Model ${model.name} Contract call failed:`, result.error);
         return null;
       }
 
       const isSuccessful = result.result as boolean;
       
-      console.log(`[Cron] Agent ${agent.name} result: ${isSuccessful}`);
+      console.log(`[Cron] Model ${model.name} result: ${isSuccessful}`);
       
-      return prisma.agent.update({
-        where: { id: agent.id },
+      return prisma.model.update({
+        where: { id: model.id },
         data: {
           iaoSuccessful: isSuccessful,
           iaoSuccessChecked: true, // 标记为已检查，下次不会再查
@@ -76,7 +76,7 @@ export async function processPendingIaoChecks() {
     // 等待所有数据库更新完成
     await Promise.all(updatePromises);
 
-    return { count: pendingAgents.length, message: 'Batch inspection completed' };
+    return { count: pendingModels.length, message: 'Batch inspection completed' };
 
   } catch (error: any) {
     console.error('[Cron] Multicall Execution exception:', error);

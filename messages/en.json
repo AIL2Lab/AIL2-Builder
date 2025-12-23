@@ -13,7 +13,7 @@
     },
     "creator": {
       "title": "Creator",
-      "description": "Compose powerful AI Agents using decentralized models and launch Initial Agent Offerings (IAO)."
+      "description": "Compose powerful AI Models using decentralized models and launch Initial Agent Offerings (IAO)."
     },
     "faq": {
       "title": "FQA",
@@ -141,6 +141,11 @@
     "failedToLoad": "Failed to load agents.",
     "retry": "Retry",
     "noMoreAgents": "No more agents",
+    "empty": {
+      "title": "No Models Found",
+      "description": "There are no models yet. Be the first to launch an IAO!",
+      "btn": "Launch IAO"
+    },
     "table": {
       "modelInfo": "Model Info",
       "symbol": "Symbol",
@@ -408,5 +413,42 @@
       }
     },
     "sendBtn": "Send Message"
+  },
+  "ModelForm": {
+    "name": {
+      "label": "AI Model Project Name",
+      "placeholder": "1-12 characters"
+    },
+    "symbol": {
+      "label": "Token Symbol",
+      "placeholder": "3-5 uppercase letters"
+    },
+    "description": {
+      "label": "AI Model Description",
+      "placeholder": "Describe your AI model functionality"
+    },
+    "avatar": {
+      "label": "Product Images"
+    },
+    "twitter": {
+      "label": "Twitter Link (Optional)",
+      "placeholder": "https://x.com/your_ai_model"
+    },
+    "telegram": {
+      "label": "Telegram Link (Optional)",
+      "placeholder": "https://t.me/your_project"
+    },
+    "submit": "Create Now",
+    "error": {
+      "unexpected": "An unexpected error occurred.",
+      "upload_failed": "Upload failed"
+    }
+  },
+  "ImageUpload": {
+    "alt": "Uploaded image",
+    "uploading": "Uploading...",
+    "drop_here": "Drop the image here ...",
+    "drag_drop": "Drag & drop an image here, or click to select",
+    "select_file": "Select File"
   }
 }

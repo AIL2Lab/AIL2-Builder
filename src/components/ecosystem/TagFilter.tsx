@@ -46,7 +46,7 @@ export default function TagFilter() {
       twitter: "https://x.com/aizel_network",
       description:
         "Aizel Network is the fastest and most scalable modular network dedicated to verifiable and private intelligence.",
-      types: ["All", "AI - Compute & Execution", "AI - Agents", "AI - Inference & Models", ],
+      types: ["All", "AI - Compute & Execution", "AI - Models", "AI - Inference & Models", ],
     },
     {
       title: "AltLayer",
@@ -86,7 +86,7 @@ export default function TagFilter() {
       url: "https://www.conwai.net/",
       twitter: "http://x.com/conwainet",
       description:
-        "One chain covering the full Artificial Intelligence lifecycle. From data collection, labeling and preprocessing to model training, evaluation, fine-tuning, inference, RAG, RLHF and autonomous agents.",
+        "One chain covering the full Artificial Intelligence lifecycle. From data collection, labeling and preprocessing to model training, evaluation, fine-tuning, inference, RAG, RLHF and autonomous models.",
       types: ["All", "L1/L2"],
     },
     {

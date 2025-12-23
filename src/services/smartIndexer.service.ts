@@ -48,14 +48,14 @@ class SmartContractIndexer {
    * 刷新内存中的合约地址列表 (无需重启服务)
    */
   async refreshAddressList() {
-    const agents = await prisma.agent.findMany({
+    const models = await prisma.model.findMany({
       where: { iaoContractAddress: { not: null } },
       select: { iaoContractAddress: true },
     });
     
     // 更新 Set，全部转小写以防大小写敏感问题
     this.watchedAddresses = new Set(
-      agents.map(a => a.iaoContractAddress!.toLowerCase())
+      models.map(a => a.iaoContractAddress!.toLowerCase())
     );
     console.log(`📋 [Indexer] 合约白名单已更新，当前数量: ${this.watchedAddresses.size}`);
   }
@@ -141,7 +141,7 @@ class SmartContractIndexer {
       // 2. 数据库更新
       // 注意：这里使用 updateMany 而不是 update，因为我们只知道 iaoContractAddress
       // 这样避免了先 find 一次 id 的开销
-      return prisma.agent.updateMany({
+      return prisma.model.updateMany({
         where: { 
           iaoContractAddress: { equals: contractAddress, mode: 'insensitive' } 
         },

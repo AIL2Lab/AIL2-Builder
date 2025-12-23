@@ -5,6 +5,7 @@ import { Button } from './button';
 import { Card, CardContent } from './card';
 import { Progress } from './progress';
 import { X, Upload, Image as ImageIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface ImageUploadProps {
   value?: string; // 改为单个字符串
@@ -19,6 +20,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
   onChange,
   onUpload,
 }) => {
+  const t = useTranslations('ImageUpload');
   const [isUploading, setIsUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
 
@@ -76,7 +78,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
             <div className="relative aspect-square w-full max-w-sm mx-auto">
               <img
                 src={value}
-                alt="Uploaded image"
+                alt={t('alt')}
                 className="w-full h-full object-cover"
               />
               {!disabled && (
@@ -107,7 +109,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
               <input {...getInputProps()} />
               {isUploading ? (
                 <div className="w-full space-y-2">
-                  <p className="text-sm text-muted-foreground">Uploading...</p>
+                  <p className="text-sm text-muted-foreground">{t('uploading')}</p>
                   <Progress value={uploadProgress} className="w-full" />
                 </div>
               ) : (
@@ -119,11 +121,11 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
                   )}
                   <p className="text-sm text-muted-foreground">
                     {isDragActive
-                      ? 'Drop the image here ...'
-                      : 'Drag & drop an image here, or click to select'}
+                      ? t('drop_here')
+                      : t('drag_drop')}
                   </p>
                   <Button type="button" variant="secondary" size="sm" disabled={disabled}>
-                    Select File
+                    {t('select_file')}
                   </Button>
                 </>
               )}

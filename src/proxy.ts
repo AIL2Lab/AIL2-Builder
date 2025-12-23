@@ -6,9 +6,9 @@ import { routing } from "./i18n/routing";
 import { errorResponse } from "./lib/api-response";
 // 需要认证的路由匹配规则
 const protectedPaths: string[] = [
-  // '/api/agent/list',
+  // '/api/model/list',
   '/api/user/profile',
-  '/api/agent'
+  '/api/model'
 ];
 
 export async function proxy(request: NextRequest) {

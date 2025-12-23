@@ -86,7 +86,7 @@ export default function Footer() {
                   IAO
                 </span>
               </div>
-              <p className="text-sm text-white/30">IAO Agent Composition</p>
+              <p className="text-sm text-white/30">IAO Model Composition</p>
             </div>
           </div>
           <div className="col-span-1 space-y-5">

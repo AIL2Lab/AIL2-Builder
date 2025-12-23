@@ -27,8 +27,8 @@ const queryClient = new QueryClient({
 });
 // Set up metadata
 const metadata = {
-  name: "xaiagent",
-  description: "xaiagent",
+  name: "xaimodel",
+  description: "xaimodel",
   url: getOrigin(),
   icons: [`${getOrigin()}/logo.png`],
 };

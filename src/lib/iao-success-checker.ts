@@ -12,27 +12,27 @@ const publicClient = createPublicClient({
  * 批量检查 IAO 状态
  * 这一步包含了：过滤、Multicall 请求、数据库更新
  */
-export async function batchCheckAndUpdateIaoStatus(agents: any[]) {
-  if (!agents || agents.length === 0) return;
+export async function batchCheckAndUpdateIaoStatus(models: any[]) {
+  if (!models || models.length === 0) return;
 
   const now = Math.floor(Date.now() / 1000);
   
-  // 1. 筛选出真正需要调用 RPC 的 Agent
+  // 1. 筛选出真正需要调用 RPC 的 Model
   // 排除掉那些虽然取出来了，但还没到结束时间的（双重保险）
-  const agentsToCall = agents.filter(agent => {
-    const iaoEndTime = agent.iaoEndTime ? Number(agent.iaoEndTime) : 0;
+  const modelsToCall = models.filter(model => {
+    const iaoEndTime = model.iaoEndTime ? Number(model.iaoEndTime) : 0;
     return iaoEndTime > 0 && now >= iaoEndTime;
   });
 
-  if (agentsToCall.length === 0) return;
+  if (modelsToCall.length === 0) return;
 
-  console.log(`准备批量检查 ${agentsToCall.length} 个 Agent 的合约状态`);
+  console.log(`准备批量检查 ${modelsToCall.length} 个 Model 的合约状态`);
 
   // 2. 构造 Multicall 参数
-  const contracts = agentsToCall.map(agent => {
+  const contracts = modelsToCall.map(model => {
     const address = process.env.NEXT_PUBLIC_IS_TEST_ENV === 'true'
-      ? agent.iaoContractAddressTestnet
-      : agent.iaoContractAddress;
+      ? model.iaoContractAddressTestnet
+      : model.iaoContractAddress;
     
     // 如果没有地址，构造一个无效调用或者标记跳过，这里简化处理
     // 实际业务中应确保数据库数据的完整性
@@ -40,7 +40,7 @@ export async function batchCheckAndUpdateIaoStatus(agents: any[]) {
 
     return {
       address: address as `0x${string}`,
-      abi: getContractABI(agent.symbol),
+      abi: getContractABI(model.symbol),
       functionName: 'isSuccess',
     };
   }).filter(item => item !== null); // 过滤掉没有地址的
@@ -57,11 +57,11 @@ export async function batchCheckAndUpdateIaoStatus(agents: any[]) {
 
     // 4. 处理结果并批量准备更新
     const updatePromises = results.map(async (result, index) => {
-      const agent = agentsToCall[index];
+      const model = modelsToCall[index];
       
       // 如果调用失败或状态为 null
       if (result.status === 'failure') {
-        console.error(`Agent ${agent.name} 检查失败:`, result.error);
+        console.error(`Model ${model.name} 检查失败:`, result.error);
         return; 
       }
 
@@ -69,8 +69,8 @@ export async function batchCheckAndUpdateIaoStatus(agents: any[]) {
       
       // 5. 更新数据库
       // 只有当状态真正改变或者确认需要写入时才更新
-      return prisma.agent.update({
-        where: { id: agent.id },
+      return prisma.model.update({
+        where: { id: model.id },
         data: {
           iaoSuccessful: isSuccessful,
           iaoSuccessChecked: true,

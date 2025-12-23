@@ -374,7 +374,7 @@ export default function ResearchPage({
                 <div className="relative h-full">
                   <Image
                     src={section3Img}
-                    alt="Multi-Agent System Architecture"
+                    alt="Multi-Model System Architecture"
                     className="w-3/4 filter grayscale sepia hue-rotate-10 saturate-200"
                     priority
                   />

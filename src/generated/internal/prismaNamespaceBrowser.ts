@@ -50,7 +50,7 @@ export const AnyNull = runtime.objectEnumValues.instances.AnyNull
 
 export const ModelName = {
   Subscriber: 'Subscriber',
-  Agent: 'Agent',
+  Model: 'Model',
   Task: 'Task',
   User: 'User',
   AuthNonce: 'AuthNonce'
@@ -82,7 +82,7 @@ export const SubscriberScalarFieldEnum = {
 export type SubscriberScalarFieldEnum = (typeof SubscriberScalarFieldEnum)[keyof typeof SubscriberScalarFieldEnum]
 
 
-export const AgentScalarFieldEnum = {
+export const ModelScalarFieldEnum = {
   id: 'id',
   name: 'name',
   symbol: 'symbol',
@@ -101,7 +101,7 @@ export const AgentScalarFieldEnum = {
   iaoSuccessCheckTime: 'iaoSuccessCheckTime'
 } as const
 
-export type AgentScalarFieldEnum = (typeof AgentScalarFieldEnum)[keyof typeof AgentScalarFieldEnum]
+export type ModelScalarFieldEnum = (typeof ModelScalarFieldEnum)[keyof typeof ModelScalarFieldEnum]
 
 
 export const TaskScalarFieldEnum = {
@@ -109,7 +109,7 @@ export const TaskScalarFieldEnum = {
   type: 'type',
   status: 'status',
   result: 'result',
-  agentId: 'agentId',
+  modelId: 'modelId',
   createdBy: 'createdBy',
   createdAt: 'createdAt',
   startedAt: 'startedAt',

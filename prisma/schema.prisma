@@ -17,7 +17,7 @@ model Subscriber {
   @@map("subscribers")
 }
 
-model Agent {
+model Model {
   id                  String    @id @default(uuid())
   name                String
   symbol              String
@@ -37,7 +37,7 @@ model Agent {
   creator             User      @relation(fields: [creatorId], references: [id])
   tasks               Task[]
 
-  @@map("agent")
+  @@map("model")
 }
 
 model Task {
@@ -45,12 +45,12 @@ model Task {
   type        String
   status      String
   result      String?
-  agentId     String
+  modelId     String
   createdBy   String
   createdAt   DateTime  @default(now())
   startedAt   DateTime?
   completedAt DateTime?
-  agent       Agent     @relation(fields: [agentId], references: [id])
+  model       Model     @relation(fields: [modelId], references: [id])
 
   @@map("task")
 }
@@ -62,7 +62,7 @@ model User {
   avatar    String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  agents    Agent[]
+  models    Model[]
 
   @@map("user")
 }

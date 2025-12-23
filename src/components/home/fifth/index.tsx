@@ -8,7 +8,7 @@ const chunks = [
         title: "DApps & Developers",
         tags: [
             'Tooling (SDKs, CLI)',
-            'AI Agents',
+            'AI Models',
             'DeFi + AI',
             'GameFI + AI',
             'Data DAOs',
