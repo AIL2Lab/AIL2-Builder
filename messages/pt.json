@@ -40,6 +40,18 @@
     "research": {
       "title": "Pesquisa",
       "description": "O Sistema Operacional de IA Descentralizado"
+    },
+    "incubator": {
+      "title": "Incubadora",
+      "description": "Acelerando as startups mais promissoras no espaço de IA descentralizada com capital, computação e suporte estratégico."
+    },
+    "Fund": {
+      "title": "Fundo do Ecossistema",
+      "description": "Um compromisso de 50 milhões de dólares para alavancar a próxima geração de infraestrutura, modelos e aplicações de consumo de IA descentralizada."
+    },
+    "contact": {
+      "title": "Fale Conosco",
+      "description": "Entre em contato com a equipe que está construindo o futuro da inteligência descentralizada."
     }
   },
   "Common": {
@@ -63,14 +75,23 @@
     "creator": "Criador",
     "learn": "Aprender",
     "blog": "Blog",
-    "platform": "AIL2 Núcleo",
     "platformDesc": "Camada de Execução",
-    "accelerate": "AIL2 Criador",
     "accelerateDesc": "Estúdio de Agentes",
-    "builder": "Construtor AIL2",
     "builderDesc": "Plataforma de Lançamento de Modelos",
+    "connectWallet": "Conectar Carteira",
+    "platform": "Plataforma AIL2",
+    "accelerate": "AIL2 Acelera",
     "faq": "Perguntas Frequentes",
-    "connectWallet": "Conectar Carteira"
+    "product": "Produto",
+    "core": "AIL2 Core",
+    "builder": "AIL2 Builder",
+    "description": {
+      "platform": "Plataforma de Aceleração de IA",
+      "accelerate": "Acelerando a jornada",
+      "faq": "Perguntas frequentes",
+      "core": "Camada de Execução",
+      "builder": "Plataforma de Lançamento de Modelos"
+    }
   },
   "Home": {
     "supportBtn": "Apoie AIL2 no X",
@@ -108,7 +129,7 @@
     "fourthScreen": {
       "title": "O Maior AI L2",
       "superLayer": "A Super Camada de AI que Unifica<br></br>ETH, BSC, GIWA, XLayer, Base, Mantle",
-      "architecture": "Arquitetura de 5 Camadas do AIL2"
+      "architecture": "Arquitetura de 6 Camadas do AIL2"
     },
     "fifthScreen": {
       "acceleration": "A aceleração do AIL2 permite que os desenvolvedores construam IA descentralizada em blockchains públicas com <theme>100x de aceleração</theme>"
@@ -134,7 +155,8 @@
     "socials": "Redes sociais",
     "product": "Produto",
     "blog": "Blog",
-    "ecosystem": "Ecossistema"
+    "ecosystem": "Ecossistema",
+    "network": "Status da Rede"
   },
   "NotFoundPage": {
     "title": "Página Não Encontrada",
@@ -282,5 +304,100 @@
         "description": "Para prevenir interferência maliciosa durante a execução, implantamos um \"Enxame Watchdog\"—um sistema de agentes especializados que monitora continuamente os mecanismos de consenso. Ao coordenar suas observações, eles aumentam a confiabilidade de todo o ambiente."
       }
     }
+  },
+  "EcosystemFund": {
+    "title": "Fundo do <theme>Ecossistema AIL2</theme>",
+    "description": "Um compromisso de 50 milhões de dólares para alavancar a próxima geração de infraestrutura, modelos e aplicações de consumo de IA descentralizada.",
+    "card1": {
+      "title": "Infraestrutura",
+      "description": "Armazenamento descentralizado, redes de computação e camadas de DA para IA."
+    },
+    "card2": {
+      "title": "Modelos Base",
+      "description": "Modelos de código aberto ajustados e otimizados para nós AIL2."
+    },
+    "card3": {
+      "title": "Aplicativos de Agentes",
+      "description": "Agentes autônomos resolvendo problemas do mundo real na cadeia."
+    },
+    "card4": {
+      "title": "Ferramentas de Desenvolvimento",
+      "description": "SDKs, depuradores e pilhas de monitoramento para construtores de IA."
+    },
+    "weOffer": "O que oferecemos",
+    "offer1": {
+      "title": "Subsídios Estratégicos",
+      "description": "Financiamento baseado em marcos de $10k a $100k."
+    },
+    "offer2": {
+      "title": "Créditos de Computação",
+      "description": "Acesso gratuito aos clusters de GPU H100 da AIL2 para treinamento."
+    },
+    "offer3": {
+      "title": "Introdução a VCs",
+      "description": "Pipeline direto para venture capital de primeiro nível em cripto e IA."
+    }
+  },
+  "Incubator": {
+    "title": "<theme>Incubadora</theme> AIL2",
+    "description": "Acelerando as startups mais promissoras no espaço de IA descentralizada com capital, computação e suporte estratégico.",
+    "subtitle": "Construída para <theme>Fundadores</theme>",
+    "subDescription": "Oferecemos de $100k a $500k em financiamento inicial, mentoría técnica aprofundada e acesso ilimitado à malha de GPU de alto desempenho da AIL2.",
+    "applyBtn": "Inscreva-se na 4ª Cohorte",
+    "viewBtn": "Ver Benefícios",
+    "PortfolioCompanies": "Empresas do Portfólio",
+    "card1": {
+      "title": "Nexus AI",
+      "description": "Escalonamento Autônomo de LLM"
+    },
+    "card2": {
+      "title": "TensorFlow DAO",
+      "description": "Motor de Treinamento On-Chain"
+    },
+    "card3": {
+      "title": "OpenWeights",
+      "description": "Loja de Modelos Descentralizada"
+    },
+    "card4": {
+      "title": "ComputeX",
+      "description": "Otimização de Latência"
+    },
+    "IncubationProcess": "<theme>Processo</theme> de Incubação",
+    "process1": {
+      "title": "Avaliação Técnica",
+      "description": "Nossos engenheiros principais revisam sua arquitetura de modelo e potencial de escalabilidade na AIL2."
+    },
+    "process2": {
+      "title": "Alinhamento Estratégico",
+      "description": "Mapeamos sua tokenomics e estratégia de aquisição de usuários dentro do ecossistema AIL2."
+    },
+    "process3": {
+      "title": "Lançamento da Cohorte",
+      "description": "Receba financiamento e vá ao ar com liquidez profunda e apoio da comunidade."
+    }
+  },
+  "Contact": {
+    "title": "Entre em <theme>Contato</theme>",
+    "description": "Entre em contato com a equipe que está construindo o futuro da inteligência descentralizada.",
+    "globalOffices": "Escritórios Globais",
+    "address1": "São Francisco, CA",
+    "address2": "Cingapura",
+    "address3": "Zug, Suíça",
+    "social": "Canais Sociais",
+    "form": {
+      "name": {
+        "col": "Nome",
+        "placeholder": "Seu nome"
+      },
+      "email": {
+        "col": "E-mail",
+        "placeholder": "Seu e-mail"
+      },
+      "message": {
+        "col": "Mensagem",
+        "placeholder": "Como podemos ajudar?"
+      }
+    },
+    "sendBtn": "Enviar Mensagem"
   }
 }

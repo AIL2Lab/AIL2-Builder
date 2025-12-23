@@ -26,6 +26,18 @@
     "research": {
       "title": "研究",
       "description": "去中心化 AI 操作系统"
+    },
+    "incubator": {
+      "title": "孵化器",
+      "description": "通过资本、计算和战略支持，加速去中心化AI领域最有前途的初创公司。"
+    },
+    "Fund": {
+      "title": "生态系统基金",
+      "description": "我们承诺投入5000万美元，用于启动下一代去中心化AI基础设施、模型和消费者应用。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "description": "与构建去中心化智能未来的团队取得联系。"
     }
   },
   "Common": {
@@ -49,15 +61,23 @@
     "creator": "创造者",
     "learn": "学习",
     "blog": "博客",
-    "platform": "AIL2 核心",
     "platformDesc": "执行层",
-    "accelerate": "AIL2 创造者",
     "accelerateDesc": "代理工作室",
-    "builder": "AIL2 构建者",
     "builderDesc": "模型发射台",
+    "connectWallet": "连接钱包",
+    "platform": "AIL2 平台",
+    "accelerate": "AIL2 加速",
     "faq": "常见问题",
     "product": "产品",
-    "connectWallet": "连接钱包"
+    "core": "AIL2 核心",
+    "builder": "AIL2 构建器",
+    "description": {
+      "platform": "AI 加速平台",
+      "accelerate": "加速旅程",
+      "faq": "常见问题",
+      "core": "执行层",
+      "builder": "模型启动台"
+    }
   },
   "Home": {
     "supportBtn": "X 上支持AIL2",
@@ -94,7 +114,7 @@
     "fourthScreen": {
       "title": "最大的人工智能L2",
       "superLayer": "AI 超级层统一体<br></br>ETH、BSC、GIWA、XLayer、Base、Mantle",
-      "architecture": "AIL2 五层架构"
+      "architecture": "AIL2 六层架构"
     },
     "fifthScreen": {
       "acceleration": "AIL2 的实现使开发者能够在公共区块链上构建去中心化人工智能，<theme>速度提升100 倍</theme> 。"
@@ -146,7 +166,8 @@
     "socials": "社交",
     "product": "产品",
     "blog": "博客",
-    "ecosystem": "生态系统"
+    "ecosystem": "生态系统",
+    "network": "网络状态"
   },
   "NotFoundPage": {
     "title": "页面未找到",
@@ -294,5 +315,100 @@
         "description": "为了防止执行过程中的恶意干扰，我们部署了一个“看门狗集群”——一个由专门智能体组成的系统，持续监控共识机制。通过协调它们的观察结果，它们增强了整个环境的可信度。"
       }
     }
+  },
+  "EcosystemFund": {
+    "title": "AIL2 <theme>生态系统基金</theme>",
+    "description": "我们承诺投入5000万美元，用于启动下一代去中心化AI基础设施、模型和消费者应用。",
+    "card1": {
+      "title": "基础设施",
+      "description": "为AI提供的去中心化存储、计算网络和数据可用性（DA）层。"
+    },
+    "card2": {
+      "title": "基础模型",
+      "description": "为AIL2节点优化的开源微调模型。"
+    },
+    "card3": {
+      "title": "智能体应用",
+      "description": "在链上解决现实世界问题的自主智能体。"
+    },
+    "card4": {
+      "title": "开发工具",
+      "description": "为AI构建者提供的SDK、调试器和监控技术栈。"
+    },
+    "weOffer": "我们提供",
+    "offer1": {
+      "title": "战略资助",
+      "description": "从1万美元到10万美元的基于里程碑的资助。"
+    },
+    "offer2": {
+      "title": "计算额度",
+      "description": "免费访问AIL2的H100 GPU集群进行训练。"
+    },
+    "offer3": {
+      "title": "风险投资引荐",
+      "description": "直接对接顶级加密和AI风险投资机构。"
+    }
+  },
+  "Incubator": {
+    "title": "AIL2 <theme>孵化器</theme>",
+    "description": "通过资本、计算和战略支持，加速去中心化AI领域最有前途的初创公司。",
+    "subtitle": "为<theme>创始人</theme>而建",
+    "subDescription": "我们提供10万至50万美元的初始资金、深度技术指导以及无限制访问AIL2高性能GPU网格。",
+    "applyBtn": "申请第四期",
+    "viewBtn": "查看权益",
+    "PortfolioCompanies": "投资组合公司",
+    "card1": {
+      "title": "Nexus AI",
+      "description": "自主LLM扩展"
+    },
+    "card2": {
+      "title": "TensorFlow DAO",
+      "description": "链上训练引擎"
+    },
+    "card3": {
+      "title": "OpenWeights",
+      "description": "去中心化模型商店"
+    },
+    "card4": {
+      "title": "ComputeX",
+      "description": "延迟优化"
+    },
+    "IncubationProcess": "孵化<theme>流程</theme>",
+    "process1": {
+      "title": "技术评估",
+      "description": "我们的核心工程师审查您的模型架构和在AIL2上的扩展潜力。"
+    },
+    "process2": {
+      "title": "战略对齐",
+      "description": "我们在AIL2生态系统内规划您的代币经济学和用户获取策略。"
+    },
+    "process3": {
+      "title": "项目启动",
+      "description": "获得资金，并在深度流动性和社区支持下正式启动。"
+    }
+  },
+  "Contact": {
+    "title": "联系<theme>我们</theme>",
+    "description": "与构建去中心化智能未来的团队取得联系。",
+    "globalOffices": "全球办公室",
+    "address1": "加利福尼亚州旧金山",
+    "address2": "新加坡",
+    "address3": "瑞士楚格",
+    "social": "社交渠道",
+    "form": {
+      "name": {
+        "col": "姓名",
+        "placeholder": "您的姓名"
+      },
+      "email": {
+        "col": "邮箱",
+        "placeholder": "您的邮箱"
+      },
+      "message": {
+        "col": "留言",
+        "placeholder": "我们能为您提供什么帮助？"
+      }
+    },
+    "sendBtn": "发送消息"
   }
 }

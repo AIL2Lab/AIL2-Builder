@@ -11,7 +11,7 @@ const chunks = [
             'AI Agents',
             'DeFi + AI',
             'GameFI + AI',
-            'Data DOAs',
+            'Data DAOs',
             'L2 RPC Gateways',
         ],
         bg: {

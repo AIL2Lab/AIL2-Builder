@@ -40,6 +40,18 @@
     "research": {
       "title": "研究",
       "description": "分散型AIオペレーティングシステム"
+    },
+    "incubator": {
+      "title": "インキュベーター",
+      "description": "資本、コンピューティング、戦略的サポートにより、分散型AI分野で最も有望なスタートアップを加速させます。"
+    },
+    "Fund": {
+      "title": "エコシステムファンド",
+      "description": "次世代の分散型AIインフラ、モデル、および消費者アプリケーションをブートストラップするための5000万ドルのコミットメント。"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "description": "分散型インテリジェンスの未来を構築するチームと連絡を取りましょう。"
     }
   },
   "Common": {
@@ -58,19 +70,28 @@
     "locale": "{locale, select, zh {中国語} en {英語} es {スペイン語} ko {韓国語} ja {日本語} pt {ポルトガル語} ru {ロシア語} tr {トルコ語} other {不明}}"
   },
   "Navbar": {
-    "research": "リサーチ",
+    "research": "研究",
     "ecosystem": "エコシステム",
     "creator": "クリエイター",
     "learn": "学ぶ",
     "blog": "ブログ",
-    "platform": "AIL2 コア",
     "platformDesc": "実行レイヤー",
-    "accelerate": "AIL2 クリエイター",
     "accelerateDesc": "エージェントスタジオ",
-    "builder": "AIL2 ビルダー",
     "builderDesc": "モデルローンチパッド",
+    "connectWallet": "ウォレット接続",
+    "platform": "AIL2 プラットフォーム",
+    "accelerate": "AIL2 アクセラレート",
     "faq": "よくある質問",
-    "connectWallet": "ウォレット接続"
+    "product": "プロダクト",
+    "core": "AIL2 コア",
+    "builder": "AIL2 ビルダー",
+    "description": {
+      "platform": "AI アクセラレーションプラットフォーム",
+      "accelerate": "ジャーニーの加速",
+      "faq": "よくある質問",
+      "core": "実行レイヤー",
+      "builder": "モデルランチャーパッド"
+    }
   },
   "Home": {
     "supportBtn": "XでAIL2をサポート",
@@ -108,7 +129,7 @@
     "fourthScreen": {
       "title": "最大のAI L2",
       "superLayer": "ETH、BSC、GIWA、XLayer、Base、Mantleを統合する<br></br>AIスーパーレイヤー",
-      "architecture": "AIL2 5層アーキテクチャ"
+      "architecture": "AIL2 6層アーキテクチャ"
     },
     "fifthScreen": {
       "acceleration": "AIL2の加速により、開発者はパブリックブロックチェーン上で分散型AIを構築し、<theme>100倍の加速</theme>を実現できます"
@@ -134,7 +155,8 @@
     "socials": "ソーシャル",
     "product": "プロダクト",
     "blog": "ブログ",
-    "ecosystem": "エコシステム"
+    "ecosystem": "エコシステム",
+    "network": "ネットワークステータス"
   },
   "NotFoundPage": {
     "title": "ページが見つかりません",
@@ -282,5 +304,100 @@
         "description": "実行中の悪意のある干渉を防ぐため、私たちはコンセンサスメカニズムを継続的に監視する専門エージェントのシステムである「ウォッチドッグ・スウォーム」を展開します。それらの観察を調整することで、環境全体の信頼性を高めます。"
       }
     }
+  },
+  "EcosystemFund": {
+    "title": "AIL2 <theme>エコシステムファンド</theme>",
+    "description": "次世代の分散型AIインフラ、モデル、および消費者アプリケーションをブートストラップするための5000万ドルのコミットメント。",
+    "card1": {
+      "title": "インフラ",
+      "description": "AIのための分散型ストレージ、コンピュートネットワーク、およびDAレイヤー。"
+    },
+    "card2": {
+      "title": "ベースモデル",
+      "description": "AIL2ノード向けに最適化されたオープンソースのファインチューニング済みモデル。"
+    },
+    "card3": {
+      "title": "エージェントアプリ",
+      "description": "オンチェーンで実世界の問題を解決する自律エージェント。"
+    },
+    "card4": {
+      "title": "開発ツール",
+      "description": "AIビルダー向けのSDK、デバッガー、監視スタック。"
+    },
+    "weOffer": "提供内容",
+    "offer1": {
+      "title": "戦略的助成金",
+      "description": "1万ドルから10万ドルのマイルストーンベースの資金提供。"
+    },
+    "offer2": {
+      "title": "コンピュートクレジット",
+      "description": "トレーニングのためのAIL2のH100 GPUクラスタへの無料アクセス。"
+    },
+    "offer3": {
+      "title": "VC紹介",
+      "description": "トップクラスの暗号資産およびAIベンチャーキャピタルへの直接的なパイプライン。"
+    }
+  },
+  "Incubator": {
+    "title": "AIL2 <theme>インキュベーター</theme>",
+    "description": "資本、コンピューティング、戦略的サポートにより、分散型AI分野で最も有望なスタートアップを加速させます。",
+    "subtitle": "<theme>創業者</theme>のために構築",
+    "subDescription": "10万ドルから50万ドルの初期資金、深い技術的メンターシップ、およびAIL2の高性能GPUメッシュへの無制限アクセスを提供します。",
+    "applyBtn": "第4期に応募する",
+    "viewBtn": "特典を見る",
+    "PortfolioCompanies": "ポートフォリオ企業",
+    "card1": {
+      "title": "Nexus AI",
+      "description": "自律LLMスケーリング"
+    },
+    "card2": {
+      "title": "TensorFlow DAO",
+      "description": "オンチェーントレーニングエンジン"
+    },
+    "card3": {
+      "title": "OpenWeights",
+      "description": "分散型モデルストア"
+    },
+    "card4": {
+      "title": "ComputeX",
+      "description": "レイテンシー最適化"
+    },
+    "IncubationProcess": "インキュベーション<theme>プロセス</theme>",
+    "process1": {
+      "title": "技術評価",
+      "description": "当社のコアエンジニアが、あなたのモデルアーキテクチャとAIL2でのスケーリング可能性をレビューします。"
+    },
+    "process2": {
+      "title": "戦略的整合性",
+      "description": "AIL2エコシステム内でのトケノミクスとユーザー獲得戦略を策定します。"
+    },
+    "process3": {
+      "title": "コホートの開始",
+      "description": "資金を受け取り、深い流動性とコミュニティサポートでライブで開始します。"
+    }
+  },
+  "Contact": {
+    "title": "<theme>私たち</theme>に連絡",
+    "description": "分散型インテリジェンスの未来を構築するチームと連絡を取りましょう。",
+    "globalOffices": "グローバルオフィス",
+    "address1": "サンフランシスコ、カリフォルニア州",
+    "address2": "シンガポール",
+    "address3": "ツーク、スイス",
+    "social": "ソーシャルチャンネル",
+    "form": {
+      "name": {
+        "col": "お名前",
+        "placeholder": "お名前"
+      },
+      "email": {
+        "col": "メールアドレス",
+        "placeholder": "メールアドレス"
+      },
+      "message": {
+        "col": "メッセージ",
+        "placeholder": "どのようにお手伝いできますか？"
+      }
+    },
+    "sendBtn": "メッセージを送信"
   }
 }
