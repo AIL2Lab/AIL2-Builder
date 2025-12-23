@@ -41,11 +41,31 @@ export { Prisma }
 
 
 // file annotations for bundling tools to include these files
-path.join(__dirname, "libquery_engine-darwin.dylib.node")
-path.join(process.cwd(), "src/generated/libquery_engine-darwin.dylib.node")
+path.join(__dirname, "libquery_engine-debian-openssl-3.0.x.so.node")
+path.join(process.cwd(), "src/generated/libquery_engine-debian-openssl-3.0.x.so.node")
 
 /**
  * Model Subscriber
  * 
  */
 export type Subscriber = Prisma.SubscriberModel
+/**
+ * Model Agent
+ * 
+ */
+export type Agent = Prisma.AgentModel
+/**
+ * Model Task
+ * 
+ */
+export type Task = Prisma.TaskModel
+/**
+ * Model User
+ * 
+ */
+export type User = Prisma.UserModel
+/**
+ * Model AuthNonce
+ * 
+ */
+export type AuthNonce = Prisma.AuthNonceModel

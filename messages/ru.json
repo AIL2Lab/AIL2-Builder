@@ -1,4 +1,22 @@
 {
+  "Creator": {
+    "title": "Создатель",
+    "description": "Создавайте и управляйте своими ИИ-агентами",
+    "createAgent": "Создать агента",
+    "table": {
+      "modelInfo": "Информация о модели",
+      "symbol": "Символ",
+      "type": "Тип",
+      "holders": "Держатели",
+      "mcap": "Рын. кап.",
+      "change24h": "Изм. 24ч",
+      "price": "Цена",
+      "vol": "Объем",
+      "liquidity": "Ликвидность",
+      "action": "Действие",
+      "chat": "Чат"
+    }
+  },
   "site": {
     "name": "AIL2 - крупнейший AIL2",
     "subtitle": "крупнейший AIL2",
@@ -42,15 +60,20 @@
   "Navbar": {
     "research": "Исследования",
     "ecosystem": "Экосистема",
+    "creator": "Создатель",
     "learn": "Изучать",
     "blog": "Блог",
-    "platform": "Платформа",
-    "accelerate": "Ускорение",
+    "platform": "AIL2 Ядро",
+    "platformDesc": "Слой выполнения",
+    "accelerate": "AIL2 Создатель",
+    "accelerateDesc": "Студия агентов",
+    "builder": "AIL2 Строитель",
+    "builderDesc": "Панель запуска моделей",
     "faq": "Часто задаваемые вопросы",
-    "product": "Продукт"
+    "connectWallet": "Подключить кошелек"
   },
   "Home": {
-    "supportBtn": "Поддержать AIL2 в X",
+    "supportBtn": "Поддержать AIL2 на X",
 
     "firstScreen": {
       "text": "Крупнейший AIL2 для"

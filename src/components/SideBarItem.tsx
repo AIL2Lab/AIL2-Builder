@@ -17,7 +17,7 @@ export const SideNavItem = ({
       <li>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex w-full items-center justify-between py-5 text-left text-base font-medium"
+          className="flex w-full items-center justify-between py-5 text-left text-base font-medium text-gray-300 hover:text-white"
         >
           {item.label}
           <ChevronDown
@@ -32,14 +32,28 @@ export const SideNavItem = ({
             isOpen ? "max-h-[500px] opacity-100 pb-5" : "max-h-0 opacity-0"
           )}
         >
-          <ul className="flex flex-col gap-3 pl-4 border-l border-white/20 ml-2">
+          <ul className="flex flex-col gap-4 pl-4 border-l border-white/20 ml-2">
             {item.children.map((subItem: any, subIdx: number) => (
               <li key={subIdx}>
                 <Link
                   href={subItem.href}
-                  className="block text-sm text-gray-300 hover:text-white"
+                  className="flex items-start gap-3 text-gray-300 hover:text-white group"
                 >
-                  {subItem.label}
+                  {subItem.icon && (
+                    <div className="mt-1 text-[#F3BA2F] group-hover:text-white transition-colors">
+                        {subItem.icon}
+                    </div>
+                  )}
+                  <div className="flex flex-col">
+                      <span className="text-sm font-bold group-hover:text-[#F3BA2F] transition-colors">
+                        {subItem.label}
+                      </span>
+                      {subItem.description && (
+                          <span className="text-xs text-gray-500 group-hover:text-gray-400">
+                              {subItem.description}
+                          </span>
+                      )}
+                  </div>
                 </Link>
               </li>
             ))}
@@ -50,7 +64,7 @@ export const SideNavItem = ({
   }
   return (
     <li className="py-5">
-      <Link href={item.href} className="block text-base font-medium">
+      <Link href={item.href} className="block text-base font-medium text-gray-300 hover:text-white">
         {item.label}
       </Link>
     </li>

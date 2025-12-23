@@ -18,60 +18,54 @@ model Subscriber {
 }
 
 model Agent {
-  id          String   @id @default(uuid())
-  name        String
-  symbol      String
-  description String
-  avatar      String?
-  socialLinks String?
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
-
-  status                    String       @default("active")
-  creator                   User         @relation(fields: [creatorId], references: [id])
-  creatorId                 String
-  tasks Task[] // 关联到任务
-
-  iaoContractAddress String?
-
-  // IAO
+  id                  String    @id @default(uuid())
+  name                String
+  symbol              String
+  description         String
+  avatar              String?
+  socialLinks         String?
+  createdAt           DateTime  @default(now()) @map("created_at")
+  updatedAt           DateTime  @updatedAt @map("updated_at")
+  status              String    @default("active")
+  creatorId           String
+  iaoContractAddress  String?
   iaoStartTime        BigInt?
   iaoEndTime          BigInt?
-  // IAO status
   iaoSuccessChecked   Boolean   @default(false)
   iaoSuccessful       Boolean?
   iaoSuccessCheckTime DateTime?
+  creator             User      @relation(fields: [creatorId], references: [id])
+  tasks               Task[]
 
   @@map("agent")
 }
 
 model Task {
   id          String    @id @default(uuid())
-  type        String // 任务类型: CREATE_TOKEN, DEPLOY_PAYMENT_CONTRACT 等
-  status      String // PENDING, PROCESSING, COMPLETED, FAILED, PARTIAL_SUCCESS
-  result      String? // JSON格式的结果数据
-  agent       Agent     @relation(fields: [agentId], references: [id])
+  type        String
+  status      String
+  result      String?
   agentId     String
-  createdBy   String // 创建者地址
+  createdBy   String
   createdAt   DateTime  @default(now())
-  startedAt   DateTime? // 开始执行时间
-  completedAt DateTime? // 完成时间
+  startedAt   DateTime?
+  completedAt DateTime?
+  agent       Agent     @relation(fields: [agentId], references: [id])
 
   @@map("task")
 }
 
 model User {
   id        String   @id @default(uuid())
-  address   String   @unique // 钱包地址
+  address   String   @unique
   nickname  String?
   avatar    String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  agents      Agent[] // 用户创建的 agents
+  agents    Agent[]
 
   @@map("user")
 }
-
 
 model AuthNonce {
   id        String   @id @default(uuid())

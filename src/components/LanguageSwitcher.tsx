@@ -50,28 +50,28 @@ const LanguageSwitcherSelect = ({className}: {className?:string}) => {
       <div>
         <button
           type="button"
-          className="cursor-pointer inline-flex justify-center w-full rounded-md px-4 py-2 bg-white/10"
+          className="cursor-pointer inline-flex items-center justify-center gap-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded="true"
           aria-haspopup="true"
         >
           {shortLocaleLabels[currentLanguage]}
-          <ChevronDown size={20}/>
+          <ChevronDown size={12}/>
         </button>
       </div>
       {isOpen && (
         <div
-          className="w-full origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white/10 ring-opacity-5 z-50"
+          className="w-32 origin-top-right absolute right-0 mt-4 rounded-xl shadow-lg bg-[#0A0A0A] border border-white/10 ring-1 ring-black ring-opacity-5 z-50 overflow-hidden"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="language-menu"
         >
-          <div className="py-1" role="none">
+          <div className="p-1" role="none">
             {routing.locales.map((lang, idx) => (
               <button
                 key={idx}
                 onClick={() => handleLanguageChange(lang)}
-                className={`cursor-pointer block w-full text-left px-4 py-2 text-sm hover:bg-black/30`}
+                className={`cursor-pointer block w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-white/10 hover:text-white rounded-lg transition-colors`}
                 role="menuitem"
               >
                 {localeLabels[lang]}

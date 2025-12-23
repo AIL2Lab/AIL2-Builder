@@ -1,4 +1,22 @@
 {
+  "Creator": {
+    "title": "Yaratıcı",
+    "description": "AI ajanlarınızı oluşturun ve yönetin",
+    "createAgent": "Ajan Oluştur",
+    "table": {
+      "modelInfo": "Model Bilgisi",
+      "symbol": "Sembol",
+      "type": "Tür",
+      "holders": "Sahipler",
+      "mcap": "Piyasa Değeri",
+      "change24h": "24s Değişim",
+      "price": "Fiyat",
+      "vol": "Hacim",
+      "liquidity": "Likidite",
+      "action": "İşlem",
+      "chat": "Sohbet"
+    }
+  },
   "site": {
     "name": "AIL2 - en büyük AIL2",
     "subtitle": "en büyük AIL2",
@@ -42,12 +60,17 @@
   "Navbar": {
     "research": "Araştırma",
     "ecosystem": "Ekosistem",
+    "creator": "Yaratıcı",
     "learn": "Öğren",
     "blog": "Blog",
-    "platform": "Platform",
-    "accelerate": "Hızlandırma",
+    "platform": "AIL2 Çekirdek",
+    "platformDesc": "Yürütme Katmanı",
+    "accelerate": "AIL2 Yaratıcı",
+    "accelerateDesc": "Ajan Stüdyosu",
+    "builder": "AIL2 İnşa Edici",
+    "builderDesc": "Model Başlatma Rampası",
     "faq": "Sıkça Sorulan Sorular",
-    "product": "Ürün"
+    "connectWallet": "Cüzdanı Bağla"
   },
   "Home": {
     "supportBtn": "X'te AIL2'yi Destekle",

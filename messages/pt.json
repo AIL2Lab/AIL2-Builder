@@ -1,4 +1,22 @@
 {
+  "Creator": {
+    "title": "Criador",
+    "description": "Crie e gerencie seus agentes de IA",
+    "createAgent": "Criar Agente",
+    "table": {
+      "modelInfo": "Info do Modelo",
+      "symbol": "Símbolo",
+      "type": "Tipo",
+      "holders": "Titulares",
+      "mcap": "Cap. de Mercado",
+      "change24h": "Var. 24h",
+      "price": "Preço",
+      "vol": "Volume",
+      "liquidity": "Liquidez",
+      "action": "Ação",
+      "chat": "Chat"
+    }
+  },
   "site": {
     "name": "AIL2 - o maior AIL2",
     "subtitle": "o maior AIL2",
@@ -42,15 +60,20 @@
   "Navbar": {
     "research": "Pesquisa",
     "ecosystem": "Ecossistema",
+    "creator": "Criador",
     "learn": "Aprender",
     "blog": "Blog",
-    "platform": "Plataforma",
-    "accelerate": "Acelerar",
+    "platform": "AIL2 Núcleo",
+    "platformDesc": "Camada de Execução",
+    "accelerate": "AIL2 Criador",
+    "accelerateDesc": "Estúdio de Agentes",
+    "builder": "Construtor AIL2",
+    "builderDesc": "Plataforma de Lançamento de Modelos",
     "faq": "Perguntas Frequentes",
-    "product": "Produto"
+    "connectWallet": "Conectar Carteira"
   },
   "Home": {
-    "supportBtn": "Apoie o AIL2 no X",
+    "supportBtn": "Apoie AIL2 no X",
 
     "firstScreen": {
       "text": "O maior AIL2 para"

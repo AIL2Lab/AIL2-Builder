@@ -1,3 +1,6 @@
+import { Zap, Cpu, Sparkles } from "lucide-react";
+import React from "react";
+
 export const siteConfig = {
   xUrl: "https://x.com/AIL2Lab",
   githubUrl: "https://github.com/AIL2Lab",
@@ -28,6 +31,10 @@ export function getNavbarConfig(t: (key: string) => string) {
           href: "/platform",
           description: 'AI Acceleration Platform',
           icon: 'Zap'
+        },
+        {
+          label: t("creator"),
+          href: "/creator",
         },
         {
           label: t("accelerate"),

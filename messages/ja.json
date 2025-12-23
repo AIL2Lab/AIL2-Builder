@@ -1,4 +1,22 @@
 {
+  "Creator": {
+    "title": "クリエイター",
+    "description": "AIエージェントの作成と管理",
+    "createAgent": "エージェント作成",
+    "table": {
+      "modelInfo": "モデル情報",
+      "symbol": "シンボル",
+      "type": "タイプ",
+      "holders": "ホルダー",
+      "mcap": "時価総額",
+      "change24h": "24時間変動",
+      "price": "価格",
+      "vol": "ボリューム",
+      "liquidity": "流動性",
+      "action": "アクション",
+      "chat": "チャット"
+    }
+  },
   "site": {
     "name": "AIL2 - 最大のAIL2",
     "subtitle": "最大のAIL2",
@@ -42,12 +60,17 @@
   "Navbar": {
     "research": "リサーチ",
     "ecosystem": "エコシステム",
+    "creator": "クリエイター",
     "learn": "学ぶ",
     "blog": "ブログ",
-    "platform": "プラットフォーム",
-    "accelerate": "アクセラレート",
+    "platform": "AIL2 コア",
+    "platformDesc": "実行レイヤー",
+    "accelerate": "AIL2 クリエイター",
+    "accelerateDesc": "エージェントスタジオ",
+    "builder": "AIL2 ビルダー",
+    "builderDesc": "モデルローンチパッド",
     "faq": "よくある質問",
-    "product": "プロダクト"
+    "connectWallet": "ウォレット接続"
   },
   "Home": {
     "supportBtn": "XでAIL2をサポート",

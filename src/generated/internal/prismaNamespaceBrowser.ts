@@ -49,7 +49,11 @@ export const AnyNull = runtime.objectEnumValues.instances.AnyNull
 
 
 export const ModelName = {
-  Subscriber: 'Subscriber'
+  Subscriber: 'Subscriber',
+  Agent: 'Agent',
+  Task: 'Task',
+  User: 'User',
+  AuthNonce: 'AuthNonce'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -78,6 +82,66 @@ export const SubscriberScalarFieldEnum = {
 export type SubscriberScalarFieldEnum = (typeof SubscriberScalarFieldEnum)[keyof typeof SubscriberScalarFieldEnum]
 
 
+export const AgentScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  symbol: 'symbol',
+  description: 'description',
+  avatar: 'avatar',
+  socialLinks: 'socialLinks',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  status: 'status',
+  creatorId: 'creatorId',
+  iaoContractAddress: 'iaoContractAddress',
+  iaoStartTime: 'iaoStartTime',
+  iaoEndTime: 'iaoEndTime',
+  iaoSuccessChecked: 'iaoSuccessChecked',
+  iaoSuccessful: 'iaoSuccessful',
+  iaoSuccessCheckTime: 'iaoSuccessCheckTime'
+} as const
+
+export type AgentScalarFieldEnum = (typeof AgentScalarFieldEnum)[keyof typeof AgentScalarFieldEnum]
+
+
+export const TaskScalarFieldEnum = {
+  id: 'id',
+  type: 'type',
+  status: 'status',
+  result: 'result',
+  agentId: 'agentId',
+  createdBy: 'createdBy',
+  createdAt: 'createdAt',
+  startedAt: 'startedAt',
+  completedAt: 'completedAt'
+} as const
+
+export type TaskScalarFieldEnum = (typeof TaskScalarFieldEnum)[keyof typeof TaskScalarFieldEnum]
+
+
+export const UserScalarFieldEnum = {
+  id: 'id',
+  address: 'address',
+  nickname: 'nickname',
+  avatar: 'avatar',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const AuthNonceScalarFieldEnum = {
+  id: 'id',
+  nonce: 'nonce',
+  address: 'address',
+  createdAt: 'createdAt',
+  expiresAt: 'expiresAt'
+} as const
+
+export type AuthNonceScalarFieldEnum = (typeof AuthNonceScalarFieldEnum)[keyof typeof AuthNonceScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -92,4 +156,12 @@ export const QueryMode = {
 } as const
 
 export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+export const NullsOrder = {
+  first: 'first',
+  last: 'last'
+} as const
+
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 

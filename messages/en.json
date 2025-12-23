@@ -11,6 +11,10 @@
       "title": "Accelerate",
       "description": "Accelerating the journey of the next wave of AI founders, propelling ideas forward with funding,  expert guidance, and go-to-market support."
     },
+    "creator": {
+      "title": "Creator",
+      "description": "Compose powerful AI Agents using decentralized models and launch Initial Agent Offerings (IAO)."
+    },
     "faq": {
       "title": "FQA",
       "description": "Frequently asked questions"
@@ -47,7 +51,9 @@
     "platform": "Platform",
     "accelerate": "Accelerate",
     "faq": "FAQ",
-    "product": "Product"
+    "creator": "Creator",
+    "product": "Product",
+    "connectWallet": "Connect Wallet"
   },
   "Home": {
     "supportBtn": "Support AIL2 on X",
@@ -100,6 +106,32 @@
       "partners": "Ecosystem Partners",
       "community": "Join <theme>AIL2</theme> Global community",
       "ecosystem": "See the biggest AI L2 ecosystem"
+    }
+  },
+  "Creator": {
+    "product": "PRODUCT",
+    "title": "AIL2 Creator<br></br>Launchpad",
+    "description": "Compose powerful AI Agents using decentralized models and launch Initial Agent Offerings (IAO).",
+    "tabs": {
+      "all": "All",
+      "iaoActive": "IAO Active"
+    },
+    "launchIAO": "Launch IAO",
+    "failedToLoad": "Failed to load agents.",
+    "retry": "Retry",
+    "noMoreAgents": "No more agents",
+    "table": {
+      "modelInfo": "Model Info",
+      "symbol": "Symbol",
+      "type": "Type",
+      "holders": "Holders",
+      "mcap": "M. Cap",
+      "change24h": "24h",
+      "price": "Price",
+      "vol": "Vol",
+      "liquidity": "Liquidity",
+      "action": "Action",
+      "chat": "Chat"
     }
   },
   "Footer": {

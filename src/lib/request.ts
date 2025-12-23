@@ -70,7 +70,13 @@ if (!skipAuth) {
     }
 
     return data;
-  } catch (error) {
+  } catch (error: any) {
+    if (error.name === 'AbortError') {
+       console.log('Request aborted');
+       // Return a pending promise or specific error structure if needed, 
+       // but typically we just let it throw or handle it in UI
+       throw error; 
+    }
     console.error('API Request Error:', error);
     throw error;
   }
@@ -82,4 +88,6 @@ export const request = {
   post: <T>(path: string, data?: any, config?: RequestConfig) => http<T>(path, { ...config, method: 'POST', body: JSON.stringify(data) }),
   put: <T>(path: string, data?: any, config?: RequestConfig) => http<T>(path, { ...config, method: 'PUT', body: JSON.stringify(data) }),
   delete: <T>(path: string, config?: RequestConfig) => http<T>(path, { ...config, method: 'DELETE' }),
+  // Expose raw http for custom needs like AbortSignal
+  http 
 };

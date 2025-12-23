@@ -63,7 +63,12 @@ export function useAuth() {
     setError(null);
 
     try {
-      const hasValidToken = await checkToken();
+      const token = getToken();
+      let hasValidToken = false;
+      
+      if (token) {
+        hasValidToken = await checkToken();
+      }
       console.log('hasValidToken',hasValidToken);
       
       if (hasValidToken) {

@@ -12,18 +12,39 @@ export interface GetAgentsResult {
   currentPage: number
 }
 
+// 统一参数类型定义，确保兼容性
+interface QueryParams {
+  page?: number
+  pageSize?: number
+  query?: string
+}
 
 export async function getAgents(
-  page: number = 1,
+  pageOrParams: number | QueryParams = 1,
   pageSize: number = 10,
   query?: string
 ): Promise<ApiResponse<GetAgentsResult>> {
-  const skip = (page - 1) * pageSize
+  // 处理参数重载
+  let page = 1;
+  let size = 10;
+  let searchQuery: string | undefined = undefined;
 
-  const where = query
+  if (typeof pageOrParams === 'object') {
+    page = pageOrParams.page || 1;
+    size = pageOrParams.pageSize || 10;
+    searchQuery = pageOrParams.query;
+  } else {
+    page = pageOrParams;
+    size = pageSize;
+    searchQuery = query;
+  }
+
+  const skip = (page - 1) * size
+
+  const where = searchQuery
     ? {
         OR: [
-          { name: { contains: query, mode: 'insensitive' as const } },
+          { name: { contains: searchQuery, mode: 'insensitive' as const } },
         ],
       }
     : {}
@@ -33,7 +54,7 @@ export async function getAgents(
       prisma.agent.findMany({
         where,
         skip,
-        take: pageSize,
+        take: size,
         orderBy: {
           createdAt: 'desc',
         },
@@ -41,7 +62,7 @@ export async function getAgents(
       prisma.agent.count({ where }),
     ])
 
-    const totalPages = Math.ceil(totalCount / pageSize)
+    const totalPages = Math.ceil(totalCount / size)
     const resultData: GetAgentsResult = {
       agents,
       totalCount,

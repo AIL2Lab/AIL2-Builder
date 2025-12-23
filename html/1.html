@@ -1,0 +1,1025 @@
+
+import React, { useState } from 'react';
+import { PageData } from './types';
+import { 
+  Layers, Hammer, Cpu, BookOpen, Newspaper, FlaskConical, Lightbulb, 
+  Mail, Coins, ArrowRight, CheckCircle2, Code2, Terminal, Shield, 
+  Zap, Globe, Users, BarChart3, Search, FileText, Download, Box, 
+  Rocket, Server, Share2, Wallet, Play, TrendingUp, TrendingDown,
+  LayoutGrid, MessageSquare, ExternalLink, Twitter, Github, Linkedin,
+  Database, Network, Plus, Image, Info, AlertCircle, Bot, Sparkles,
+  Settings, Paperclip, Mic, Send, Filter, ArrowUpRight, Gamepad2, ArrowLeft, Upload,
+  ShieldCheck, History, Activity, ZapOff, Scale
+} from 'lucide-react';
+
+// --- Helper Components ---
+
+const Card = ({ children, className = "" }: { children?: React.ReactNode, className?: string }) => (
+  <div className={`bg-brand-panel border border-brand-border rounded-2xl p-6 hover:border-brand-gold/50 transition-all duration-300 ${className}`}>
+    {children}
+  </div>
+);
+
+const SectionTitle = ({ title, subtitle, centered = false }: { title: string, subtitle?: string, centered?: boolean }) => (
+  <div className={`mb-12 ${centered ? 'text-center' : ''}`}>
+    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">{title}</h3>
+    {subtitle && <p className="text-gray-400 text-lg max-w-2xl mx-auto">{subtitle}</p>}
+  </div>
+);
+
+const Badge = ({ children, color = 'blue', className="" }: { children?: React.ReactNode, color?: 'blue' | 'green' | 'yellow' | 'red' | 'gray' | 'purple', className?: string }) => {
+    const styles = {
+        blue: "bg-blue-900/30 text-blue-400 border-blue-800",
+        green: "bg-green-900/30 text-green-400 border-green-800",
+        yellow: "bg-yellow-900/30 text-brand-gold border-brand-gold/30",
+        red: "bg-red-900/30 text-red-400 border-red-800",
+        gray: "bg-gray-800 text-gray-300 border-gray-700",
+        purple: "bg-purple-900/30 text-purple-400 border-purple-800"
+    };
+    return (
+        <span className={`px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider border ${styles[color]} ${className}`}>
+            {children}
+        </span>
+    );
+};
+
+const CodeBlock = ({ code, language = 'typescript' }: { code: string, language?: string }) => (
+  <div className="bg-[#0d0d0d] rounded-lg border border-gray-800 overflow-hidden font-mono text-sm my-4 group shadow-2xl">
+    <div className="flex items-center px-4 py-2 bg-[#1a1a1a] border-b border-gray-800 gap-2">
+      <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+      <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+      <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+      <div className="ml-auto text-xs text-gray-500">{language}</div>
+    </div>
+    <div className="p-4 overflow-x-auto">
+      <pre className="text-gray-300 whitespace-pre-wrap">
+        {code}
+      </pre>
+    </div>
+  </div>
+);
+
+const FAQItem = ({ question, answer }: { question: string, answer: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border-b border-gray-800 last:border-0">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full py-6 flex items-center justify-between text-left group"
+      >
+        <span className={`text-lg font-bold transition-colors ${isOpen ? 'text-brand-gold' : 'text-gray-200 group-hover:text-white'}`}>{question}</span>
+        <Plus className={`transition-transform duration-300 ${isOpen ? 'rotate-45 text-brand-gold' : 'text-gray-500'}`} size={20} />
+      </button>
+      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}>
+        <p className="text-gray-400 leading-relaxed">{answer}</p>
+      </div>
+    </div>
+  );
+};
+
+// --- Page Specific Content Modules ---
+
+const CorePage = () => {
+  return (
+    <div className="space-y-32">
+      {/* 1. Hero Section */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="space-y-8">
+          <Badge color="yellow" className="text-xs">AIL2 Core Protocol</Badge>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-[1.1]">
+            Build decentralized AI apps on a <span className="text-brand-gold">distributed GPU network.</span>
+          </h2>
+          <p className="text-lg text-gray-400 leading-relaxed">
+            Integrate via SDK & contracts. AIL2 handles routing, scheduling, receipts, settlement, and miner incentives—so you ship faster across Ethereum, BNB Chain, XLayer, Base, Mantle, and GIWA.
+          </p>
+          <div className="flex flex-wrap gap-3 items-center opacity-70">
+            {['ETH', 'BNB', 'XLayer', 'Base', 'Mantle', 'GIWA'].map(chain => (
+              <span key={chain} className="px-3 py-1 bg-neutral-900 border border-gray-800 rounded-full text-xs font-bold text-gray-500">{chain}</span>
+            ))}
+          </div>
+          <div className="flex gap-4">
+            <button className="px-8 py-4 bg-brand-gold text-black font-bold rounded-xl hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">Open Developer Console</button>
+            <button className="px-8 py-4 bg-transparent border border-gray-700 text-white font-bold rounded-xl hover:border-brand-gold hover:text-brand-gold transition-all">Read Core Docs</button>
+          </div>
+        </div>
+        
+        {/* Right side 3D-ish visual */}
+        <div className="relative h-[400px] flex items-center justify-center">
+          <div className="absolute inset-0 bg-brand-gold/5 blur-[120px] rounded-full"></div>
+          <div className="relative w-72 h-72 animate-spin-slow">
+            <div className="absolute inset-0 border-2 border-brand-gold/20 rounded-full border-dashed"></div>
+            <div className="absolute inset-8 border-2 border-brand-gold/40 rounded-full border-dotted"></div>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black border border-brand-gold p-4 rounded-2xl shadow-2xl">
+              <Cpu className="text-brand-gold" size={32} />
+            </div>
+            <div className="absolute top-1/2 -translate-y-1/2 -right-4 bg-black border border-gray-700 p-3 rounded-xl">
+              <span className="text-brand-gold font-bold text-xs uppercase">100x Faster</span>
+            </div>
+          </div>
+          {/* Static floating text */}
+          <div className="absolute text-7xl font-black text-white/5 select-none pointer-events-none">AIL2</div>
+        </div>
+      </section>
+
+      {/* 2. Trust Bar */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { icon: <Activity className="text-brand-gold" />, title: "Router & Scheduler", desc: "Multi-objective routing (latency / reliability / cost / risk)" },
+          { icon: <History className="text-brand-gold" />, title: "Receipts & Settlement", desc: "Auditable receipts + batch settlement + auto split" },
+          { icon: <Globe className="text-brand-gold" />, title: "Cross-chain Native", desc: "One integration, serve users across chains" }
+        ].map((item, i) => (
+          <div key={i} className="flex gap-4 p-6 bg-neutral-900/50 border border-gray-800 rounded-2xl">
+            <div className="shrink-0 mt-1">{item.icon}</div>
+            <div>
+              <h4 className="font-bold text-white mb-1">{item.title}</h4>
+              <p className="text-sm text-gray-500 leading-tight">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* 3. Centered Headline & Comparison */}
+      <section className="text-center space-y-12">
+        <h2 className="text-4xl md:text-5xl font-black max-w-4xl mx-auto leading-tight">
+          A protocol-grade core stack for decentralized AI.
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <Card className="bg-black/50">
+            <h4 className="text-brand-gold font-bold mb-4 flex items-center gap-2"><Upload size={18}/> You Bring</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Model container (Docker)</li>
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Pricing Strategy</li>
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Revenue Split Policy</li>
+            </ul>
+          </Card>
+          <Card className="bg-brand-gold/5 border-brand-gold/20">
+            <h4 className="text-brand-gold font-bold mb-4 flex items-center gap-2"><Settings size={18}/> AIL2 Provides</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Global GPU network</li>
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Intelligent Routing</li>
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Anti-fraud & Settlement</li>
+            </ul>
+          </Card>
+          <Card className="bg-black/50">
+            <h4 className="text-brand-gold font-bold mb-4 flex items-center gap-2"><Zap size={18}/> You Get</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Infinite Scalability</li>
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Auditable Accounting</li>
+              <li className="flex gap-2"><ArrowRight size={14} className="text-brand-gold shrink-0 mt-0.5"/> Instant Incentives</li>
+            </ul>
+          </Card>
+        </div>
+      </section>
+
+      {/* 4. Feature Grid (2x3) */}
+      <section>
+        <SectionTitle title="Core Protocol Capabilities" subtitle="A modular stack designed for high-throughput AI inference." />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            { icon: <Activity size={24}/>, title: "Router & Scheduler", desc: "Predict queue time, score nodes, retry/fallback automatically across the entire decentralized mesh." },
+            { icon: <Box size={24}/>, title: "Model Containers", desc: "Versioning, canary rollout, rollback. Miners pull your custom images and run them in secure isolated environments." },
+            { icon: <FileText size={24}/>, title: "Usage Receipts", desc: "Signed receipts with token counts, GPU seconds, and fees. Merkle batch proofs ensure absolute auditability." },
+            { icon: <Scale size={24}/>, title: "AI L2 Settlement", desc: "Batch finalize inference proofs with a dispute window and automatic revenue distribution to token holders." },
+            { icon: <ShieldCheck size={24}/>, title: "SLA & Reputation", desc: "Real-time monitoring of node success rates and p95 latency. Reputation scores affect routing priority." },
+            { icon: <ZapOff size={24}/>, title: "Security & Anti-fraud", desc: "Risk-weighted rewards and automated slashing for forged receipts or duplicated work detection." }
+          ].map((feat, i) => (
+            <div key={i} className="p-8 bg-neutral-900 border border-gray-800 rounded-3xl hover:border-brand-gold group transition-all">
+              <div className="w-12 h-12 bg-black border border-gray-800 rounded-xl flex items-center justify-center mb-6 text-brand-gold group-hover:scale-110 transition-transform">
+                {feat.icon}
+              </div>
+              <h4 className="text-xl font-bold text-brand-gold mb-3">{feat.title}</h4>
+              <p className="text-gray-400 mb-4">{feat.desc}</p>
+              <button className="text-xs font-bold text-brand-gold flex items-center gap-1 hover:gap-2 transition-all">Learn more <ArrowRight size={14}/></button>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 5. How it Works */}
+      <section>
+        <div className="max-w-4xl mx-auto">
+          <SectionTitle centered title="From Request to Settlement" subtitle="The lifecycle of a decentralized inference request." />
+          <div className="space-y-4">
+            {[
+              "Request initiated via SDK/Gateway with project credentials.",
+              "Router validates authorization, rate-limits, and checks credit balance.",
+              "Scheduler selects optimal GPU node based on latency and reputation.",
+              "Container executes inference and returns signed result + receipt.",
+              "Receipt is batched into Merkle tree for Layer 2 settlement and split payment."
+            ].map((step, i) => (
+              <div key={i} className="flex gap-6 items-center p-6 bg-neutral-900/30 rounded-2xl border border-gray-800 hover:bg-neutral-900 transition-colors">
+                <div className="w-10 h-10 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center font-bold shrink-0">{i + 1}</div>
+                <p className="text-gray-300 font-medium">{step}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 mt-12 text-sm italic">Everything is measurable, auditable, and programmable.</p>
+        </div>
+      </section>
+
+      {/* 6. Quickstart / Code Section */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <SectionTitle title="Ship in 5 Minutes" subtitle="Start building with a single API call." />
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="flex gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 shrink-0"></div>
+                <div><p className="text-white font-bold">Create Project</p><p className="text-sm text-gray-500">Get your unique project_id in the console.</p></div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 shrink-0"></div>
+                <div><p className="text-white font-bold">Generate API Key</p><p className="text-sm text-gray-500">Securely sign your inference requests.</p></div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 shrink-0"></div>
+                <div><p className="text-white font-bold">Register Model</p><p className="text-sm text-gray-500">Define requirements, pricing, and revenue split.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <CodeBlock 
+            language="bash (Inference Request)"
+            code={`curl -X POST "https://api.ail2.network/v1/infer" \\
+  -H "Authorization: Bearer $AIL2_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "project_id": "p_123",
+    "model_id": "nebula-ai",
+    "version": "1.2.3",
+    "input": {"prompt": "Explain zk-proof in 3 bullets"},
+    "options": {"timeout_ms": 12000}
+  }'`}
+          />
+          <CodeBlock 
+            language="json (Response with Receipt)"
+            code={`{
+  "output": {"text": "..."},
+  "receipt": {
+    "receipt_id": "rcpt_9f3a...",
+    "tokens": 1240,
+    "gpu_sec": 0.84,
+    "fee": "0.024",
+    "node": "gpu-kr-0281"
+  }
+}`}
+          />
+        </div>
+      </section>
+
+      {/* 7. Capability Table */}
+      <section>
+        <SectionTitle title="Core Capabilities Matrix" />
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="border-b border-gray-800">
+                <th className="py-4 px-6 text-sm font-bold text-gray-500 uppercase tracking-widest">Capability</th>
+                <th className="py-4 px-6 text-sm font-bold text-gray-500 uppercase tracking-widest">What you get</th>
+                <th className="py-4 px-6 text-sm font-bold text-gray-500 uppercase tracking-widest">Notes</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-800">
+              {[
+                ["Inference API", "Sync/Async endpoints for all models", "HTTP/WS Support"],
+                ["Streaming", "Token-by-token or event-based streaming", "p99 < 50ms TTFT"],
+                ["Model Registry", "Versions, canary, and instant rollbacks", "Integrated CI/CD"],
+                ["Receipts", "Signed Merkle-provable usage receipts", "Audit-ready anytime"],
+                ["Settlement", "Layer 2 automated split execution", "Settles on Mainnet"],
+                ["Policies", "Custom rate-limits and region geofencing", "Configurable per key"]
+              ].map(([cap, get, note], i) => (
+                <tr key={i} className="hover:bg-white/[0.02] transition-colors">
+                  <td className="py-6 px-6 font-bold text-white">{cap}</td>
+                  <td className="py-6 px-6 text-gray-400">{get}</td>
+                  <td className="py-6 px-6 text-brand-gold text-sm font-medium">{note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 8. FAQ */}
+      <section className="max-w-4xl mx-auto">
+        <SectionTitle centered title="Frequently Asked Questions" />
+        <div className="bg-brand-panel p-8 rounded-3xl border border-brand-border">
+          <FAQItem 
+            question="What are the hardware requirements for miners?"
+            answer="Miners must provide enterprise-grade GPUs (Nvidia A100, H100, or RTX 4090) with high-bandwidth interconnects to meet the AIL2 Core performance SLA."
+          />
+          <FAQItem 
+            question="How does AIL2 handle model privacy?"
+            answer="AIL2 supports TEE-based (Trusted Execution Environments) containers for models that require weights or inputs to remain encrypted throughout the inference cycle."
+          />
+          <FAQItem 
+            question="Can I customize the billing policy for my model?"
+            answer="Yes. Developers can define custom pricing per token, per GPU second, or per inference task directly in the model registration contract."
+          />
+        </div>
+      </section>
+
+      {/* 9. Final CTA */}
+      <section className="text-center py-20 bg-gradient-to-b from-neutral-900 to-black rounded-[40px] border border-brand-gold/20">
+        <h3 className="text-4xl font-black mb-8">Ready to integrate AIL2 Core?</h3>
+        <div className="flex justify-center gap-6">
+           <button className="px-12 py-4 bg-brand-gold text-black font-bold rounded-xl hover:bg-white hover:scale-105 transition-all">Open Console</button>
+           <button className="px-12 py-4 bg-transparent border border-gray-700 text-white font-bold rounded-xl hover:border-brand-gold transition-all">Read Documentation</button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+const EcosystemFundPage = () => {
+  return (
+    <div className="space-y-32">
+      <section className="text-center py-20 relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-gold/10 blur-[150px] rounded-full"></div>
+        <div className="relative z-10">
+          <Badge color="yellow" className="mb-6">Empowering Innovation</Badge>
+          <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter">
+            AIL2 <span className="text-brand-gold">Ecosystem Fund</span>
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            A $50M commitment to bootstrap the next generation of decentralized AI infrastructure, models, and consumer applications.
+          </p>
+          <button className="mt-12 px-12 py-5 bg-brand-gold text-black font-bold text-lg rounded-2xl hover:bg-white hover:scale-105 transition-all">Apply for Funding</button>
+        </div>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          { icon: <Database />, title: "Infrastructure", desc: "Decentralized storage, compute networks, and DA layers for AI." },
+          { icon: <Cpu />, title: "Base Models", desc: "Open-source fine-tuned models optimized for AIL2 nodes." },
+          { icon: <Bot />, title: "Agentic Apps", desc: "Autonomous agents solving real-world problems on-chain." },
+          { icon: <Hammer />, title: "Dev Tools", desc: "SDKs, debuggers, and monitoring stacks for AI builders." }
+        ].map((track, i) => (
+          <div key={i} className="p-8 bg-brand-panel border border-brand-border rounded-3xl hover:border-brand-gold transition-colors">
+            <div className="w-14 h-14 bg-black border border-gray-800 rounded-2xl flex items-center justify-center mb-6 text-brand-gold">
+              {track.icon}
+            </div>
+            <h4 className="text-xl font-bold mb-3">{track.title}</h4>
+            <p className="text-gray-500 text-sm leading-relaxed">{track.desc}</p>
+          </div>
+        ))}
+      </section>
+      
+      <section className="bg-neutral-900 rounded-[40px] p-12 border border-gray-800">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-6">
+            <h3 className="text-4xl font-bold">What we offer</h3>
+            <ul className="space-y-4">
+              <li className="flex gap-4 items-start">
+                <CheckCircle2 className="text-brand-gold shrink-0 mt-1" size={20}/>
+                <div>
+                  <p className="font-bold">Strategic Grants</p>
+                  <p className="text-sm text-gray-500">Milestone-based funding from $10k to $100k.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <CheckCircle2 className="text-brand-gold shrink-0 mt-1" size={20}/>
+                <div>
+                  <p className="font-bold">Compute Credits</p>
+                  <p className="text-sm text-gray-500">Free access to AIL2's H100 GPU clusters for training.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <CheckCircle2 className="text-brand-gold shrink-0 mt-1" size={20}/>
+                <div>
+                  <p className="font-bold">VC Introduction</p>
+                  <p className="text-sm text-gray-500">Direct pipeline to leading Tier-1 crypto and AI venture capital.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="relative">
+             <div className="aspect-video bg-black border border-gray-800 rounded-3xl overflow-hidden relative group">
+                <img src="https://picsum.photos/800/600?random=11" className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                   <div className="w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                      <Play fill="black" size={32} />
+                   </div>
+                </div>
+             </div>
+             <p className="mt-4 text-center text-gray-500 text-sm italic">Watch: Why Founders Choose AIL2</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+// --- Mock Data ---
+
+const LAUNCHPAD_PROJECTS = [
+  {
+    name: "Nebula AI",
+    ticker: "NEB",
+    type: "Model",
+    holders: "417,677",
+    mcap: "$6,557,000.00",
+    change: -13.31,
+    price: "$0.00006557",
+    volume: "$7,449",
+    liquidity: "$95,293",
+    action: "Chat",
+    color: "from-blue-500 to-purple-600"
+  },
+  {
+    name: "CyberMind",
+    ticker: "CYBER",
+    type: "Model",
+    holders: "31,275",
+    mcap: "$719,000.00",
+    change: -10.73,
+    price: "$0.00000719",
+    volume: "$6,114",
+    liquidity: "$87,660",
+    action: "Chat",
+    color: "from-orange-500 to-red-600"
+  },
+  {
+    name: "FlowGPT",
+    ticker: "FGPT",
+    type: "Model",
+    holders: "616,069",
+    mcap: "$684,000.00",
+    change: 0.00,
+    price: "$0.00000684",
+    volume: "$0",
+    liquidity: "$2,226",
+    action: "Chat",
+    color: "from-green-400 to-emerald-600"
+  },
+  {
+    name: "DataForge",
+    ticker: "DFG",
+    type: "Model",
+    holders: "39,679",
+    mcap: "$620,000.00",
+    change: 2.51,
+    price: "$6.2e-7",
+    volume: "$44",
+    liquidity: "$241",
+    action: "Chat",
+    color: "from-brand-gold to-yellow-600"
+  },
+  {
+    name: "Visionary",
+    ticker: "VIS",
+    type: "Model",
+    holders: "9,227",
+    mcap: "$129,000.00",
+    change: -7.48,
+    price: "$0.00000129",
+    volume: "$1,660",
+    liquidity: "$20,955",
+    action: "Chat",
+    color: "from-pink-500 to-rose-600"
+  },
+  {
+    name: "EchoBase",
+    ticker: "ECHO",
+    type: "Model",
+    holders: "9,132",
+    mcap: "$34,000.00",
+    change: -7.77,
+    price: "$3.4e-7",
+    volume: "$590",
+    liquidity: "$5,255",
+    action: "Chat",
+    color: "from-cyan-500 to-blue-600"
+  },
+  {
+    name: "LawBot",
+    ticker: "LAW",
+    type: "Model",
+    holders: "14,633",
+    mcap: "$10,000.00",
+    change: -17.02,
+    price: "$1.0e-7",
+    volume: "$561",
+    liquidity: "$2,949",
+    action: "Chat",
+    color: "from-gray-500 to-slate-600"
+  }
+];
+
+const CREATOR_PROJECTS = [
+  {
+    name: "AlphaTrader",
+    ticker: "ALPHA",
+    type: "Agent",
+    holders: "12,450",
+    mcap: "$2,100,000",
+    change: 15.2,
+    price: "$0.0021",
+    volume: "$120,500",
+    liquidity: "$450,000",
+    action: "Chat",
+    color: "from-indigo-500 to-blue-500"
+  },
+  {
+    name: "CopyWriter Pro",
+    ticker: "COPY",
+    type: "Agent",
+    holders: "8,200",
+    mcap: "$1,850,000",
+    change: -2.5,
+    price: "$0.0018",
+    volume: "$85,000",
+    liquidity: "$320,000",
+    action: "Chat",
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    name: "DesignMate",
+    ticker: "DSGN",
+    type: "Agent",
+    holders: "5,600",
+    mcap: "$950,000",
+    change: 5.8,
+    price: "$0.0009",
+    volume: "$45,200",
+    liquidity: "$150,000",
+    action: "Chat",
+    color: "from-orange-400 to-red-500"
+  },
+  {
+    name: "LegalEagle",
+    ticker: "LEGAL",
+    type: "Agent",
+    holders: "3,100",
+    mcap: "$520,000",
+    change: 1.2,
+    price: "$0.0005",
+    volume: "$22,000",
+    liquidity: "$85,000",
+    action: "Chat",
+    color: "from-slate-500 to-gray-600"
+  },
+  {
+    name: "TravelBot",
+    ticker: "TRVL",
+    type: "Agent",
+    holders: "2,800",
+    mcap: "$410,000",
+    change: -8.4,
+    price: "$0.0004",
+    volume: "$18,500",
+    liquidity: "$60,000",
+    action: "Chat",
+    color: "from-green-400 to-teal-500"
+  }
+];
+
+// --- Interactive Builder Component ---
+
+const BuilderContent = () => {
+  const [view, setView] = useState<'list' | 'create'>('list');
+
+  if (view === 'create') {
+    return (
+      <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
+         {/* Header */}
+         <div className="flex items-center justify-between mb-8">
+             <div className="flex items-center gap-4">
+                 <button onClick={() => setView('list')} className="p-2 bg-neutral-900 border border-gray-800 rounded-lg hover:border-brand-gold text-white transition-colors">
+                     <ArrowLeft size={20} />
+                 </button>
+                 <div>
+                     <h2 className="text-3xl font-bold text-white">Create IMO</h2>
+                     <p className="text-gray-400 text-sm">Launch your AI Model Token</p>
+                 </div>
+             </div>
+             <button className="flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/50 text-blue-400 rounded-lg text-sm font-bold">
+                 <BookOpen size={16} /> Creation Guide
+             </button>
+         </div>
+
+         <div className="bg-white text-black rounded-2xl overflow-hidden shadow-2xl">
+             {/* Info Banner */}
+             <div className="bg-blue-50 p-4 flex items-start gap-3 border-b border-blue-100">
+                 <Info className="text-blue-500 shrink-0 mt-0.5" size={18} />
+                 <p className="text-sm text-blue-700">Creating a token is free. The token will be automatically generated on-chain after a successful IMO.</p>
+             </div>
+
+             <div className="p-8 space-y-8">
+                 {/* Project Name */}
+                 <div className="space-y-2">
+                     <label className="text-sm font-bold text-gray-700 flex items-center gap-1">
+                         AI Model Project Name <span className="text-red-500">*</span>
+                     </label>
+                     <input type="text" placeholder="1-20 Characters" className="w-full bg-white border border-gray-300 rounded-lg p-3 text-black focus:border-brand-gold outline-none focus:ring-2 focus:ring-brand-gold/20 transition-all placeholder-gray-400" />
+                 </div>
+
+                 {/* Ticker */}
+                 <div className="space-y-2">
+                     <label className="text-sm font-bold text-gray-700 flex items-center gap-1">
+                         Token Symbol <span className="text-red-500">*</span>
+                     </label>
+                     <input type="text" placeholder="3-5 Uppercase Letters" className="w-full bg-white border border-gray-300 rounded-lg p-3 text-black focus:border-brand-gold outline-none focus:ring-2 focus:ring-brand-gold/20 transition-all placeholder-gray-400 uppercase" />
+                 </div>
+
+                 {/* Description */}
+                 <div className="space-y-2">
+                     <label className="text-sm font-bold text-gray-700 flex items-center gap-1">
+                         AI Model Description <span className="text-red-500">*</span>
+                     </label>
+                     <textarea placeholder="Describe your AI model's functionality..." className="w-full h-32 bg-white border border-gray-300 rounded-lg p-3 text-black focus:border-brand-gold outline-none focus:ring-2 focus:ring-brand-gold/20 transition-all placeholder-gray-400 resize-none"></textarea>
+                     <div className="flex justify-between text-xs text-gray-500">
+                         <span>Recommended: 100-500 chars. Detail your model's unique features.</span>
+                         <span>0/500</span>
+                     </div>
+                 </div>
+
+                 {/* Logo Upload */}
+                 <div className="space-y-2">
+                     <label className="text-sm font-bold text-gray-700 flex items-center gap-1">
+                         Token Logo <span className="text-red-500">*</span>
+                     </label>
+                     <p className="text-xs text-gray-500 mb-2">Recommended size: 100x100px. Supports PNG, JPG.</p>
+                     <div className="w-32 h-32 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center cursor-pointer hover:border-brand-gold hover:bg-brand-gold/5 transition-colors group">
+                         <Plus size={32} className="text-gray-400 group-hover:text-brand-gold mb-2" />
+                     </div>
+                 </div>
+
+                 {/* Tokenomics Bar */}
+                 <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                     <div>
+                         <div className="text-xs text-gray-500 uppercase font-bold mb-1">Total Supply</div>
+                         <div className="text-lg font-bold text-black">1,000,000,000</div>
+                     </div>
+                     <div>
+                         <div className="text-xs text-gray-500 uppercase font-bold mb-1">Mining Allocation</div>
+                         <div className="text-lg font-bold text-brand-gold">200,000,000 (20%)</div>
+                         <div className="text-[10px] text-gray-500">Fixed</div>
+                     </div>
+                     <div>
+                         <div className="text-xs text-gray-500 uppercase font-bold mb-1">Release Schedule</div>
+                         <div className="text-lg font-bold text-black">10 Years</div>
+                         <div className="text-[10px] text-gray-500">20,000,000 / Year</div>
+                     </div>
+                 </div>
+
+                 {/* Submit Button */}
+                 <button className="w-full bg-[#f4b886] hover:bg-[#e0a06b] text-white font-bold py-4 rounded-lg transition-all shadow-lg transform hover:-translate-y-0.5">
+                     Create Immediately
+                 </button>
+             </div>
+         </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        {/* Controls Bar */}
+        <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6">
+            <div className="flex flex-wrap gap-2">
+                <span className="text-gray-500 text-sm font-medium mr-2 self-center">Filter:</span>
+                <button className="px-4 py-2 bg-black border border-brand-gold text-brand-gold rounded-lg text-sm font-bold">All</button>
+                <button className="px-4 py-2 bg-transparent border border-gray-800 text-gray-400 hover:border-gray-600 hover:text-white rounded-lg text-sm transition-colors">IMO Active</button>
+                <button className="px-4 py-2 bg-transparent border border-gray-800 text-gray-400 hover:border-gray-600 hover:text-white rounded-lg text-sm transition-colors">Tradable</button>
+            </div>
+            
+            <div className="flex flex-wrap gap-4 items-center w-full xl:w-auto">
+                <button 
+                  onClick={() => setView('create')}
+                  className="flex items-center gap-2 px-6 py-2 bg-brand-gold text-black font-bold rounded-lg hover:bg-white transition-colors shadow-[0_0_15px_rgba(212,175,55,0.3)] transform hover:-translate-y-0.5"
+                >
+                    <Rocket size={16} /> Launch IMO
+                </button>
+            </div>
+        </div>
+
+        {/* Projects List Table */}
+        <div className="bg-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+            {/* Table Header */}
+            <div className="grid grid-cols-12 gap-4 px-6 py-4 bg-neutral-900/50 border-b border-gray-800 text-xs font-bold text-gray-500 uppercase tracking-widest">
+                <div className="col-span-3">Model Info</div>
+                <div className="col-span-1">Symbol</div>
+                <div className="col-span-1">Type</div>
+                <div className="col-span-1 text-right">Holders</div>
+                <div className="col-span-1 text-right">M. Cap</div>
+                <div className="col-span-1 text-right">24h</div>
+                <div className="col-span-1 text-right">Price</div>
+                <div className="col-span-1 text-right">Vol</div>
+                <div className="col-span-1 text-right">Liquidity</div>
+                <div className="col-span-1 text-center">Action</div>
+            </div>
+
+            {/* Table Body */}
+            <div className="divide-y divide-gray-800/50">
+                {LAUNCHPAD_PROJECTS.map((project, i) => (
+                    <div key={i} className="grid grid-cols-12 gap-4 items-center px-6 py-5 hover:bg-white/[0.02] transition-colors group">
+                        <div className="col-span-3 flex items-center gap-4">
+                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.color} p-[1px]`}>
+                                <div className="w-full h-full bg-black rounded-[10px] flex items-center justify-center">
+                                     <span className="text-xl font-bold text-white">{project.name.charAt(0)}</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="font-bold text-white text-base">{project.name}</div>
+                                <div className="flex gap-2 mt-1 opacity-50"><Twitter size={12}/><MessageSquare size={12}/><Globe size={12}/></div>
+                            </div>
+                        </div>
+                        <div className="col-span-1 font-mono text-gray-400 text-sm">${project.ticker}</div>
+                        <div className="col-span-1"><Badge color='blue'>{project.type}</Badge></div>
+                        <div className="col-span-1 text-right font-mono text-gray-300 text-sm">{project.holders}</div>
+                        <div className="col-span-1 text-right font-mono text-white font-bold text-sm">{project.mcap}</div>
+                        <div className={`col-span-1 text-right font-mono text-sm font-bold ${project.change >= 0 ? 'text-green-500' : 'text-red-500'}`}>{project.change}%</div>
+                        <div className="col-span-1 text-right font-mono text-gray-300 text-sm">{project.price}</div>
+                        <div className="col-span-1 text-right font-mono text-gray-400 text-sm">{project.volume}</div>
+                        <div className="col-span-1 text-right font-mono text-gray-400 text-sm">{project.liquidity}</div>
+                        <div className="col-span-1 flex justify-center">
+                             <button className="px-3 py-1.5 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold rounded-full text-xs font-bold hover:bg-brand-gold hover:text-black transition-all">Chat</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+  );
+};
+
+// --- Interactive Creator Component ---
+
+const CreatorContent = () => {
+    const [view, setView] = useState<'list' | 'create'>('list');
+  
+    if (view === 'create') {
+      return (
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="flex items-center gap-4">
+              <button onClick={() => setView('list')} className="p-2 bg-neutral-900 border border-gray-800 rounded-lg hover:border-brand-gold text-white transition-colors">
+                  <ArrowLeft size={20} />
+              </button>
+              <h2 className="text-3xl font-bold text-white">Create Agent</h2>
+          </div>
+
+          <div className="border border-gray-800 rounded-2xl bg-[#0a0a0a] overflow-hidden flex flex-col md:flex-row shadow-2xl h-[700px]">
+              <div className="w-full md:w-1/2 p-6 border-r border-gray-800 overflow-y-auto custom-scrollbar">
+                  <div className="flex items-center gap-2 mb-6 text-brand-gold"><Bot size={24} /><h3 className="text-xl font-bold text-white">Configure Agent</h3></div>
+                  <div className="space-y-6">
+                      <div className="bg-neutral-900/50 p-4 rounded-xl border border-gray-800 space-y-4">
+                          <div className="flex items-center gap-4">
+                               <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center border-2 border-dashed border-gray-600 hover:border-brand-gold cursor-pointer"><Image size={24} className="text-gray-500" /></div>
+                               <div className="flex-1">
+                                   <label className="text-xs text-gray-400 font-bold uppercase">Agent Name</label>
+                                   <input type="text" defaultValue="Crypto Analyst Bot" className="w-full bg-transparent border-b border-gray-700 py-1 text-white focus:border-brand-gold outline-none" />
+                               </div>
+                          </div>
+                      </div>
+                      <div className="bg-neutral-900/50 p-4 rounded-xl border border-gray-800">
+                          <h4 className="font-bold text-white flex items-center gap-2 mb-3"><Cpu size={16} className="text-brand-gold"/> Model</h4>
+                          <select className="w-full bg-black border border-gray-700 rounded-lg p-2 text-sm text-white focus:border-brand-gold outline-none">
+                              <option>Llama-3-70B</option>
+                              <option>Mistral Large</option>
+                          </select>
+                      </div>
+                      <div className="bg-neutral-900/50 p-4 rounded-xl border border-gray-800">
+                          <h4 className="font-bold text-white flex items-center gap-2 mb-3"><Sparkles size={16} className="text-brand-gold"/> Personality</h4>
+                          <textarea className="w-full h-32 bg-black border border-gray-700 rounded-lg p-3 text-sm text-gray-300 focus:border-brand-gold outline-none resize-none" defaultValue="You are a professional financial analyst..."></textarea>
+                      </div>
+                      <button className="w-full bg-brand-gold text-black font-bold py-3 rounded-lg hover:bg-white transition-colors">Publish Agent</button>
+                  </div>
+              </div>
+              <div className="w-full md:w-1/2 bg-black flex flex-col">
+                  <div className="p-4 border-b border-gray-800 flex justify-between items-center bg-neutral-900/30">
+                      <div className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div><span className="text-sm font-bold text-gray-300">Preview</span></div>
+                  </div>
+                  <div className="flex-1 p-6 space-y-6 overflow-y-auto text-sm">
+                      <div className="bg-neutral-900 rounded-2xl p-4 border border-gray-800 max-w-[80%] text-gray-300">Hello! I'm your Crypto Analyst.</div>
+                      <div className="bg-brand-gold/10 rounded-2xl p-4 border border-brand-gold/30 max-w-[80%] text-brand-gold ml-auto">What is AIL2?</div>
+                  </div>
+                  <div className="p-4 border-t border-gray-800"><input type="text" placeholder="Type a message..." className="w-full bg-neutral-900 border border-gray-700 rounded-full py-3 px-4 text-sm text-white focus:border-brand-gold outline-none" /></div>
+              </div>
+          </div>
+        </div>
+      );
+    }
+  
+    return (
+      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="flex justify-between items-center">
+              <div className="flex gap-2">
+                  <button className="px-4 py-2 bg-black border border-brand-gold text-brand-gold rounded-lg text-sm font-bold">All</button>
+                  <button className="px-4 py-2 bg-transparent border border-gray-800 text-gray-400 hover:text-white rounded-lg text-sm">IAO Active</button>
+              </div>
+              <button onClick={() => setView('create')} className="flex items-center gap-2 px-6 py-2 bg-brand-gold text-black font-bold rounded-lg hover:bg-white transition-colors"><Rocket size={16} /> Launch IAO</button>
+          </div>
+          <div className="bg-[#0a0a0a] border border-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="grid grid-cols-12 gap-4 px-6 py-4 bg-neutral-900/50 border-b border-gray-800 text-xs font-bold text-gray-500 uppercase tracking-widest">
+                  <div className="col-span-3">Agent Info</div>
+                  <div className="col-span-1">Symbol</div>
+                  <div className="col-span-1">Type</div>
+                  <div className="col-span-1 text-right">Holders</div>
+                  <div className="col-span-1 text-right">M. Cap</div>
+                  <div className="col-span-1 text-right">24h</div>
+                  <div className="col-span-1 text-right">Price</div>
+                  <div className="col-span-1 text-right">Vol</div>
+                  <div className="col-span-1 text-right">Liquidity</div>
+                  <div className="col-span-1 text-center">Action</div>
+              </div>
+              <div className="divide-y divide-gray-800/50">
+                  {CREATOR_PROJECTS.map((project, i) => (
+                      <div key={i} className="grid grid-cols-12 gap-4 items-center px-6 py-5 hover:bg-white/[0.02] transition-colors group">
+                          <div className="col-span-3 flex items-center gap-4">
+                              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.color} p-[1px]`}>
+                                  <div className="w-full h-full bg-black rounded-[10px] flex items-center justify-center">
+                                       <span className="text-xl font-bold text-white">{project.name.charAt(0)}</span>
+                                  </div>
+                              </div>
+                              <div className="font-bold text-white text-base">{project.name}</div>
+                          </div>
+                          <div className="col-span-1 font-mono text-gray-400 text-sm">${project.ticker}</div>
+                          <div className="col-span-1"><Badge color='purple'>{project.type}</Badge></div>
+                          <div className="col-span-1 text-right font-mono text-gray-300 text-sm">{project.holders}</div>
+                          <div className="col-span-1 text-right font-mono text-white font-bold text-sm">{project.mcap}</div>
+                          <div className={`col-span-1 text-right font-mono text-sm font-bold ${project.change >= 0 ? 'text-green-500' : 'text-red-500'}`}>{project.change}%</div>
+                          <div className="col-span-1 text-right font-mono text-gray-300 text-sm">{project.price}</div>
+                          <div className="col-span-1 text-right font-mono text-gray-400 text-sm">{project.volume}</div>
+                          <div className="col-span-1 text-right font-mono text-gray-400 text-sm">{project.liquidity}</div>
+                          <div className="col-span-1 flex justify-center"><button className="px-3 py-1.5 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold rounded-full text-xs font-bold hover:bg-brand-gold hover:text-black transition-all">Chat</button></div>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      </div>
+    );
+  };
+
+// --- Page Content Map ---
+
+export const PAGES_CONTENT: Record<string, PageData> = {
+  'ail2-core': {
+    category: 'Product',
+    title: 'AIL2 Core Protocol',
+    subtitle: 'The sovereign execution layer. Build containers, define tokens, and mobilize decentralized GPUs.',
+    content: <CorePage />
+  },
+  'ail2-builder': {
+    category: 'Product',
+    title: 'AIL2 Builder Launchpad',
+    subtitle: 'The premier platform for AI model developers to launch Initial Model Offerings (IMO).',
+    content: <BuilderContent />
+  },
+  'ail2-creator': {
+    category: 'Product',
+    title: 'AIL2 Creator Launchpad',
+    subtitle: 'Compose powerful AI Agents using decentralized models and launch Initial Agent Offerings (IAO).',
+    content: <CreatorContent />
+  },
+  'ecosystem-fund': {
+    category: 'Ecosystem',
+    title: 'Ecosystem Fund',
+    subtitle: 'Empowering the next generation of decentralized AI builders.',
+    content: <EcosystemFundPage />
+  },
+  'docs': {
+    category: 'Blog',
+    title: 'Documentation',
+    subtitle: 'Technical guides, API references, and architecture overviews.',
+    content: (
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="w-full md:w-64 flex-shrink-0">
+            <div className="sticky top-24 space-y-4">
+                <div className="relative">
+                    <Search className="absolute left-3 top-2.5 text-gray-500" size={16} />
+                    <input type="text" placeholder="Search docs..." className="w-full bg-black border border-gray-800 rounded-lg py-2 pl-9 pr-4 text-sm text-gray-300 focus:border-brand-gold outline-none" />
+                </div>
+                <div className="space-y-1">
+                    <div className="text-white font-bold mb-2">Getting Started</div>
+                    <div className="pl-3 border-l-2 border-brand-gold text-brand-gold text-sm py-1 cursor-pointer">Introduction</div>
+                    <div className="pl-3 border-l-2 border-transparent text-gray-500 hover:text-gray-300 text-sm py-1 cursor-pointer">Quick Start</div>
+                </div>
+            </div>
+        </div>
+        <div className="flex-1 space-y-8">
+            <div className="prose prose-invert max-w-none">
+                <h2 className="text-3xl font-bold mb-4">Introduction to AIL2</h2>
+                <p className="text-gray-400 leading-relaxed mb-6">AIL2 is a Layer 2 scaling solution specifically designed for Artificial Intelligence workloads.</p>
+                <div className="bg-brand-panel border-l-4 border-brand-gold p-4 mb-8"><p className="text-sm text-gray-300"><strong>Note:</strong> AIL2 Mainnet Beta is currently live.</p></div>
+                <h3 className="text-xl font-bold mb-4">Installation</h3>
+                <CodeBlock language="bash" code="npm install @ail2/sdk ethers" />
+            </div>
+        </div>
+      </div>
+    )
+  },
+  'blog': {
+    category: 'Blog',
+    title: 'Latest Updates',
+    subtitle: 'News, tutorials, and ecosystem announcements.',
+    content: (
+      <div className="space-y-12">
+        <div className="relative rounded-3xl overflow-hidden border border-gray-800 group cursor-pointer">
+             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+             <img src="https://picsum.photos/1200/600?grayscale" alt="Featured" className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700" />
+             <div className="absolute bottom-0 left-0 p-8 z-20 max-w-2xl">
+                 <Badge color="yellow">Announcement</Badge>
+                 <h2 className="text-4xl font-bold mt-4 mb-2 group-hover:text-brand-gold transition-colors">Mainnet Beta Launch: The Era of Verifiable AI Begins</h2>
+                 <p className="text-gray-300 mb-4 line-clamp-2">Today marks a historic milestone as we open the floodgates to AIL2 Mainnet Beta.</p>
+             </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+            { tag: 'Ecosystem', title: 'Partnership with Nvidia Inception', img: 'https://picsum.photos/400/300?random=1' },
+            { tag: 'Engineering', title: 'Technical Deep Dive: Proof of Inference', img: 'https://picsum.photos/400/300?random=2' },
+            { tag: 'Community', title: 'AIL2 Creator Fund: $50M Allocation', img: 'https://picsum.photos/400/300?random=3' }
+        ].map((post, i) => (
+            <div key={i} className="group bg-brand-panel border border-brand-border rounded-2xl overflow-hidden hover:border-brand-gold transition-colors cursor-pointer">
+                <div className="h-48 overflow-hidden relative">
+                    <img src={post.img} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="p-6">
+                    <Badge color="blue" className="mb-3">{post.tag}</Badge>
+                    <h3 className="text-xl font-bold group-hover:text-brand-gold transition-colors">{post.title}</h3>
+                </div>
+            </div>
+        ))}
+        </div>
+      </div>
+    )
+  },
+  'research': {
+    category: 'Blog',
+    title: 'Research Lab',
+    subtitle: 'Exploring the frontiers of cryptography and machine learning.',
+    content: (
+      <div className="space-y-8">
+        <div className="p-8 bg-neutral-900 border border-gray-800 rounded-2xl mb-12">
+            <h3 className="text-2xl font-bold mb-4">Focus Areas</h3>
+            <div className="flex flex-wrap gap-4">
+                {['Zero-Knowledge ML', 'Federated Learning', 'Optimistic Rollups'].map(tag => (
+                    <span key={tag} className="px-4 py-2 rounded-full border border-gray-700 hover:border-brand-gold hover:text-brand-gold cursor-pointer transition-colors text-sm">{tag}</span>
+                ))}
+            </div>
+        </div>
+        <div className="space-y-4">
+        {[
+            { title: 'Verifiable Inference using zk-SNARKs on Mobile Devices', author: 'Dr. A. Vance, et al.' },
+            { title: 'Decentralized Training Coordination via Gossip Protocols', author: 'Team Core' }
+        ].map((paper, i) => (
+            <div key={i} className="flex flex-col md:flex-row md:items-center justify-between p-6 bg-brand-panel border border-brand-border rounded-xl hover:bg-neutral-900 transition-colors group">
+                <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2"><FileText size={16} className="text-brand-gold" /><span className="text-xs text-gray-500 uppercase">PDF</span></div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-brand-gold transition-colors">{paper.title}</h3>
+                    <p className="text-sm text-gray-500 mt-1">Author: {paper.author}</p>
+                </div>
+                <button className="p-2 border border-gray-700 rounded-lg hover:bg-white hover:text-black mt-4 md:mt-0"><Download size={18} /></button>
+            </div>
+        ))}
+        </div>
+      </div>
+    )
+  },
+  'incubator': {
+    category: 'Ecosystem',
+    title: 'AIL2 Incubator',
+    subtitle: 'Accelerating the most promising startups in the decentralized AI space.',
+    content: (
+      <div className="space-y-16">
+        <div className="bg-gradient-to-r from-brand-panel via-neutral-900 to-brand-panel p-10 rounded-3xl border border-brand-gold/20 text-center relative overflow-hidden">
+            <div className="relative z-10">
+                <h3 className="text-4xl font-bold mb-6">Built for Founders</h3>
+                <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">We provide $100k-$500k in initial funding and technical mentorship.</p>
+                <button className="bg-brand-gold text-black font-bold py-3 px-8 rounded-full hover:bg-white transition-colors">Apply for Cohort 4</button>
+            </div>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {['Nexus AI', 'TensorFlow DAO', 'OpenWeights', 'ComputeX'].map(name => (
+                <div key={name} className="h-32 bg-neutral-900 border border-gray-800 rounded-xl flex flex-col items-center justify-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100 hover:border-brand-gold cursor-pointer">
+                    <div className="w-12 h-12 bg-white/10 rounded-full"></div>
+                    <span className="font-bold">{name}</span>
+                </div>
+            ))}
+        </div>
+      </div>
+    )
+  },
+  'contact-us': {
+    category: 'Ecosystem',
+    title: 'Contact Us',
+    subtitle: 'Get in touch with the team.',
+    content: (
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="bg-brand-panel p-8 rounded-3xl border border-brand-border">
+             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <div className="space-y-2"><label className="text-sm font-medium text-gray-400">Email</label><input type="email" className="w-full bg-black border border-gray-800 rounded-lg p-3 text-white focus:border-brand-gold outline-none" placeholder="jane@example.com" /></div>
+                <div className="space-y-2"><label className="text-sm font-medium text-gray-400">Message</label><textarea className="w-full bg-black border border-gray-800 rounded-lg p-3 text-white focus:border-brand-gold outline-none h-32 resize-none" placeholder="How can we help?" /></div>
+                <button className="w-full bg-brand-gold text-black font-bold py-4 rounded-lg hover:bg-white transition-colors">Send Message</button>
+             </form>
+          </div>
+          <div className="space-y-8">
+             <div className="p-8 bg-neutral-900 rounded-3xl border border-gray-800">
+                <h3 className="text-xl font-bold mb-4">Offices</h3>
+                <div className="space-y-4 text-sm text-gray-400"><p>San Francisco, CA</p><p>Singapore</p><p>Zug, Switzerland</p></div>
+             </div>
+          </div>
+      </div>
+    )
+  }
+};

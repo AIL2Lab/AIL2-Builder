@@ -1,4 +1,4 @@
-import { CreateAgentForm } from "@/components/models/create/AgentForm";
+import { CreateModelForm } from "@/components/models/create/ModelForm";
 import PageLayout from "@/components/PageLayout";
 
 export default function ModelsCreatePage({
@@ -7,7 +7,7 @@ export default function ModelsCreatePage({
   return (
     <PageLayout isShowFooter>
       <section className="container mx-auto lg:max-w-5xl my-4 sm:my-8 md:my-12 lg:my-16 px-5">
-        <CreateAgentForm />
+        <CreateModelForm />
       </section>
     </PageLayout>
   );

@@ -1,4 +1,22 @@
 {
+  "Creator": {
+    "title": "크리에이터",
+    "description": "AI 에이전트 생성 및 관리",
+    "createAgent": "에이전트 생성",
+    "table": {
+      "modelInfo": "모델 정보",
+      "symbol": "심볼",
+      "type": "유형",
+      "holders": "홀더",
+      "mcap": "시가총액",
+      "change24h": "24시간 변동",
+      "price": "가격",
+      "vol": "볼륨",
+      "liquidity": "유동성",
+      "action": "작업",
+      "chat": "채팅"
+    }
+  },
   "site": {
     "name": "AIL2 - 가장 큰 AIL2",
     "subtitle": "가장 큰 AIL2",
@@ -47,7 +65,8 @@
     "platform": "플랫폼",
     "accelerate": "가속",
     "faq": "자주 묻는 질문",
-    "product": "제품"
+    "product": "제품",
+    "connectWallet": "지갑 연결"
   },
   "Home": {
     "supportBtn": "X에서 AIL2 지원하기",
