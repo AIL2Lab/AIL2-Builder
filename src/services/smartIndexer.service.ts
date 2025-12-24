@@ -1,9 +1,9 @@
 import { createPublicClient, http, parseAbiItem, Log } from 'viem';
 import prisma from "@/lib/prisma";
-import { dbcMainnet } from '@/config/network.config';
+import { currentChain } from '@/config/network.config';
 
 // 配置
-const CHAIN = dbcMainnet;
+const CHAIN = currentChain;
 const RPC_URL = process.env.NEXT_PUBLIC_MAINNET_RPC_URL;
 const POLLING_INTERVAL = 10_000; // 每10秒检查一次（比每分钟检查更实时，且压力更小）
 const MAX_BLOCK_RANGE = 1000; // 每次最多拉取多少个区块的日志，防止 RPC 超时

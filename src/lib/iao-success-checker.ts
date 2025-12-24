@@ -1,10 +1,10 @@
 import { createPublicClient, http, formatUnits } from 'viem';
-import { dbcMainnet } from '@/config/network.config';
+import { currentChain } from '@/config/network.config';
 import { getContractABI } from '@/config/contracts';
 import prisma from '@/lib/prisma'; 
 
 const publicClient = createPublicClient({
-  chain: dbcMainnet,
+  chain: currentChain,
   transport: http()
 });
 

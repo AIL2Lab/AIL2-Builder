@@ -1,7 +1,8 @@
 import { cookieStorage, createStorage } from '@wagmi/core'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
-import { type AppKitNetwork } from '@reown/appkit/networks'
-import { dbcMainnet } from './network.config'
+import {  networks } from './network.config'
+
+export { networks } from './network.config'
 
 // Get projectId from https://dashboard.reown.com
 export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
@@ -9,8 +10,6 @@ export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
 if (!projectId) {
   throw new Error('Project ID is not defined')
 }
-
-export const networks = [dbcMainnet] as [AppKitNetwork, ...AppKitNetwork[]]
 
 //Set up the Wagmi Adapter (Config)
 export const wagmiAdapter = new WagmiAdapter({
