@@ -52,18 +52,20 @@ const bnbTestnetConfig: NetworkConfig = {
         testnet: true,
     } as const satisfies Chain,
     contracts: {
-        iaoFactory: '0x43a8ffc33B625475fc3BE8290A16F655cFbfFC21',
+        iaoFactory: '0x09fC549Afd848E77294c81EeC2ffD85528ad267B',
     },
 };
 
 // --- Exported Configurations ---
 
 // 1. Available Networks List (for Wagmi/AppKit)
-export const networks = [dbcMainnetConfig.chain, bnbTestnetConfig.chain] as const;
+export const networks = [
+    // dbcMainnetConfig.chain, 
+    bnbTestnetConfig.chain] as const;
 
 // 2. Current Selected Network Configuration (Hardcoded for now as requested)
 // Change this to bnbTestnetConfig to switch networks
-const currentNetworkConfig = dbcMainnetConfig; 
+const currentNetworkConfig = bnbTestnetConfig; 
 
 // 3. Exported Helpers & Constants based on Current Network
 export const currentChain: Chain = currentNetworkConfig.chain;

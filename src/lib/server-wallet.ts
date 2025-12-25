@@ -12,10 +12,15 @@ let account;
 try {
     if (privateKey) {
         // Simple check to avoid crashing on obvious bad keys (like placeholders)
-        if (!privateKey.startsWith('0x') && !/^[0-9a-fA-F]+$/.test(privateKey)) {
-             throw new Error("Private key must be a hex string");
+        // Ensure private key starts with 0x
+        const formattedKey = privateKey.startsWith('0x') ? privateKey : `0x${privateKey}` as `0x${string}`;
+
+        // Check if it is a valid hex string (64 chars + 2 for 0x = 66 chars, or just check content)
+        if (!/^0x[0-9a-fA-F]{64}$/.test(formattedKey)) {
+             console.error(`Invalid private key format. Length: ${formattedKey.length}. Content (masked): ${formattedKey.slice(0,6)}...`);
+             throw new Error("Private key must be a valid hex string with 0x prefix and 64 hex characters.");
         }
-        account = privateKeyToAccount(privateKey);
+        account = privateKeyToAccount(formattedKey);
     }
 } catch (error) {
     console.error("❌ Failed to initialize server wallet account. Invalid Private Key format.");

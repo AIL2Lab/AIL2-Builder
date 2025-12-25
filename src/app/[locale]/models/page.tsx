@@ -58,13 +58,20 @@ export default function CreatorPage() {
     setIsError(false);
 
     try {
+      // Map activeTab to filter value
+      let filter: 'all' | 'iao_active' = 'all';
+      if (activeTab === 'IAO Active') {
+        filter = 'iao_active';
+      }
+
       // Use direct service call instead of hook
       // Note: request library should support signal passing if we want true cancellation at fetch level
       // but our simplified service wrapper might not expose it directly yet.
       // For now we just handle the logic state.
       const response = await ModelService.getModels({ 
         page: pageNum, 
-        pageSize 
+        pageSize,
+        filter
       });
 
       if (response.code === 200 && response.data) {
@@ -89,18 +96,41 @@ export default function CreatorPage() {
     } finally {
       setIsLoading(false);
     }
-  }, [pageSize]);
+  }, [pageSize, activeTab]);
 
   // Initial fetch and page changes
   useEffect(() => {
-    fetchModels(page);
+    setAllModels([]); // 清空数据列表
+    setHasMore(true); // 重置hasMore状态
+    setPage(1); // Reset page when tab changes (implicitly handled if fetchModels depends on activeTab, but safer to reset)
+    fetchModels(1);
     
     return () => {
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
       }
     };
+  }, [activeTab, fetchModels]); // Removed page dependency here to avoid double fetch if setPage triggers rerender. Actually page dependency is needed for pagination.
+  
+  // Correct useEffect for pagination and tab change
+  useEffect(() => {
+    fetchModels(page);
   }, [page, fetchModels]);
+
+  // When tab changes, we need to reset page to 1 and fetch.
+  // The fetchModels dependency on activeTab will cause it to be recreated when activeTab changes.
+  // But if page is already 1, the above useEffect will run. 
+  // If page is NOT 1, we need to set it to 1.
+  
+  // Let's refactor slightly to be cleaner.
+  // We can just have one useEffect that watches [page, activeTab].
+  // But when activeTab changes, we MUST reset page to 1.
+  
+  // Better approach:
+  // 1. useEffect on activeTab -> setPage(1).
+  // 2. useEffect on page -> fetchModels(page).
+  // 3. fetchModels should use the CURRENT activeTab (it's in closure or dependency).
+
 
   // Infinite Scroll Intersection Observer
   const handleObserver = useCallback((entries: IntersectionObserverEntry[]) => {
@@ -151,6 +181,7 @@ export default function CreatorPage() {
                     : 'border-white/10 text-gray-400 hover:border-white/30'
                 }`}
               >
+                {/* All / 全部 */}
                 {t('tabs.all')}
               </button>
               <button 
@@ -235,7 +266,7 @@ export default function CreatorPage() {
           {/* Infinite Scroll Loader */}
           {(hasMore || isLoading) && !isError && (
              <div ref={observerTarget} className="flex justify-center items-center py-8">
-               {isLoading && (
+               {isLoading && page > 1 && (
                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-500"></div>
                )}
                {!hasMore && allModels.length > 0 && (

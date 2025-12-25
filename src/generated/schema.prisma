@@ -1,0 +1,119 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Subscriber {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3) // ✅ 带时区
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3) // ✅ 带时区
+
+  @@map("subscribers")
+}
+
+model Model {
+  id          String   @id @default(uuid())
+  name        String
+  symbol      String
+  description String
+  avatar      String?
+  socialLinks Json?
+  status      String   @default("active")
+  creatorId   String
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  creator User   @relation(fields: [creatorId], references: [id])
+  iaos    IAO[]
+  tasks   Task[]
+
+  @@index([creatorId])
+  @@index([status])
+  @@map("model")
+}
+
+model IAO {
+  id      String @id @default(uuid())
+  modelId String
+  chainId String
+
+  // 💰 IAO 合约信息
+  iaoContractAddress String
+  iaoOwner           String
+  iaoCreator         String
+
+  // 💎 代币信息
+  iaoStakeToken  String
+  iaoRewardToken String
+  iaoNftHolder   String?
+
+  // ⏰ 时间信息（带时区的 DateTime）
+  iaoStartTime     DateTime @db.Timestamptz(3) // ✅ IAO 开始时间
+  iaoEndTime       DateTime @db.Timestamptz(3) // ✅ IAO 结束时间
+  iaoDepositPeriod Int // 持续小时数
+
+  // 💰 奖励信息
+  iaoTotalReward String
+
+  // 🔗 区块链信息
+  iaoTxHash String
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  model Model @relation(fields: [modelId], references: [id], onDelete: Cascade)
+
+  @@unique([modelId, chainId, iaoContractAddress])
+  @@index([iaoContractAddress])
+  @@index([chainId])
+  @@index([modelId])
+  @@map("iao")
+}
+
+model Task {
+  id          String    @id @default(uuid())
+  type        String
+  status      String
+  result      String?
+  modelId     String
+  createdBy   String
+  createdAt   DateTime  @default(now()) @db.Timestamptz(3)
+  startedAt   DateTime? @db.Timestamptz(3)
+  completedAt DateTime? @db.Timestamptz(3)
+  model       Model     @relation(fields: [modelId], references: [id])
+
+  @@index([modelId])
+  @@index([status])
+  @@map("task")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  address   String   @unique
+  nickname  String?
+  avatar    String?
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  models    Model[]
+
+  @@index([address])
+  @@map("user")
+}
+
+model AuthNonce {
+  id        String   @id @default(uuid())
+  nonce     String   @unique
+  address   String
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  expiresAt DateTime @db.Timestamptz(3)
+
+  @@index([nonce])
+  @@index([address])
+  @@map("auth_nonce")
+}

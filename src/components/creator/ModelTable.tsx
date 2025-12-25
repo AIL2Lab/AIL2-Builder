@@ -1,6 +1,8 @@
 import React from 'react';
 import { Model } from '@/generated/client';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { Link } from '@/i18n/navigation';
 
 interface ModelTableProps {
   models: Model[];
@@ -44,9 +46,20 @@ export const ModelTable: React.FC<ModelTableProps> = ({ models }) => {
               <div key={model.id || index} className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-white/5 transition-colors group">
                 {/* Model Info */}
                 <div className="col-span-3 flex items-center gap-4 pl-4">
-                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center font-bold text-lg border-blue-500 text-blue-500`}>
-                    {model.symbol ? model.symbol[0] : '?'}
-                  </div>
+                  {model.avatar ? (
+                    <div className="w-10 h-10 rounded-xl overflow-hidden relative border border-white/10">
+                      <Image 
+                        src={model.avatar} 
+                        alt={model.name} 
+                        fill 
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className={`w-10 h-10 rounded-xl border flex items-center justify-center font-bold text-lg border-blue-500 text-blue-500`}>
+                      {model.symbol ? model.symbol[0] : '?'}
+                    </div>
+                  )}
                   <span className="font-bold text-white">{model.name}</span>
                 </div>
 
@@ -81,10 +94,11 @@ export const ModelTable: React.FC<ModelTableProps> = ({ models }) => {
                 <div className="col-span-1 text-right text-gray-300 font-mono text-sm">{liquidity}</div>
 
                 {/* Action */}
-                <div className="col-span-1 text-center pr-2">
-                  <button className="px-6 py-1.5 text-xs rounded-full border border-yellow-500/50 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors w-full whitespace-nowrap">
-                    {t('chat')}
-                  </button>
+                <div className="col-span-1 text-center pr-2 flex justify-center">
+                  <Link href={`/models/detail/${model.id}`} className="px-6 py-1.5 text-xs rounded-full border border-yellow-500/50 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors whitespace-nowrap">
+                    {/* View Details / 查看详情 */}
+                    {t('viewDetails')}
+                  </Link>
                 </div>
               </div>
             );

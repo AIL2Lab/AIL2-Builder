@@ -46,7 +46,13 @@
     "learnMore": "Learn more",
     "comparisonImages": "Comparison Images",
     "contactUs": "Contact Us",
-    "ourEmail": "our email"
+    "ourEmail": "our email",
+    "timeUnits": {
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
+    }
   },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
@@ -135,11 +141,13 @@
     "description": "Compose powerful AI Agents using decentralized models and launch Initial Agent Offerings (IAO).",
     "tabs": {
       "all": "All",
-      "iaoActive": "IAO Active"
+      "iaoActive": "IAO Active",
+      "tradable": "Tradable"
     },
     "launchIAO": "Launch IAO",
     "failedToLoad": "Failed to load agents.",
     "retry": "Retry",
+    "noMoreModels": "No more models",
     "noMoreAgents": "No more agents",
     "empty": {
       "title": "No Models Found",
@@ -157,7 +165,8 @@
       "vol": "Vol",
       "liquidity": "Liquidity",
       "action": "Action",
-      "chat": "Chat"
+      "chat": "Chat",
+      "viewDetails": "View Details"
     }
   },
   "Footer": {
@@ -450,5 +459,40 @@
     "drop_here": "Drop the image here ...",
     "drag_drop": "Drag & drop an image here, or click to select",
     "select_file": "Select File"
+  },
+  "iaoPool": {
+    "iaoBeforeTitle": "IAO Coming Soon",
+    "iaoActiveTitle": "IAO Active",
+    "iaoEndedTitle": "IAO Ended",
+    "loading": "Loading...",
+    "noIaoData": "No IAO data available",
+    "iaoComingSoon": "IAO Coming Soon",
+    "iaoOngoing": "IAO Ongoing",
+    "iaoEnded": "IAO Ended",
+    "iaoEndedDescription": "This IAO has ended. Connect your wallet to view results and perform related actions.",
+    "iaoEndedNotice": "Connect your wallet to view your investment details, claim rewards, or withdraw refunds.",
+    "pleaseWaitPatiently": "The IAO will start soon. Please wait patiently. You will be able to participate and earn token rewards.",
+    "startCountdown": "Starting in",
+    "timeLeft": "Time Left",
+    "raisedAmount": "Raised",
+    "softCap": "Soft Cap",
+    "hardCap": "Hard Cap",
+    "totalReward": "Total Reward",
+    "depositPeriod": "Deposit Period",
+    "duration": "Duration",
+    "hours": "hours",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "contractAddress": "Contract Address",
+    "network": "Network",
+    "notice": "Notice",
+    "connectWalletToParticipate": "Connect your wallet to participate in the IAO and view detailed information.",
+    "minInvest": "Min Investment",
+    "maxInvest": "Max Investment",
+    "balance": "Balance",
+    "max": "Max",
+    "stake": "Stake",
+    "participateIao": "Participate in IAO",
+    "yourInvestment": "Your Investment"
   }
 }

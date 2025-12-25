@@ -1,20 +1,28 @@
 // src/instrumentation.ts
 
 export async function register() {
-  // ⚠️ 关键检查：确保只在 Node.js 运行时启动 (Next.js 还有 Edge 运行时，那里不支持长连接)
+  // 确保只在 Node.js 环境运行（服务端）
   if (process.env.NEXT_RUNTIME === 'nodejs') {
-    
-    // 动态导入，避免在 Edge 环境或其他非 Server 环境下加载依赖
-    // 这里的路径根据你的实际结构调整
-    const { smartIndexer } = await import('@/services/smartIndexer.service');
+    console.log('🔧 [Instrumentation] 正在初始化服务...');
 
-    // 初始化并启动
-    // 注意：init 是异步的，但 register 函数不会等待它完成才启动服务器
-    // 这样不会阻塞 Next.js 的启动速度
-    smartIndexer.init().then(() => {
-      smartIndexer.start();
-    }).catch(err => {
-      console.error('❌ [Instrumentation] Indexer 启动失败:', err);
-    });
+    try {
+      // 动态导入，避免在客户端执行
+      const { smartIndexerService } = await import('@/services/onchain/smartIndexer.service');
+
+      // 检查是否成功导入
+      if (!smartIndexerService) {
+        throw new Error('smartIndexerService 导入失败');
+      }
+
+      console.log('✅ [Instrumentation] smartIndexerService 导入成功');
+
+      // 异步启动，不阻塞服务器启动
+      smartIndexerService.start().catch(err => {
+        console.error('❌ [Instrumentation] Indexer 启动失败:', err);
+      });
+
+    } catch (error) {
+      console.error('❌ [Instrumentation] 导入失败:', error);
+    }
   }
 }

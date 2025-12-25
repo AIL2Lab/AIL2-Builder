@@ -60,7 +60,13 @@
     "learnMore": "詳細を見る",
     "comparisonImages": "比較画像",
     "contactUs": "お問い合わせ",
-    "ourEmail": "当社のメール"
+    "ourEmail": "当社のメール",
+    "timeUnits": {
+      "days": "日",
+      "hours": "時間",
+      "minutes": "分",
+      "seconds": "秒"
+    }
   },
   "Error": {
     "description": "<p>誠に申し訳ありません、エラーが発生しました。</p><p>アクセスしていたページを<retry>再読み込み</retry>してください。</p>",

@@ -60,7 +60,13 @@
     "learnMore": "더 알아보기",
     "comparisonImages": "비교 이미지",
     "contactUs": "문의하기",
-    "ourEmail": "우리 이메일"
+    "ourEmail": "우리 이메일",
+    "timeUnits": {
+      "days": "일",
+      "hours": "시간",
+      "minutes": "분",
+      "seconds": "초"
+    }
   },
   "Error": {
     "description": "<p>죄송하게도 오류가 발생했습니다.</p><p>방문하시던 페이지를 <retry>새로고침</retry>해 보세요.</p>",

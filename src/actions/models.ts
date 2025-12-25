@@ -17,37 +17,53 @@ interface QueryParams {
   page?: number
   pageSize?: number
   query?: string
+  filter?: 'all' | 'iao_active'
 }
 
 export async function getModels(
   pageOrParams: number | QueryParams = 1,
   pageSize: number = 10,
-  query?: string
+  query?: string,
+  filterType?: 'all' | 'iao_active'
 ): Promise<ApiResponse<GetModelsResult>> {
   // 处理参数重载
   let page = 1;
   let size = 10;
   let searchQuery: string | undefined = undefined;
+  let filter: 'all' | 'iao_active' = 'all';
 
   if (typeof pageOrParams === 'object') {
     page = pageOrParams.page || 1;
     size = pageOrParams.pageSize || 10;
     searchQuery = pageOrParams.query;
+    filter = pageOrParams.filter || 'all';
   } else {
     page = pageOrParams;
     size = pageSize;
     searchQuery = query;
+    filter = filterType || 'all';
   }
 
   const skip = (page - 1) * size
 
-  const where = searchQuery
-    ? {
-        OR: [
-          { name: { contains: searchQuery, mode: 'insensitive' as const } },
-        ],
+  const where: any = {};
+  
+  if (searchQuery) {
+    where.OR = [
+      { name: { contains: searchQuery, mode: 'insensitive' as const } },
+    ];
+  }
+
+  // IAO 进行中：需要关联查询 IAO 表，判断当前时间是否在 IAO 开始和结束时间之间
+  if (filter === 'iao_active') {
+    const now = new Date();
+    where.iaos = {
+      some: {
+        iaoStartTime: { lte: now },
+        iaoEndTime: { gte: now }
       }
-    : {}
+    };
+  }
 
   try {
     const [models, totalCount] = await prisma.$transaction([

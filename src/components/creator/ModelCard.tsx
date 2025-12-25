@@ -1,6 +1,7 @@
 import React from 'react';
 import { Model } from '@/generated/client';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 interface ModelCardProps {
   model: Model;
@@ -34,9 +35,9 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
             <div className="text-gray-400 text-sm">{ticker}</div>
           </div>
         </div>
-        <button className="px-4 py-1.5 text-xs rounded-full border border-yellow-500/50 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors">
-          {t('chat')}
-        </button>
+        <Link href={`/models/detail/${model.id}`} className="px-4 py-1.5 text-xs rounded-full border border-yellow-500/50 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors">
+          {t('viewDetails')}
+        </Link>
       </div>
 
       {/* Metrics Grid */}

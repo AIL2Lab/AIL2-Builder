@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../src/generated"
 }
 
@@ -11,33 +11,69 @@ datasource db {
 model Subscriber {
   id        Int      @id @default(autoincrement())
   email     String   @unique
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)  // ✅ 带时区
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)       // ✅ 带时区
 
   @@map("subscribers")
 }
 
 model Model {
-  id                  String    @id @default(uuid())
-  name                String
-  symbol              String
-  description         String
-  avatar              String?
-  socialLinks         String?
-  createdAt           DateTime  @default(now()) @map("created_at")
-  updatedAt           DateTime  @updatedAt @map("updated_at")
-  status              String    @default("active")
-  creatorId           String
-  iaoContractAddress  String?
-  iaoStartTime        BigInt?
-  iaoEndTime          BigInt?
-  iaoSuccessChecked   Boolean   @default(false)
-  iaoSuccessful       Boolean?
-  iaoSuccessCheckTime DateTime?
-  creator             User      @relation(fields: [creatorId], references: [id])
-  tasks               Task[]
+  id          String   @id @default(uuid())
+  name        String
+  symbol      String
+  description String
+  avatar      String?
+  socialLinks Json?
+  status      String   @default("active")
+  creatorId   String
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+  
+  creator     User     @relation(fields: [creatorId], references: [id])
+  iaos        IAO[]
+  tasks       Task[]
 
+  @@index([creatorId])
+  @@index([status])
   @@map("model")
+}
+
+model IAO {
+  id                  String    @id @default(uuid())
+  modelId             String
+  chainId             String
+  
+  // 💰 IAO 合约信息
+  iaoContractAddress  String
+  iaoOwner            String
+  iaoCreator          String
+  
+  // 💎 代币信息
+  iaoStakeToken       String
+  iaoRewardToken      String
+  iaoNftHolder        String?
+  
+  // ⏰ 时间信息（带时区的 DateTime）
+  iaoStartTime        DateTime  @db.Timestamptz(3)  // ✅ IAO 开始时间
+  iaoEndTime          DateTime  @db.Timestamptz(3)  // ✅ IAO 结束时间
+  iaoDepositPeriod    Int                           // 持续小时数
+  
+  // 💰 奖励信息
+  iaoTotalReward      String
+  
+  // 🔗 区块链信息
+  iaoTxHash           String
+  
+  createdAt           DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt           DateTime  @updatedAt @map("updated_at") @db.Timestamptz(3)
+  
+  model               Model     @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  
+  @@unique([modelId, chainId, iaoContractAddress])
+  @@index([iaoContractAddress])
+  @@index([chainId])
+  @@index([modelId])
+  @@map("iao")
 }
 
 model Task {
@@ -47,11 +83,13 @@ model Task {
   result      String?
   modelId     String
   createdBy   String
-  createdAt   DateTime  @default(now())
-  startedAt   DateTime?
-  completedAt DateTime?
+  createdAt   DateTime  @default(now()) @db.Timestamptz(3)
+  startedAt   DateTime? @db.Timestamptz(3)
+  completedAt DateTime? @db.Timestamptz(3)
   model       Model     @relation(fields: [modelId], references: [id])
 
+  @@index([modelId])
+  @@index([status])
   @@map("task")
 }
 
@@ -60,10 +98,11 @@ model User {
   address   String   @unique
   nickname  String?
   avatar    String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
   models    Model[]
 
+  @@index([address])
   @@map("user")
 }
 
@@ -71,8 +110,10 @@ model AuthNonce {
   id        String   @id @default(uuid())
   nonce     String   @unique
   address   String
-  createdAt DateTime @default(now())
-  expiresAt DateTime
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  expiresAt DateTime @db.Timestamptz(3)
 
-  @@map("authNonce")
+  @@index([nonce])
+  @@index([address])
+  @@map("auth_nonce")
 }

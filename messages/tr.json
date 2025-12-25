@@ -60,7 +60,13 @@
     "learnMore": "Daha fazla öğren",
     "comparisonImages": "Karşılaştırma Görselleri",
     "contactUs": "Bize Ulaşın",
-    "ourEmail": "e-postamız"
+    "ourEmail": "e-postamız",
+    "timeUnits": {
+      "days": "gün",
+      "hours": "saat",
+      "minutes": "dakika",
+      "seconds": "saniye"
+    }
   },
   "Error": {
     "description": "<p>Ne yazık ki bir hatayla karşılaştık.</p><p>Ziyaret ettiğiniz sayfayı <retry>yeniden yüklemeyi</retry> deneyebilirsiniz.</p>",

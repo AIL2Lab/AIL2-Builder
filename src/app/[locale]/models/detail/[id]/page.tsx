@@ -1,5 +1,5 @@
 
-import ModelDetail from "@/components/models/detail/ModelDetail";
+import ModelDetail from "./components/ModelDetail";
 import PageLayout from "@/components/PageLayout";
 
 export default async function ModelDetailPage({

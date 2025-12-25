@@ -60,7 +60,13 @@
     "learnMore": "Saber más",
     "comparisonImages": "Imágenes de comparación",
     "contactUs": "Contáctenos",
-    "ourEmail": "nuestro correo"
+    "ourEmail": "nuestro correo",
+    "timeUnits": {
+      "days": "días",
+      "hours": "horas",
+      "minutes": "minutos",
+      "seconds": "segundos"
+    }
   },
   "Error": {
     "description": "<p>Lamentablemente, hemos encontrado un error.</p><p>Puedes intentar <retry>recargar la página</retry> que estabas visitando.</p>",

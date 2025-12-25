@@ -19,14 +19,15 @@ export const ModelService = {
   /**
    * Get model list with pagination
    */
-  getModels: (params: GetModelsParams = {}) => {
-    return request.get<GetModelsResult>('/model/list', {
-      params: {
-        page: params.page || 1,
-        pageSize: params.pageSize || 10,
-        query: params.query || ''
-      }
-    });
+  getModels: async (params: { page: number; pageSize: number; query?: string; filter?: 'all' | 'tradable' | 'iao_active' }) => {
+    // For server components or direct server action usage
+    // We can't import server actions directly in client components if we want to use them as simple functions sometimes
+    // But here we are calling the server action.
+    
+    // Dynamically import to avoid build issues if mixed environment
+    // OR just call the action directly if this file is used in client components
+    const { getModels } = await import('@/actions/models');
+    return getModels(params);
   },
 
   /**
