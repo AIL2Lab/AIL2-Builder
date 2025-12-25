@@ -1,9 +1,10 @@
 
+import { ReactNode } from "react";
 import { FAQItem } from "../core/FAQItem";
 
 type Question = {
   text: string;
-  answerText: string;
+  answerText: ReactNode;
 };
 
 export default function QuestionSelector({

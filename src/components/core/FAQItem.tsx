@@ -1,8 +1,8 @@
 'use client'
 import { Plus } from "lucide-react";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
-export const FAQItem = ({ question, answer }: { question: string, answer: string }) => {
+export const FAQItem = ({ question, answer }: { question: string, answer: string| ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="border-b border-gray-800 last:border-0 w-full">
