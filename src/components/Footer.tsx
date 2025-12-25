@@ -94,13 +94,7 @@ export default function Footer() {
             </div>
             <div>
               <div className="flex justify-between">
-                <a
-                  href="/doc/AIL2_Whitepaper_v1.5_EN.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Docs
-                </a>
+                <Link href="/docs">Docs</Link>
                 <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   NEW
                 </span>
