@@ -23,9 +23,9 @@ export default function Footer() {
   const popupLabel = <div>Contact Us</div>;
   return (
     <footer className="footer w-full mx-auto lg:max-w-7xl my-5 sm:my-8 md:my-12 lg:my-16">
-      <div className="grid grid-cols-6 p-5 lg:p-5 xl:p-5 gap-5">
-        <div className="col-span-6  md:col-span-3 px-0 lg:px-10">
-            <div className=" flex items-center h-full">
+      <div className="grid grid-cols-6 p-5 lg:p-5 xl:p-5 gap-5 items-center">
+        <div className="col-span-6  md:col-span-3 px-0 lg:px-10 my-5">
+          <div className="flex items-center ">
             <div className="footer-email p-5 lg:p-10 space-y-2.5 flex-1">
               <div className="text-2xl font-normal">
                 {t.rich("emailTip", {
@@ -53,8 +53,23 @@ export default function Footer() {
                 </button>
               </form>
             </div>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <h5 className="text-brand-gold text-xs uppercase tracking-[0.2em] my-2.5 text-theme">
+              {t("network")}
+            </h5>
+            <div className="flex gap-2.5">
+              <div className="flex items-center gap-3 mb-3 text-sm text-text-muted">
+                <div className="w-1.5 h-1.5 bg-[#00FF00] rounded-full shadow-[0_0_8px_#00FF00]"></div>
+                <span>Routing: Operational</span>
+              </div>
+              <div className="flex items-center gap-3 mb-3 text-sm text-text-muted">
+                <div className="w-1.5 h-1.5 bg-[#00FF00] rounded-full shadow-[0_0_8px_#00FF00]"></div>
+                <span>Nodes: 12,999 Online</span>
+              </div>
             </div>
           </div>
+        </div>
         <div className="text-sm sm:text-base col-span-6 md:col-span-3 grid grid-cols-3 my-10 gap-2.5">
           <div className="col-span-1 space-y-5">
             <div className="text-theme font-bold text-base sm:text-lg">
@@ -63,7 +78,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/core">AIL2 Core</Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   SDK
                 </span>
               </div>
@@ -72,7 +87,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/ecosystem">AIL2 Builder</Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   IMO
                 </span>
               </div>
@@ -81,7 +96,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/models">AIL2 Creator</Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   IAO
                 </span>
               </div>
@@ -95,7 +110,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/docs">Docs</Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   NEW
                 </span>
               </div>
@@ -104,7 +119,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/blog">Blog</Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   UPDATE
                 </span>
               </div>
@@ -113,7 +128,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/research">Research</Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   PAPER
                 </span>
               </div>
@@ -129,7 +144,7 @@ export default function Footer() {
                 <Link className="whitespace-nowrap" href="/incubator">
                   Incubator
                 </Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   APPLY
                 </span>
               </div>
@@ -143,7 +158,7 @@ export default function Footer() {
                 <Link className="whitespace-nowrap" href="/contact">
                   Contact Us
                 </Link>
-                <span className="border border-theme text-theme px-0.5 py-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme px-0.5 py-0.5 rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   BD
                 </span>
               </div>
@@ -154,7 +169,7 @@ export default function Footer() {
                 <Link className="whitespace-nowrap" href="/foud">
                   Ecosystem Fund
                 </Link>
-                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
+                <span className="border border-theme text-theme   rounded-sm text-[10px] px-1 leading-none hidden sm:flex md:hidden lg:flex justify-center items-center">
                   GRANT
                 </span>
               </div>
@@ -163,23 +178,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <h5 className="text-brand-gold text-xs uppercase tracking-[0.2em] mb-6 text-theme">
-          {t('network')}
-        </h5>
-        <div className="flex gap-2.5">
-          <div className="flex items-center gap-3 mb-3 text-sm text-text-muted">
-            <div className="w-1.5 h-1.5 bg-[#00FF00] rounded-full shadow-[0_0_8px_#00FF00]"></div>
-            <span>Routing: Operational</span>
-          </div>
-          <div className="flex items-center gap-3 mb-3 text-sm text-text-muted">
-            <div className="w-1.5 h-1.5 bg-[#00FF00] rounded-full shadow-[0_0_8px_#00FF00]"></div>
-            <span>Nodes: 12,999 Online</span>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center items-center border-t border-theme">
-        <div className="w-fit sm:w-full grid grid-cols-2 px-10 py-15  space-y-5 sm:space-y-0">
+
+      <div className="flex justify-center items-center border-t border-white/6">
+        <div className="w-fit sm:w-full grid grid-cols-2 px-10 py-10  space-y-5 sm:space-y-0">
           <div className="col-span-2 sm:col-span-1 text-center sm:text-left whitespace-nowrap">
             {t("copyright")}
           </div>
