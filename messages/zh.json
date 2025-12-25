@@ -17,7 +17,7 @@
     },
     "ecosystem": {
       "title": "生态系统",
-      "description": "一个整合 AI L2 技术最新进展的综合性平台。一个全面的尖端 AI L2 项目的存储库。"
+      "description": "一个整合 AIL2 技术最新进展的综合性平台。一个全面的尖端 AIL2 项目的存储库。"
     },
     "research": {
       "title": "研究",
@@ -42,6 +42,10 @@
     "docs": {
       "title": "AIL2 文档",
       "description": "AIL2 网络的技术指南、API 参考和架构概述。"
+    },
+    "blog": {
+      "title": "AIL2 博客",
+      "description": "关于 AIL2 的最新文章"
     }
   },
   "Common": {
@@ -127,7 +131,7 @@
     "seventhScreen": {
       "partners": "生态系统合作伙伴",
       "community": "加入 <theme>AIL2</theme> 全球社区",
-      "ecosystem": "了解最大的 AI L2 生态系统"
+      "ecosystem": "了解最大的 AIL2 生态系统"
     }
   },
   "Footer": {
@@ -149,7 +153,7 @@
   },
   "Ecosystem": {
     "title": "探索<br></br>AIL2 生态系统",
-    "subtitle": "• 一个整合 AI L2 技术最新进展的综合性平台。<br></br>• AI L2 领域先锋边缘计算项目的中央存储库。"
+    "subtitle": "• 一个整合 AIL2 技术最新进展的综合性平台。<br></br>• AIL2 领域先锋边缘计算项目的中央存储库。"
   },
   "Platform": {
     "title": "去中心化<br></br>AI 加速平台",
@@ -223,7 +227,59 @@
     }
   },
   "Faq": {
-    "description": "常见问题"
+    "description": "常见问题解答",
+    "q1": {
+      "question": "什么是 AIL2？",
+      "answer": "AIL2 是一个构建在分布式 GPU 矿工网络和跨链结算层之上的去中心化 AI 应用生态系统。它作为一个标准化的基础设施解决方案，赋能开发者在多个区块链上高效部署和扩展去中心化 AI 应用。"
+    },
+    "q2": {
+      "question": "AIL2 支持哪些区块链？",
+      "answer": "AIL2 支持广泛的主流公链，包括：<br></br>1.Ethereum<br></br>2.BNB Chain<br></br>3.X Layer<br></br>4.Base<br></br>5.Mantle<br></br>6.GIWA"
+    },
+    "q3": {
+      "question": "AIL2 的三个核心目标客户群体是什么？",
+      "answer": "AIL2 根据技术能力和需求将用户分为三类：<br></br>1.<strong>AIL2 Core（专业开发者）：</strong> 拥有完整 Web3 和 AI 开发能力的团队，使用 SDK 和 API 进行自定义集成。<br></br>2.<strong>AIL2 Builder（IMO 模式）：</strong> 拥有改进的 AI 模型但缺乏智能合约经验的开发者，使用平台进行一键代币发行和募资。<br></br>3.<strong>AIL2 Creator（IAO 模式）：</strong> 使用可视化界面组合现有模型为 AI 智能体并建立社区的非技术创作者。"
+    },
+    "q4": {
+      "question": "AIL2 的核心价值主张是什么？",
+      "answer": "AIL2 的价值主张围绕四大支柱：<br></br>1.<strong>去中心化 GPU 网络：</strong> 将全球 GPU 资源整合成一个弹性计算网络。<br></br>2.<strong>智能路由：</strong> 通过多目标优化实现低延迟和高可用性的请求分发。<br></br>3.<strong>跨链结算：</strong> 跨不同区块链的统一支付和对账。<br></br>4.<strong>需求绑定激励：</strong> 将矿工奖励与实际需求绑定，以抑制代币通胀。"
+    },
+    "q5": {
+      "question": "描述 AIL2 的四层架构。",
+      "answer": "系统由以下部分组成：<br></br>1.<strong>计算层：</strong> 物理基础，由运行标准化软件的分布式 GPU 矿工节点组成。<br></br>2.<strong>网络层： </strong>处理请求接收、路由决策（使用路由器和调度器）以及数据传输。<br></br>3.<strong>结算层：</strong> 管理计量收据验证、费用计费和跨链财务结算。<br></br>4.<strong>生态系统层：</strong> 面向用户的界面，包括 SDK、Builder 平台 (IMO) 和 Creator 平台 (IAO)。"
+    },
+    "q6": {
+      "question": "智能路由系统如何选择最佳 GPU 节点？",
+      "answer": "调度器将路由视为一个多目标优化问题。它首先基于硬约束（显存 VRAM、区域 Region、可用性 Availability）过滤节点，然后基于延迟 Latency、成本 Cost 和质量 Quality 等软约束对它们进行评分。它使用改进的 <strong>UCB（置信区间上界）</strong> 算法来平衡利用已知的高性能节点和探索潜在被低估的新节点。"
+    },
+    "q7": {
+      "question": "什么是 IMO 和 IAO？",
+      "answer": "它们是降低准入门槛的机制：<br></br>1.<strong>IMO（初始模型发行）：</strong> 模型开发者发行代币、注册模型并获得初始算力支持的一站式募资机制。<br></br>2.<strong>IAO（初始智能体发行）：</strong> 面向非技术创作者的类似机制，使用模板启动 AI 智能体应用并发行项目代币以建立社区。"
+    },
+    "q8": {
+      "question": "AIL2 中的计费和结算如何工作？",
+      "answer": "推理完成后，节点生成加密签名的 <strong>使用收据</strong>。AIL2 支持混合计费（文本按 Token，媒体按时间）。为了降低成本，收据被聚合成默克尔树进行 <strong>批量结算</strong>。支付可以通过多链本地结算（每条链独立合约）或主结算链模式（使用跨链桥）进行。"
+    },
+    "q9": {
+      "question": "有哪些安全措施可以防止作弊？",
+      "answer": "AIL2 采用多方面的安全方法：<br></br>1.<strong>风险评分：</strong> 对参与者行为进行实时评估。<br></br>惩罚机制：对高风险节点降低权重或暂停服务。<br></br>2.<strong>罚没：</strong> 对严重违规行为（如伪造收据、重放攻击或恶意结果）进行经济处罚（扣除质押）。<br></br>3.<strong>可验证推理：</strong> 路线图从随机抽查演进到冗余执行，最终实现零知识证明 (ZKP)。"
+    },
+    "q10": {
+      "question": "AIL2 的治理结构是什么？",
+      "answer": "治理分为三个部分：<br></br>1.<strong>社区治理：</strong> 代币质押者对一般参数和金库分配进行投票。<br></br>2.<strong>安全委员会：</strong> 负责对攻击或关键错误进行紧急响应的多签小组。<br></br>3.<strong>参数委员会：</strong> 提出技术参数调整（例如路由权重）供社区批准的专家小组。"
+    },
+    "q11": {
+      "question": "矿工的硬件要求是什么？",
+      "answer": "矿工必须提供配备高带宽互连的企业级 GPU（Nvidia A100、H100 或 RTX 4090），以满足 AIL2 核心性能 SLA。"
+    },
+    "q12": {
+      "question": "AIL2 如何处理模型隐私？",
+      "answer": "AIL2 支持基于 TEE（可信执行环境）的容器，用于要求权重或输入在推理周期内保持加密的模型。"
+    },
+    "q13": {
+      "question": "我可以自定义模型的计费策略吗？",
+      "answer": "可以。开发者可以直接在模型注册合约中定义按 Token、按 GPU 秒或按推理任务的自定义定价。"
+    }
   },
   "Research": {
     "title": "<theme>去中心化</theme> <br></br> AI 操作系统",
@@ -438,7 +494,7 @@
         "description": "包含 token 数、GPU 秒数和费用的签名收据。默克尔批量证明确保绝对可审计性。"
       },
       "card4": {
-        "title": "AI L2 结算",
+        "title": "AIL2 结算",
         "description": "批量完成推理证明，带有争议窗口和向代币持有者自动分配收入。"
       },
       "card5": {
@@ -585,5 +641,12 @@
       "management": "管理",
       "billing": "计费与使用"
     }
+  },
+  "Blog": {
+    "title": "博客",
+    "readBtn": "阅读文章",
+    "noData": "未找到文章。",
+    "prev": "上一页",
+    "next": "下一页"
   }
 }

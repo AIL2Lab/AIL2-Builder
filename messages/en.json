@@ -17,7 +17,7 @@
     },
     "ecosystem": {
       "title": "Ecosystem",
-      "description": "A consolidated platform for the latest advancements in AI L2 technology.A comprehensive repository of cutting-edge AI L2 initiatives."
+      "description": "A consolidated platform for the latest advancements in AIL2 technology.A comprehensive repository of cutting-edge AIL2 initiatives."
     },
     "research": {
       "title": "Research",
@@ -42,6 +42,10 @@
     "docs": {
       "title": "AIL2 Document",
       "description": "Technical guides, API references, and architecture overviews for the AIL2 network."
+    },
+    "blog": {
+      "title": "AIL2 Blog",
+      "description": "Latest articles on AIL2"   
     }
   },
   "Common": {
@@ -112,7 +116,7 @@
       }
     },
     "fourthScreen": {
-      "title": "The Largest AI L2",
+      "title": "The Largest AIL2",
       "superLayer": "The AI Superlayer Unifying<br></br>ETH, BSC, GIWA, XLayer, Base, Mantle",
       "architecture": "AIL2 6 Layer Architecture"
     },
@@ -128,7 +132,7 @@
     "seventhScreen": {
       "partners": "Ecosystem Partners",
       "community": "Join <theme>AIL2</theme> Global community",
-      "ecosystem": "See the biggest AI L2 ecosystem"
+      "ecosystem": "See the biggest AIL2 ecosystem"
     }
   },
   "Footer": {
@@ -150,7 +154,7 @@
   },
   "Ecosystem": {
     "title": "Explore<br></br>the AIL2 Ecosystem",
-    "subtitle": "• A consolidated platform for the latest advancements in AI L2 technology. <br></br>• The central repository for pioneering edge computing projects in AI L2."
+    "subtitle": "• A consolidated platform for the latest advancements in AIL2 technology. <br></br>• The central repository for pioneering edge computing projects in AIL2."
   },
   "Platform": {
     "title": "Decentralized<br></br>AI Acceleration Platform",
@@ -224,7 +228,59 @@
     }
   },
   "Faq": {
-    "description": "Frequently asked questions"
+    "description": "Frequently asked questions",
+    "q1": {
+      "question": "What is AIL2?",
+      "answer": "AIL2 is a decentralized AI application ecosystem built on a distributed GPU miner network and a cross-chain settlement layer. It acts as a standardized infrastructure solution empowering developers to deploy and scale decentralized AI applications across multiple blockchains efficiently."
+    },
+    "q2": {
+      "question": "Which blockchains does AIL2 support?",
+      "answer": "AIL2 supports a wide range of mainstream public chains, including:<br></br>1.Ethereum<br></br>2.BNB Chain<br></br>3.X Layer<br></br>4.Base<br></br>5.Mantle<br></br>6.GIWA"
+    },
+    "q3": {
+      "question": "What are the three core target customer segments for AIL2?",
+      "answer": "AIL2 categorizes its users into three segments based on technical capability and needs:<br></br>1.<strong>AIL2 Core (Professional Developers):</strong> Teams with full Web3 and AI development capabilities who use the SDK and APIs for custom integration.<br></br>2.<strong>AIL2 Builder (IMO Mode): </strong>Developers with improved AI models but lacking smart contract experience, who use the platform for one-click token issuance and fundraising.<br></br>3.<strong>AIL2 Creator (IAO Mode):</strong> Non-technical creators who use visual interfaces to combine existing models into AI Agents and build communities."
+    },
+    "q4": {
+      "question": "What is the core value proposition of AIL2?",
+      "answer": "AIL2's value proposition centers on four pillars:<br></br>1.<strong>Decentralized GPU Network:</strong> Integrating global GPU resources into an elastic computing network.<br></br>2.<strong>Intelligent Routing:</strong> Low-latency and high-availability request distribution via multi-objective optimization.<br></br>3.<strong>Cross-Chain Settlement:</strong> Unified payment and reconciliation across different blockchains.<br></br>4.<strong>Demand-Bound Incentives:</strong> Binding miner rewards to real demand to suppress token inflation."
+    },
+    "q5": {
+      "question": "Describe the four-layer architecture of AIL2.",
+      "answer": "The system consists of:<br></br>1.<strong>Compute Layer:</strong> The physical foundation consisting of distributed GPU miner nodes running standardized software.<br></br>2.<strong>Network Layer: </strong>Handles request ingestion, routing decision-making (using Router and Scheduler), and data transport.<br></br>3.<strong>Settlement Layer:</strong> Manages metering receipt verification, fee billing, and cross-chain financial settlement.<br></br>4.<strong>Ecosystem Layer:</strong> The user-facing interface, including SDKs, the Builder platform (IMO), and the Creator platform (IAO)."
+    },
+    "q6": {
+      "question": "How does the intelligent routing system select the best GPU node?",
+      "answer": "The scheduler treats routing as a multi-objective optimization problem. It filters nodes based on hard constraints (VRAM, Region, Availability) and then scores them based on soft constraints like Latency, Cost, and Quality. It utilizes an improved <strong>UCB (Upper Confidence Bound)</strong> algorithm to balance exploiting known high-performing nodes and exploring potentially undervalued new nodes."
+    },
+    "q7": {
+      "question": "What are IMO and IAO?",
+      "answer": "They are mechanisms to lower barriers for entry:<br></br>1.<strong>IMO(Initial Model Offering):</strong> A one-stop fundraising mechanism for model developers to issue tokens, register models, and gain initial computing power support.<br></br>2.<strong>IAO (Initial Agent Offering):</strong> A similar mechanism for non-technical creators to launch AI Agent applications using templates and issue project tokens for community building."
+    },
+    "q8": {
+      "question": "How does billing and settlement work in AIL2?",
+      "answer": "After inference, nodes generate cryptographically signed <strong>Usage Receipts</strong>. AIL2 supports hybrid billing (Token-based for text, Time-based for media). To reduce costs, receipts are aggregated into Merkle Trees for <strong>batch settlement</strong>. Payment can occur via Multi-Chain Local Settlement (independent contracts per chain) or a Main Settlement Chain mode (using cross-chain bridges)."
+    },
+    "q9": {
+      "question": "What security measures are in place to prevent cheating?",
+      "answer": "AIL2 employs a multi-faceted security approach:<br></br>1.<strong>Risk Scoring:</strong> Real-time assessment of participant behavior.<br></br>Penalty Mechanism: Reduced weights or service suspension for high-risk nodes.<br></br>2.<strong>Slashing:</strong> Economic penalties (stake deduction) for severe violations like forged receipts, replay attacks, or malicious results.<br></br>3.<strong>Verifiable Inference:</strong> A roadmap evolving from random spot-checks to redundant execution and eventually Zero-Knowledge Proofs (ZKP)."
+    },
+    "q10": {
+      "question": "What is the governance structure of AIL2?",
+      "answer": "Governance is divided into three components:<br></br>1.<strong>Community Governance:.</strong> Token stakers vote on general parameters and treasury allocation.<br></br>2.<strong>Security Council:.</strong> A multi-sig group responsible for emergency responses to attacks or critical bugs.<br></br>3.<strong>Parameter Committee:</strong> Experts who propose technical parameter adjustments (e.g., routing weights) for community approval."
+    },
+    "q11": {
+      "question": "What are the hardware requirements for miners?",
+      "answer": "Miners must provide enterprise-grade GPUs (Nvidia A100, H100, or RTX 4090) with high-bandwidth interconnects to meet the AIL2 Core performance SLA."
+    },
+    "q12": {
+      "question": "How does AIL2 handle model privacy?",
+      "answer": "AIL2 supports TEE-based (Trusted Execution Environments) containers for models that require weights or inputs to remain encrypted throughout the inference cycle."
+    },
+    "q13": {
+      "question": "Can I customize the billing policy for my model?",
+      "answer": "Yes. Developers can define custom pricing per token, per GPU second, or per inference task directly in the model registration contract."
+    }
   },
   "Research": {
     "title": "The <theme>Decentralized</theme> <br></br> AI Operating System",
@@ -439,7 +495,7 @@
         "description": "Signed receipts with token counts, GPU seconds, and fees. Merkle batch proofs ensure absolute auditability."
       },
       "card4": {
-        "title": "AI L2 Settlement",
+        "title": "AIL2 Settlement",
         "description": "Batch finalize inference proofs with a dispute window and automatic revenue distribution to token holders."
       },
       "card5": {
@@ -586,5 +642,12 @@
       "management": "MANAGEMENT",
       "billing": "Billing & Usage"
     }
+  },
+  "Blog": {
+    "title": "Blog",
+    "readBtn": "READ ARTICLE",
+    "noData": "No articles found.",
+    "prev": "PREV",
+    "next": "NEXT"
   }
 }

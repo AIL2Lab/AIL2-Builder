@@ -23,7 +23,7 @@ export default function Footer() {
   const popupLabel = <div>Contact Us</div>;
   return (
     <footer className="footer w-full mx-auto lg:max-w-7xl my-5 sm:my-8 md:my-12 lg:my-16">
-      <div className="grid grid-cols-6 p-5 lg:p-8 xl:p-15 gap-5">
+      <div className="grid grid-cols-6 p-5 lg:p-5 xl:p-5 gap-5">
         <div className="col-span-6  md:col-span-3 px-0 lg:px-10">
             <div className=" flex items-center h-full">
             <div className="footer-email p-5 lg:p-10 space-y-2.5 flex-1">
@@ -63,7 +63,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/core">AIL2 Core</Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   SDK
                 </span>
               </div>
@@ -72,7 +72,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/ecosystem">AIL2 Builder</Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   IMO
                 </span>
               </div>
@@ -81,7 +81,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/models">AIL2 Creator</Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   IAO
                 </span>
               </div>
@@ -101,7 +101,7 @@ export default function Footer() {
                 >
                   Docs
                 </a>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   NEW
                 </span>
               </div>
@@ -110,7 +110,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/blog">Blog</Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   UPDATE
                 </span>
               </div>
@@ -119,7 +119,7 @@ export default function Footer() {
             <div>
               <div className="flex justify-between">
                 <Link href="/research">Research</Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   PAPER
                 </span>
               </div>
@@ -135,7 +135,7 @@ export default function Footer() {
                 <Link className="whitespace-nowrap" href="/incubator">
                   Incubator
                 </Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   APPLY
                 </span>
               </div>
@@ -149,7 +149,7 @@ export default function Footer() {
                 <Link className="whitespace-nowrap" href="/contact">
                   Contact Us
                 </Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme px-0.5 py-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   BD
                 </span>
               </div>
@@ -160,7 +160,7 @@ export default function Footer() {
                 <Link className="whitespace-nowrap" href="/foud">
                   Ecosystem Fund
                 </Link>
-                <span className="border border-theme text-theme font-bold px-1 py-0.5 rounded-sm text-xs hidden lg:inline-block">
+                <span className="border border-theme text-theme  p-0.5 rounded-sm text-xs hidden sm:flex md:hidden lg:flex justify-center items-center">
                   GRANT
                 </span>
               </div>
@@ -189,10 +189,10 @@ export default function Footer() {
           <div className="col-span-2 sm:col-span-1 text-center sm:text-left whitespace-nowrap">
             {t("copyright")}
           </div>
-          <div className="col-span-2 sm:col-span-1 flex justify-between  sm:justify-end ">
-            <div className="text-theme text-base font-normal mr-20">
+          <div className="col-span-2 sm:col-span-1 flex justify-center  sm:justify-end ">
+            {/* <div className="text-theme text-base font-normal mr-20">
               {t("socials")}
-            </div>
+            </div> */}
             <div className="flex gap-2.5">
               <Link href={siteConfig.xUrl} target="_blank">
                 <TwitterIcon fill="var(--color-theme)" />

@@ -17,7 +17,7 @@
     },
     "ecosystem": {
       "title": "Ekosistem",
-      "description": "AI L2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. Kütük AI L2 girişimlerinin kapsamlı bir deposu."
+      "description": "AIL2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. Kütük AIL2 girişimlerinin kapsamlı bir deposu."
     },
     "research": {
       "title": "Araştırma",
@@ -42,6 +42,10 @@
     "docs": {
       "title": "AIL2 Dokümantasyonu",
       "description": "AIL2 ağı için teknik rehberler, API referansları ve mimari genel bakışlar."
+    },
+    "blog": {
+      "title": "AIL2 Blogu",
+      "description": "AIL2 hakkındaki son makaleler"
     }
   },
   "Common": {
@@ -112,7 +116,7 @@
       }
     },
     "fourthScreen": {
-      "title": "En Büyük AI L2",
+      "title": "En Büyük AIL2",
       "superLayer": "ETH, BSC, GIWA, XLayer, Base, Mantle'i birleştiren<br></br>AI Süper Katmanı",
       "architecture": "AIL2 6 Katmanlı Mimarisi"
     },
@@ -128,7 +132,7 @@
     "seventhScreen": {
       "partners": "Ekosistem Ortakları",
       "community": "<theme>AIL2</theme> Küresel Topluluğuna Katılın",
-      "ecosystem": "En büyük AI L2 ekosistemini görün"
+      "ecosystem": "En büyük AIL2 ekosistemini görün"
     }
   },
   "Footer": {
@@ -150,7 +154,7 @@
   },
   "Ecosystem": {
     "title": "AIL2 Ekosistemini<br></br>Keşfedin",
-    "subtitle": "• AI L2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. <br></br>• AI L2'deki öncü edge computing projeleri için merkezi depo."
+    "subtitle": "• AIL2 teknolojisindeki en son gelişmeler için birleştirilmiş bir platform. <br></br>• AIL2'deki öncü edge computing projeleri için merkezi depo."
   },
   "Platform": {
     "title": "Merkezi Olmayan<br></br>AI Hızlandırma Platformu",
@@ -224,7 +228,59 @@
     }
   },
   "Faq": {
-    "description": "Sıkça sorulan sorular"
+    "description": "Sıkça Sorulan Sorular",
+    "q1": {
+      "question": "AIL2 nedir?",
+      "answer": "AIL2, dağıtık GPU madenci ağı ve çapraz zincir mutabakat katmanı üzerine inşa edilmiş merkezi olmayan bir AI uygulama ekosistemidir. Geliştiricilerin birden fazla blok zinciri genelinde merkezi olmayan AI uygulamalarını verimli bir şekilde dağıtmasına ve ölçeklendirmesine olanak tanıyan standartlaştırılmış bir altyapı çözümü olarak hareket eder."
+    },
+    "q2": {
+      "question": "AIL2 hangi blok zincirlerini destekler?",
+      "answer": "AIL2 şunları içeren geniş bir ana akım genel zincir yelpazesini destekler:<br></br>1.Ethereum<br></br>2.BNB Chain<br></br>3.X Layer<br></br>4.Base<br></br>5.Mantle<br></br>6.GIWA"
+    },
+    "q3": {
+      "question": "AIL2'nin üç temel hedef müşteri segmenti nedir?",
+      "answer": "AIL2, teknik yetenek ve ihtiyaçlara dayanarak kullanıcılarını üç segmente sınıflandırır:<br></br>1.<strong>AIL2 Core (Profesyonel Geliştiriciler):</strong> Özel entegrasyon için SDK ve API kullanan tam Web3 ve AI geliştirme yeteneklerine sahip ekipler.<br></br>2.<strong>AIL2 Builder (IMO Modu): </strong>Geliştirilmiş AI modelleri olan ancak akıllı sözleşme deneyimi olmayan, tek tıkla token ihraç etme ve fon toplama için platformu kullanan geliştiriciler.<br></br>3.<strong>AIL2 Creator (IAO Modu):</strong> Mevcut modelleri AI Ajanlarıyla birleştirmek ve topluluk oluşturmak için görsel arayüzler kullanan teknik olmayan yaratıcılar."
+    },
+    "q4": {
+      "question": "AIL2'nin temel değer önerisi nedir?",
+      "answer": "AIL2'nin değer önerisi dört temele dayanır:<br></br>1.<strong>Merkezi Olmayan GPU Ağı:</strong> Küresel GPU kaynaklarını elastik bir bilgi işlem ağına entegre etme.<br></br>2.<strong>Entelligan Yönlendirme:</strong> Çok amaçlı optimizasyon aracılığıyla düşük gecikmeli ve yüksek kullanılabilirlikli istek dağıtımı.<br></br>3.<strong>Çapraz Zincir Mutabakatı:</strong> Farklı blok zincirleri genelinde birleşik ödeme ve uzlaştırma.<br></br>4.<strong>Talep Bağlı Teşvikler:</strong> Token enflasyonunu bastırmak için madenci ödüllerini gerçek talebe bağlama."
+    },
+    "q5": {
+      "question": "AIL2'nin dört katmanlı mimarisini açıklayın.",
+      "answer": "Sistem şunlardan oluşur:<br></br>1.<strong>İşlem Katmanı:</strong> Standartlaştırılmış yazılım çalışan dağıtık GPU madenci düğümlerinden oluşan fiziksel temel.<br></br>2.<strong>Ağ Katmanı: </strong>İstek alımı, yönlendirme kararlarını (Yönlendirici ve Zamanlayıcıyı kullanarak) ve veri taşımayı yönetir.<br></br>3.<strong>Mutabakat Katmanı:</strong> Ölçekü fişi doğrulamasını, ücret faturalamasını ve çapraz zincir finansal mutabakatını yönetir.<br></br>4.<strong>Ekosistem Katmanı:</strong> SDK'lar, Builder platformu (IMO) ve Creator platformu (IAO) dahil olmak üzere kullanıcıya yönelik arayüz."
+    },
+    "q6": {
+      "question": "Entelligan yönlendirme sistemi en iyi GPU düğümünü nasıl seçer?",
+      "answer": "Zamanlayıcı, yönlendirmeyi çok amaçlı bir optimizasyon sorunu olarak ele alır. Önce katı kısıtlamalara (VRAM, Bölge, Kullanılabilirlik) göre düğümleri filtreler ve ardından Gecikme, Maliyet ve Kalite gibi yumuşak kısıtlamalara göre puanlar. Bilinen yüksek performanslı düğümleri kullanma ve potansiyel olarak düşük tahmin edilen yeni düğümleri keşfetme dengesini sağlamak için geliştirilmiş bir <strong>UCB (Üst Güven Sınırı)</strong> algoritması kullanır."
+    },
+    "q7": {
+      "question": "IMO ve IAO nedir?",
+      "answer": "Giriş engellerini azaltmak için mekanizmalardır:<br></br>1.<strong>IMO (Initial Model Offering):</strong> Model geliştiricilerinin token ihraç etmesi, modelleri kaydetmesi ve ilk bilgi işlem gücü desteği alması için tek noktadan fon toplama mekanizması.<br></br>2.<strong>IAO (Initial Agent Offering):</strong> Teknik olmayan yaratıcıların şablonları kullanarak AI Ajanı uygulamaları başlatması ve topluluk oluşturması için proje tokenları ihraç etmesine olanak tanıyan benzer bir mekanizma."
+    },
+    "q8": {
+      "question": "AIL2'de faturalandırma ve mutabakat nasıl çalışır?",
+      "answer": "Çıkarımdan (inference) sonra, düğümler kriptografik olarak imzalanmış <strong>Kullanım Fişleri</strong> oluşturur. AIL2 hibrit faturalandırmayı (metin için token bazlı, medya için zaman bazlı) destekler. Maliyetleri düşürmek için fişler <strong>toplu mutabakat</strong> için Merkle Ağaçlarına toplanır. Ödeme, Çok Zincirli Yerel Mutabakat (zincir başına bağımsız sözleşmeler) veya Ana Mutabakat Zinciri modu (çapraz zincir köprüleri kullanılarak) yoluyla gerçekleşebilir."
+    },
+    "q9": {
+      "question": "Hile yapılmasını önlemek için hangi güvenlik önlemleri mevcuttur?",
+      "answer": "AIL2 çok yönlü bir güvenlik yaklaşımı kullanır:<br></br>1.<strong>Risk Puanlama:</strong> Katılımcı davranışının gerçek zamanlı değerlendirilmesi.<br></br>Ceza Mekanizması: Yüksek riskli düğümler için ağırlık azaltma veya hizmet askıya alma.<br></br>2.<strong>Slashing:</strong> Sahte fişler, tekrar saldırıları veya kötü niyetli sonuçlar gibi ciddi ihlaller için ekonomik cezalar (stake kesintisi).<br></br>3.<strong>Doğrulanabilir Çıkarım:</strong> Rastgele nokta kontrollerinden yedekli yürütmeye ve nihayetinde Sıfır Bilgi Kanıtlarına (ZKP) kadar evrimleşen bir yol haritası."
+    },
+    "q10": {
+      "question": "AIL2'nin yönetişim yapısı nedir?",
+      "answer": "Yönetişim üç bileşene ayrılır:<br></br>1.<strong>Topluluk Yönetişimi:</strong> Token stake sahipleri genel parametreler ve hazine tahsisi konusunda oy kullanır.<br></br>2.<strong>Güvenlik Konseyi:</strong> Saldırılara veya kritik hatalara acil yanıtların sorumlu olduğu çok imzalı bir grup.<br></br>3.<strong>Parametre Komitesi:</strong> Topluluk onayı için teknik parametre ayarlamalarını (örneğin, yönlendirme ağırlıkları) öneren uzmanlar."
+    },
+    "q11": {
+      "question": "Madenciler için donanım gereksinimleri nelerdir?",
+      "answer": "Madenciler, AIL2 Çekirdek performans SLA'sını karşılamak için yüksek bant genişliğine sahip ara bağlantıları olan kurumsal düzeyde GPU'lar (Nvidia A100, H100 veya RTX 4090) sağlamalıdır."
+    },
+    "q12": {
+      "question": "AIL2 model gizliliğini nasıl ele alır?",
+      "answer": "AIL2, ağırlıkların veya girdilerin çıkarım döngüsü boyunca şifreli kalmasını gerektiren modeller için TEE tabanlı (Güvenilir Çalıştırma Ortamları) konteynerleri destekler."
+    },
+    "q13": {
+      "question": "Modelim için faturalandırma politikasını özelleştirebilir miyim?",
+      "answer": "Evet. Geliştiriciler, model kayıt sözleşmesinde doğrudan token başına, GPU saniyesi başına veya çıkarım görevi başına özel fiyatlar tanımlayabilir."
+    }
   },
   "Research": {
     "title": "<theme>Merkezi Olmayan</theme> <br></br> AI İşletim Sistemi",
@@ -439,7 +495,7 @@
         "description": "Token sayıları, GPU saniyeleri ve ücretleri içeren imzalı makbuzlar. Merkle toplu kanıtları mutlak denetlenebilirliği sağlar."
       },
       "card4": {
-        "title": "AI L2 Mutabakatı",
+        "title": "AIL2 Mutabakatı",
         "description": "Bir anlaşmazlık penceresi ve token sahiplerine otomatik gelir dağıtımı ile çıkarım kanıtlarını toplu olarak sonlandırın."
       },
       "card5": {
@@ -586,5 +642,12 @@
       "management": "YÖNETİM",
       "billing": "Faturalandırma ve Kullanım"
     }
+  },
+  "Blog": {
+    "title": "Blog",
+    "readBtn": "Makaleyi Oku",
+    "noData": "Makale bulunamadı.",
+    "prev": "Önceki",
+    "next": "Sonraki"
   }
 }

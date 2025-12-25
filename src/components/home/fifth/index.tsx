@@ -29,7 +29,7 @@ const chunks = [
         }
     },
     {
-        title: 'AIL2 Core (AI L2 Rollup)',
+        title: 'AIL2 Core (AIL2 Rollup)',
         bg: {
             src: '/images/chunk-3.png',
             with: 293,

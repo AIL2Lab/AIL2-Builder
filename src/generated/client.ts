@@ -49,3 +49,8 @@ path.join(process.cwd(), "src/generated/libquery_engine-darwin.dylib.node")
  * 
  */
 export type Subscriber = Prisma.SubscriberModel
+/**
+ * Model Contact
+ * 
+ */
+export type Contact = Prisma.ContactModel

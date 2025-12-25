@@ -224,11 +224,7 @@ export default function ResearchPage({
                     >
                       {t("section2.item1.btn1")}
                     </a>
-                    <PopupBtn
-                      label={t("section2.item1.btn2")}
-                      title={t("section2.item1.dialogTitle")}
-                      content={popupContent1}
-                    />
+                    <Link href="/docs">{t("section2.item1.btn2")}</Link>
                   </div>
                   <div className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed grow">
                     {t.rich("section2.item1.description", {

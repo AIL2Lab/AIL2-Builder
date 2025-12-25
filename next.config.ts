@@ -5,7 +5,7 @@ const cspHeader = [
   "default-src 'self';",
   "script-src 'self' 'unsafe-eval' 'unsafe-inline';",
   "style-src 'self' 'unsafe-inline';",
-  "img-src 'self' https://picsum.photos;"
+  "img-src 'self' https://picsum.photos https://www.decentralgpt.org;"
 ].join(' ');
 
 const nextConfig: NextConfig = {
@@ -37,6 +37,13 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "picsum.photos",
+        port: "",
+        pathname: "/**",
+        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "www.decentralgpt.org",
         port: "",
         pathname: "/**",
         search: "",

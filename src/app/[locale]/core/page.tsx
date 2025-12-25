@@ -3,7 +3,7 @@ import { use } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale, useTranslations } from "next-intl";
 import { Metadata } from "next";
-import { Badge } from "@/components/core/Badge";
+
 import {
   Activity,
   ArrowRight,
@@ -23,6 +23,7 @@ import { Card } from "@/components/core/Card";
 import { SectionTitle } from "@/components/core/SectionTitle";
 import { CodeBlock } from "@/components/core/CodeBlock";
 import { FAQItem } from "@/components/core/FAQItem";
+import { Link } from "@/i18n/navigation";
 
 export async function generateMetadata({
   params,
@@ -69,12 +70,14 @@ export default function ContactPage({ params }: PageProps<"/[locale]/core">) {
                 )}
               </div>
               <div className="flex gap-4">
-                <button className="px-8 py-4 bg-brand-gold text-black font-bold rounded-xl bg-theme hover:bg-white hover:scale-105 transition-all">
+                {/* <button className="px-8 py-4 bg-brand-gold text-black font-bold rounded-xl bg-theme hover:bg-white hover:scale-105 transition-all">
                   {t("openBtn")}
-                </button>
-                <button className="px-8 py-4 bg-transparent border border-gray-700 text-white font-bold rounded-xl hover:border-theme hover:text-theme transition-all">
-                  {t("readBtn")}
-                </button>
+                </button> */}
+                <Link href="/docs">
+                  <button className="cursor-pointer px-8 py-4 bg-transparent border border-gray-700 text-white font-bold rounded-xl hover:border-theme hover:text-theme transition-all">
+                    {t("readBtn")}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative h-[400px] flex items-center justify-center">
@@ -269,9 +272,6 @@ export default function ContactPage({ params }: PageProps<"/[locale]/core">) {
                     {feat.title}
                   </h4>
                   <p className="text-gray-400 mb-4">{feat.desc}</p>
-                  <button className="text-theme text-xs font-bold text-brand-gold flex items-center gap-1 hover:gap-2 transition-all">
-                    Learn more <ArrowRight size={14} />
-                  </button>
                 </div>
               ))}
             </div>
@@ -456,7 +456,7 @@ export default function ContactPage({ params }: PageProps<"/[locale]/core">) {
               />
             </div>
           </section>
-          <section className="text-center py-20 bg-gradient-to-b from-neutral-900 to-black rounded-[40px] border border-brand-gold/20">
+          {/* <section className="text-center py-20 bg-linear-to-b from-neutral-900 to-black rounded-[40px] border border-brand-gold/20">
             <h3 className="text-4xl font-black mb-8">
               {t("Integrate.title")}
             </h3>
@@ -464,11 +464,13 @@ export default function ContactPage({ params }: PageProps<"/[locale]/core">) {
               <button className="px-12 py-4 bg-theme text-black font-bold rounded-xl hover:bg-white hover:scale-105 transition-all">
                 {t("Integrate.openBtn")}
               </button>
-              <button className="px-12 py-4 bg-transparent border border-gray-700 text-white font-bold rounded-xl hover:border-theme transition-all">
-                {t("Integrate.readBtn")}
-              </button>
+              <Link href="/docs">
+                  <button className="cursor-pointer px-12 py-4 bg-transparent border border-gray-700 text-white font-bold rounded-xl hover:border-theme transition-all">
+                    {t("Integrate.readBtn")}
+                  </button>
+              </Link>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </PageLayout>

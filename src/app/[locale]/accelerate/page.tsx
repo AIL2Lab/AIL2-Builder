@@ -5,6 +5,8 @@ import { use } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale, useTranslations } from "next-intl";
 import { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
+import { siteConfig } from "@/config/site";
 
 export async function generateMetadata({
   params,
@@ -79,12 +81,16 @@ export default function AcceleratePage({
           </p>
 
           <div className="flex gap-4 pt-4 justify-center md:justify-start">
-            <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer">
-              {t_common("applyBtn")}
-            </div>
-            <button className="px-7 py-3 btn2 w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
-              {t_common("learnMore")}
-            </button>
+            <Link href="/ecosystem">
+              <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer">
+                {t_common("applyBtn")}
+              </div>
+            </Link>
+            <Link href="/docs">
+              <button className="cursor-pointer px-7 py-3 btn2 w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
+                {t_common("learnMore")}
+              </button>
+            </Link>
           </div>
         </div>
         <div className="w-full md:w-[55%] mt-10 md:mt-0 flex justify-center md:justify-end relative">
@@ -155,11 +161,16 @@ export default function AcceleratePage({
             <p className="text-gray-400 text-sm mb-8">
               {t("section3.item6.description")}
             </p>
-            <button className="flex items-center justify-between w-full bg-theme/10 border border-theme/50 px-4 py-3 rounded-xl">
-              <span className="text-theme">
-                {t("section3.item6.followBtn")}
-              </span>
-              <TwitterIcon size={24} fill="white" />
+            <button className=" w-full bg-theme/10 border border-theme/50 px-4 py-3 rounded-xl">
+              <Link
+                href={siteConfig.xUrl}
+                className="flex items-center justify-between"
+              >
+                <span className="text-theme">
+                  {t("section3.item6.followBtn")}
+                </span>
+                <TwitterIcon size={24} fill="white" />
+              </Link>
             </button>
           </div>
         </div>
@@ -186,9 +197,11 @@ export default function AcceleratePage({
               </li>
             ))}
           </ul>
-          <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base">
-            {t_common("applyBtn")}
-          </div>
+          <Link href="/ecosystem">
+            <div className="px-7 py-3 support-btn w-fit rounded-xl font-bold mt-2.5 text-sm md:text-base cursor-pointer">
+              {t_common("applyBtn")}
+            </div>
+          </Link>
         </div>
       </section>
     </PageLayout>

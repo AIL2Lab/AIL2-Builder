@@ -1,10 +1,8 @@
-"use client";
-import { ChevronRight, ChevronLeft } from "lucide-react";
-import { useState } from "react";
+
+import { FAQItem } from "../core/FAQItem";
+
 type Question = {
-  id: number;
   text: string;
-  answerTitle: string;
   answerText: string;
 };
 
@@ -13,44 +11,19 @@ export default function QuestionSelector({
 }: {
   questions: Question[];
 }) {
-  const [current, setActive] = useState<Question>(questions[0]);
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-      <div className="lg:col-span-5 flex flex-col gap-3">
-        {questions.map((q) => {
-          const isActive = current.id === q.id;
+    <div className="flex flex-col gap-2.5">
+      {questions.map((q, idx) => {
           return (
-            <button
-              key={q.id}
-              onClick={() => setActive(q)}
-              className={`
-                    group w-full flex items-center justify-between 
-                    px-3 py-2 sm:px-6 sm:py-4 rounded-xl text-lg font-medium transition-all duration-200 border cursor-pointer
-                    ${
-                      isActive
-                        ? "bg-black border-theme text-theme"
-                        : "bg-white/5 border-transparent text-white/30 hover:bg-[#1a1a1a]"
-                    }
-                  `}
+            <div
+              key={idx}
+              className={`hover:bg-black hover:border-theme hover:text-theme bg-white/5 border-transparent text-white group w-full flex items-center justify-between 
+                    px-5 rounded-xl text-lg font-medium transition-all duration-200 border cursor-pointer`}
             >
-              <span>{q.text}</span>
-              {isActive ? (
-                <ChevronLeft className="w-5 h-5" />
-              ) : (
-                <ChevronRight className="w-5 h-5 opacity-50 group-hover:opacity-100" />
-              )}
-            </button>
+              <FAQItem question={q.text} answer={q.answerText} />
+            </div>
           );
         })}
-      </div>
-      <div className="lg:col-span-7 pt-2">
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight mb-6">
-          {current.answerTitle}
-        </h2>
-        <div className="text-base sm:text-lg md:text-xl lg:text-2xl space-y-6 text-gray-400 leading-relaxed">
-          <p>{current.answerText}</p>
-        </div>
-      </div>
     </div>
   );
 }

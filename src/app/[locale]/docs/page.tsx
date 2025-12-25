@@ -33,7 +33,7 @@ export default function DocsPage({
         <Sidebar />
         <main className="flex-1 lg:pl-72 pt-32">
           <div className="max-w-4xl mx-auto px-8 lg:px-12 py-10">
-            <section id="introduction" className="mb-24 scroll-mt-40">
+            <section id="introduction" className="mb-24 scroll-mt-60">
               <h1 className="text-7xl font-extrabold text-white tracking-tight mb-4">
                 {t("title")}
               </h1>
@@ -61,7 +61,7 @@ export default function DocsPage({
                 </p>
               </div>
             </section>
-            <section id="sdk-installation" className="mb-24 scroll-mt-40">
+            <section id="sdk-installation" className="mb-24 scroll-mt-60">
               <h2 className="text-3xl font-bold text-white mb-8 underline decoration-brand-accent/30 underline-offset-8">
                 {t("sdk.title")}
               </h2>
@@ -83,7 +83,7 @@ const client = new AIL2Client({
 });`}
               />
             </section>
-            <section id="quick-start" className="mb-24 scroll-mt-40">
+            <section id="quick-start" className="mb-24 scroll-mt-60">
               <h2 className="text-3xl font-bold text-white mb-8 underline decoration-brand-accent/30 underline-offset-8">
                 {t("quickstart.title")}
               </h2>
@@ -113,14 +113,14 @@ const client = new AIL2Client({
 }`}
               />
             </section>
-            <section id="core-concepts" className="mb-24 scroll-mt-40">
+            <section id="core-concepts" className="mb-24 scroll-mt-60">
               <h2 className="text-3xl font-bold text-white mb-12 underline decoration-brand-accent/30 underline-offset-8">
                 {t("coreConcepts.title")}
               </h2>
               <div className="grid grid-cols-1 gap-10">
                 <div
                   id="proof-of-inference"
-                  className="p-10 rounded-2xl bg-[#080808] border border-white/5 hover:border-brand-accent/30 transition-all group shadow-xl"
+                  className="scroll-mt-60 p-10 rounded-2xl bg-[#080808] border border-white/5 hover:border-brand-accent/30 transition-all group shadow-xl"
                 >
                   <h3 className="text-2xl font-bold text-brand-accent mb-6 flex items-center">
                     {t("coreConcepts.inference.title")}
@@ -131,7 +131,7 @@ const client = new AIL2Client({
                 </div>
                 <div
                   id="state-channels"
-                  className="p-10 rounded-2xl bg-[#080808] border border-white/5 hover:border-brand-accent/30 transition-all group shadow-xl"
+                  className="scroll-mt-60 p-10 rounded-2xl bg-[#080808] border border-white/5 hover:border-brand-accent/30 transition-all group shadow-xl"
                 >
                   <h3 className="text-2xl font-bold text-brand-accent mb-6 flex items-center">
                     {t("coreConcepts.stateChannels.title")}
@@ -142,7 +142,7 @@ const client = new AIL2Client({
                 </div>
                 <div
                   id="token-economics"
-                  className="p-10 rounded-2xl bg-[#080808] border border-white/5 hover:border-brand-accent/30 transition-all group shadow-xl"
+                  className="scroll-mt-60 p-10 rounded-2xl bg-[#080808] border border-white/5 hover:border-brand-accent/30 transition-all group shadow-xl"
                 >
                   <h3 className="text-2xl font-bold text-brand-accent mb-6 flex items-center">
                     {t("coreConcepts.token.title")}
@@ -153,11 +153,11 @@ const client = new AIL2Client({
                 </div>
               </div>
             </section>
-            <section id="api-reference" className="mb-24 scroll-mt-40">
+            <section id="api-reference" className="mb-24 scroll-mt-60">
               <h2 className="text-3xl font-bold text-white mb-12 underline decoration-brand-accent/30 underline-offset-8">
                 {t("api.title")}
               </h2>
-              <div id="api-infer" className="mb-20">
+              <div id="api-infer" className="mb-20 scroll-mt-60">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   {t("api.inference")}
                   <span className="ml-4 px-3 py-1 bg-slate-800 text-white text-[11px] font-black rounded tracking-widest">
@@ -232,7 +232,7 @@ const client = new AIL2Client({
                   {t("api.text2")}
                 </p>
               </div>
-              <div id="api-models">
+              <div id="api-models" className="scroll-mt-60">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   {t("api.modelRegistry")}
                   <span className="ml-4 px-3 py-1 bg-slate-800 text-white text-[11px] font-black rounded tracking-widest">
@@ -265,7 +265,7 @@ const client = new AIL2Client({
                 </p>
               </div>
             </section>
-            <section id="billing" className="mb-24 scroll-mt-40">
+            <section id="billing" className="mb-24 scroll-mt-60">
               <h2 className="text-3xl font-bold text-white mb-10 underline decoration-brand-accent/30 underline-offset-8">
                 {t("bill.title")}
               </h2>

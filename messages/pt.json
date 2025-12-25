@@ -17,7 +17,7 @@
     },
     "ecosystem": {
       "title": "Ecossistema",
-      "description": "Uma plataforma consolidada para os últimos avanços em tecnologia AI L2. Um repositório abrangente de iniciativas de ponta de AI L2."
+      "description": "Uma plataforma consolidada para os últimos avanços em tecnologia AIL2. Um repositório abrangente de iniciativas de ponta de AIL2."
     },
     "research": {
       "title": "Pesquisa",
@@ -42,6 +42,10 @@
     "docs": {
       "title": "Documentação AIL2",
       "description": "Guias técnicos, referências de API e visões gerais da arquitetura para a rede AIL2."
+    },
+    "blog": {
+      "title": "Blog da AIL2",
+      "description": "Últimos artigos sobre a AIL2"
     }
   },
   "Common": {
@@ -112,7 +116,7 @@
       }
     },
     "fourthScreen": {
-      "title": "O Maior AI L2",
+      "title": "O Maior AIL2",
       "superLayer": "A Super Camada de AI que Unifica<br></br>ETH, BSC, GIWA, XLayer, Base, Mantle",
       "architecture": "Arquitetura de 6 Camadas do AIL2"
     },
@@ -128,7 +132,7 @@
     "seventhScreen": {
       "partners": "Parceiros do Ecossistema",
       "community": "Junte-se à comunidade global da <theme>AIL2</theme>",
-      "ecosystem": "Veja o maior ecossistema de AI L2"
+      "ecosystem": "Veja o maior ecossistema de AIL2"
     }
   },
   "Footer": {
@@ -150,7 +154,7 @@
   },
   "Ecosystem": {
     "title": "Explore<br></br>o Ecossistema AIL2",
-    "subtitle": "• Uma plataforma consolidada para os últimos avanços em tecnologia AI L2. <br></br>• O repositório central para projetos pioneiros de edge computing em AI L2."
+    "subtitle": "• Uma plataforma consolidada para os últimos avanços em tecnologia AIL2. <br></br>• O repositório central para projetos pioneiros de edge computing em AIL2."
   },
   "Platform": {
     "title": "Plataforma de<br></br>Aceleração de IA Descentralizada",
@@ -224,7 +228,59 @@
     }
   },
   "Faq": {
-    "description": "Perguntas frequentes"
+    "description": "Perguntas Frequentes",
+    "q1": {
+      "question": "O que é AIL2?",
+      "answer": "A AIL2 é um ecossistema de aplicações de IA descentralizadas construído sobre uma rede de mineradores GPU distribuídos e uma camada de liquidação multi-cadeia. Atua como uma solução de infraestrutura padronizada que capacita os desenvolvedores a implantar e escalar aplicações de IA descentralizadas de forma eficiente em várias blockchains."
+    },
+    "q2": {
+      "question": "Quais blockchains a AIL2 suporta?",
+      "answer": "A AIL2 suporta uma ampla gama de cadeias públicas principais, incluindo:<br></br>1.Ethereum<br></br>2.BNB Chain<br></br>3.X Layer<br></br>4.Base<br></br>5.Mantle<br></br>6.GIWA"
+    },
+    "q3": {
+      "question": "Quais são os três segmentos principais de clientes da AIL2?",
+      "answer": "A AIL2 classifica seus usuários em três segmentos com base na capacidade técnica e necessidades:<br></br>1.<strong>AIL2 Core (Desenvolvedores Profissionais):</strong> Equipes com capacidades completas de desenvolvimento Web3 e IA que usam SDK e APIs para integração personalizada.<br></br>2.<strong>AIL2 Builder (Modo IMO): </strong>Desenvolvedores com modelos de IA aprimorados, mas sem experiência em contratos inteligentes, que usam a plataforma para emissão de tokens e captação de recursos com um clique.<br></br>3.<strong>AIL2 Creator (Modo IAO):</strong> Criadores não técnicos que usam interfaces visuais para combinar modelos existentes em Agentes de IA e construir comunidades."
+    },
+    "q4": {
+      "question": "Qual é a proposta de valor central da AIL2?",
+      "answer": "A proposta de valor da AIL2 centra-se em quatro pilares:<br></br>1.<strong>Rede GPU Descentralizada:</strong> Integrando recursos globais de GPU em uma rede de computação elástica.<br></br>2.<strong>Roteamento Inteligente:</strong> Distribuição de solicitações de baixa latência e alta disponibilidade através de otimização multiobjetivo.<br></br>3.<strong>Liquidação Multi-cadeia:</strong> Pagamento e conciliação unificados em diferentes blockchains.<br></br>4.<strong>Incentivos Vinculados à Demanda:</strong> Vinculando as recompensas dos mineradores à demanda real para suprimir a inflação de tokens."
+    },
+    "q5": {
+      "question": "Descreva a arquitetura de quatro camadas da AIL2.",
+      "answer": "O sistema consiste em:<br></br>1.<strong>Camada de Computação:</strong> A base física composta por nós de mineradores GPU distribuídos executando software padronizado.<br></br>2.<strong>Camada de Rede: </strong>Gerencia a ingestão de solicitações, tomada de decisão de roteamento (usando Roteador e Agendador) e transporte de dados.<br></br>3.<strong>Camada de Liquidação:</strong> Gerencia a verificação de recibos de medição, cobrança de taxas e liquidação financeira multi-cadeia.<br></br>4.<strong>Camada de Ecossistema:</strong> A interface voltada para o usuário, incluindo SDKs, plataforma Builder (IMO) e plataforma Creator (IAO)."
+    },
+    "q6": {
+      "question": "Como o sistema de roteamento inteligente seleciona o melhor nó GPU?",
+      "answer": "O agendador trata o roteamento como um problema de otimização multiobjetivo. Ele filtra os nós com base em restrições rígidas (VRAM, Região, Disponibilidade) e, em seguida, os pontua com base em restrições flexíveis como Latência, Custo e Qualidade. Utiliza um algoritmo aprimorado de <strong>UCB (Limite Superior de Confiança)</strong> para equilibrar a exploração de nós de alto desempenho conhecidos e a exploração de novos nós potencialmente subvalorizados."
+    },
+    "q7": {
+      "question": "O que são IMO e IAO?",
+      "answer": "São mecanismos para reduzir as barreiras de entrada:<br></br>1.<strong>IMO (Oferta Inicial de Modelo):</strong> Um mecanismo de captação de recursos completo para desenvolvedores de modelos emitirem tokens, registrarem modelos e obterem suporte inicial de poder de computação.<br></br>2.<strong>IAO (Oferta Inicial de Agente):</strong> Um mecanismo semelhante para criadores não técnicos lançarem aplicações de Agente de IA usando modelos e emitirem tokens de projeto para construção da comunidade."
+    },
+    "q8": {
+      "question": "Como funcionam a cobrança e a liquidação na AIL2?",
+      "answer": "Após a inferência, os nós geram <strong>Recibos de Uso</strong> assinados criptograficamente. A AIL2 suporta cobrança híbrida (baseada em token para texto, baseada em tempo para mídia). Para reduzir custos, os recibos são agregados em Árvores de Merkle para <strong>liquidação em lote</strong>. O pagamento pode ocorrer via Liquidação Local Multi-cadeia (contratos independentes por cadeia) ou um modo de Cadeia de Liquidação Principal (usando pontes multi-cadeia)."
+    },
+    "q9": {
+      "question": "Quais medidas de segurança estão em vigor para evitar trapaças?",
+      "answer": "A AIL2 emprega uma abordagem de segurança multifacetada:<br></br>1.<strong>Pontuação de Risco:</strong> Avaliação em tempo real do comportamento dos participantes.<br></br>Mecanismo de Penalidade: Redução de pesos ou suspensão do serviço para nós de alto risco.<br></br>2.<strong>Slashing:</strong> Penalidades econômicas (dedução de stake) por violações graves, como recibos falsificados, ataques de repetição ou resultados maliciosos.<br></br>3.<strong>Inferência Verificável:</strong> Um roteiro que evolui de verificações aleatórias para execução redundante e, eventualmente, Provas de Conhecimento Zero (ZKP)."
+    },
+    "q10": {
+      "question": "Qual é a estrutura de governança da AIL2?",
+      "answer": "A governança é dividida em três componentes:<br></br>1.<strong>Governança Comunitária:</strong> Os stakers de token votam em parâmetros gerais e alocação de tesouraria.<br></br>2.<strong>Conselho de Segurança:</strong> Um grupo multi-sig responsável por respostas de emergência a ataques ou bugs críticos.<br></br>3.<strong>Comitê de Parâmetros:</strong> Especialistas que propõem ajustes de parâmetros técnicos (por exemplo, pesos de roteamento) para aprovação da comunidade."
+    },
+    "q11": {
+      "question": "Quais são os requisitos de hardware para mineradores?",
+      "answer": "Os mineradores devem fornecer GPUs de nível empresarial (Nvidia A100, H100 ou RTX 4090) com interconexões de alta largura de banda para atender ao SLA de desempenho do AIL2 Core."
+    },
+    "q12": {
+      "question": "Como a AIL2 lida com a privacidade do modelo?",
+      "answer": "A AIL2 suporta contêineres baseados em TEE (Ambientes de Execução Confiável) para modelos que exigem que os pesos ou as entradas permaneçam criptografados durante todo o ciclo de inferência."
+    },
+    "q13": {
+      "question": "Posso personalizar a política de cobrança para o meu modelo?",
+      "answer": "Sim. Os desenvolvedores podem definir preços personalizados por token, por segundo de GPU ou por tarefa de inferência diretamente no contrato de registro do modelo."
+    }
   },
   "Research": {
     "title": "O Sistema Operacional de IA <br></br><theme>Descentralizado</theme>",
@@ -439,7 +495,7 @@
         "description": "Recibos assinados com contagens de tokens, segundos de GPU e taxas. Provas em lote Merkle garantem auditoria absoluta."
       },
       "card4": {
-        "title": "Liquidação AI L2",
+        "title": "Liquidação AIL2",
         "description": "Finalização em lote de provas de inferência com uma janela de disputa e distribuição automática de receita para detentores de tokens."
       },
       "card5": {
@@ -586,5 +642,12 @@
       "management": "GESTÃO",
       "billing": "Faturamento e Uso"
     }
+  },
+  "Blog": {
+    "title": "Blog",
+    "readBtn": "Ler artigo",
+    "noData": "Nenhum artigo encontrado.",
+    "prev": "Anterior",
+    "next": "Próximo"
   }
 }
