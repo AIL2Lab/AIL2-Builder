@@ -12,8 +12,6 @@ export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
   const t = useTranslations("Footer");
   const t_common = useTranslations("Common");
-  console.log(state);
-  console.log(isPending);
   
   const popupContent = (
     <div className="flex flex-col justify-center items-center">
