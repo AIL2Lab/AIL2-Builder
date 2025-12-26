@@ -1,10 +1,11 @@
 import React from 'react';
-import { Model } from '@/generated/client';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { CountdownTimer } from './CountdownTimer';
+import { ModelWithIaos } from '@/actions/models';
 
 interface ModelCardProps {
-  model: Model;
+  model: ModelWithIaos;
 }
 
 export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
@@ -22,6 +23,15 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
   const isPositive = true;
   const type = 'MODEL';
 
+  // Check if there's an active IAO
+  const activeIAO = model.iaos?.find(iao => {
+    if (!iao?.iaoEndTime) return false;
+    const now = new Date();
+    const endTime = new Date(iao.iaoEndTime);
+    return endTime > now;
+  });
+  const isIAOActive = !!activeIAO;
+
   return (
     <div className="p-4 bg-white/5 space-y-4">
       {/* Header: Model Info & Action */}
@@ -35,50 +45,75 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
             <div className="text-gray-400 text-sm">{ticker}</div>
           </div>
         </div>
-        <Link href={`/models/detail/${model.id}`} className="px-4 py-1.5 text-xs rounded-full border border-yellow-500/50 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors">
-          {t('viewDetails')}
+        <Link 
+          href={`/models/detail/${model.id}`} 
+          className="px-4 py-1.5 text-xs rounded-full border border-yellow-500/50 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors whitespace-nowrap"
+        >
+          {isIAOActive ? '参与IAO' : t('viewDetails')}
         </Link>
       </div>
 
-      {/* Metrics Grid */}
-      <div className="grid grid-cols-2 gap-4 text-sm">
-        <div>
-          <div className="text-gray-500 text-xs uppercase mb-1">{t('price')}</div>
-          <div className="font-mono text-gray-300">{price}</div>
-        </div>
-        <div>
-          <div className="text-gray-500 text-xs uppercase mb-1">{t('change24h')}</div>
-          <div className={`font-mono ${isPositive ? 'text-green-500' : 'text-red-500'}`}>
-            {change24h}
+      {isIAOActive && activeIAO ? (
+        /* IAO Active View */
+        <div className="space-y-3">
+          {/* Countdown */}
+          <div className="flex items-center justify-between py-3 px-4 bg-black/30 rounded-lg border border-[#F3BA2F]/20">
+            <div className="text-gray-400 text-sm">剩余时间</div>
+            <CountdownTimer endTime={activeIAO.iaoEndTime} />
+          </div>
+          
+          {/* Type Badge */}
+          <div className="flex items-center justify-between">
+            <div className="text-gray-500 text-xs uppercase">{t('type')}</div>
+            <span className="inline-block px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold">
+              {type}
+            </span>
           </div>
         </div>
-        <div>
-          <div className="text-gray-500 text-xs uppercase mb-1">{t('mcap')}</div>
-          <div className="font-mono font-bold text-white">{mCap}</div>
-        </div>
-        <div>
-          <div className="text-gray-500 text-xs uppercase mb-1">{t('type')}</div>
-          <span className="inline-block px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold">
-            {type}
-          </span>
-        </div>
-      </div>
+      ) : (
+        /* Normal View */
+        <>
+          {/* Metrics Grid */}
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <div className="text-gray-500 text-xs uppercase mb-1">{t('price')}</div>
+              <div className="font-mono text-gray-300">{price}</div>
+            </div>
+            <div>
+              <div className="text-gray-500 text-xs uppercase mb-1">{t('change24h')}</div>
+              <div className={`font-mono ${isPositive ? 'text-green-500' : 'text-red-500'}`}>
+                {change24h}
+              </div>
+            </div>
+            <div>
+              <div className="text-gray-500 text-xs uppercase mb-1">{t('mcap')}</div>
+              <div className="font-mono font-bold text-white">{mCap}</div>
+            </div>
+            <div>
+              <div className="text-gray-500 text-xs uppercase mb-1">{t('type')}</div>
+              <span className="inline-block px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold">
+                {type}
+              </span>
+            </div>
+          </div>
 
-      {/* Additional Details */}
-      <div className="grid grid-cols-3 gap-2 pt-2 border-t border-white/5 text-xs">
-        <div>
-          <div className="text-gray-500 mb-0.5">{t('holders')}</div>
-          <div className="font-mono text-gray-400">{holders}</div>
-        </div>
-        <div>
-          <div className="text-gray-500 mb-0.5">{t('vol')}</div>
-          <div className="font-mono text-gray-400">{vol}</div>
-        </div>
-        <div>
-          <div className="text-gray-500 mb-0.5">{t('liquidity')}</div>
-          <div className="font-mono text-gray-400">{liquidity}</div>
-        </div>
-      </div>
+          {/* Additional Details */}
+          <div className="grid grid-cols-3 gap-2 pt-2 border-t border-white/5 text-xs">
+            <div>
+              <div className="text-gray-500 mb-0.5">{t('holders')}</div>
+              <div className="font-mono text-gray-400">{holders}</div>
+            </div>
+            <div>
+              <div className="text-gray-500 mb-0.5">{t('vol')}</div>
+              <div className="font-mono text-gray-400">{vol}</div>
+            </div>
+            <div>
+              <div className="text-gray-500 mb-0.5">{t('liquidity')}</div>
+              <div className="font-mono text-gray-400">{liquidity}</div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

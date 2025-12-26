@@ -7,7 +7,7 @@ import { useRouter } from '@/i18n/navigation';
 import { ModelCard } from '@/components/creator/ModelCard';
 import { ModelTable } from '@/components/creator/ModelTable';
 import { ModelService } from '@/services/api/model';
-import { Model } from '@/generated/client';
+import { ModelWithIaos } from '@/actions/models';
 import { useTranslations } from 'next-intl';
 
 // --- Components ---
@@ -34,7 +34,7 @@ export default function CreatorPage() {
   
   // Data Fetching State
   const [page, setPage] = useState(1);
-  const [allModels, setAllModels] = useState<Model[]>([]);
+  const [allModels, setAllModels] = useState<ModelWithIaos[]>([]);
   const [hasMore, setHasMore] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -229,7 +229,7 @@ export default function CreatorPage() {
                 </Button>
               </div>
             ) : (
-               <ModelTable models={allModels} />
+               <ModelTable models={allModels} isIAOActiveTab={activeTab === 'IAO Active'} />
             )}
           </div>
 

@@ -1,12 +1,16 @@
 'use server'
 
 import prisma from "@/lib/prisma";
-import { type Model } from '@/generated/client'
+import { type Model, type IAO } from '@/generated/client'
 import { ApiResponse } from '@/types/response.type'
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 
+export type ModelWithIaos = Model & {
+  iaos: IAO[]
+}
+
 export interface GetModelsResult {
-  models: Model[]
+  models: ModelWithIaos[]
   totalCount: number
   totalPages: number
   currentPage: number
@@ -73,6 +77,9 @@ export async function getModels(
         take: size,
         orderBy: {
           createdAt: 'desc',
+        },
+        include: {
+          iaos: true,
         },
       }),
       prisma.model.count({ where }),
