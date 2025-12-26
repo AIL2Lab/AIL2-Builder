@@ -12,6 +12,9 @@ export default function Footer() {
   const [state, submitAction, isPending] = useActionState(addEmail, null);
   const t = useTranslations("Footer");
   const t_common = useTranslations("Common");
+  console.log(state);
+  console.log(isPending);
+  
   const popupContent = (
     <div className="flex flex-col justify-center items-center">
       <div>
@@ -39,18 +42,18 @@ export default function Footer() {
                 <input
                   type="text"
                   placeholder={
-                    state?.success ? t("emailReceived") : t("emailPlaceholder")
+                    state?.success ? t("emailReceived") : isPending ? t("emailBtnLoadingText")  : t("emailPlaceholder")
                   }
                   name="email"
                   maxLength={256}
-                  className="flex-1 min-w-[100px] sm:min-w-auto"
+                  className="flex-1 min-w-[100px] sm:min-w-auto py-2.5"
                 />
-                <button
+                { !(state?.success) && <button
                   type="submit"
                   className="email-btn bg-theme px-5 py-2.5"
                 >
                   {t("emailBtnText")}
-                </button>
+                </button>}
               </form>
             </div>
           </div>
