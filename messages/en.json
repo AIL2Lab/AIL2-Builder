@@ -487,12 +487,27 @@
     "network": "Network",
     "notice": "Notice",
     "connectWalletToParticipate": "Connect your wallet to participate in the IAO and view detailed information.",
+    "walletConnected": "Wallet Connected",
+    "readyToParticipate": "You can now participate in the IAO. The actual staking data will be loaded from the blockchain.",
     "minInvest": "Min Investment",
     "maxInvest": "Max Investment",
     "balance": "Balance",
     "max": "Max",
     "stake": "Stake",
+    "deposit": "Deposit",
     "participateIao": "Participate in IAO",
-    "yourInvestment": "Your Investment"
+    "yourInvestment": "Your Investment",
+    "youSend": "You Send",
+    "maxButton": "MAX",
+    "availableBalance": "Available Balance",
+    "loadingFromBlockchain": "Loading from blockchain...",
+    "iaoNotStarted": "IAO Not Started",
+    "connectWalletFirst": "Connect Wallet",
+    "processing": "Processing...",
+    "investNotStarted": "Investment Not Available",
+    "updatingData": "Updating...",
+    "yourStakedAmount": "Your Staked Amount",
+    "yourDepositedAmount": "Your Deposited Amount",
+    "insufficientBalance": "Insufficient Balance"
   }
 }

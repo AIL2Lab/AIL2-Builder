@@ -6,6 +6,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { CONTRACTS } from "@/config/contracts";
 import { deployIaoOnChain } from "./utils/deployIao";
 import { currentChain } from "@/config/network.config";
+import { IAO_CONFIG } from "@/config/iao.config";
 
 export async function POST(request: NextRequest) {
   try {
@@ -87,18 +88,19 @@ export async function POST(request: NextRequest) {
     let iaoDeployResult: any = null;
 
     try {
+      // 使用配置对象
       const tokenIn = CONTRACTS.SIC_TOKEN; 
       const rewardToken = CONTRACTS.SIC_TOKEN; 
-      const aiL2NftHolder = "0x0000000000000000000000000000000000000000";
+      const aiL2NftHolder = IAO_CONFIG.nftHolder;
       
-      // ✅ 使用 Date 对象（自动处理时区）
-      const startTime = new Date(Date.now() + 3600 * 1000); // 1小时后
-      const depositPeriodHours = 24;
+      // 计算时间（使用配置）
+      const startTime = new Date(Date.now() + IAO_CONFIG.delayStartSeconds * 1000);
+      const depositPeriodHours = IAO_CONFIG.durationHours;
       const endTime = new Date(startTime.getTime() + depositPeriodHours * 3600 * 1000);
       
       // 合约需要秒时间戳
       const startTimeSeconds = BigInt(Math.floor(startTime.getTime() / 1000));
-      const totalReward = BigInt(1) * BigInt(10 ** 18);
+      const totalReward = IAO_CONFIG.iaoRewardAmount;
 
       iaoDeployResult = await deployIaoOnChain(
         address, 
