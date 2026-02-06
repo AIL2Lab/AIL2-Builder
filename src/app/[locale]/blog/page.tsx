@@ -5,6 +5,9 @@ import { Locale } from "next-intl";
 import { Metadata } from "next";
 import BlogList from "@/components/blog/BlogList";
 
+// 动态渲染，每次请求都获取最新数据
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({
   params,
 }: {

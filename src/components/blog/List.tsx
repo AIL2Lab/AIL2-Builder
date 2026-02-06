@@ -110,14 +110,7 @@ export function List({ posts, total }: ListProps) {
 
   return (
     <div ref={listRef} className="min-h-screen bg-black text-white font-sans selection:bg-[#F8C700] selection:text-black">
-      <div className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-white leading-[0.9]">
-            {t("title")}
-          </h1>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-6 pb-20">
+      <div className="max-w-7xl mx-auto px-6 py-20">
         {currentPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentPosts.map((post) => (

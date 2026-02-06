@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { Link as I18nLink } from '@/i18n/navigation';
 
 interface Post {
   id: string;
@@ -189,13 +190,13 @@ export default function PostsPage() {
                       {post.viewCount}
                     </td>
                     <td className="px-6 py-4 text-right text-sm">
-                      <Link
+                      <I18nLink
                         href={`/blog/${post.slug}`}
                         target="_blank"
                         className="text-theme hover:text-theme/80 mr-4 transition-colors"
                       >
                         预览
-                      </Link>
+                      </I18nLink>
                       <Link
                         href={`/admin/posts/${post.id}/edit`}
                         className="text-blue-400 hover:text-blue-300 mr-4 transition-colors"
