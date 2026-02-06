@@ -61,7 +61,7 @@ export function getNavbarConfig(t: (key: string) => string) {
   const navbarRight = [
     {
       label: t("blog"),
-      href: "/",
+      href: "/blog",
     },
   ];
 

@@ -649,6 +649,7 @@
     "readBtn": "READ ARTICLE",
     "noData": "No articles found.",
     "prev": "PREV",
-    "next": "NEXT"
+    "next": "NEXT",
+    "views": "views"
   }
 }

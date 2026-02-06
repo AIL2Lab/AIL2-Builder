@@ -28,3 +28,72 @@ model Contact {
 
   @@map("contact")
 }
+
+model Post {
+  id          String     @id @default(uuid())
+  title       String
+  slug        String     @unique
+
+  content     String     @db.Text
+  excerpt     String?    @db.Text
+  coverImage  String?    @map("cover_image")
+
+  metaTitle   String?    @map("meta_title")
+  metaDesc    String?    @map("meta_desc")
+  keywords    String[]
+
+  ogImage     String?    @map("og_image")
+
+  status      PostStatus @default(DRAFT)
+  publishedAt DateTime?  @map("published_at")
+
+  authorId    String     @map("author_id")
+  authorName  String     @map("author_name")
+
+  categoryId  String?    @map("category_id")
+  category    Category?  @relation(fields: [categoryId], references: [id])
+  tags        Tag[]      @relation("PostTags")
+
+  viewCount   Int        @default(0) @map("view_count")
+
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+
+  @@index([status, publishedAt])
+  @@index([slug])
+  @@map("posts")
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique
+  description String?
+
+  metaTitle   String?  @map("meta_title")
+  metaDesc    String?  @map("meta_desc")
+
+  posts       Post[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("categories")
+}
+
+model Tag {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  slug      String   @unique
+
+  posts     Post[]   @relation("PostTags")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("tags")
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}

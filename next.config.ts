@@ -3,9 +3,12 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const cspHeader = [
   "default-src 'self';",
-  "script-src 'self' 'unsafe-eval' 'unsafe-inline';",
-  "style-src 'self' 'unsafe-inline';",
-  "img-src 'self' https://picsum.photos https://www.decentralgpt.org;"
+  "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.tiny.cloud;",
+  "style-src 'self' 'unsafe-inline' https://cdn.tiny.cloud;",
+  "img-src 'self' blob: data: https://picsum.photos https://www.decentralgpt.org https://images.unsplash.com https://cdn.tiny.cloud;",
+  "connect-src 'self' https://cdn.tiny.cloud;",
+  "media-src 'self' https://cdn.tiny.cloud;",
+  "font-src 'self' data: https://cdn.tiny.cloud;"
 ].join(' ');
 
 const nextConfig: NextConfig = {
@@ -37,16 +40,17 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "picsum.photos",
-        port: "",
         pathname: "/**",
-        search: "",
       },
       {
         protocol: "https",
         hostname: "www.decentralgpt.org",
-        port: "",
         pathname: "/**",
-        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
       },
     ],
   },

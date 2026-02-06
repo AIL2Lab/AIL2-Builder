@@ -649,6 +649,7 @@
     "readBtn": "Ler artigo",
     "noData": "Nenhum artigo encontrado.",
     "prev": "Anterior",
-    "next": "Próximo"
+    "next": "Próximo",
+    "views": "visualizações"
   }
 }

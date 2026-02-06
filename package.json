@@ -8,14 +8,18 @@
     "start": "next start",
     "redeploy": "npm install && npm run build && pm2 restart ecosystem.config.js",
     "generate:prisma": "npx prisma generate",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",
     "@prisma/extension-accelerate": "^2.0.2",
+    "@tinymce/tinymce-react": "^6.3.0",
     "clsx": "^2.1.1",
+    "dompurify": "^3.3.1",
     "dotenv": "^17.2.3",
     "flag-icons": "^7.5.0",
+    "jsdom": "^28.0.0",
     "lucide-react": "^0.555.0",
     "motion": "^12.23.24",
     "next": "16.0.7",
@@ -25,10 +29,14 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "@prisma/config": "^7.3.0",
     "@tailwindcss/postcss": "^4",
+    "@types/dompurify": "^3.0.5",
+    "@types/jsdom": "^27.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.0",
     "pm2": "^6.0.13",

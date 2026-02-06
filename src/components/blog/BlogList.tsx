@@ -1,36 +1,46 @@
 import { List } from "./List";
 
-
-interface Rendered {
-  rendered: string;
+interface Post {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string | null;
+  coverImage: string | null;
+  publishedAt: string | null;
+  viewCount: number;
+  category: {
+    id: string;
+    name: string;
+    slug: string;
+  } | null;
+  tags: {
+    id: string;
+    name: string;
+    slug: string;
+  }[];
 }
-interface BlogPost {
-  id: number;
-  title: Rendered;
-  link: string;
-  seo_desc: string;
-  seo_image: string;     // API 里的图片字段
-  release_time: string;  // API 里的时间字段
-  categories: number[];
+
+interface PostsResponse {
+  posts: Post[];
+  total: number;
+  totalPages: number;
+  currentPage: number;
 }
 
-const API_URL = "https://www.decentralgpt.org/wp-json/wp/v2/posts?per_page=9999&_fields=id,title,link,seo_desc,seo_image,categories,release_time";
-async function getPosts(): Promise<BlogPost[]> {
+async function getPosts(): Promise<PostsResponse> {
   try {
-    const res = await fetch(API_URL, { next: { revalidate: 3600 } });
-    if (!res.ok) throw new Error('Failed to fetch data');
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/posts?limit=9999`, {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) throw new Error('Failed to fetch posts');
     return res.json();
   } catch (error) {
     console.error(error);
-    return [];
+    return { posts: [], total: 0, totalPages: 0, currentPage: 1 };
   }
 }
 
-
 export default async function BlogList() {
-    
-    const allPosts = await getPosts();
-    return (
-        <List allPosts={allPosts} />
-    )
+  const data = await getPosts();
+  return <List posts={data.posts} total={data.total} />;
 }

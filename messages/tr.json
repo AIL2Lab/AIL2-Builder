@@ -649,6 +649,7 @@
     "readBtn": "Makaleyi Oku",
     "noData": "Makale bulunamadı.",
     "prev": "Önceki",
-    "next": "Sonraki"
+    "next": "Sonraki",
+    "views": "görüntüleme"
   }
 }
