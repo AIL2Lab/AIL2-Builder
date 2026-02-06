@@ -133,6 +133,30 @@
       "partners": "Parceiros do Ecossistema",
       "community": "Junte-se à comunidade global da <theme>AIL2</theme>",
       "ecosystem": "Veja o maior ecossistema de AIL2"
+    },
+    "faqSection": {
+      "title": "Perguntas Frequentes",
+      "subtitle": "Saiba mais sobre IA descentralizada e como a AIL2 funciona",
+      "q1": {
+        "question": "O que é AIL2?",
+        "answer": "AIL2 é uma infraestrutura de IA descentralizada e um ecossistema DeAI que permite aos desenvolvedores construir, implantar e escalar aplicações de IA em várias blockchains. Ele aproveita uma rede distribuída de mineradores GPU para fornecer escalabilidade infinita para modelos de IA, permitindo que os desenvolvedores acelerem o desenvolvimento de aplicações de IA descentralizada em 100 vezes em ETH, BSC, XLayer, Base, Mantle e GIWA."
+      },
+      "q2": {
+        "question": "Como funciona a IA descentralizada na AIL2?",
+        "answer": "AIL2 fecha a lacuna entre os requisitos massivos de computação de IA e o consenso de blockchain distribuído. Os modelos de IA são executados em uma rede descentralizada de mineradores GPU, com roteamento inteligente para selecionar nós ótimos com base em latência, custo e confiabilidade. O sistema usa Prova de Inferência (PoI) para verificar criptograficamente se a computação realizada por nós não confiáveis corresponde à execução esperada do modelo, garantindo correção e segurança."
+      },
+      "q3": {
+        "question": "Quais blockchains a AIL2 suporta?",
+        "answer": "AIL2 suporta implantação multi-chain em seis blockchains principais: Ethereum (ETH), BNB Chain (BSC), XLayer, Base, Mantle e GIWA. Essa abordagem multi-chain permite que os desenvolvedores implantem aplicações de IA em sua blockchain preferida, mantendo interoperabilidade perfeita e funcionalidade cross-chain."
+      },
+      "q4": {
+        "question": "Como os desenvolvedores podem implantar modelos de IA on-chain?",
+        "answer": "Os desenvolvedores podem implantar modelos de IA na AIL2 usando nosso SDK de IA Web3. O processo envolve: 1) Criar um projeto e gerar chaves de API no Console do Desenvolvedor, 2) Empacotar o contêiner do modelo com Docker, 3) Definir requisitos e preços no manifesto do modelo, e 4) Implantar na rede AIL2 onde os mineradores GPU lidam com a execução. O SDK lida com roteamento, agendamento, recibos e liquidação automaticamente."
+      },
+      "q5": {
+        "question": "O que é mineração GPU para IA na AIL2?",
+        "answer": "AIL2 realoca recursos de mineração de criptomoedas para tarefas de IA ao criar uma rede GPU descentralizada onde os mineradores fornecem GPUs de nível empresarial (Nvidia A100, H100 ou RTX 4090) para executar inferência de IA. Os mineradores ganham recompensas com base na computação real fornecida, com incentivos vinculados à demanda que suprimem a inflação de tokens. Isso cria uma solução de computação de alto desempenho e custo-efetivo para cargas de trabalho de IA."
+      }
     }
   },
   "Footer": {

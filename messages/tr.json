@@ -133,6 +133,30 @@
       "partners": "Ekosistem Ortakları",
       "community": "<theme>AIL2</theme> Küresel Topluluğuna Katılın",
       "ecosystem": "En büyük AIL2 ekosistemini görün"
+    },
+    "faqSection": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Merkeziyetsiz AI ve AIL2'nin nasıl çalıştığı hakkında daha fazla bilgi edinin",
+      "q1": {
+        "question": "AIL2 nedir?",
+        "answer": "AIL2, geliştiricilerin birden fazla blockchain üzerinde AI uygulamaları oluşturmasına, dağıtmasına ve ölçeklendirmesine olanak tanıyan merkeziyetsiz bir AI altyapısı ve DeAI ekosistemidir. AI modelleri için sonsuz ölçeklenebilirlik sağlamak üzere dağıtılmış bir GPU madenci ağından yararlanarak, geliştiricilerin ETH, BSC, XLayer, Base, Mantle ve GIWA üzerinde merkeziyetsiz AI uygulama geliştirmesini 100 kat hızlandırmasını sağlar."
+      },
+      "q2": {
+        "question": "AIL2'de merkeziyetsiz AI nasıl çalışır?",
+        "answer": "AIL2, büyük ölçekli AI hesaplama gereksinimleri ile dağıtılmış blockchain konsensüsü arasındaki boşluğu kapatır. AI modelleri, gecikme, maliyet ve güvenilirliğe dayalı olarak optimal düğümleri seçmek için akıllı yönlendirme ile birlikte merkeziyetsiz bir GPU madenci ağında çalışır. Sistem, güvenilmeyen düğümler tarafından gerçekleştirilen hesaplamanın beklenen model yürütmesiyle eşleştiğini kriptografik olarak doğrulamak için Çıkarım Kanıtı (PoI) kullanarak doğruluk ve güvenliği sağlar."
+      },
+      "q3": {
+        "question": "AIL2 hangi blockchain'leri destekliyor?",
+        "answer": "AIL2, altı ana blockchain'de çok zincirli dağıtımı destekler: Ethereum (ETH), BNB Chain (BSC), XLayer, Base, Mantle ve GIWA. Bu çok zincirli yaklaşım, geliştiricilerin sorunsuz birlikte çalışabilirlik ve zincirler arası işlevselliği korurken tercih ettikleri blockchain'de AI uygulamaları dağıtmasına olanak tanır."
+      },
+      "q4": {
+        "question": "Geliştiriciler zincir üzerinde AI modellerini nasıl dağıtabilir?",
+        "answer": "Geliştiriciler, Web3 AI SDK'mızı kullanarak AIL2'ye AI modelleri dağıtabilir. Süreç şunları içerir: 1) Geliştirici Konsolu'nda bir proje oluşturmak ve API anahtarları oluşturmak, 2) Docker ile model konteynerinizi paketlemek, 3) Model manifestinde gereksinimleri ve fiyatlandırmayı tanımlamak ve 4) GPU madencilerinin yürütmeyi yönettiği AIL2 ağına dağıtmak. SDK otomatik olarak yönlendirme, zamanlama, makbuzlar ve uzlaşmayı yönetir."
+      },
+      "q5": {
+        "question": "AIL2'de AI için GPU madenciliği nedir?",
+        "answer": "AIL2, madencilerin AI çıkarımı gerçekleştirmek için kurumsal sınıf GPU'lar (Nvidia A100, H100 veya RTX 4090) sağladığı merkeziyetsiz bir GPU ağı oluşturarak kripto madencilik kaynaklarını AI görevleri için yeniden tahsis eder. Madenciler, gerçekte sağlanan hesaplamaya dayalı olarak ödüller kazanır ve belirteç enflasyonunu baskılayan talebe bağlı teşviklerle birlikte gelir. Bu, AI iş yükleri için uygun maliyetli, yüksek performanslı bir bilgi işlem çözümü oluşturur."
+      }
     }
   },
   "Footer": {

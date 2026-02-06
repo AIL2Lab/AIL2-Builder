@@ -10,8 +10,8 @@ export default function HomeFourthScreen() {
                 <div className="mt-5 text-theme text-lg md:text-3xl font-normal">{t('fourthScreen.architecture')}</div>
             </div>
             <div className="w-full flex justify-center items-center relative">
-                <Image width={1512} height={1206} src="/images/screen-4-1.png" alt=""/>
-                <Image className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" width={1129} height={748} src="/images/screen-4-2.png" alt=""/>
+                <Image width={1512} height={1206} src="/images/screen-4-1.png" alt="AIL2 6-Layer Decentralized AI Architecture - AI Superlayer Infrastructure"/>
+                <Image className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" width={1129} height={748} src="/images/screen-4-2.png" alt="AIL2 Multi-Chain AI Network - ETH BSC XLayer Base Mantle GIWA Integration"/>
             </div>
         </div>
     )

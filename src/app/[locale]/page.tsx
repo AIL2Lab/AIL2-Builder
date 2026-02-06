@@ -9,6 +9,7 @@ import HomeFourthScreen from '@/components/home/fourth-screen';
 import HomeFifthScreen from '@/components/home/fifth';
 import HomeSixthScreen from '@/components/home/sixth-screen';
 import HomeSeventhScreen from '@/components/home/seventh-screen';
+import HomeFAQSection from '@/components/home/faq-section';
 
 
 export default function IndexPage({params}: PageProps<'/[locale]'>) {
@@ -24,6 +25,7 @@ export default function IndexPage({params}: PageProps<'/[locale]'>) {
         <HomeFourthScreen />
         <HomeFifthScreen />
         <HomeSixthScreen />
+        <HomeFAQSection />
         {/* <HomeSeventhScreen /> */}
     </PageLayout>
   );

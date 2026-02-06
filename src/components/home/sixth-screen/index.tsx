@@ -6,49 +6,49 @@ import Link from "next/link";
 
 const supports = [
   {
-    name: "gobi pariners",
+    name: "Gobi Partners - AIL2 Ecosystem Partner",
     src: "/images/gobi.png",
     with: 128,
     height: 38,
   },
   {
-    name: "waterdrip",
+    name: "Waterdrip Capital - AIL2 Investor Partner",
     src: "/images/waterdrip.png",
     with: 132,
     height: 60,
   },
   {
-    name: "depin",
+    name: "DePIN - Decentralized Physical Infrastructure Partner",
     src: "/images/depin.png",
     with: 169,
     height: 35,
   },
   {
-    name: "jdi",
+    name: "JDI - AIL2 Strategic Partner",
     src: "/images/jdi.png",
     with: 95,
     height: 70,
   },
   {
-    name: "dbc",
+    name: "DBC - Deep Brain Chain AI Computing Partner",
     src: "/images/dbc.png",
     with: 78,
     height: 70,
   },
   {
-    name: "meezan",
+    name: "Meezan Ventures - AIL2 Investment Partner",
     src: "/images/meezan.png",
     with: 84,
     height: 50,
   },
   {
-    name: "neoventures",
+    name: "NeoVentures - AIL2 Strategic Investor",
     src: "/images/neov.png",
     with: 215,
     height: 30,
   },
   {
-    name: "primelink",
+    name: "PrimeLink - AIL2 Technology Partner",
     src: "/images/primelink.png",
     with: 170,
     height: 60,

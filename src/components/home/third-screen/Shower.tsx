@@ -15,18 +15,21 @@ export default function Shower() {
       title: t("item1.title"),
       description: t("item1.description"),
       image: "/images/endless-scalability-11.png",
+      alt: "AIL2 Endless Scalability Architecture - Decentralized AI Infrastructure",
     },
     {
       id: 2,
       title: t("item2.title"),
       description: t("item2.description"),
       image: "/images/gpu-driver-22.png",
+      alt: "AIL2 GPU Driver - Distributed GPU Network for AI Computing",
     },
     {
       id: 3,
       title: t("item3.title"),
       description: t("item3.description"),
       image: "/images/fluid-composability-33.png",
+      alt: "AIL2 Fluid Composability - Web3 AI SDK Integration",
     },
   ];
   useEffect(() => {
@@ -70,13 +73,13 @@ export default function Shower() {
                 onClick={() => setActiveIndex(index)}
               >
                 <div className="">
-                  <h3
+                  <h2
                     className={`pl-10 text-2xl font-bold transition-colors duration-700 ${
                       activeIndex === index ? "text-theme" : "text-white/50"
                     }`}
                   >
                     {item.title}
-                  </h3>
+                  </h2>
                   {/* <div
                     className={`my-2.5 h-px bg-white/10 transition-all duration-500 ${
                       activeIndex === index ? "opacity-100" : "opacity-0"
@@ -107,7 +110,7 @@ export default function Shower() {
               >
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.alt}
                   fill
                   className="object-cover"
                   priority={index === 0}

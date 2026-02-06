@@ -370,7 +370,7 @@ export default function ResearchPage({
                 <div className="relative h-full">
                   <Image
                     src={section3Img}
-                    alt="Multi-Agent System Architecture"
+                    alt="AIL2 Multi-Agent System Architecture - Decentralized AI Operating System with Autonomous Smart Contract Management"
                     className="w-3/4 filter grayscale sepia hue-rotate-10 saturate-200"
                     priority
                   />

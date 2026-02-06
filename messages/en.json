@@ -1,51 +1,51 @@
 {
   "site": {
-    "name": "AIL2",
+    "name": "AIL2 | The Decentralized AI Superlayer for ETH, BSC & Multi-Chain Scaling",
     "subtitle": "the largest AIL2",
-    "description": "AI models run fully decentralized, with infinite scalability,empowering developers to accelerate decentralized AI application development by 100x across six blockchains: ETH, BSC, GIWA, XLayer,Base, and Mantle.",
+    "description": "AIL2 is a decentralized AI infrastructure and DeAI ecosystem powered by GPU mining for AI. Deploy AI models on-chain with our Web3 AI SDK across ETH, BSC, XLayer, Base, Mantle, and GIWA. Build decentralized AI applications 100x faster with infinite scalability.",
     "platform": {
-      "title": "Platform",
-      "description": "Decentralized AI Acceleration Platform"
+      "title": "Decentralized AI Acceleration Platform | Multi-Chain GPU Infrastructure",
+      "description": "Build decentralized AI applications 100x faster on AIL2's GPU-powered platform. Seamless multi-chain deployment across ETH, BSC, XLayer, Base, and Mantle with Web3 AI SDK integration."
     },
     "accelerate": {
-      "title": "Accelerate",
-      "description": "Accelerating the journey of the next wave of AI founders, propelling ideas forward with funding,  expert guidance, and go-to-market support."
+      "title": "AIL2 Accelerate | Go-to-Market Support for DeAI Founders",
+      "description": "Accelerate your decentralized AI startup with AIL2. Get funding, expert technical guidance, joint marketing promotion, and go-to-market support for DeAI founders."
     },
     "faq": {
-      "title": "FQA",
-      "description": "Frequently asked questions"
+      "title": "AIL2 FAQ | What is Decentralized AI & How Does GPU Mining for AI Work",
+      "description": "Find answers to frequently asked questions about AIL2's decentralized AI infrastructure. Learn about GPU mining for AI, multi-chain support, IMO/IAO mechanisms, and how to deploy AI models on-chain."
     },
     "ecosystem": {
-      "title": "Ecosystem",
-      "description": "A consolidated platform for the latest advancements in AIL2 technology.A comprehensive repository of cutting-edge AIL2 initiatives."
+      "title": "AIL2 Ecosystem | DeAI Apps, Partners & Decentralized AI Projects",
+      "description": "Explore the AIL2 DeAI ecosystem of decentralized AI applications, partners, and projects. Discover DeFi+AI, GameFi+AI, AI Agents, and Data DAOs built on distributed GPU infrastructure."
     },
     "research": {
-      "title": "Research",
-      "description": "The Decentralized AI Operating System"
+      "title": "AIL2 Research | Decentralized AI Operating System & Technical Whitepapers",
+      "description": "Explore AIL2's research on decentralized AI infrastructure, verifiable inference with ZK-Rollups, multi-agent systems, and distributed GPU networks. Read our technical whitepapers and architecture documentation."
     },
     "incubator": {
-      "title": "Incubator",
-      "description": "Accelerating the most promising startups in the decentralized AI space with capital, compute, and strategic support."
+      "title": "AIL2 Incubator | Funding & Support for DeAI Startups",
+      "description": "Join the AIL2 Incubator program for decentralized AI startups. Get $100k-$500k funding, GPU compute credits, technical mentorship, and strategic support for your DeAI project."
     },
     "Fund": {
-      "title": "Ecosystem-Fund",
-      "description": "A $50M commitment to bootstrap the next generation of decentralized AI infrastructure, models, and consumer applications."
+      "title": "AIL2 Ecosystem Fund | $50M Grant for Decentralized AI Projects",
+      "description": "Apply for the AIL2 Ecosystem Fund's $50M commitment to bootstrap decentralized AI infrastructure, base models, agentic apps, and developer tools. Milestone-based grants from $10k to $100k."
     },
     "contact": {
-      "title": "Contact Us",
-      "description": "Get in touch with the team building the future of decentralized intelligence."
+      "title": "Contact AIL2 | Build Decentralized AI Apps with Our Team",
+      "description": "Get in touch with the AIL2 team to learn how to build decentralized AI applications on our distributed GPU network. Offices in San Francisco, Singapore, and Zug."
     },
     "core": {
-      "title": "AIL2 Core",
-      "description": "Build decentralized AI apps on a distributed GPU network."
+      "title": "AIL2 Core | Developer SDK for Decentralized AI Apps on GPU Network",
+      "description": "Integrate AIL2 Core SDK to build decentralized AI apps on a distributed GPU network. Router, scheduler, receipts, settlement, and cross-chain support for Ethereum, BNB Chain, XLayer, Base, and Mantle."
     },
     "docs": {
-      "title": "AIL2 Document",
-      "description": "Technical guides, API references, and architecture overviews for the AIL2 network."
+      "title": "AIL2 Documentation | Web3 AI SDK, API Reference & Integration Guides",
+      "description": "Technical guides, API references, and architecture overviews for integrating AIL2 SDK with Ethereum and multi-chain networks. Learn how to deploy AI models on-chain with our decentralized AI infrastructure."
     },
     "blog": {
-      "title": "AIL2 Blog",
-      "description": "Latest articles on AIL2"   
+      "title": "AIL2 Blog | Decentralized AI News, Web3 AI SDK Guides & DeAI Insights",
+      "description": "Latest articles on decentralized AI infrastructure, Web3 AI SDK integration, GPU mining for AI, and how to deploy AI models on-chain with AIL2."
     }
   },
   "Common": {
@@ -86,7 +86,7 @@
     "supportBtn": "Support AIL2 on X",
 
     "firstScreen": {
-      "text": "The Largest AIL2 for"
+      "text": "AIL2 | The Decentralized AI Superlayer for"
     },
     "secondScreen": {
       "title": "Accelerate Decentralized AI Development 100x",
@@ -133,6 +133,30 @@
       "partners": "Ecosystem Partners",
       "community": "Join <theme>AIL2</theme> Global community",
       "ecosystem": "See the biggest AIL2 ecosystem"
+    },
+    "faqSection": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Learn more about decentralized AI and how AIL2 works",
+      "q1": {
+        "question": "What is AIL2?",
+        "answer": "AIL2 is a decentralized AI infrastructure and DeAI ecosystem that enables developers to build, deploy, and scale AI applications across multiple blockchains. It leverages a distributed GPU miner network to provide infinite scalability for AI models, allowing developers to accelerate decentralized AI application development by 100x across ETH, BSC, XLayer, Base, Mantle, and GIWA."
+      },
+      "q2": {
+        "question": "How does decentralized AI work on AIL2?",
+        "answer": "AIL2 bridges the gap between massive AI compute requirements and distributed blockchain consensus. AI models run on a decentralized network of GPU miners, with intelligent routing to select optimal nodes based on latency, cost, and reliability. The system uses Proof of Inference (PoI) to cryptographically verify that compute performed by untrusted nodes matches expected model execution, ensuring correctness and security."
+      },
+      "q3": {
+        "question": "What blockchains does AIL2 support?",
+        "answer": "AIL2 supports multi-chain deployment across six major blockchains: Ethereum (ETH), BNB Chain (BSC), XLayer, Base, Mantle, and GIWA. This multi-chain approach enables developers to deploy AI applications on their preferred blockchain while maintaining seamless interoperability and cross-chain functionality."
+      },
+      "q4": {
+        "question": "How can developers deploy AI models on-chain?",
+        "answer": "Developers can deploy AI models on AIL2 using our Web3 AI SDK. The process involves: 1) Creating a project and generating API keys in the Developer Console, 2) Packaging your model container with Docker, 3) Defining requirements and pricing in the model manifest, and 4) Deploying to the AIL2 network where GPU miners handle execution. The SDK handles routing, scheduling, receipts, and settlement automatically."
+      },
+      "q5": {
+        "question": "What is GPU mining for AI on AIL2?",
+        "answer": "AIL2 repurposes crypto mining resources for AI tasks by creating a decentralized GPU network where miners provide enterprise-grade GPUs (Nvidia A100, H100, or RTX 4090) to execute AI inference. Miners earn rewards based on actual compute provided, with demand-bound incentives that suppress token inflation. This creates a cost-effective, high-performance computing solution for AI workloads."
+      }
     }
   },
   "Footer": {

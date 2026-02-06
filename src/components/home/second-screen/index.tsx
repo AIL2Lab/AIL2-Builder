@@ -17,12 +17,12 @@ export default function HomeSecondScreen() {
               src="/svg/logo.svg"
               width={50}
               height={50}
-              alt="logo"
+              alt="AIL2 Logo - Decentralized AI Superlayer"
               className="mr-4"
             />
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
               {t("secondScreen.title")}
-            </h3>
+            </h1>
           </div>
           <div className="sm:w-1/2 flex justify-center items-center relative">
             <BlockchainCarousel autoPlay={true} interval={1000} />

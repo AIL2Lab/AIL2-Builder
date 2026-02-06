@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(ls -la:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(grep -r:*)"
     ]
   }
 }
