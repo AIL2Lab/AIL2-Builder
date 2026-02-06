@@ -30,14 +30,11 @@ interface PostsResponse {
 
 async function getPosts(): Promise<PostsResponse> {
   try {
-    // 直接从数据库查询，构建时不需要启动服务
+    // 查询已发布文章（兼容 publishedAt 为 null 的情况）
     const [posts, total] = await Promise.all([
       prisma.post.findMany({
         where: {
           status: 'PUBLISHED',
-          publishedAt: {
-            lte: new Date(),
-          },
         },
         include: {
           category: true,
@@ -50,9 +47,6 @@ async function getPosts(): Promise<PostsResponse> {
       prisma.post.count({
         where: {
           status: 'PUBLISHED',
-          publishedAt: {
-            lte: new Date(),
-          },
         },
       }),
     ]);
@@ -77,7 +71,7 @@ async function getPosts(): Promise<PostsResponse> {
     };
   } catch (error) {
     console.error('获取文章列表失败:', error);
-    return { posts: [], total: 0, totalPages: 0, currentPage: 1 };
+    throw error;
   }
 }
 

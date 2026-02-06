@@ -122,7 +122,11 @@ export async function POST(request: Request) {
         keywords: body.keywords || [],
         ogImage: body.ogImage,
         status: body.status || 'DRAFT',
-        publishedAt: body.publishedAt ? new Date(body.publishedAt) : null,
+        publishedAt: body.publishedAt
+          ? new Date(body.publishedAt)
+          : body.status === 'PUBLISHED'
+          ? new Date()
+          : null,
         authorId: body.authorId || 'admin',
         authorName: body.authorName || '管理员',
         categoryId: body.categoryId || null,

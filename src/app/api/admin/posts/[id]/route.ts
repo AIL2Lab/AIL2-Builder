@@ -79,7 +79,13 @@ export async function PUT(
         keywords: data.keywords,
         ogImage: data.ogImage,
         status: data.status,
-        publishedAt: data.publishedAt ? new Date(data.publishedAt) : null,
+        publishedAt: data.publishedAt
+          ? new Date(data.publishedAt)
+          : data.status === 'PUBLISHED' && !existingPost.publishedAt
+          ? new Date()
+          : data.publishedAt === null
+          ? null
+          : undefined,
         authorId: data.authorId || undefined,
         authorName: data.authorName || undefined,
         categoryId: data.categoryId || null,
