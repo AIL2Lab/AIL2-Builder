@@ -123,8 +123,8 @@ export async function POST(request: Request) {
         ogImage: body.ogImage,
         status: body.status || 'DRAFT',
         publishedAt: body.publishedAt ? new Date(body.publishedAt) : null,
-        authorId: body.authorId,
-        authorName: body.authorName,
+        authorId: body.authorId || 'admin',
+        authorName: body.authorName || '管理员',
         categoryId: body.categoryId || null,
         tags: body.tagIds
           ? {

@@ -80,8 +80,8 @@ export async function PUT(
         ogImage: data.ogImage,
         status: data.status,
         publishedAt: data.publishedAt ? new Date(data.publishedAt) : null,
-        authorId: data.authorId,
-        authorName: data.authorName,
+        authorId: data.authorId || undefined,
+        authorName: data.authorName || undefined,
         categoryId: data.categoryId || null,
         tags: data.tagIds
           ? {
