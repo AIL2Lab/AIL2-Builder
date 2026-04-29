@@ -1,4 +1,7 @@
-import { PrismaClient } from '@prisma/client';
+// Schema generator emits to ../src/generated; use that client instead of
+// the legacy @prisma/client export which the new "prisma-client" generator
+// no longer populates.
+import { PrismaClient } from '../src/generated/client';
 
 const prisma = new PrismaClient();
 
