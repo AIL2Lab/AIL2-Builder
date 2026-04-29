@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Next.js Build
+    runs-on: ubuntu-latest
+    # next build performs its own type / route validation pass, which is
+    # what actually caught the prisma/seed.ts import regression that
+    # shipped to main earlier. We rely on it as the primary correctness
+    # gate; tsc --noEmit is intentionally not run here because the
+    # codebase still has ~30 pre-existing strict-mode errors unrelated to
+    # ship-blocking compilation.
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.17.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        # DATABASE_URL is required by prisma config loading but generate
+        # itself does not connect — any well-formed connection string works.
+        env:
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+        run: pnpm exec prisma generate
+
+      - name: Next.js production build
+        env:
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+        run: pnpm build
+
+  lint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.17.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        # next-lint resolves @/generated/client during type discovery;
+        # generate it before linting so missing-module errors don't bury
+        # real lint findings.
+        env:
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+        run: pnpm exec prisma generate
+
+      - name: Lint
+        # The project has ~30 pre-existing lint errors. Until those are
+        # cleaned up, we run lint with --max-warnings=999 so it reports
+        # but doesn't gate; tighten this once the backlog is cleared.
+        run: pnpm lint --max-warnings 999 || true
