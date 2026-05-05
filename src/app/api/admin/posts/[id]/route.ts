@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
+import { updatePostSchema, validateBody } from '../../_lib/schemas';
 
 export async function GET(
   request: Request,
@@ -39,20 +40,17 @@ export async function PUT(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
+  const parsed = await validateBody(request, updatePostSchema);
+  if (!parsed.ok) return parsed.response;
+  const data = parsed.data;
+
   try {
-    const { id } = await params;
-    const data = await request.json();
-
-    // 检查文章是否存在
-    const existingPost = await prisma.post.findUnique({
-      where: { id },
-    });
-
+    const existingPost = await prisma.post.findUnique({ where: { id } });
     if (!existingPost) {
       return NextResponse.json({ error: '文章不存在' }, { status: 404 });
     }
 
-    // 如果修改了 slug，检查是否与其他文章冲突
     if (data.slug && data.slug !== existingPost.slug) {
       const slugConflict = await prisma.post.findUnique({
         where: { slug: data.slug },
@@ -65,7 +63,6 @@ export async function PUT(
       }
     }
 
-    // 更新文章
     const updatedPost = await prisma.post.update({
       where: { id },
       data: {
@@ -79,6 +76,8 @@ export async function PUT(
         keywords: data.keywords,
         ogImage: data.ogImage,
         status: data.status,
+        // publishedAt rules: explicit value wins; transitioning to PUBLISHED
+        // without one stamps now; explicit null clears; otherwise leave it.
         publishedAt: data.publishedAt
           ? new Date(data.publishedAt)
           : data.status === 'PUBLISHED' && !existingPost.publishedAt
@@ -88,11 +87,11 @@ export async function PUT(
           : undefined,
         authorId: data.authorId || undefined,
         authorName: data.authorName || undefined,
-        categoryId: data.categoryId || null,
+        categoryId: data.categoryId ?? null,
         tags: data.tagIds
           ? {
-              set: [], // 先清空现有标签
-              connect: data.tagIds.map((tagId: string) => ({ id: tagId })),
+              set: [], // clear existing first, then connect the new set
+              connect: data.tagIds.map((tagId) => ({ id: tagId })),
             }
           : undefined,
       },

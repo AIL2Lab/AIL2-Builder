@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
+import { createCategorySchema, validateBody } from '../_lib/schemas';
 
 // GET /api/admin/categories
 export async function GET() {
@@ -22,29 +23,26 @@ export async function GET() {
 
 // POST /api/admin/categories
 export async function POST(request: Request) {
-  try {
-    const data = await request.json();
+  const parsed = await validateBody(request, createCategorySchema);
+  if (!parsed.ok) return parsed.response;
+  const data = parsed.data;
 
-    // 检查 slug 是否已存在
+  try {
     const existing = await prisma.category.findUnique({
       where: { slug: data.slug },
     });
 
     if (existing) {
-      return NextResponse.json(
-        { error: 'Slug 已存在' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Slug 已存在' }, { status: 400 });
     }
 
-    // 创建新分类
     const newCategory = await prisma.category.create({
       data: {
         name: data.name,
         slug: data.slug,
-        description: data.description,
-        metaTitle: data.metaTitle,
-        metaDesc: data.metaDesc,
+        description: data.description ?? null,
+        metaTitle: data.metaTitle ?? null,
+        metaDesc: data.metaDesc ?? null,
       },
     });
 

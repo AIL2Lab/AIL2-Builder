@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
-import { z } from 'zod';
 import prisma from '@/lib/prisma';
-
-const POST_STATUSES = ['DRAFT', 'PUBLISHED', 'ARCHIVED'] as const;
+import { POST_STATUSES, createPostSchema, validateBody } from '../_lib/schemas';
 
 // Structural where-clause type. We define it locally rather than importing
 // Prisma.PostWhereInput because the generated client lives outside source
@@ -15,32 +13,6 @@ type PostWhereClause = {
     slug?: { contains: string; mode: 'insensitive' };
   }>;
 };
-
-// Schema for POST /api/admin/posts. Mirrors the Prisma Post model fields
-// the handler actually writes; anything else in the body is silently
-// dropped by Zod's default object behavior.
-const createPostSchema = z.object({
-  title: z.string().trim().min(1).max(500),
-  slug: z
-    .string()
-    .trim()
-    .min(1)
-    .max(200)
-    .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'slug must be kebab-case ASCII'),
-  content: z.string().max(1_000_000),
-  excerpt: z.string().max(2000).optional().nullable(),
-  coverImage: z.string().url().max(2048).optional().nullable(),
-  metaTitle: z.string().max(200).optional().nullable(),
-  metaDesc: z.string().max(500).optional().nullable(),
-  keywords: z.array(z.string().max(100)).max(50).optional(),
-  ogImage: z.string().url().max(2048).optional().nullable(),
-  status: z.enum(POST_STATUSES).optional(),
-  publishedAt: z.string().datetime().optional().nullable(),
-  authorId: z.string().max(100).optional(),
-  authorName: z.string().max(200).optional(),
-  categoryId: z.string().max(100).optional().nullable(),
-  tagIds: z.array(z.string().max(100)).max(50).optional(),
-});
 
 // GET /api/admin/posts
 export async function GET(request: Request) {
@@ -132,20 +104,8 @@ export async function GET(request: Request) {
 
 // POST /api/admin/posts
 export async function POST(request: Request) {
-  let body: unknown;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: '请求格式错误' }, { status: 400 });
-  }
-
-  const parsed = createPostSchema.safeParse(body);
-  if (!parsed.success) {
-    return NextResponse.json(
-      { error: '请求字段无效', issues: parsed.error.issues },
-      { status: 400 }
-    );
-  }
+  const parsed = await validateBody(request, createPostSchema);
+  if (!parsed.ok) return parsed.response;
   const data = parsed.data;
 
   try {
