@@ -1,91 +1,68 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import prisma from '@/lib/prisma';
+import DeletePostButton from './_components/DeletePostButton';
 
-interface Post {
-  id: string;
-  title: string;
-  slug: string;
-  status: string;
-  publishedAt: string | null;
-  createdAt: string;
-  category: { name: string } | null;
-  viewCount: number;
+// The page reads from the database on every request and is gated by the
+// admin_session cookie at the middleware layer; both make it inherently
+// dynamic. Force-dynamic is explicit so Next.js' prerender pass at build
+// time doesn't try to hit Prisma without a DB.
+export const dynamic = 'force-dynamic';
+
+// Server Component: data fetch happens during render on the server, no
+// client-side useEffect waterfall, no loading flicker, and the ~20kb of
+// state-management JS that the old client version pulled in vanishes from
+// the bundle. The only client island left is the row-level delete button,
+// which needs confirm() + fetch.
+
+const STATUS_LABEL: Record<string, string> = {
+  PUBLISHED: '已发布',
+  DRAFT: '草稿',
+  ARCHIVED: '已归档',
+};
+
+const STATUS_STYLE: Record<string, string> = {
+  PUBLISHED: 'bg-green-500/20 text-green-400 border-green-500/30',
+  DRAFT: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
+  ARCHIVED: 'bg-gray-500/20 text-gray-400 border-gray-500/30',
+};
+
+const ALLOWED_STATUSES = ['PUBLISHED', 'DRAFT', 'ARCHIVED'] as const;
+
+type PostWhere = {
+  status?: (typeof ALLOWED_STATUSES)[number];
+  OR?: Array<{
+    title?: { contains: string; mode: 'insensitive' };
+    slug?: { contains: string; mode: 'insensitive' };
+  }>;
+};
+
+async function getPosts(filter: string, search: string) {
+  const where: PostWhere = {};
+  if ((ALLOWED_STATUSES as readonly string[]).includes(filter)) {
+    where.status = filter as (typeof ALLOWED_STATUSES)[number];
+  }
+  if (search) {
+    where.OR = [
+      { title: { contains: search, mode: 'insensitive' } },
+      { slug: { contains: search, mode: 'insensitive' } },
+    ];
+  }
+  return prisma.post.findMany({
+    where,
+    include: { category: { select: { name: true } } },
+    orderBy: { createdAt: 'desc' },
+  });
 }
 
-export default function PostsPage() {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState('all');
-  const [search, setSearch] = useState('');
-
-  useEffect(() => {
-    fetchPosts();
-  }, [filter, search]);
-
-  async function fetchPosts() {
-    try {
-      setLoading(true);
-      const params = new URLSearchParams();
-      if (filter !== 'all') params.append('status', filter);
-      if (search) params.append('search', search);
-
-      const res = await fetch(`/api/admin/posts?${params}`);
-      const data = await res.json();
-
-      if (Array.isArray(data)) {
-        setPosts(data);
-      } else if (data.error) {
-        console.error('API error:', data.error);
-        setPosts([]);
-      } else {
-        console.error('Unexpected response format:', data);
-        setPosts([]);
-      }
-    } catch (error) {
-      console.error('Failed to fetch posts:', error);
-      setPosts([]);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  async function deletePost(id: string) {
-    if (!confirm('确定要删除这篇文章吗？')) return;
-
-    try {
-      const res = await fetch(`/api/admin/posts/${id}`, {
-        method: 'DELETE',
-      });
-
-      if (res.ok) {
-        setPosts(posts.filter((p) => p.id !== id));
-      }
-    } catch (error) {
-      alert('删除失败');
-    }
-  }
-
-  const getStatusBadge = (status: string) => {
-    const styles: Record<string, string> = {
-      PUBLISHED: 'bg-green-500/20 text-green-400 border-green-500/30',
-      DRAFT: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
-      ARCHIVED: 'bg-gray-500/20 text-gray-400 border-gray-500/30',
-    };
-    const labels: Record<string, string> = {
-      PUBLISHED: '已发布',
-      DRAFT: '草稿',
-      ARCHIVED: '已归档',
-    };
-    return (
-      <span
-        className={`px-3 py-1 text-xs font-medium rounded-full border ${styles[status]}`}
-      >
-        {labels[status]}
-      </span>
-    );
-  };
+export default async function PostsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ status?: string; search?: string }>;
+}) {
+  const params = await searchParams;
+  const filter = params.status ?? 'all';
+  const search = params.search ?? '';
+  const posts = await getPosts(filter, search);
 
   return (
     <div>
@@ -100,11 +77,15 @@ export default function PostsPage() {
         </Link>
       </div>
 
-      {/* Filters */}
-      <div className="bg-[#121212] border border-white/10 p-4 rounded-2xl mb-6 flex flex-col sm:flex-row gap-4">
+      {/* Filters as a plain GET form: server reads searchParams, no client
+          state, no useEffect, browser back/forward works for free. */}
+      <form
+        method="GET"
+        className="bg-[#121212] border border-white/10 p-4 rounded-2xl mb-6 flex flex-col sm:flex-row gap-4"
+      >
         <select
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
+          name="status"
+          defaultValue={filter}
           className="px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white focus:border-theme focus:outline-none transition-colors"
         >
           <option value="all">全部状态</option>
@@ -114,12 +95,18 @@ export default function PostsPage() {
         </select>
         <input
           type="text"
+          name="search"
           placeholder="搜索标题或 Slug..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          defaultValue={search}
           className="flex-1 px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder:text-white/40 focus:border-theme focus:outline-none transition-colors"
         />
-      </div>
+        <button
+          type="submit"
+          className="px-6 py-3 bg-theme/20 text-theme border border-theme/40 rounded-xl hover:bg-theme/30 transition-colors"
+        >
+          应用
+        </button>
+      </form>
 
       {/* Table */}
       <div className="bg-[#121212] border border-white/10 rounded-2xl overflow-hidden">
@@ -148,16 +135,7 @@ export default function PostsPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-white/5">
-              {loading ? (
-                <tr>
-                  <td colSpan={6} className="px-6 py-12 text-center text-white/60">
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-5 h-5 border-2 border-theme/30 border-t-theme rounded-full animate-spin" />
-                      加载中...
-                    </div>
-                  </td>
-                </tr>
-              ) : posts.length === 0 ? (
+              {posts.length === 0 ? (
                 <tr>
                   <td colSpan={6} className="px-6 py-12 text-center text-white/40">
                     暂无文章
@@ -168,18 +146,22 @@ export default function PostsPage() {
                   <tr key={post.id} className="hover:bg-white/5 transition-colors">
                     <td className="px-6 py-4">
                       <div>
-                        <div className="font-medium text-white">
-                          {post.title}
-                        </div>
-                        <div className="text-sm text-white/40 mt-1">
-                          /{post.slug}
-                        </div>
+                        <div className="font-medium text-white">{post.title}</div>
+                        <div className="text-sm text-white/40 mt-1">/{post.slug}</div>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-sm text-white/60">
                       {post.category?.name || '-'}
                     </td>
-                    <td className="px-6 py-4">{getStatusBadge(post.status)}</td>
+                    <td className="px-6 py-4">
+                      <span
+                        className={`px-3 py-1 text-xs font-medium rounded-full border ${
+                          STATUS_STYLE[post.status] ?? ''
+                        }`}
+                      >
+                        {STATUS_LABEL[post.status] ?? post.status}
+                      </span>
+                    </td>
                     <td className="px-6 py-4 text-sm text-white/60">
                       {post.publishedAt
                         ? new Date(post.publishedAt).toLocaleDateString('zh-CN')
@@ -203,12 +185,7 @@ export default function PostsPage() {
                       >
                         编辑
                       </Link>
-                      <button
-                        onClick={() => deletePost(post.id)}
-                        className="text-red-400 hover:text-red-300 transition-colors"
-                      >
-                        删除
-                      </button>
+                      <DeletePostButton postId={post.id} />
                     </td>
                   </tr>
                 ))
